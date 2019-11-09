@@ -13,6 +13,7 @@ function writeScene(scene) {
 			//writeTransition("prologueSkip", "Skip the prologue");
 			writeText("Other notes:");
 			writeText("This game was made for the <a href='https://tfgames.site/phpbb3/viewtopic.php?f=12&t=12799'>Game-Night Contest on TFGames.</a>");
+			writeText("You can open a character's description by clicking on their icon - do this often to see a lot of the changes that occur, both of the person and how you view them in the game.");
 			writeText("My Discord is corenkeitaro#7169. If you see anything that needs fixing in the game, you can message me there or email me at cryptogreekcaptions@gmail.com.");
 			writeText("You can click on the title of a window to close it. For example, if you click 'STATUS' on the left, you can close the new window by clicking anywhere in the 'STATUS' section at the top.");
 			writeText("The following is a more in-depth listing of fetishes, for the people who want to know <i>exactly</i> what they're getting into:");
