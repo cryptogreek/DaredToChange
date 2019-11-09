@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dare(d) to Change</title>
+		<script src="scripts/index.js"></script>
+		<script src="scripts/sceneList.js"></script>
+		<link rel="stylesheet" type="text/css" href="scripts/index.css" />
+		<link rel="icon" href="scripts/gamefiles/none.png" type="image/icon type">
+	</head>
+	<body onload ="startup()">
+		<div id = "menu" class = "menu">
+			<div id="titlePanel">
+				<p id = "title" class = "title"><i>Dare(d) to Change</i></p>
+				<div id="closeButton" class="closeButton" onclick="closeButton()"><</div>
+				<p id = "version" class = "version" style = "line-height: 50%">Version 0.0 (How are you even reading this?)</p>
+				<p id = "author">
+					<a href="https://www.reddit.com/user/CaptainCryptogreek">Written by CryptoGreek</a><br>
+					<a href="https://noodlejacuzzi.github.io/index.html">Engine by Noodle Jacuzzi</a><br>
+					<a href="https://www.patreon.com/noodlejacuzzi">Patreon</a>
+				</p>
+			</div>
+			<div id="buttonMenu">
+				<div id="buttonMenuPrimary" class="flexbox">
+					<h4 id="logButton" class="button" onclick="selfButton()">STATUS</h4>
+					<h4 id="saveButton" class="button" onclick="saveButton()">SAVE/LOAD</h4>
+				</div>
+				<h4 id="restartButton" class="button" onclick="restartButton()">RESTART</h4>
+			</div>
+			<div id="playerPanel" class="flexbox">
+				<img id="playerImage" class="playerImage" src="images/none.png">
+				<div id="playerStats">
+					<h3 id = "playerName" class = "char_player version">???</h3>
+					<p id = "day" class = "version">Round: 0</p>
+					<p id = 'scenesTotal'></p>
+				</div>
+			</div>
+		</div>
+			<div id="openButton" class="openButton" onclick="openButton()">></div>
+		<div id = "wrapper" class = "wrapper">
+			<div id="wrapperBG"></div>
+			<div id = "output" class = "output" onclick = "hideStuff()">
+			<p class="choiceText" onclick="sceneTransition('start')">
+				Start the game
+			</p>
+			</div>
+			<div id = "save" class = "popup save">
+				<h1 class = "windowTitle" onclick="saveButton()">SAVE/LOAD</h1>
+				<div class="saveList">
+					<div class = "saveSlot">
+						<p id = "save151Name" class = "saveName">Slot 1</p>
+						<p id = "save151Date" class = "saveDate">Jan 9th, 8:31</p>
+						<p id = "load151Button" class = "loadButton button" onclick = "loadSlot(181)"></p>
+						<p id = "delete151Button" class = "deleteButton button" onclick = "deleteSlot(181)"></p>
+						<p id = "save151Button" class = "saveButton button" onclick = "saveSlot(181)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save152Name" class = "saveName">Slot 2</p>
+						<p id = "save152Date" class = "saveDate"></p>
+						<p id = "load152Button" class = "loadButton button" onclick = "loadSlot(182)"></p>
+						<p id = "delete152Button" class = "deleteButton button" onclick = "deleteSlot(182)"></p>
+						<p id = "save152Button" class = "saveButton button" onclick = "saveSlot(182)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save153Name" class = "saveName">Slot 3</p>
+						<p id = "save153Date" class = "saveDate"></p>
+						<p id = "load153Button" class = "loadButton button" onclick = "loadSlot(183)"></p>
+						<p id = "delete153Button" class = "deleteButton button" onclick = "deleteSlot(183)"></p>
+						<p id = "save153Button" class = "saveButton button" onclick = "saveSlot(183)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save154Name" class = "saveName">Slot 4</p>
+						<p id = "save154Date" class = "saveDate"></p>
+						<p id = "load154Button" class = "loadButton button" onclick = "loadSlot(184)"></p>
+						<p id = "delete154Button" class = "deleteButton button" onclick = "deleteSlot(184)"></p>
+						<p id = "save154Button" class = "saveButton button" onclick = "saveSlot(184)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save155Name" class = "saveName">Slot 5</p>
+						<p id = "save155Date" class = "saveDate"></p>
+						<p id = "load155Button" class = "loadButton button" onclick = "loadSlot(185)"></p>
+						<p id = "delete155Button" class = "deleteButton button" onclick = "deleteSlot(185)"></p>
+						<p id = "save155Button" class = "saveButton button" onclick = "saveSlot(185)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save156Name" class = "saveName">Slot 6</p>
+						<p id = "save156Date" class = "saveDate"></p>
+						<p id = "load156Button" class = "loadButton button" onclick = "loadSlot(186)"></p>
+						<p id = "delete156Button" class = "deleteButton button" onclick = "deleteSlot(186)"></p>
+						<p id = "save156Button" class = "saveButton button" onclick = "saveSlot(186)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save157Name" class = "saveName">Slot 7</p>
+						<p id = "save157Date" class = "saveDate"></p>
+						<p id = "load157Button" class = "loadButton button" onclick = "loadSlot(187)"></p>
+						<p id = "delete157Button" class = "deleteButton button" onclick = "deleteSlot(187)"></p>
+						<p id = "save157Button" class = "saveButton button" onclick = "saveSlot(187)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save158Name" class = "saveName">Slot 8</p>
+						<p id = "save158Date" class = "saveDate"></p>
+						<p id = "load158Button" class = "loadButton button" onclick = "loadSlot(188)"></p>
+						<p id = "delete158Button" class = "deleteButton button" onclick = "deleteSlot(188)"></p>
+						<p id = "save158Button" class = "saveButton button" onclick = "saveSlot(188)">SAVE</p>
+					</div>
+					<div class = "saveSlot">
+						<p id = "save159Name" class = "saveName"></p>
+						<p id = "save159Date" class = "saveDate"></p>
+						<p id = "load159Button" class = "loadFileButton" onclick = "loadFile()">Load from text string</p>
+						<p id = "delete159Button" class = "deleteButton button" onclick = "deleteSlot(9)"></p>
+						<p id = "save159Button" class = "saveFileButton" onclick = "saveFile()">Save to text string</p>
+					</div>
+				</div>
+			</div>
+			<div id = "self" class = "self popup">
+				<h1 class = "windowTitle" onclick="selfButton()">STATUS</h1>
+				<div class = "logbookLeft" id = "logbookLeft">
+				</div>
+				<div class = "logbookRight" id = "logbookRight">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
