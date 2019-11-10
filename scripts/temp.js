@@ -203,3 +203,10 @@ Areas:
 	"DARE: Unknown"
 	"SUCCESS: Unknown"
 	"CHANGE: Unknown"
+
+
+"Scene one remains as it is, no need to go changing it much. Spend less time introducing the characters or, even better, reuse the stuff put in as part of the game. Have the players chat as part of building your characters."
+"Choose one of the three pieces (masc, fem, sis). You're the host, so you get first pick. If you choose sis, then masc goes to Dale; if you choose fem, masc goes to Meg; if you choose masc, sis goes to Dale."
+"Character building involves listing two facts about yourself and honestly answering two questions - one from the other players, and the other being how seriously you're taking this game in terms of its magical effects."
+"Also, there's a quick-start that skips right to the gameplay part, allowing you to set a bunch of factors in addition to the normal ones. Potentially allow for turning off particular fetishes."
+"After the intro scene is complete, the game begins with a shimmery effect across your skin, feeling like thin silk pulling across your pores for a short moment. Then, a set of LVL1 events are available to the players - three, maybe four options"
