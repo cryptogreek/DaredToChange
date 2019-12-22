@@ -73,11 +73,18 @@ function writeScene(scene) {
 				writeTransition("prologueName", "Go smaller.");
 				break;
 			}
+			if(data.player.dick < 1){
+				writeText("At least in this version, there's no option to start as either a woman or a eunuch.");
+				writeTransition("prologueName", "Go back.");
+				break;
+			}
 			if(data.player.dick < 4){
+				data.player.genitalsVal = 2;
 				writeSpecial("You have an abnormally small penis, which makes you a bit more insecure about your masculinity.");
 				data.player.will -= 1;
 			}
 			if(data.player.dick > 7){
+				data.player.genitalsVal = 1;
 				writeSpecial("You have an abnormally large cock, which makes you feel more confident in your masculinity.");
 				data.player.will += 1;
 			}

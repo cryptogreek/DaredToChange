@@ -103,9 +103,9 @@ var oppBuildArray = [
 	{desc: "and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
 ];
 var playerBuildArray = [
+	{desc: "and you're probably pretty-average weight-wise.",},
 	{desc: "and you're just a little heavier than average.",},
 	{desc: "and you're just a bit more slim and light than average.",},
-	{desc: "and you're probably pretty-average weight-wise.",},
 	{desc: "and you're pretty muscular compared to most people.",},
 	{desc: "and you've got a bit more in the curves-department compared to most people.",},
 	{desc: "and you are practically an Adonis when it comes to your body and muscles.",},
@@ -181,10 +181,10 @@ var oppAssArray = [
 
 ];
 var playerAssArray = [
-	{desc: "When it comes to your ass, it's not like it's boney or anything, but you have to admit that it's fairly average.",},
-	{desc: "Then there's your ass, which has just enough body to it that you can understand why "+data.story[0].fName+" doesn't bother hiding the quick glances at your backside.",},
-	{desc: "And then, there's your ass. Thanks to the transformation, it's thick enough that you can feel it bounce when you move, and it's far more sensitive than you expected.",},
-	{desc: "And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
+	{desc: " When it comes to your ass, it's not like it's boney or anything, but you have to admit that it's fairly average.",},
+	{desc: " Then there's your ass, which has just enough body to it that you can understand why "+data.story[0].fName+" doesn't bother hiding the quick glances at your backside.",},
+	{desc: " And then, there's your ass. Thanks to the transformation, it's thick enough that you can feel it bounce when you move, and it's far more sensitive than you expected.",},
+	{desc: " And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
 ];
 
 var oppTailArray = [
@@ -225,15 +225,26 @@ var oppGenitalsArray = [
 	{desc: "You can see signs of a bulge at his crotch, though his pants are loose enough that that's all you can see.",},
 	{desc: "You can see clear signs of a rather large bulge at her crotch, though her pants are loose enough that you can't really make much else out.",},
 	{desc: "She has a pair of violet panties on, just sheer enough for you to see the shape of her pussy.",},
-	{desc: "His cock is hanging down between his legs, not quite fully erect but still at least "+data.story[0].dick+" inches long, and <i>very</i> thick.",},
-	{desc: "Her cock is hanging down between her legs, not quite fully erect but still at least "+data.story[0].dick+" inches long, and <i>very</i> thick.",},
+	{desc: "His cock is hanging down between his legs, not quite fully erect but still at least ",},
+	{desc: "Her cock is hanging down between her legs, not quite fully erect but still at least ",},
+];
+var oppGenitalsArray2 = [
+	{desc: ""},
+	{desc: "-inches long, and <i>very</i> thick."},
 ];
 var playerGenitalsArray = [
-	{desc: "You have a fairly average, "+data.player.dick+"-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
-	{desc: "You have a fat "+data.player.dick+"-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
-	{desc: "You have a short "+data.player.dick+"-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
-	{desc: "Your cock has shrunk down thanks to the transformation, now only "+data.player.dick+"-inches long. Despite that, it feels even <i>more</i> sensitive now than it did before...",},
-	{desc: "You have a tiny little sissy clitty, only "+data.player.dick+"-inches long. At this point, it doesn't even get hard, but the tip is always dribbling just a little bit of pre.",},
+	{desc: "You have a fairly average, ",},
+	{desc: "You have a fat, ",},
+	{desc: "You have a short ",},
+	{desc: "Your cock has shrunk down thanks to the transformation, now only ",},
+	{desc: "You have a tiny little sissy clitty, only ",},
+];
+var playerGenitalsArray2 = [
+	{desc: "-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
+	{desc: "-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
+	{desc: "-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
+	{desc: "-inches long. Despite that, it feels even <i>more</i> sensitive now than it did before...",},
+	{desc: "-inches long. At this point, it doesn't even get hard, but the tip is always dribbling just a little bit of pre.",},
 ];
 
 
@@ -378,9 +389,6 @@ function writeSpeech (name, img, text) {
 			cssColor = "#5d9e49";
 		img="scripts/gamefiles/profiles/"+name+data.story[0].sex+".jpg";
 	}
-	if(name == "dale"){
-		cssColor = "#5d9e49";
-	}
 	if (img == "") {
 		img = "scripts/gamefiles/profiles/"+name+".jpg";
 	}
@@ -391,27 +399,12 @@ function writeSpeech (name, img, text) {
 		name = "You";
 		img = "scripts/gamefiles/profiles/" + data.player.character + ".jpg";
 	}
-	if (name == "notes") {
-		name = "Research Notes";
-		img = "scripts/gamefiles/profiles/notes.png";
-	}
-	if (name == "gasF") {
-		name = data.player.fName;
-		img = "scripts/gamefiles/profiles/gasF.jpg";
-	}
-	if (name == "gasM") {
-		name = assistantF;
-		img = "scripts/gamefiles/profiles/gasM.jpg";
-	}
 	for (i = 0; i < data.story.length; i++) {
 		if (data.story[i].index == name) {
 			name = data.story[i].fName;
 			var lName = data.story[i].lName;
 			var tempIndex = i;
 		}
-	}
-	if (name == "Peta") {
-		name = "Mrs. " + lName;
 	}
 	if(name == "You"){
 		console.log("The player speech was generated.");
@@ -450,9 +443,6 @@ function writeTab(character, text) {
 			var lName = data.story[i].lName;
 		}
 	}
-	if (name == "Peta") {
-		name = "Mrs. " + lName;
-	}
 	document.getElementById('output').innerHTML +=`
 	<div class = "textBox">
 		<img class = "textThumb" src = "
@@ -466,89 +456,89 @@ function writeTab(character, text) {
 	`;
 }
 
-function writeArtifact (name) {
-	console.log("Now writing artifact tab id " + name);
-	var researchStatus = 0;
-	var researchTotal = 0;
-	var desc2 = "";
-	for (i = 0; i < artifactArray.length; i++) {
-		if (artifactArray[i].index == name) {
-			var jam = i;
-			var title = artifactArray[i].title;
-			var desc = artifactArray[i].desc;
-			var artifactResearchCheck = name + "Research1";
-			if (artifactArray[i].equipable == true) {
-				console.log("artifact is equippable");
-				if (galleryCheck(artifactResearchCheck) == true) {
-					console.log("artifact has been researched");
-					var equip = "Equip";
-					desc2 = artifactArray[jam].desc2;
-				}
-				else {
-					console.log("artifact has not been researched");
-					var equip = "";
-					desc2 = "";
-				}
-			}
-			else {
-				console.log("artifact is not equippable");
-				if (galleryCheck(artifactResearchCheck) == true) {
-					console.log("artifact has been researched");
-					desc2 = artifactArray[jam].desc2;
-				}
-				else {
-					console.log("artifact has not been researched");
-					desc2 = "";
-				}
-				var equip = "";
-			}
-		}
-	}
-	//console.log('now checking number of scenes');
-	for (i = 0; i < galleryArray.length; i++) {
-		if (galleryArray[i].index.includes(name)) {
-			researchTotal += 1;
-			if (galleryCheck(galleryArray[i].index) == true) {
-				researchStatus += 1;
-			}
-		}
-	}
-	console.log('Scenes found, current progress is ' + researchStatus + ' of ' + researchTotal);
-	//console.log('now determining appropriate research level');
-	if (equip != "") {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/`+ name +`.jpg">
-			<div class="textBoxContent">
-			<p class = "textName">`+ title + `</p>
-			<p>Research Status: `+researchStatus+` of `+researchTotal+` scenes unlocked</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('`+name+`Research')">Research</span>   
-				<span class = "choiceText" onclick = "equip('`+name+`')">`+equip+`</span>
-			</p>
-			<p>`+ desc + `</p>
-			<p>`+ desc2 + `</p>
-		</div>
-		<br>
-		`;
-	}
-	else {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/`+ name +`.jpg">
-			<div class="textBoxContent">
-			<p class = "textName">`+ title + `</p>
-			<p>Research Status: `+researchStatus+` of `+researchTotal+` scenes unlocked</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('`+name+`Research')">Research</span>
-			</p>
-			<p>`+ desc + `</p>
-			<p>`+ desc2 + `</p>
-		</div>
-		<br>
-		`;
-	}
-}
+// function writeArtifact (name) {
+// 	console.log("Now writing artifact tab id " + name);
+// 	var researchStatus = 0;
+// 	var researchTotal = 0;
+// 	var desc2 = "";
+// 	for (i = 0; i < artifactArray.length; i++) {
+// 		if (artifactArray[i].index == name) {
+// 			var jam = i;
+// 			var title = artifactArray[i].title;
+// 			var desc = artifactArray[i].desc;
+// 			var artifactResearchCheck = name + "Research1";
+// 			if (artifactArray[i].equipable == true) {
+// 				console.log("artifact is equippable");
+// 				if (galleryCheck(artifactResearchCheck) == true) {
+// 					console.log("artifact has been researched");
+// 					var equip = "Equip";
+// 					desc2 = artifactArray[jam].desc2;
+// 				}
+// 				else {
+// 					console.log("artifact has not been researched");
+// 					var equip = "";
+// 					desc2 = "";
+// 				}
+// 			}
+// 			else {
+// 				console.log("artifact is not equippable");
+// 				if (galleryCheck(artifactResearchCheck) == true) {
+// 					console.log("artifact has been researched");
+// 					desc2 = artifactArray[jam].desc2;
+// 				}
+// 				else {
+// 					console.log("artifact has not been researched");
+// 					desc2 = "";
+// 				}
+// 				var equip = "";
+// 			}
+// 		}
+// 	}
+// 	//console.log('now checking number of scenes');
+// 	for (i = 0; i < galleryArray.length; i++) {
+// 		if (galleryArray[i].index.includes(name)) {
+// 			researchTotal += 1;
+// 			if (galleryCheck(galleryArray[i].index) == true) {
+// 				researchStatus += 1;
+// 			}
+// 		}
+// 	}
+// 	console.log('Scenes found, current progress is ' + researchStatus + ' of ' + researchTotal);
+// 	//console.log('now determining appropriate research level');
+// 	if (equip != "") {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/`+ name +`.jpg">
+// 			<div class="textBoxContent">
+// 			<p class = "textName">`+ title + `</p>
+// 			<p>Research Status: `+researchStatus+` of `+researchTotal+` scenes unlocked</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('`+name+`Research')">Research</span>   
+// 				<span class = "choiceText" onclick = "equip('`+name+`')">`+equip+`</span>
+// 			</p>
+// 			<p>`+ desc + `</p>
+// 			<p>`+ desc2 + `</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	else {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/`+ name +`.jpg">
+// 			<div class="textBoxContent">
+// 			<p class = "textName">`+ title + `</p>
+// 			<p>Research Status: `+researchStatus+` of `+researchTotal+` scenes unlocked</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('`+name+`Research')">Research</span>
+// 			</p>
+// 			<p>`+ desc + `</p>
+// 			<p>`+ desc2 + `</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// }
 
 function writeBig (img, cap) {
 	if (imagesDisabled != true) {
@@ -625,66 +615,66 @@ function writePorn() {
 	}
 }
 
-function dreamCheck() {
-	var event = false;
-	var dreamChecker = data.player.artifact1 + "Dream" + "1";
-	for (i = 0; i < galleryArray.length; i++) {
-		if (dreamChecker == galleryArray[i].index) {
-			if (galleryCheck(dreamChecker)==false) {
-				event = dreamChecker;
-			}
-		}
-	}
-	dreamChecker = data.player.artifact2 + "Dream" + "2";
-	for (i = 0; i < galleryArray.length; i++) {
-		if (dreamChecker == galleryArray[i].index) {
-			if (galleryCheck(dreamChecker)==false) {
-				event = dreamChecker;
-			}
-		}
-	}
-	dreamChecker = data.player.artifact2 + "Dream" + "1";
-	for (i = 0; i < galleryArray.length; i++) {
-		if (dreamChecker == galleryArray[i].index) {
-			if (galleryCheck(dreamChecker)==false) {
-				event = dreamChecker;
-			}
-		}
-	}
-	switch (data.player.day) {
-		case 0:
-			event = 'dream0'; 
-		break;
-		case 1: 
-			event = 'dream1';
-		break;
-	}
-	tempScene = 'room';
-	console.log('Final dream check result is ' + event);
-	return event;
-}
+// function dreamCheck() {
+// 	var event = false;
+// 	var dreamChecker = data.player.artifact1 + "Dream" + "1";
+// 	for (i = 0; i < galleryArray.length; i++) {
+// 		if (dreamChecker == galleryArray[i].index) {
+// 			if (galleryCheck(dreamChecker)==false) {
+// 				event = dreamChecker;
+// 			}
+// 		}
+// 	}
+// 	dreamChecker = data.player.artifact2 + "Dream" + "2";
+// 	for (i = 0; i < galleryArray.length; i++) {
+// 		if (dreamChecker == galleryArray[i].index) {
+// 			if (galleryCheck(dreamChecker)==false) {
+// 				event = dreamChecker;
+// 			}
+// 		}
+// 	}
+// 	dreamChecker = data.player.artifact2 + "Dream" + "1";
+// 	for (i = 0; i < galleryArray.length; i++) {
+// 		if (dreamChecker == galleryArray[i].index) {
+// 			if (galleryCheck(dreamChecker)==false) {
+// 				event = dreamChecker;
+// 			}
+// 		}
+// 	}
+// 	switch (data.player.day) {
+// 		case 0:
+// 			event = 'dream0'; 
+// 		break;
+// 		case 1: 
+// 			event = 'dream1';
+// 		break;
+// 	}
+// 	tempScene = 'room';
+// 	console.log('Final dream check result is ' + event);
+// 	return event;
+// }
 
-function researchLevel(name) {
-	var artifactResearchName = name + 'Research';
-	var failed = true;
-	var sceneTarget = name + 'Failed';
-	for (i = 0; i < galleryArray.length; i++) {
-		if (galleryArray[i].index.includes(artifactResearchName)) {
-			if (galleryCheck(galleryArray[i].index) != true) {
-				failed = false;
-				sceneTarget = galleryArray[i].index;
-				break;
-			}
-		}
-	}
-	console.log('research level is ' + sceneTarget);
-	if (failed == false) {
-		writeEvent(sceneTarget);
-	}
-	else {
-		sceneTransition(sceneTarget);
-	}
-}
+// function researchLevel(name) {
+// 	var artifactResearchName = name + 'Research';
+// 	var failed = true;
+// 	var sceneTarget = name + 'Failed';
+// 	for (i = 0; i < galleryArray.length; i++) {
+// 		if (galleryArray[i].index.includes(artifactResearchName)) {
+// 			if (galleryCheck(galleryArray[i].index) != true) {
+// 				failed = false;
+// 				sceneTarget = galleryArray[i].index;
+// 				break;
+// 			}
+// 		}
+// 	}
+// 	console.log('research level is ' + sceneTarget);
+// 	if (failed == false) {
+// 		writeEvent(sceneTarget);
+// 	}
+// 	else {
+// 		sceneTransition(sceneTarget);
+// 	}
+// }
 
 function replaceCodenames(text) {
 	var codenameCheck = "";
@@ -733,45 +723,45 @@ function flashy() {
 	document.getElementById('playerMoney').style.color = (document.getElementById('playerMoney').style.color == 'green' ? 'white' : 'green');
 }
 
-function renameEveryone() {
-	for (i = 0; i < data.story.length; i++) {
-		var sheet = 'nameSubmission' + i + '1';
-		data.story[i].fName = document.getElementById(sheet).value;
-		var sheet = 'nameSubmission' + i + '2';
-		data.story[i].lName = document.getElementById(sheet).value;
-	}
-	sceneTransition("room");
-}
+// function renameEveryone() {
+// 	for (i = 0; i < data.story.length; i++) {
+// 		var sheet = 'nameSubmission' + i + '1';
+// 		data.story[i].fName = document.getElementById(sheet).value;
+// 		var sheet = 'nameSubmission' + i + '2';
+// 		data.story[i].lName = document.getElementById(sheet).value;
+// 	}
+// 	sceneTransition("room");
+// }
 
 function renamePlayer() {
 	data.player.fName = document.getElementById('nameSubmission').value;
 	data.player.lName = document.getElementById('lastSubmission').value;
 	data.player.age = document.getElementById('ageSubmission').value;
-	data.player.dick = document.getElementById('dickSubmission').value;
+	data.player.dick = parseInt(document.getElementById('dickSubmission').value,10);
 	sceneTransition("prologue2");
 }
 
-function equip(n) {
-	data.player.artifact2 = n;
-	updateMenu();
-	document.getElementById('output').innerHTML = '';
-	for (i = 0; i < artifactArray.length; i++) {
-		if (artifactArray[i].index == n) {
-			var title = artifactArray[i].title;
-		}
-	}
-	writeText("You've equipped the " + title);
-	writeTransition(data.player.currentScene, "Go back");
-}
+// function equip(n) {
+// 	data.player.artifact2 = n;
+// 	updateMenu();
+// 	document.getElementById('output').innerHTML = '';
+// 	for (i = 0; i < artifactArray.length; i++) {
+// 		if (artifactArray[i].index == n) {
+// 			var title = artifactArray[i].title;
+// 		}
+// 	}
+// 	writeText("You've equipped the " + title);
+// 	writeTransition(data.player.currentScene, "Go back");
+// }
 
-function checkArtifact(n) {
-	if (n == data.player.artifact1 || n == data.player.artifact2) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
+// function checkArtifact(n) {
+// 	if (n == data.player.artifact1 || n == data.player.artifact2) {
+// 		return true;
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// }
 
 //Saving
 function saveSlot(slot) {
@@ -872,107 +862,107 @@ function unlockScene(n) {
 	}
 }
 
-function generateGalleryNav() {
-	for (i = 0; i < artifactArray.length; i++) {
-		if (artifactArray[i].dark == false) {
-			document.getElementById('output').innerHTML += `
-				<div class = "textBox" onclick="generateArtifactPage('` + artifactArray[i].index + `')" >
-					<img class = "textThumb" src = "scripts/gamefiles/items/`+ artifactArray[i].index +`.jpg">
-					<br>
-					<span class = "choiceText" onclick="generateArtifactPage('` + artifactArray[i].index + `')">`+artifactArray[i].title +`</span>
-				</div>
-				<br>
-			`;
-		}
-	}
-	for (i = 0; i < data.story.length; i++) {
-		if (data.story[i].met == true) {
-			document.getElementById('output').innerHTML += `
-			<div class = "textBox" onclick="generateGirlPage('` + data.story[i].index + `')" >
-				<img class = "textThumb" src = "scripts/gamefiles/profiles/`+ data.story[i].index +`.jpg">
-				<br>
-				<span class = "choiceText" onclick="generateGirlPage('` + data.story[i].index + `')">`+data.story[i].fName + ` ` + data.story[i].lName +`</span>
-			</div>
-			<br>
-			`;
-		}
-	}
-	document.getElementById('output').innerHTML += `
-		<div class = "textBox" onclick="generateSwallowsPage()" >
-			<img class = "textThumb" src = "scripts/gamefiles/profiles/swallows.png">
-			<br>
-			<span class = "choiceText" onclick="generateSwallowsPage()">Scenes written by Swallows999</span>
-		</div>
-		<br>
-	`;
-	writeFunction("generateDarkGalleryNav()", "View the dark vault gallery");
-}
+// function generateGalleryNav() {
+// 	for (i = 0; i < artifactArray.length; i++) {
+// 		if (artifactArray[i].dark == false) {
+// 			document.getElementById('output').innerHTML += `
+// 				<div class = "textBox" onclick="generateArtifactPage('` + artifactArray[i].index + `')" >
+// 					<img class = "textThumb" src = "scripts/gamefiles/items/`+ artifactArray[i].index +`.jpg">
+// 					<br>
+// 					<span class = "choiceText" onclick="generateArtifactPage('` + artifactArray[i].index + `')">`+artifactArray[i].title +`</span>
+// 				</div>
+// 				<br>
+// 			`;
+// 		}
+// 	}
+// 	for (i = 0; i < data.story.length; i++) {
+// 		if (data.story[i].met == true) {
+// 			document.getElementById('output').innerHTML += `
+// 			<div class = "textBox" onclick="generateGirlPage('` + data.story[i].index + `')" >
+// 				<img class = "textThumb" src = "scripts/gamefiles/profiles/`+ data.story[i].index +`.jpg">
+// 				<br>
+// 				<span class = "choiceText" onclick="generateGirlPage('` + data.story[i].index + `')">`+data.story[i].fName + ` ` + data.story[i].lName +`</span>
+// 			</div>
+// 			<br>
+// 			`;
+// 		}
+// 	}
+// 	document.getElementById('output').innerHTML += `
+// 		<div class = "textBox" onclick="generateSwallowsPage()" >
+// 			<img class = "textThumb" src = "scripts/gamefiles/profiles/swallows.png">
+// 			<br>
+// 			<span class = "choiceText" onclick="generateSwallowsPage()">Scenes written by Swallows999</span>
+// 		</div>
+// 		<br>
+// 	`;
+// 	writeFunction("generateDarkGalleryNav()", "View the dark vault gallery");
+// }
 
-function generateDarkGalleryNav() {
-	document.getElementById('output').innerHTML = '';
-	for (i = 0; i < artifactArray.length; i++) {
-		if (artifactArray[i].dark == true) {
-			document.getElementById('output').innerHTML += `
-				<div class = "textBox" onclick="generateArtifactPage('` + artifactArray[i].index + `')" >
-					<img class = "textThumb" src = "scripts/gamefiles/items/`+ artifactArray[i].index +`.jpg">
-					<br>
-					<span class = "choiceText" onclick="generateArtifactPage('` + artifactArray[i].index + `')">`+artifactArray[i].title +`</span>
-				</div>
-				<br>
-			`;
-		}
-	}
-	writeTransition("gallery", "Go back");
-}
+// function generateDarkGalleryNav() {
+// 	document.getElementById('output').innerHTML = '';
+// 	for (i = 0; i < artifactArray.length; i++) {
+// 		if (artifactArray[i].dark == true) {
+// 			document.getElementById('output').innerHTML += `
+// 				<div class = "textBox" onclick="generateArtifactPage('` + artifactArray[i].index + `')" >
+// 					<img class = "textThumb" src = "scripts/gamefiles/items/`+ artifactArray[i].index +`.jpg">
+// 					<br>
+// 					<span class = "choiceText" onclick="generateArtifactPage('` + artifactArray[i].index + `')">`+artifactArray[i].title +`</span>
+// 				</div>
+// 				<br>
+// 			`;
+// 		}
+// 	}
+// 	writeTransition("gallery", "Go back");
+// }
 
-function generateArtifactPage(n) {
-	document.getElementById('output').innerHTML = '';
-	writeBig("scripts/gamefiles/items/"+n+".jpg");
-	console.log('checking for ' + n);
-	for (i = 0; i < galleryArray.length; i++) {
-		//console.log(galleryArray[i].index);
-		//console.log(i);
-		if (galleryArray[i].index.includes(n)) {
-			console.log('event found, unlock status is ' + galleryCheck(galleryArray[i]));
-			if (galleryCheck(galleryArray[i].index) == true) {
-				writeFunction ("writeEvent('"+galleryArray[i].index+"')", galleryArray[i].name)
-			}
-		}
-	}
-	writeTransition(data.player.currentScene, "Go back");
-}
+// function generateArtifactPage(n) {
+// 	document.getElementById('output').innerHTML = '';
+// 	writeBig("scripts/gamefiles/items/"+n+".jpg");
+// 	console.log('checking for ' + n);
+// 	for (i = 0; i < galleryArray.length; i++) {
+// 		//console.log(galleryArray[i].index);
+// 		//console.log(i);
+// 		if (galleryArray[i].index.includes(n)) {
+// 			console.log('event found, unlock status is ' + galleryCheck(galleryArray[i]));
+// 			if (galleryCheck(galleryArray[i].index) == true) {
+// 				writeFunction ("writeEvent('"+galleryArray[i].index+"')", galleryArray[i].name)
+// 			}
+// 		}
+// 	}
+// 	writeTransition(data.player.currentScene, "Go back");
+// }
 
-function generateSwallowsPage() {
-	document.getElementById('output').innerHTML = '';
-	writeBig("scripts/gamefiles/profiles/swallows.png");
-	for (i = 0; i < data.gallery.length; i++) {
-		if (data.gallery[i].girl.includes('swallows')) {
-			writeFunction ("writeEvent('"+data.gallery[i].index+"')", data.gallery[i].name)
-		}
-	}
-	writeTransition(data.player.currentScene, "Go back");
-}
+// function generateSwallowsPage() {
+// 	document.getElementById('output').innerHTML = '';
+// 	writeBig("scripts/gamefiles/profiles/swallows.png");
+// 	for (i = 0; i < data.gallery.length; i++) {
+// 		if (data.gallery[i].girl.includes('swallows')) {
+// 			writeFunction ("writeEvent('"+data.gallery[i].index+"')", data.gallery[i].name)
+// 		}
+// 	}
+// 	writeTransition(data.player.currentScene, "Go back");
+// }
 
-function generateGirlPage(n) {
-	document.getElementById('output').innerHTML = '';
-	writeBig("scripts/gamefiles/characters/"+ n +".jpg");
-	for (i = 0; i < data.gallery.length; i++) {
-		if (data.gallery[i].girl.includes(n)) {
-			writeFunction ("writeEvent('"+data.gallery[i].index+"')", data.gallery[i].name)
-		}
-	}
-	writeTransition(data.player.currentScene, "Go back");
-}
+// function generateGirlPage(n) {
+// 	document.getElementById('output').innerHTML = '';
+// 	writeBig("scripts/gamefiles/characters/"+ n +".jpg");
+// 	for (i = 0; i < data.gallery.length; i++) {
+// 		if (data.gallery[i].girl.includes(n)) {
+// 			writeFunction ("writeEvent('"+data.gallery[i].index+"')", data.gallery[i].name)
+// 		}
+// 	}
+// 	writeTransition(data.player.currentScene, "Go back");
+// }
 
-function galleryCheck(n) {
-	for (x = 0; x < data.gallery.length; x++) {
-		if (data.gallery[x].index.includes(n)) {
-			return true;
-			break;
-		}
-	}
-	return false;
-}
+// function galleryCheck(n) {
+// 	for (x = 0; x < data.gallery.length; x++) {
+// 		if (data.gallery[x].index.includes(n)) {
+// 			return true;
+// 			break;
+// 		}
+// 	}
+// 	return false;
+// }
 
 //Logbook
 function openLogFor(n) {
@@ -1009,7 +999,7 @@ function switchDesc(n) {
 			<p class = "selfDesc">`+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
 			<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
 			<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
-			<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+`</p>
+			<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+data.story[0].dick+oppGenitalsArray[data.story[0].genitalsVal2].desc`</p>
 		</div
 		`;
 	}
@@ -1036,7 +1026,7 @@ function switchDesc(n) {
 			<p class = "selfDesc">`+playerHeightArray[data.player.heightVal].desc+playerBuildArray[data.player.buildVal].desc+playerClothesArray[data.player.clothesVal].desc+`</p>
 			<p class = "selfDesc">`+playerHairArray[data.player.hairVal].desc+playerEarsArray[data.player.earsVal].desc+`</p>
 			<p class = "selfDesc">`+playerLegsArray[data.player.legsVal].desc+playerAssArray[data.player.assVal].desc+playerTailArray[data.player.tailVal].desc+`</p>
-			<p class = "selfDesc">`+playerChestArray[data.player.chestVal].desc+playerGenitalsArray[data.player.genitalsVal].desc+`</p>
+			<p class = "selfDesc">`+playerChestArray[data.player.chestVal].desc+playerGenitalsArray[data.player.genitalsVal].desc+data.player.dick+playerGenitalsArray2[data.player.genitalsVal].desc+`</p>
 		</div>
 		`;
 	}
@@ -1057,383 +1047,383 @@ function generateLogbookGallery(n) {
 }
 
 //Cheating
-function cheat() {
-	//If you're reading this, then please link to my patreon post instead of posting the cheats. The release post of v2 already has a list of cheat codes, and is visible to non-patrons
-	var goof = document.getElementById('cheatSubmission').value;
-	goof = goof.toLowerCase();
-	var goofMessage = "Code does not exist";
-	console.log("Testing cheat code " + goof);
-	switch (goof) {
-		case "swallows999": {
-			goofMessage = "Welcome, Swallows."
-			if (checkBody("swallows") != true) {
-				var goof = {index: "swallows", name: "Anomaly Vault's Sponsor",};
-				data.bodytypes.push(goof);
-				var target = data.bodytypes.length - 1;
-				changeBody(target);
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "new name": {
-			data.player.currentScene = "renamingRoom";
-			goofMessage = ""
-			break;
-		}
-		case "scp": {
-			if (data.player.color.includes('scp') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'scp';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "securecontainprotect": {
-			if (data.player.color.includes('scp') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'scp';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "secure contain protect": {
-			if (data.player.color.includes('scp') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'scp';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "lobotomy": {
-			if (data.player.color.includes('lobotomy') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'lobotomy';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "lobotomycorp": {
-			if (data.player.color.includes('lobotomy') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'lobotomy';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "lobotomy corporation": {
-			if (data.player.color.includes('lobotomy') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'lobotomy';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "umbrella": {
-			if (data.player.color.includes('umbrella') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'umbrella';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "resident evil": {
-			if (data.player.color.includes('umbrella') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'umbrella';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "silent hill": {
-			if (data.player.color.includes('silent') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'silent';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "warehouse13": {
-			if (data.player.color.includes('warehouse') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'warehouse';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "warehouse 13": {
-			if (data.player.color.includes('warehouse') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'warehouse';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "fringe": {
-			if (data.player.color.includes('fringe') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'fringe';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "ethics": {
-			if (data.player.color.includes('ethics') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'ethics';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "welcome to ethics": {
-			if (data.player.color.includes('ethics') == false) {
-				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
-				data.player.color += 'ethics';
-			}
-			else {
-				goofMessage = "You've already used this code."
-			}
-			break;
-		}
-		case "noodlemaster": {
-			for (x = 0; x < galleryArray.length; x++) {
-				if (galleryCheck(galleryArray[x].index)== false) {
-					unlockScene(galleryArray[x].index);
-				}
-			}
-			goofMessage = "Master code accepted. All scenes unlocked."
-			break;
-		}
-		case "haa": {
-			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
-			break;
-		}
-		case "human alteration app": {
-			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
-			break;
-		}
-		case "rainy dayz": {
-			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
-			break;
-		}
-		case "princess quest": {
-			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
-			break;
-		}
-		case "bitch medicenter": {
-			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
-			break;
-		}
-		case "hentai university": {
-			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
-			break;
-		}
-	}
-	sceneTransition(data.player.currentScene);
-	writeText(goofMessage);
-}
+// function cheat() {
+// 	//If you're reading this, then please link to my patreon post instead of posting the cheats. The release post of v2 already has a list of cheat codes, and is visible to non-patrons
+// 	var goof = document.getElementById('cheatSubmission').value;
+// 	goof = goof.toLowerCase();
+// 	var goofMessage = "Code does not exist";
+// 	console.log("Testing cheat code " + goof);
+// 	switch (goof) {
+// 		case "swallows999": {
+// 			goofMessage = "Welcome, Swallows."
+// 			if (checkBody("swallows") != true) {
+// 				var goof = {index: "swallows", name: "Anomaly Vault's Sponsor",};
+// 				data.bodytypes.push(goof);
+// 				var target = data.bodytypes.length - 1;
+// 				changeBody(target);
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "new name": {
+// 			data.player.currentScene = "renamingRoom";
+// 			goofMessage = ""
+// 			break;
+// 		}
+// 		case "scp": {
+// 			if (data.player.color.includes('scp') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'scp';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "securecontainprotect": {
+// 			if (data.player.color.includes('scp') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'scp';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "secure contain protect": {
+// 			if (data.player.color.includes('scp') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'scp';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "lobotomy": {
+// 			if (data.player.color.includes('lobotomy') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'lobotomy';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "lobotomycorp": {
+// 			if (data.player.color.includes('lobotomy') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'lobotomy';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "lobotomy corporation": {
+// 			if (data.player.color.includes('lobotomy') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'lobotomy';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "umbrella": {
+// 			if (data.player.color.includes('umbrella') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'umbrella';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "resident evil": {
+// 			if (data.player.color.includes('umbrella') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'umbrella';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "silent hill": {
+// 			if (data.player.color.includes('silent') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'silent';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "warehouse13": {
+// 			if (data.player.color.includes('warehouse') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'warehouse';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "warehouse 13": {
+// 			if (data.player.color.includes('warehouse') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'warehouse';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "fringe": {
+// 			if (data.player.color.includes('fringe') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'fringe';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "ethics": {
+// 			if (data.player.color.includes('ethics') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'ethics';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "welcome to ethics": {
+// 			if (data.player.color.includes('ethics') == false) {
+// 				goofMessage = "Code accepted. Forbidden artifact unlocked in the dark vault."
+// 				data.player.color += 'ethics';
+// 			}
+// 			else {
+// 				goofMessage = "You've already used this code."
+// 			}
+// 			break;
+// 		}
+// 		case "noodlemaster": {
+// 			for (x = 0; x < galleryArray.length; x++) {
+// 				if (galleryCheck(galleryArray[x].index)== false) {
+// 					unlockScene(galleryArray[x].index);
+// 				}
+// 			}
+// 			goofMessage = "Master code accepted. All scenes unlocked."
+// 			break;
+// 		}
+// 		case "haa": {
+// 			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
+// 			break;
+// 		}
+// 		case "human alteration app": {
+// 			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
+// 			break;
+// 		}
+// 		case "rainy dayz": {
+// 			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
+// 			break;
+// 		}
+// 		case "princess quest": {
+// 			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
+// 			break;
+// 		}
+// 		case "bitch medicenter": {
+// 			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
+// 			break;
+// 		}
+// 		case "hentai university": {
+// 			goofMessage = "Sorry. Nothing's here right now. Please keep this code in mind for later though."
+// 			break;
+// 		}
+// 	}
+// 	sceneTransition(data.player.currentScene);
+// 	writeText(goofMessage);
+// }
 
-function listCheats() {
-	if (data.player.color.includes('scp') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/doctor.jpg">
-			<p class = "textName">'Plague' Doctor</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('doctorResearch')">Research</span>   
-			</p>
-			<p class = "textName">A mysterious woman dressed in a skimpy version of a medieval plague doctor's uniform. Very dangerous.</p>
-		</div>
-		<br>
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/talisman.jpg">
-			<p class = "textName">Talisman</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('talismanResearch')">Research</span>
-			</p>
-			<p class = "textName">A possessed talisman. There's a sticky note on it saying 'DO NOT TOUCH'</p>
-		</div>
-		<br>
-		`;
-	}
-	if (data.player.color.includes('lobotomy') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/magical.jpg">
-			<p class = "textName">Magical Girl</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('magicalResearch')">Research</span>
-			</p>
-			<p class = "textName">A woman proclaiming herself to be a champion of justice. You're pretty sure she was fished up from a river somewhere.</p>
-		</div>
-		<br>
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/blue.jpg">
-			<p class = "textName">Blue Star</p>
-			<p class = "textName">Blue Star</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('blueResearch')">Blue Star</span>
-			</p>
-			<p class = "textName">Blue Star</p>
-		</div>
-		<br>
-		`;
-	}
-	if (data.player.color.includes('warehouse') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/kettle.jpg">
-			<p class = "textName">Wish-granting Kettle</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('kettleResearch')">Research</span>
-			</p>
-			<p class = "textName">A rusty old kettle. It showed some promise at one point, but it's creators clearly had the wrong focus and it just isn't as shiny as everything else.</p>
-		</div>
-		<br>
-		`;
-	}
-	if (data.player.color.includes('fringe') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/fringe.jpg">
-			<p class = "textName">Ultra Top Secret Room</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('fringeResearch')">Research</span>
-			</p>
-			<p class = "textName">A super locked room, you aren't allowed to go in here. The end of the door's paint job is much, much more lazily done than the rest.</p>
-		</div>
-		<br>
-		`;
-	}
-	if (data.player.color.includes('umbrella') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/umbrella.jpg">
-			<p class = "textName">Zombie Virus</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('umbrellaResearch')">Research</span>
-			</p>
-			<p class = "textName">A vial containing a zombification virus. Hopefully it makes hot zombies, not gross ones.</p>
-		</div>
-		<br>
-		`;
-	}
-	if (data.player.color.includes('silent') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/silent.jpg">
-			<p class = "textName">Nurse's Room</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('silentResearch')">Research</span>
-			</p>
-			<p class = "textName">A room full of strange creatures, which probably symbolize a really deep message about sexuality or something.</p>
-		</div>
-		<br>
-		`;
-	}
-	if (data.player.color.includes('ethics') == true) {
-		document.getElementById('output').innerHTML +=`
-		<div class = "textBox">
-			<img class = "textThumb" src = "scripts/gamefiles/items/ethics.jpg">
-			<p class = "textName">Ethics Rock</p>
-			<p class = "textName">Research Status: N/A</p>
-			<p>
-				<span class = "choiceText" onclick = "sceneTransition('ethicsResearch')">Research</span>
-			</p>
-			<p class = "textName">A rock that dispenses lines of  ethical ramblings. It's a rock though, so it probably doesn't know what its talking about.</p>
-		</div>
-		<br>
-		`;
-	}
-}
+// function listCheats() {
+// 	if (data.player.color.includes('scp') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/doctor.jpg">
+// 			<p class = "textName">'Plague' Doctor</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('doctorResearch')">Research</span>   
+// 			</p>
+// 			<p class = "textName">A mysterious woman dressed in a skimpy version of a medieval plague doctor's uniform. Very dangerous.</p>
+// 		</div>
+// 		<br>
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/talisman.jpg">
+// 			<p class = "textName">Talisman</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('talismanResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A possessed talisman. There's a sticky note on it saying 'DO NOT TOUCH'</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	if (data.player.color.includes('lobotomy') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/magical.jpg">
+// 			<p class = "textName">Magical Girl</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('magicalResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A woman proclaiming herself to be a champion of justice. You're pretty sure she was fished up from a river somewhere.</p>
+// 		</div>
+// 		<br>
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/blue.jpg">
+// 			<p class = "textName">Blue Star</p>
+// 			<p class = "textName">Blue Star</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('blueResearch')">Blue Star</span>
+// 			</p>
+// 			<p class = "textName">Blue Star</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	if (data.player.color.includes('warehouse') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/kettle.jpg">
+// 			<p class = "textName">Wish-granting Kettle</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('kettleResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A rusty old kettle. It showed some promise at one point, but it's creators clearly had the wrong focus and it just isn't as shiny as everything else.</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	if (data.player.color.includes('fringe') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/fringe.jpg">
+// 			<p class = "textName">Ultra Top Secret Room</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('fringeResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A super locked room, you aren't allowed to go in here. The end of the door's paint job is much, much more lazily done than the rest.</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	if (data.player.color.includes('umbrella') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/umbrella.jpg">
+// 			<p class = "textName">Zombie Virus</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('umbrellaResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A vial containing a zombification virus. Hopefully it makes hot zombies, not gross ones.</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	if (data.player.color.includes('silent') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/silent.jpg">
+// 			<p class = "textName">Nurse's Room</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('silentResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A room full of strange creatures, which probably symbolize a really deep message about sexuality or something.</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// 	if (data.player.color.includes('ethics') == true) {
+// 		document.getElementById('output').innerHTML +=`
+// 		<div class = "textBox">
+// 			<img class = "textThumb" src = "scripts/gamefiles/items/ethics.jpg">
+// 			<p class = "textName">Ethics Rock</p>
+// 			<p class = "textName">Research Status: N/A</p>
+// 			<p>
+// 				<span class = "choiceText" onclick = "sceneTransition('ethicsResearch')">Research</span>
+// 			</p>
+// 			<p class = "textName">A rock that dispenses lines of  ethical ramblings. It's a rock though, so it probably doesn't know what its talking about.</p>
+// 		</div>
+// 		<br>
+// 		`;
+// 	}
+// }
 
-function kettleWish() {
-	var goof = document.getElementById('kettleSubmission').value;
-	sceneTransition(data.player.currentScene);
-	if (goof == "ferret" || goof == "ferrets") {
-		kettleCounter +=2;
-		writeText("A good wish! For this, you get two ferrets. You have "+kettleCounter+" ferrets.");
-	}
-	else {
-		kettleCounter +=1;
-		writeText("Suddenly, out of nowhere, a ferret is here. You have "+kettleCounter+" ferret(s).");
-	}
-	switch (kettleCounter) {
-		case 5:
-			writeText("You have a dazzle of ferrets now, they're very cute.");
-		break;
-		case 7:
-			writeText("You might be making too many ferrets. Maybe try wishing for something else?");
-		break;
-		case 9:
-			writeText("Soon you will have too many ferrets.");
-		break;
-		case 10:
-			writeText("You feel like if you keep making ferrets, nothing but ferrets will exist.");
-		break;
-		case 12:
-			writeText("The kettle rumbles a little this time, as if saying 'If this many ferrets do not satisfy you, no wish will.'");
-		break;
-		case 13:
-			writeText("The ferret making will continue forever. When you are satisfied, please scream the number to the heavens.");
-		break;
-	}
-}
+// function kettleWish() {
+// 	var goof = document.getElementById('kettleSubmission').value;
+// 	sceneTransition(data.player.currentScene);
+// 	if (goof == "ferret" || goof == "ferrets") {
+// 		kettleCounter +=2;
+// 		writeText("A good wish! For this, you get two ferrets. You have "+kettleCounter+" ferrets.");
+// 	}
+// 	else {
+// 		kettleCounter +=1;
+// 		writeText("Suddenly, out of nowhere, a ferret is here. You have "+kettleCounter+" ferret(s).");
+// 	}
+// 	switch (kettleCounter) {
+// 		case 5:
+// 			writeText("You have a dazzle of ferrets now, they're very cute.");
+// 		break;
+// 		case 7:
+// 			writeText("You might be making too many ferrets. Maybe try wishing for something else?");
+// 		break;
+// 		case 9:
+// 			writeText("Soon you will have too many ferrets.");
+// 		break;
+// 		case 10:
+// 			writeText("You feel like if you keep making ferrets, nothing but ferrets will exist.");
+// 		break;
+// 		case 12:
+// 			writeText("The kettle rumbles a little this time, as if saying 'If this many ferrets do not satisfy you, no wish will.'");
+// 		break;
+// 		case 13:
+// 			writeText("The ferret making will continue forever. When you are satisfied, please scream the number to the heavens.");
+// 		break;
+// 	}
+// }
 
-function writeWardrobe() {
-	for (i = 0; i < data.bodytypes.length; i++) {
-		writeMed("scripts/gamefiles/characters/"+data.bodytypes[i].index+".jpg", data.bodytypes[i].artist);
-		writeFunction("changeBody('"+i+"')", data.bodytypes[i].name);
-	}
-}
+// function writeWardrobe() {
+// 	for (i = 0; i < data.bodytypes.length; i++) {
+// 		writeMed("scripts/gamefiles/characters/"+data.bodytypes[i].index+".jpg", data.bodytypes[i].artist);
+// 		writeFunction("changeBody('"+i+"')", data.bodytypes[i].name);
+// 	}
+// }
 
-function checkBody(n) {
-	console.log("Now checking for bodytype " + n);
-	for (i = 0; i < data.bodytypes.length; i++) {
-		if (data.bodytypes[i].index.includes(n)) {
-			return true;
-			break;
-		}
-	}
-	return false;
-}
+// function checkBody(n) {
+// 	console.log("Now checking for bodytype " + n);
+// 	for (i = 0; i < data.bodytypes.length; i++) {
+// 		if (data.bodytypes[i].index.includes(n)) {
+// 			return true;
+// 			break;
+// 		}
+// 	}
+// 	return false;
+// }
 
-function changeBody(n) {
-	data.player.character = data.bodytypes[n].index;
-	data.player.characterArtist = data.bodytypes[n].artist;
-	updateMenu();
-}
+// function changeBody(n) {
+// 	data.player.character = data.bodytypes[n].index;
+// 	data.player.characterArtist = data.bodytypes[n].artist;
+// 	updateMenu();
+// }
