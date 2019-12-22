@@ -43,7 +43,7 @@ var data = {
 		//{index: "opp", image: "", met: false, fName: "Kieran", lName: "Lentis", desc:"Your opponent in tonight's game of Dare to Change.", color:"#6f0087", willpower:5,},
 		//{index: "meg", image: "", met: false, fName: "Megan", lName: "Howzer", desc:"An old friend that you have Game Night with. She seems to be wearing more provacative clothing tonight.", color:"#6f0087", willpower:5,},
 		//{index: "dale", image: "", met: false, fName: "Dale", lName: "Tigrid", desc:"A guy that Meg seems to know. You don't know much else about him.", color:"#5d9e49", willpower:5,},
-		willpower:5,
+		will:5,
 		sex:"M",
 		height:65,
 		heightVal:0,
@@ -59,10 +59,10 @@ var data = {
 		dick:6,
 		},
 	],
-	flags: [
-	],
-	gallery: [
-	],
+	// flags: [
+	// ],
+	// gallery: [
+	// ],
 }
 
 var galleryArray = [
@@ -93,8 +93,8 @@ var playerHeightArray = [
 ];
 
 var oppBuildArray = [
-	{desc: "and he's pretty well-built, with his toned muscles looking pretty obvious from where you're looking.",},
-	{desc: "and she's pretty well-built, with her toned muscles looking pretty obvious from where you're looking.",},
+	{desc: "and he's pretty well-built, with his toned muscles seeming fairly obvious from where you're looking.",},
+	{desc: "and she's pretty well-built, with her toned muscles seeming fairly obvious from where you're looking.",},
 	{desc: "and he's looking fairly curvy now, thanks to the effects of the transformation.",},
 	{desc: "and she's looking fairly curvy now, thanks to the effects of the transformation.",},
 	{desc: "and he's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
