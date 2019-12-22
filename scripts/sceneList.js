@@ -21,11 +21,10 @@ function writeScene(scene) {
 		}
 		case "test" : {
 			writeSpeech("player","","Some test dialogue. The player is currently a man.");
-			document.getElementById('output').innerHTML += `<p class='rawText'>` + playerHeightArray[0].desc + `</p>`;
+			writeText(""+playerHeightArray[0].desc);
 			writeSpeech("opp","","And I'm oppF! It rhymes with peg!");
 			data.player.character = "pink";
 			writeSpeech("player","","And now, I should be a woman and/or sissy!");
-			logbookArray[0].desc = meganDescArray[5].desc;
 			updateMenu();
 			break;
 		}
@@ -35,19 +34,19 @@ function writeScene(scene) {
 			break;
 		}
 		case "demo": {
-			writeText("So that's all I've got for now. You should have a decent idea of the game's structure at this point. With the engine good to go each actual release would include 8-10 scenes, probably introducing two new artifacts with each version.");
-			writeText("I'd be splitting my focus between this and other projects, but I think I could reliably get a new release for this game out every month.");
-			writeText("Between work research, home use, and dream sequences there are quite a few directions to take each artifact. One thing you could do is let me know directly what you'd do with the artifact and I can implement that in game. 'I'd use the bracelet at the beach!' Then I write a beach scene.");
-			writeText("I only showed off two of the girls, so here's a list of each girl I have images / code prepared for, I can use any of them pretty freely:");
-			for (i = 0; i < data.story.length; i++) {
-				writeMed(`scripts/gamefiles/characters/`+data.story[i].index+data.story[i].image+`.jpg`);
-				document.getElementById('output').innerHTML += `
-				<p class="centeredText">`+data.story[i].fName+` `+data.story[i].lName+`</p> 
-				<p class="centeredText">`+data.story[i].desc+`</p> 
-				`;
-			}
-			writeText("And with that everything I have to present is finished.");
-			break;
+			// writeText("So that's all I've got for now. You should have a decent idea of the game's structure at this point. With the engine good to go each actual release would include 8-10 scenes, probably introducing two new artifacts with each version.");
+			// writeText("I'd be splitting my focus between this and other projects, but I think I could reliably get a new release for this game out every month.");
+			// writeText("Between work research, home use, and dream sequences there are quite a few directions to take each artifact. One thing you could do is let me know directly what you'd do with the artifact and I can implement that in game. 'I'd use the bracelet at the beach!' Then I write a beach scene.");
+			// writeText("I only showed off two of the girls, so here's a list of each girl I have images / code prepared for, I can use any of them pretty freely:");
+			// for (i = 0; i < data.story.length; i++) {
+			// 	writeMed(`scripts/gamefiles/characters/`+data.story[i].index+data.story[i].image+`.jpg`);
+			// 	document.getElementById('output').innerHTML += `
+			// 	<p class="centeredText">`+data.story[i].fName+` `+data.story[i].lName+`</p> 
+			// 	<p class="centeredText">`+data.story[i].desc+`</p> 
+			// 	`;
+			// }
+			// writeText("And with that everything I have to present is finished.");
+			// break;
 		}
 		case "prologue": {
 			writeText("Nearly every Saturday, you have Game Night. It's a simple, easy way to relax and quit worrying about whatever looming deadline threatens your mental well-being <i>this</i> week. Last time, you chose the game and, as usual, Meg called a few of her friends to join.");

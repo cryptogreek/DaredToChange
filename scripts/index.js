@@ -39,10 +39,6 @@ var data = {
 		fName: "???",
 		lName: "???",
 		color:"#833aa7",
-		//male:5d9e49, herm:833aa7, fem:6f0087
-		//{index: "opp", image: "", met: false, fName: "Kieran", lName: "Lentis", desc:"Your opponent in tonight's game of Dare to Change.", color:"#6f0087", willpower:5,},
-		//{index: "meg", image: "", met: false, fName: "Megan", lName: "Howzer", desc:"An old friend that you have Game Night with. She seems to be wearing more provacative clothing tonight.", color:"#6f0087", willpower:5,},
-		//{index: "dale", image: "", met: false, fName: "Dale", lName: "Tigrid", desc:"A guy that Meg seems to know. You don't know much else about him.", color:"#5d9e49", willpower:5,},
 		will:5,
 		sex:"M",
 		height:65,
@@ -58,6 +54,10 @@ var data = {
 		genitalsVal:0,
 		dick:6,
 		},
+		//male:5d9e49, herm:833aa7, fem:6f0087
+		//{index: "opp", image: "", met: false, fName: "Kieran", lName: "Lentis", desc:"Your opponent in tonight's game of Dare to Change.", color:"#6f0087", willpower:5,},
+		//{index: "meg", image: "", met: false, fName: "Megan", lName: "Howzer", desc:"An old friend that you have Game Night with. She seems to be wearing more provacative clothing tonight.", color:"#6f0087", willpower:5,},
+		//{index: "dale", image: "", met: false, fName: "Dale", lName: "Tigrid", desc:"A guy that Meg seems to know. You don't know much else about him.", color:"#5d9e49", willpower:5,},
 	],
 	// flags: [
 	// ],
@@ -241,29 +241,6 @@ var playerGenitalsArray = [
 
 
 
-var meganDescArray = [
-	{desc: "An old friend that you have Game Night with, and a barista at a nearby cafe that you can never remember the name of.",},
-	{desc: "The dominant woman that you have Game Night with, and a barista at a nearby cafe that you can never remember the name of.",},
-	{desc: "Your personal mistress that makes sure you're never plagued with indecision. If you're lucky, she might call you over soon, but you should probably focus on the game for now...",},
-	{desc: "The subby girl that you have Game Night with, and a barista at a nearby cafe that you can never remember the name of.",},
-	{desc: "Your personal bitch that makes sure that makes damn sure you're never dissatisfied. At this point, you could probably get her to crawl over to your cock with just a stern look.",},
-	{desc: "Your feminine role-model that you look up to, she works as a barista at a nearby cafe. Maybe you apply for the same job? Thinking about the customers looking at you in that uniform sends tingles down your spine...",},
-];
-var meganBodyArray = [
-	{body:"She has a pretty solid figure, usually wearing pretty revealing clothes. She loves the feeling of getting hit on, but you've heard more than a few complaints about people who can't take a hint."},
-	{body:""},
-	{body:""},
-	{body:""},
-	{body:""},
-];
-var meganClothesArray = [
-	{clothes:"Right now, she's wearing a particularly short skirt that barely covers her ass, thin black stockings, and a tight shirt that's just revealing enough that you're pretty sure she skipped wearing a bra tonight."},
-	{clothes:""},
-	{clothes:""},
-	{clothes:""},
-	{clothes:""},
-];
-
 var artifactArray = [
 	{index: "bracelet", dark: false, equipable: false, title: "Reprehensive Bracelet", desc: "A partially tarnished silver bracelet.", desc2: "When worn, the wearer can become imperceivable and erase memories of themselves & their actions."},
 	{index: "erotibox", dark: false, equipable: false, title: "Erotibox", desc: "A large wooden crate large enough to fit a person inside. <br>Anything put inside the box will become an erotic version of itself.", desc2: ""},
@@ -315,22 +292,22 @@ function passTime() {
 }
 
 function nameUpdate() {
-	roommateF = data.story[0].fName;
-	roommateL = data.story[0].lName;
-	assistantF = data.story[1].fName;
-	assistantL = data.story[1].lName;
-	girlfriendF = data.story[2].fName;
-	girlfriendL = data.story[2].lName;
-	librarianF = data.story[3].fName;
-	librarianL = data.story[3].lName;
-	madameF = data.story[4].fName;
-	madameL = data.story[4].lName;
-	gymF = data.story[5].fName;
-	gymL = data.story[5].lName;
-	lifeguardF = data.story[6].fName;
-	lifeguardL = data.story[6].lName;
-	chairF = data.story[7].fName;
-	chairL = data.story[7].lName;
+	// roommateF = data.story[0].fName;
+	// roommateL = data.story[0].lName;
+	// assistantF = data.story[1].fName;
+	// assistantL = data.story[1].lName;
+	// girlfriendF = data.story[2].fName;
+	// girlfriendL = data.story[2].lName;
+	// librarianF = data.story[3].fName;
+	// librarianL = data.story[3].lName;
+	// madameF = data.story[4].fName;
+	// madameL = data.story[4].lName;
+	// gymF = data.story[5].fName;
+	// gymL = data.story[5].lName;
+	// lifeguardF = data.story[6].fName;
+	// lifeguardL = data.story[6].lName;
+	// chairF = data.story[7].fName;
+	// chairL = data.story[7].lName;
 }
 
 //Showing & hiding windows
