@@ -15,30 +15,53 @@ var data = {
 		age: "25",
 		color: "Blue",
 		character: "red",
-		preference: "none",
+		pref: "switch",
 		currentScene: "start",
 		will: 5,
-		round: 0,
 		dick: 6,
+		height: 63,
+		heightVal:0,
+		buildVal:0,
+		clothesVal:0,
+		earsVal:0,
+		hairVal:0,
+		legsVal:0,
+		assVal:0,
+		tailVal:0,
+		chestVal:0,
+		genitalsVal:0,
 		flags: "",
 	},
 	story: [
-		{index: "meg", image: "", met: true, fName: "Megan", lName: "Howzer", desc:"An old friend that you have Game Night with. She seems to be wearing more provacative clothing tonight.", color:"#6f0087", willpower:5,},
-		{index: "dale", image: "", met: false, fName: "Dale", lName: "Tigrid", desc:"A guy that Meg seems to know. You don't know much else about him.", color:"#5d9e49", willpower:5,},
+		{index: "opp",
+		image: "",
+		met: false,
+		fName: "???",
+		lName: "???",
+		color:"#833aa7",
+		//male:5d9e49, herm:833aa7, fem:6f0087
+		//{index: "opp", image: "", met: false, fName: "Kieran", lName: "Lentis", desc:"Your opponent in tonight's game of Dare to Change.", color:"#6f0087", willpower:5,},
+		//{index: "meg", image: "", met: false, fName: "Megan", lName: "Howzer", desc:"An old friend that you have Game Night with. She seems to be wearing more provacative clothing tonight.", color:"#6f0087", willpower:5,},
+		//{index: "dale", image: "", met: false, fName: "Dale", lName: "Tigrid", desc:"A guy that Meg seems to know. You don't know much else about him.", color:"#5d9e49", willpower:5,},
+		willpower:5,
+		sex:"M",
+		height:65,
+		heightVal:0,
+		buildVal:0,
+		clothesVal:0,
+		earsVal:0,
+		hairVal:0,
+		legsVal:0,
+		assVal:0,
+		tailVal:0,
+		chestVal:0,
+		genitalsVal:0,
+		dick:6,
+		},
 	],
 	flags: [
-		{index:"introFeet",state:false,},
-		{index:"introLieShort",state:false,},
-		{index:"introLieLong",state:false,},
-		{index:"daleKnowsTinyDick",state:false,},
 	],
 	gallery: [
-	],
-	bodytypes: [
-		{index: "red", name: "Featureless Red"},
-		{index: "basic", name: "Sissy"},
-		{index: "macho", name: "Macho Man"},
-		{index: "shemale", name: "Shemale"},
 	],
 }
 
@@ -46,17 +69,177 @@ var galleryArray = [
 ]
 
 var logbookArray = [
-	{index: "meg", 
-		desc: "An old friend that you have Game Night with, and a barista at a nearby cafe that you can never remember the name of.",
-		body: "She has a pretty solid figure, usually wearing pretty revealing clothes. She loves the feeling of getting hit on, but you've heard more than a few complaints about people who can't take a hint.",
-		clothes: "",
-	},
-	{index: "dale", 
-		desc: "Someone that Megan invited to Game Night so that you'd have the right number of players.",
-		body: "He's a fairly-well-built guy, standing a bit taller than you.",
-		clothes: "Her work outfit isn't too professional, but standards are lax here. She wears a short skirt and a blazer opened enough you can clearly her pink undershirt which doubles as a bra.",
+	{index: "opp", 
+		desc: "Your opponent in Dare to Change.",
+		body: "This value hasn't been set yet.",
+		clothes: "They're wearing comfortable clothes.",
 	},
 ];
+
+var oppHeightArray = [
+	{desc: data.story[0].fName+" looks to be around "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
+	{desc: data.story[0].fName+" stands at a rather short "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
+	{desc: data.story[0].fName+" stands at a rather tall "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
+	{desc: data.story[0].fName+" is a towering "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
+	{desc: data.story[0].fName+" is a miniscule "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
+];
+
+var playerHeightArray = [
+	{desc: "You stand at "+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
+	{desc: "You stand at a short "+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
+	{desc: "You stand at a rather tall"+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
+	{desc: "You stand at a miniscule"+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
+	{desc: "You stand at a towering"+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
+];
+
+var oppBuildArray = [
+	{desc: "and he's pretty well-built, with his toned muscles looking pretty obvious from where you're looking.",},
+	{desc: "and she's pretty well-built, with her toned muscles looking pretty obvious from where you're looking.",},
+	{desc: "and he's looking fairly curvy now, thanks to the effects of the transformation.",},
+	{desc: "and she's looking fairly curvy now, thanks to the effects of the transformation.",},
+	{desc: "and he's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
+	{desc: "and she's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
+	{desc: "and between his broad shoulders and defined muscles, he's looking more and more like the perfect alpha-male body.",},
+	{desc: "and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
+];
+var playerBuildArray = [
+	{desc: "and you're just a little heavier than average.",},
+	{desc: "and you're just a bit more slim and light than average.",},
+	{desc: "and you're probably pretty-average weight-wise.",},
+	{desc: "and you're pretty muscular compared to most people.",},
+	{desc: "and you've got a bit more in the curves-department compared to most people.",},
+	{desc: "and you are practically an Adonis when it comes to your body and muscles.",},
+	{desc: "and you are a <i>lot</i> curvier than most people.",},
+];
+
+var oppClothesArray = [
+	{desc: " He's wearing a tight-fitting T-shirt that hides nothing, and a pair of loose jeans that you could swear shouldn't be as tight around the crotch as they look.",},
+	{desc: " She's wearing a tight-fitting T-shirt that does nothing to hide the fact that she skipped putting on a bra, and a pair of just-as-tight jeans that hug her ass and hips in ways that can really <i>do things</i> to a man.",},
+	{desc: " She's wearing a tight-fitting T-shirt that's just thin enough for you to see the the color of her light-violet bra, and a pair of loose jeans that you could swear shouldn't be as tight around the crotch as they look.",},
+
+];
+var playerClothesArray = [
+	{desc: " You're wearing some normal, fairly-comfortable clothes - nothing to write home about.",},
+	{desc: " You have some rather racy, feminine clothes on right now; it's a bit embarrassing to wear, though.",},
+	{desc: " You have some rather racy, feminine clothes on right now; if you're being honest, it's a little bit of a turn-on...",},
+	{desc: " You're wearing some nice, loose clothes that can accomodate for your changing body.",},
+	{desc: " You're wearing a <i>very</i> tight outfit that hugs every part of your body, hiding absolutely nothing from your opponent.",},
+];
+
+var oppEarsArray = [
+	{desc: "",},
+	{desc: "You can see a pair of cat ears poking out from his head, which he seems to enjoy rubbing with his fingers. ",},
+	{desc: "You can see a pair of cat ears poking out from her head, which he seems to enjoy rubbing with her fingers. ",},
+	{desc: "You can see a pair of dog ears poking out from the sides of his head, which he occasionally gently scratches at. ",},
+	{desc: "You can see a pair of dog ears poking out from the sides of her head, which she occasionally gently scratches at. ",},
+	{desc: "You can see a pair of bunny ears poking out from his head, which seem to twitch rather obviously whenever he looks directly at you. ",},
+	{desc: "You can see a pair of bunny ears poking out from her head, which seem to twitch rather obviously whenever he looks directly at you. ",},
+	{desc: "You can see a pair of fox ears poking out from his head, which seem to shift slightly whenever he hears something interesting... or when your heartbeat speeds up. ",},
+	{desc: "You can see a pair of fox ears poking out from her head, which seem to shift slightly whenever she hears something interesting... or when your heartbeat speeds up. ",},
+];
+var playerEarsArray = [
+	{desc: "",},
+	{desc: "A pair of adorable cat ears poke out from the top of your head, just sensitive enough that you can feel the very faint breeze caressing the fur. ",},
+	{desc: "A pair of adorable dog ears droop out from the sides of your head. They don't seem to be able to hear much, but you could swear you can hear your own heartbeat through them. ",},
+	{desc: "A pair of twitchy bunny ears spring out from the top of your head. Despite your best efforts, you can't seem to control how they move, especially when your opponent takes a good look at them. ",},
+	{desc: "A pair of sensitive fox ears pop out from the top of your head. You can't seem to stop them from twitching slightly whenever you hear a noise, even if it's as quiet as the drop of a pin. ",},
+];
+
+var oppHairArray = [
+	{desc: "His hair is pretty short, roughly tossed about and looking a bit fuzzy.",},
+	{desc: "Her hair is around shoulder-length and casually hangs rather loosely.",},
+	{desc: "His hair is around shoulder-length and casually hangs rather loosely. It almost looks feminine from here.",},
+	{desc: "Her long hair is has to go down to the middle of her back, tied into a loose ponytail that she seems to like to toy with.",},
+	{desc: "His hair easily goes down to the middle of his back, tied into a loose ponytail that he seems to like to toy with.",},
+];
+var playerHairArray = [
+	{desc: "Your hair is a bit short, feeling a little rough but a little soft when you touch it.",},
+	{desc: "Your hair is around shoulder-length, and you get the urge to touch it pretty frequently.",},
+	{desc: "Your hair goes down to the middle of your back, hanging loosely and sending pleasant tingles along your back when the tips rub against it.",},
+	{desc: "Your hair easily drops down to your ass, flowing down in what you know full-well to be a <i>very</i> feminine look.",},
+];
+
+var oppLegsArray = [
+	{desc: "His legs are <i>very</i> well-built, toned enough that you could probably trace his muscles with a finger.",},
+	{desc: "Her legs are <i>very</i> well-built, toned enough that you could probably trace her muscles with a finger.",},
+	{desc: "His legs are looking <i>very</i> plush now, to the point you're pretty sure you could sink your fingers right into them and have them spill out around your hands.",},
+	{desc: "Her legs are <i>very</i> plush, to the point you're pretty sure you could sink your fingers right into them and have them spill out around your hands.",},
+	{desc: "His legs are looking very slim now, and you could swear that at this point, you could pin him to the wall yourself and hold him there.",},
+];
+var playerLegsArray = [
+	{desc: "Your legs are a little plush, soft to the touch and not that firm.",},
+	{desc: "Your legs are a little firm, soft enough that you can poke into it, but springy enough to bounce right back.",},
+	{desc: "Your legs are a very toned now, the muscles in your thighs defined enough that you can trace them with a finger.",},
+	{desc: "Your legs are a looking fairly dainty now, thanks to the transformation - perfectly smooth, too.",},
+];
+
+var oppAssArray = [
+	{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Looking at it, you can't help but feel curious about how firm it would feel in your hands...",},
+	{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Despite how firm you would <i>swear</i> it has to be, there always seems to be just enough jiggle that it shakes with every movement.",},
+	{desc: "And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever "+data.story[0].fName+ " shifts in place, you could swear it practically ripples.",},
+	{desc: "And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if "+data.story[0].fName+"'s gentle squirming is anything to go by.",},
+
+];
+var playerAssArray = [
+	{desc: "When it comes to your ass, it's not like it's boney or anything, but you have to admit that it's fairly average.",},
+	{desc: "Then there's your ass, which has just enough body to it that you can understand why "+data.story[0].fName+" doesn't bother hiding the quick glances at your backside.",},
+	{desc: "And then, there's your ass. Thanks to the transformation, it's thick enough that you can feel it bounce when you move, and it's far more sensitive than you expected.",},
+	{desc: "And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
+];
+
+var oppTailArray = [
+	{desc: "",},
+	{desc: " Along with that, there's also a slim cat's tail poking out, waving gently through the air and occasionally slowing down to drag across some part of his body.",},
+	{desc: " Along with that, there's also a slim cat's tail poking out, waving gently through the air and occasionally slowing down to drag across some part of her body.",},
+	{desc: " Along with that, there's also a fluffy dog's tail poking out, wagging a bit and occasionally slowing down whenever he stops to think about something.",},
+	{desc: " Along with that, there's also a fluffy dog's tail poking out, wagging a bit and occasionally slowing down whenever she stops to think about something.",},
+	{desc: " Along with that, there's also a little floof of a bunny's tail poking out. It's small size makes a bit hard to see, but it seems to twitch pretty frequently when you can see it.",},
+	{desc: " Along with that, there's also a massively fluffy fox's tail sticking out, lazily cast over the side of the chair while he absentmindedly pets it with one hand, only further fluffing it with each stroke.",},
+	{desc: " Along with that, there's also a massively fluffy fox's tail sticking out, lazily cast over the side of the chair while she absentmindedly pets it with one hand, only further fluffing it with each stroke.",},
+];
+var playerTailArray = [
+	{desc: "",},
+	{desc: " You have a glossy cat's tail poking out from just above your rear, moving with unintentional, natural grace as it swings about lazily.",},
+	{desc: " You also have a very floofy doggy tail poking out from just above your butt. It swings side-to-side completely unbidden, but you can stop the wild wagging if you focus.",},
+	{desc: " You also have a puff of a white bunny's tail sticking out from your rear, twitching gently almost all the time. The fur is very soft and <i>very</i> sensitive.",},
+	{desc: " Above that, you have a massive pile of hyper-fluffy fox-tail that drapes off to the side. It's a bit heavy, but the texture is incredible, and running your hands through it feels <i>amazing.</i>",},
+];
+
+var oppChestArray = [
+	{desc: "His chest and shoulders are pretty broad, especially when he spreads out his arms and leans back. You don't doubt that he could probably pick you up pretty easily. ",},
+	{desc: "Her chest is a bit on the small side, but she is <i>very</i> toned. Given how strong her arms look, you don't doubt that she could probably pick you up pretty easily. ",},
+	{desc: "Her chest looks pretty large and firm, but she is <i>very</i> toned. Given how strong her arms look, you don't doubt that she could probably pick you up pretty easily. ",},
+	{desc: "Her tits are practically spilling over, a fact that she is clearly trying to show off with her posture. Given the nature of the game, though, that's hardly a surprise. ",},
+	{desc: "His chest is looking a lot smaller now, his entire frame looking far more slim, but with just a hint of swelling around the chest that you're pretty confident isn't from his muscles. ",},
+];
+var playerChestArray = [
+	{desc: "You have a pretty normal, flat chest. You're not flabby, but you're not exactly <i>fit</i>, either. ",},
+	{desc: "Your chest is starting to swell a bit, looking almost like a large A-cup. They're sensitive, too... ",},
+	{desc: "You have a pair of fairly-large C-cup breasts hanging from your chest, your sensitive nipples feeling like they're constantly being teased. ",},
+	{desc: "You have a pretty normal, flat chest. You're not flabby, but you're not exactly <i>fit</i>, either. ",},
+	{desc: "You you have a pair of teeny-titties pushing out from your chest, highlighting your slim sissy figure. ",},
+];
+
+var oppGenitalsArray = [
+	{desc: "",},
+	{desc: "You can see signs of a bulge at his crotch, though his pants are loose enough that that's all you can see.",},
+	{desc: "You can see clear signs of a rather large bulge at her crotch, though her pants are loose enough that you can't really make much else out.",},
+	{desc: "She has a pair of violet panties on, just sheer enough for you to see the shape of her pussy.",},
+	{desc: "His cock is hanging down between his legs, not quite fully erect but still at least "+data.story[0].dick+" inches long, and <i>very</i> thick.",},
+	{desc: "Her cock is hanging down between her legs, not quite fully erect but still at least "+data.story[0].dick+" inches long, and <i>very</i> thick.",},
+];
+var playerGenitalsArray = [
+	{desc: "You have a fairly average, "+data.player.dick+"-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
+	{desc: "You have a fat "+data.player.dick+"-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
+	{desc: "You have a short "+data.player.dick+"-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
+	{desc: "Your cock has shrunk down thanks to the transformation, now only "+data.player.dick+"-inches long. Despite that, it feels even <i>more</i> sensitive now than it did before...",},
+	{desc: "You have a tiny little sissy clitty, only "+data.player.dick+"-inches long. At this point, it doesn't even get hard, but the tip is always dribbling just a little bit of pre.",},
+];
+
+
+
+
+
 
 var meganDescArray = [
 	{desc: "An old friend that you have Game Night with, and a barista at a nearby cafe that you can never remember the name of.",},
@@ -95,10 +278,8 @@ var artifactArray = [
 	{index: "toolkit", dark: true, equipable: false, title: "Sissy's Toolkit", desc: "A plastic makeup kit. When opened, objects will appear inside and in the room which are designed to encourage the opener to 'explore themselves'. These range from makeup to unknown body-modifying drugs and a 3-man group of naked men. ", desc2: ""},
 ];
 
-var megF = data.story[0].fName;
-var megL = data.story[0].lName;
-var daleF = data.story[1].fName;
-var daleL = data.story[1].lName;
+var oppF = data.story[0].fName;
+var oppL = data.story[0].lName;
 
 //Startup & Systems config
 function startup() {
@@ -211,8 +392,14 @@ function writeSpeech (name, img, text) {
 		else
 			cssColor = "#994949";
 	}
-	if(name == "meg"){
-		cssColor = "#9400b5";
+	if(name == "opp"){
+		if(data.story[0].sex=="H")
+			cssColor = "#9400b5";
+		else if(data.story[0].sex=="M")
+			cssColor = "#3459c4";
+		else
+			cssColor = "#5d9e49";
+		img="scripts/gamefiles/profiles/"+name+data.story[0].sex+".jpg";
 	}
 	if(name == "dale"){
 		cssColor = "#5d9e49";
@@ -525,14 +712,14 @@ function researchLevel(name) {
 function replaceCodenames(text) {
 	var codenameCheck = "";
 	for (geminiLoop = 0; geminiLoop < 5; geminiLoop++) {
-	text = text.replace('playerF', data.player.fName);
-	text = text.replace('playerL', data.player.lName);
-	for (codenameIndex = 0; codenameIndex < data.story.length; codenameIndex++) {
-		codenameCheck = data.story[codenameIndex].index + "F";
-		text = text.replace(codenameCheck, data.story[codenameIndex].fName);
-		codenameCheck = data.story[codenameIndex].index + "L";
-		text = text.replace(codenameCheck, data.story[codenameIndex].lName);
-	}
+		text = text.replace('playerF', data.player.fName);
+		text = text.replace('playerL', data.player.lName);
+		for (codenameIndex = 0; codenameIndex < data.story.length; codenameIndex++) {
+			codenameCheck = data.story[codenameIndex].index + "F";
+			text = text.replace(codenameCheck, data.story[codenameIndex].fName);
+			codenameCheck = data.story[codenameIndex].index + "L";
+			text = text.replace(codenameCheck, data.story[codenameIndex].lName);
+		}
 	}
 	return text;
 }
@@ -835,17 +1022,17 @@ function switchDesc(n) {
 		console.log("now loading logbook for character ID " + n + " aka " + data.story[n].index);
 		if (imagesDisabled != true) {
 			document.getElementById('logbookRight').innerHTML = `
-				<img id="selfImage" class="selfImage" src="scripts/gamefiles/characters/`+data.story[n].index+data.story[n].image+`.jpg">
+				<img id="selfImage" class="selfImage" src="scripts/gamefiles/characters/`+data.story[n].index+data.story[n].image+data.story[n].sex+`.jpg">
 			`;
 		}
 		document.getElementById('logbookRight').innerHTML += `
 		<div class=" lb_primary">
 			<h2 class = "selfDesc">Name: `+data.story[n].fName+` `+data.story[n].lName+`</h2>
 		</div><div class=" lb_secondary">
-			<p class = "selfDesc">`+logbookArray[n].desc+`</p>
-			<p class = "selfDesc">`+logbookArray[n].body+`</p>
-			<p class = "selfDesc">`+logbookArray[n].clothes+`</p>
-			<p class = "selfDesc">   </p>
+			<p class = "selfDesc">`+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
+			<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
+			<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
+			<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+`</p>
 		</div
 		`;
 	}
@@ -869,9 +1056,10 @@ function switchDesc(n) {
 		<div class=" lb_primary">
 			<h2 class = "selfDesc">Name: `+data.player.fName+` `+data.player.lName+`</h2>
 		</div><div class=" lb_secondary">
-			<p class = "selfDesc">Round: `+data.player.round+`</p>
-			<p class = "selfDesc">Willpower: `+data.player.will+`</p>
-			<p class = "selfDesc">Features: `+researchStatus+` of `+researchTotal+`</p>
+			<p class = "selfDesc">`+playerHeightArray[data.player.heightVal].desc+playerBuildArray[data.player.buildVal].desc+playerClothesArray[data.player.clothesVal].desc+`</p>
+			<p class = "selfDesc">`+playerHairArray[data.player.hairVal].desc+playerEarsArray[data.player.earsVal].desc+`</p>
+			<p class = "selfDesc">`+playerLegsArray[data.player.legsVal].desc+playerAssArray[data.player.assVal].desc+playerTailArray[data.player.tailVal].desc+`</p>
+			<p class = "selfDesc">`+playerChestArray[data.player.chestVal].desc+playerGenitalsArray[data.player.genitalsVal].desc+`</p>
 		</div>
 		`;
 	}

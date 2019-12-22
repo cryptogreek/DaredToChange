@@ -21,8 +21,8 @@ function writeScene(scene) {
 		}
 		case "test" : {
 			writeSpeech("player","","Some test dialogue. The player is currently a man.");
-			writeSpeech("dale","","This is Dale speaking.");
-			writeSpeech("meg","","And I'm Meg! It rhymes with peg!");
+			document.getElementById('output').innerHTML += `<p class='rawText'>` + playerHeightArray[0].desc + `</p>`;
+			writeSpeech("opp","","And I'm oppF! It rhymes with peg!");
 			data.player.character = "pink";
 			writeSpeech("player","","And now, I should be a woman and/or sissy!");
 			logbookArray[0].desc = meganDescArray[5].desc;

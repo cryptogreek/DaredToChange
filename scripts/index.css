@@ -38,6 +38,14 @@ p {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.blueText {
+  color: #bf2c2c;
+  font-weight: bold;
+  cursor: pointer;
+}
+.blueText:hover{
+  color: #e62222;
+}
 
 /*Menu*/
 .menu {
@@ -366,6 +374,7 @@ p {
 	overflow: hidden;
 }
 .selfImage {
+	width: 20%;
 	margin-left: 10px;
 	margin-right: 10px;
 	float: right;
