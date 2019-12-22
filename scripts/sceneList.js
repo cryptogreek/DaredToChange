@@ -68,31 +68,35 @@ function writeScene(scene) {
 			break;
 		}
 		case "prologue2" : {
-			if(data.player.dick > 12){
-				writeText("Sir, if your gut-puncher is over a foot long, you need to stop playing porn and start <i>doing</i> it.");
-				writeTransition("prologueName", "Go smaller.");
-				break;
-			}
-			if(data.player.dick < 1){
-				writeText("At least in this version, there's no option to start as either a woman or a eunuch.");
-				writeTransition("prologueName", "Go back.");
-				break;
-			}
-			if(data.player.dick < 4){
-				data.player.genitalsVal = 2;
-				writeSpecial("You have an abnormally small penis, which makes you a bit more insecure about your masculinity.");
-				data.player.will -= 1;
-			}
-			if(data.player.dick > 7){
-				data.player.genitalsVal = 1;
-				writeSpecial("You have an abnormally large cock, which makes you feel more confident in your masculinity.");
-				data.player.will += 1;
-			}
-			if(data.player.age <18){
+			if(data.player.age < 18){
 				writeText("It was at that moment that you realized that you totally forgot you were underaged.");
 				writeText("Meg brings over a friend and you play Uno while eating junk food. You have a lot of wholesome, non-sexual fun.");
 				writeTransition("prologueName", "That was a joke, I'm actually 18+.");
 				break;
+			}
+			if(data.player.dick > 7){
+				if(data.player.dick > 12){
+					writeText("Sir, if your gut-puncher is over a foot long, you need to stop playing porn and start <i>doing</i> it.");
+					writeTransition("prologueName", "Go smaller.");
+					break;
+				}
+				else{
+					data.player.genitalsVal = 1;
+					writeSpecial("You have an abnormally large cock, which makes you feel more confident in your masculinity.");
+					data.player.will += 1;
+				}
+			}
+			if(data.player.dick < 4){
+				if(data.player.dick < 1){
+					writeText("At least in this version, there's no option to start as either a woman or a eunuch.");
+					writeTransition("prologueName", "Go back.");
+					break;
+				}
+				else{
+					data.player.genitalsVal = 2;
+					writeSpecial("You have an abnormally small penis, which makes you a bit more insecure about your masculinity.");
+					data.player.will -= 1;
+				}
 			}
 			else{
 				writeText("With that out of the way, everything should be fine. Drinks, snacks, clear and open space on the carpet, etc...");
@@ -107,11 +111,9 @@ function writeScene(scene) {
 			}
 		}
 		case "prologueSub": {
-			logbookArray[0].clothes = meganClothesArray[0].clothes;
-
 			if(data.player.will > 0)
 				data.player.will -= 1;
-			data.story[1].met = true;
+			data.story[0].met = true;
 			writeText("You move quickly, hoping to prevent her from kicking it a second time, and swiftly open the door.");
 			writeText("You can see Meg standing there, smugly grinning to the guy beside her.");
 			writeSpeech("meg","","See? A quick kick got him here way faster.");
@@ -137,7 +139,7 @@ function writeScene(scene) {
 		case "prologueDom": {
 			if(data.player.will < 10)
 				data.player.will += 1;
-			data.story[1].met = true;
+			data.story[0].met = true;
 			writeText("You relax a bit more on the beanbag, checking your notifications for a few seconds.");
 			writeText("You've just finished checking your email when you hear a far more restrained knock on the door.");
 			writeText("<i>Now</i> you head over, opening it up with a smile.");
@@ -149,7 +151,7 @@ function writeScene(scene) {
 			writeSpeech("player","","If you really needed to get in, you wouldn't have stopped at one kick.");
 			writeSpeech("meg","","Eh, fair point.");
 			writeText("She strides inside, her brown hair bouncing about as she almost skips towards the main living-space.");
-			writeText("Looks like she's carrying the game box. It's not the largest, but it helps highlight certain... assets.");
+			writeText("Looks like she's carrying the game box. It's not the largest, but the way she's carrying it helps to highlight certain... assets.");
 			writeText("You can't read the full name, obscured as it is by her chest as she moves past you.");
 			writeText("She's wearing a shorter, tighter skirt this time, and you could swear she skipped out on the bra...");
 			writeSpeech("dale","","Ah, right.");
