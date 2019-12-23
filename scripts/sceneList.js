@@ -20,12 +20,37 @@ function writeScene(scene) {
 			break;
 		}
 		case "test" : {
+			data.player.fName = "Testing";
+			data.story[0].sex = "H";
+			data.story[0].met = true;
+			data.story[0].fName = "Felicity";
+			data.story[0].lName = "Lenore";
+			data.story[0].height = 75;
+			data.story[0].buildVal = 1;
+			data.story[0].clothesVal = 2;
+			data.story[0].hairVal = 3;
+			data.story[0].legsVal = 1;
+			data.story[0].assVal = 1;
+			data.story[0].chestVal = 2;
+			data.story[0].genitalsVal = 2;
 			writeSpeech("player","","Some test dialogue. The player is currently a man.");
-			writeText(""+playerHeightArray[0].desc);
-			writeSpeech("opp","","And I'm oppF! It rhymes with peg!");
+			writeSpeech("opp","","And I'm oppF! I'll be your opponent in tonight's game!");
 			data.player.character = "pink";
-			writeSpeech("player","","And now, I should be a woman and/or sissy!");
+			writeSpeech("player","","And now, the player should be a woman and/or sissy!");
+			data.player.character = "red";
+			writeSpeech("player","","But now, for testing reasons, the player is a man again.");
 			updateMenu();
+			writeTransition("fairyKingStart", "Test the Fairy King's Forest");
+			writeTransition("fairyRej", "Accept the Fairy's Help");
+			writeTransition("fairyAcc", "Reject the Fairy's Help (Dom)");
+			writeTransition("fairyAcc1", "Reject the Fairy's Help (Sub)");
+			writeTransition("golemCaveStart", "Test the Cavern of the Golems");
+			writeTransition("golemAcc", "Show Humility to the Golems (give opponent foot massage)");
+			writeTransition("golemRej", "Reject the Golem's Challenge");
+			writeTransition("androStart", "Watch your opponent go to Andro-Spring");
+			writeTransition("cafeStart", "Watch your opponent go to the Shadow Elf Cafe");
+			writeTransition("titanStart", "Go to the Titan's Gate");
+			writeTransition("driderStart", "Go to the Drider's Nest");
 			break;
 		}
 		case "startWardrobe": {
@@ -49,6 +74,7 @@ function writeScene(scene) {
 			// break;
 		}
 		case "prologue": {
+			data.story[0].met = true;
 			writeText("Nearly every Saturday, you have Game Night. It's a simple, easy way to relax and quit worrying about whatever looming deadline threatens your mental well-being <i>this</i> week. Last time, you chose the game and, as usual, Meg called a few of her friends to join.");
 			writeText("Given that you two switch out between who chooses the next game, that makes it Meg's turn, and she hasn't hesitated about hyping up the game that she found. And since whoever <i>doesn't</i> choose the game hosts, you're finishing up with the prep-work.");
 			writeText("Most people would probably just laugh off the idea of a board game that advertised itself as 'transforming your mind and body' over the course playing it, but those people clearly didn't watch Jumanji enough times.");
@@ -63,6 +89,9 @@ function writeScene(scene) {
 			writeText("Last Name: <input type='text' id='lastSubmission' value='Rascals'>");
 			writeText("Age: <input type='text' id='ageSubmission' value='25'>");
 			writeText("Dick (in): <input type='text' id='dickSubmission' value='6'>");
+			writeText("Height (in): <input type='text' id='heightSubmission' value='66'>");
+			writeText("Build: <input type='radio' id='build0' name='build' value='average'> Average <input type='radio' id='build1' name='build' value='stocky'> Stocky <input type='radio' id='build2' name='build' value='slim'> Slim <input type='radio' id='build3' name='build' value='fit'> Fit");
+			writeText("Sexual Preference: <input type='radio' id='gender0' name='gender' value='M'> Male <input type='radio' id='gender1' name='gender' value='F'> Female <input type='radio' id='gender2' name='gender' value='H'> Shemale");
 			//writeTransition("prologue3", "Finish");
 			writeFunction("renamePlayer()", "Finish");
 			break;
@@ -377,6 +406,62 @@ function writeScene(scene) {
 			writeTransition("room", "Go back");
 			break;
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//NEW SCENES FOR DARED TO CHANGE START HERE
+		case "fairyKingStart" : {
+			writeText("You move your piece forward, placing it firmly on the forested tile. After removing your hand, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
+			writeText("The back is labeled with the tile's name in gold lettering, and turning it around-");
+			writeSpeech("card","none.jpg","You received your first card~!");
+			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind his/her hand.");
+			writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
+			writeSpeech("card","none.jpg","Any forest that houses the Fae can be a tricky place to get lost in, and there are no forests harder to navigate than those of the Fairy King. You get hopelessly lost, but rejoice! A friendly elf can lead you out of the forests, though she seems rather curious about humans...");
+			writeSpeech("card","none.jpg","Challenge: Let the other player toy with your tongue for as long as they want, even if you start drooling all over yourself!");
+			writeText("You can either explain the challenge to oppF and go through with it, or reject it...");
+			writeTransition("fairyAcc", "Explain the challenge and open wide");
+			writeTransition("fairyRej", "Discard the card and take a punishment instead");
+			break;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		case "newDay": {
 			if (data.player.currentScene != scene) {
 				data.player.day += 1;

@@ -39,8 +39,9 @@ var data = {
 		fName: "???",
 		lName: "???",
 		color:"#833aa7",
-		will:5,
 		sex:"M",
+		will:5,
+		dick:7,
 		height:65,
 		heightVal:0,
 		buildVal:0,
@@ -52,7 +53,7 @@ var data = {
 		tailVal:0,
 		chestVal:0,
 		genitalsVal:0,
-		dick:6,
+		genitalsVal2:0,
 		},
 		//male:5d9e49, herm:833aa7, fem:6f0087
 		//{index: "opp", image: "", met: false, fName: "Kieran", lName: "Lentis", desc:"Your opponent in tonight's game of Dare to Change.", color:"#6f0087", willpower:5,},
@@ -77,11 +78,11 @@ var logbookArray = [
 ];
 
 var oppHeightArray = [
-	{desc: data.story[0].fName+" looks to be around "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
-	{desc: data.story[0].fName+" stands at a rather short "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
-	{desc: data.story[0].fName+" stands at a rather tall "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
-	{desc: data.story[0].fName+" is a towering "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
-	{desc: data.story[0].fName+" is a miniscule "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches, ",},
+	{desc: " looks to be around "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
+	{desc: " stands at a rather short "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
+	{desc: " stands at a rather tall "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
+	{desc: " is a towering "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
+	{desc: " is a miniscule "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
 ];
 
 var playerHeightArray = [
@@ -208,7 +209,7 @@ var playerTailArray = [
 var oppChestArray = [
 	{desc: "His chest and shoulders are pretty broad, especially when he spreads out his arms and leans back. You don't doubt that he could probably pick you up pretty easily. ",},
 	{desc: "Her chest is a bit on the small side, but she is <i>very</i> toned. Given how strong her arms look, you don't doubt that she could probably pick you up pretty easily. ",},
-	{desc: "Her chest looks pretty large and firm, but she is <i>very</i> toned. Given how strong her arms look, you don't doubt that she could probably pick you up pretty easily. ",},
+	{desc: "Her breasts looks pretty large and firm, at least Double-Ds, but she is <i>very</i> toned. Given how strong her arms look, you don't doubt that she could probably pick you up pretty easily. ",},
 	{desc: "Her tits are practically spilling over, a fact that she is clearly trying to show off with her posture. Given the nature of the game, though, that's hardly a surprise. ",},
 	{desc: "His chest is looking a lot smaller now, his entire frame looking far more slim, but with just a hint of swelling around the chest that you're pretty confident isn't from his muscles. ",},
 ];
@@ -399,6 +400,9 @@ function writeSpeech (name, img, text) {
 		name = "You";
 		img = "scripts/gamefiles/profiles/" + data.player.character + ".jpg";
 	}
+	if (name == "card") {
+		img = "scripts/gamefiles/profiles/card.jpg";
+	}
 	for (i = 0; i < data.story.length; i++) {
 		if (data.story[i].index == name) {
 			name = data.story[i].fName;
@@ -415,6 +419,19 @@ function writeSpeech (name, img, text) {
 			">
 			<div class="textBoxContent">
 			<p class = "textName" style="color:`+cssColor+`">`+ name + `</p>
+			<p>` + replaceCodenames(text) + `</p>
+		</div>
+		<br>
+		`;
+	}
+	else if(name == "card"){
+		document.getElementById('output').innerHTML +=`
+		<div class="textBox" style="border-color: `+cssColor+`">
+			<img class = "textThumb" onclick="openLogFor(`+tempIndex+`)" style="box-shadow: -5px 5px `+cssColor+`" src = "
+				`+ img +`
+			">
+			<div class="textBoxContent">
+			<p class = "textName" style="color:`+cssColor+`">Card</p>
 			<p>` + replaceCodenames(text) + `</p>
 		</div>
 		<br>
@@ -738,7 +755,59 @@ function renamePlayer() {
 	data.player.lName = document.getElementById('lastSubmission').value;
 	data.player.age = document.getElementById('ageSubmission').value;
 	data.player.dick = parseInt(document.getElementById('dickSubmission').value,10);
+	data.player.height = document.getElementById('heightSubmission').value;
+	for(var i = 0; i < 4; i++){
+		if(document.getElementById('build'+i+'').checked==true){
+			data.player.buildVal = i;
+		}
+	}
+	for(var i = 0; i < 3; i++){
+		if(document.getElementById('gender'+i+'').checked==true){
+			data.story[0].sex = document.getElementById('gender'+i+'').value;
+		}
+	}
+	if(data.story[0].sex == "H"){
+		data.story[0].fName = "Felicity";
+		data.story[0].lName = "Lenore";
+		data.story[0].height = 75;
+		data.story[0].buildVal = 1;
+		data.story[0].clothesVal = 2;
+		data.story[0].hairVal = 3;
+		data.story[0].legsVal = 1;
+		data.story[0].assVal = 1;
+		data.story[0].chestVal = 2;
+		data.story[0].genitalsVal = 2;
 	sceneTransition("prologue2");
+	}
+	else if(data.story[0].sex == "M"){
+		data.story[0].fName = "Cody";
+		data.story[0].lName = "Devons";
+		data.story[0].height = 73;
+		data.story[0].buildVal = 1;
+		data.story[0].clothesVal = 0;
+		data.story[0].hairVal = 0;
+		data.story[0].legsVal = 0;
+		data.story[0].assVal = 0;
+		data.story[0].chestVal = 0;
+		data.story[0].genitalsVal = 1;
+	sceneTransition("prologue2");
+	}
+	else if(data.story[0].sex == "F"){
+		data.story[0].fName = "Sienna";
+		data.story[0].lName = "Kendrix";
+		data.story[0].height = 67;
+		data.story[0].buildVal = 0;
+		data.story[0].clothesVal = 1;
+		data.story[0].hairVal = 1;
+		data.story[0].legsVal = 3;
+		data.story[0].assVal = 1;
+		data.story[0].chestVal = 1;
+		data.story[0].genitalsVal = 0;
+	sceneTransition("prologue2");
+	}
+	else{
+		writeText("Yo, you somehow set your opponent's sex to something impossible? It was probably a glitch, but if it was on purpose, you won't find any eldritch abominations to waifu in this game. Sorry about that.");
+	}
 }
 
 // function equip(n) {
@@ -992,16 +1061,30 @@ function switchDesc(n) {
 				<img id="selfImage" class="selfImage" src="scripts/gamefiles/characters/`+data.story[n].index+data.story[n].image+data.story[n].sex+`.jpg">
 			`;
 		}
-		document.getElementById('logbookRight').innerHTML += `
-		<div class=" lb_primary">
-			<h2 class = "selfDesc">Name: `+data.story[n].fName+` `+data.story[n].lName+`</h2>
-		</div><div class=" lb_secondary">
-			<p class = "selfDesc">`+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
-			<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
-			<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
-			<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+data.story[0].dick+oppGenitalsArray[data.story[0].genitalsVal2].desc`</p>
-		</div
-		`;
+		if(data.story[0].genitalsVal2 != 0){		
+			document.getElementById('logbookRight').innerHTML += `
+			<div class=" lb_primary">
+				<h2 class = "selfDesc">Name: `+data.story[n].fName+` `+data.story[n].lName+`</h2>
+			</div><div class=" lb_secondary">
+				<p class = "selfDesc">`+data.story[0].fName+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
+				<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
+				<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
+				<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+data.story[0].dick+oppGenitalsArray2[data.story[0].genitalsVal2].desc+`</p>
+			</div>
+			`;
+		}
+		else{
+			document.getElementById('logbookRight').innerHTML += `
+			<div class=" lb_primary">
+				<h2 class = "selfDesc">Name: `+data.story[n].fName+` `+data.story[n].lName+`</h2>
+			</div><div class=" lb_secondary">
+				<p class = "selfDesc">`+data.story[0].fName+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
+				<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
+				<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
+				<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+`</p>
+			</div>
+			`;
+		}
 	}
 	else {
 		if (imagesDisabled != true) {
