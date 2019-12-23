@@ -111,6 +111,7 @@ var playerBuildArray = [
 	{desc: "and you've got a bit more in the curves-department compared to most people.",},
 	{desc: "and you are practically an Adonis when it comes to your body and muscles.",},
 	{desc: "and you are a <i>lot</i> curvier than most people.",},
+	{desc: "and you're a lot slimmer than you were at the start of the game. Plus, your ears almost seem pointed, now...",},
 ];
 
 var oppClothesArray = [
@@ -125,6 +126,7 @@ var playerClothesArray = [
 	{desc: " You have some rather racy, feminine clothes on right now; if you're being honest, it's a little bit of a turn-on...",},
 	{desc: " You're wearing some nice, loose clothes that can accomodate for your changing body.",},
 	{desc: " You're wearing a <i>very</i> tight outfit that hugs every part of your body, hiding absolutely nothing from your opponent.",},
+	{desc: " You're wearing some normal, fairly-comfortable clothes - though, they're a bit big for your body now.",},
 ];
 
 var oppEarsArray = [
@@ -172,6 +174,7 @@ var playerLegsArray = [
 	{desc: "Your legs are a little firm, soft enough that you can poke into it, but springy enough to bounce right back.",},
 	{desc: "Your legs are a very toned now, the muscles in your thighs defined enough that you can trace them with a finger.",},
 	{desc: "Your legs are a looking fairly dainty now, thanks to the transformation - perfectly smooth, too.",},
+	{desc: "Your legs are looking fairly dainty and thin thanks to the transformation, which you're not sure how you feel about.",},
 ];
 
 var oppAssArray = [
@@ -183,7 +186,7 @@ var oppAssArray = [
 ];
 var playerAssArray = [
 	{desc: " When it comes to your ass, it's not like it's boney or anything, but you have to admit that it's fairly average.",},
-	{desc: " Then there's your ass, which has just enough body to it that you can understand why "+data.story[0].fName+" doesn't bother hiding the quick glances at your backside.",},
+	{desc: " Then there's your ass, which has just enough body to it that you can't blame your opponent for stealing the occasional glances at your backside.",},
 	{desc: " And then, there's your ass. Thanks to the transformation, it's thick enough that you can feel it bounce when you move, and it's far more sensitive than you expected.",},
 	{desc: " And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
 ];
@@ -219,6 +222,7 @@ var playerChestArray = [
 	{desc: "You have a pair of fairly-large C-cup breasts hanging from your chest, your sensitive nipples feeling like they're constantly being teased. ",},
 	{desc: "You have a pretty normal, flat chest. You're not flabby, but you're not exactly <i>fit</i>, either. ",},
 	{desc: "You you have a pair of teeny-titties pushing out from your chest, highlighting your slim sissy figure. ",},
+	{desc: "Having shrunk down, your chest is similarly slimmer, with your shoulders less broad now than before. ",},
 ];
 
 var oppGenitalsArray = [
@@ -557,6 +561,20 @@ function writeTab(character, text) {
 // 	}
 // }
 
+function willUp(){
+	if(data.player.will < 9)
+		data.player.will += 1;
+	if(data.player.fName == "Testing")
+		writeSpecial("Willpower has been incremented.");
+}
+
+function willDown(){
+	if(data.player.will > 1)
+		data.player.will -= 1;
+	if(data.player.fName == "Testing")
+		writeSpecial("Willpower has been decremented.");
+}
+
 function writeBig (img, cap) {
 	if (imagesDisabled != true) {
 	document.getElementById('output').innerHTML += `
@@ -703,12 +721,14 @@ function replaceCodenames(text) {
 			text = text.replace('OppHer', 'His');
 			text = text.replace('oppShe', 'he');
 			text = text.replace('OppShe', 'He');
+			text = text.replace('oppHim', 'him');
 		}
 		else{
 			text = text.replace('oppHer', 'her');
 			text = text.replace('OppHer', 'Her');
 			text = text.replace('oppShe', 'she');
 			text = text.replace('OppShe', 'She');
+			text = text.replace('oppHim', 'her');
 		}
 		for (codenameIndex = 0; codenameIndex < data.story.length; codenameIndex++) {
 			codenameCheck = data.story[codenameIndex].index + "F";
