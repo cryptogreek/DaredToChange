@@ -698,6 +698,18 @@ function replaceCodenames(text) {
 	for (geminiLoop = 0; geminiLoop < 5; geminiLoop++) {
 		text = text.replace('playerF', data.player.fName);
 		text = text.replace('playerL', data.player.lName);
+		if(data.story[0].sex == "M"){
+			text = text.replace('oppHer', 'his');
+			text = text.replace('OppHer', 'His');
+			text = text.replace('oppShe', 'he');
+			text = text.replace('OppShe', 'He');
+		}
+		else{
+			text = text.replace('oppHer', 'her');
+			text = text.replace('OppHer', 'Her');
+			text = text.replace('oppShe', 'she');
+			text = text.replace('OppShe', 'She');
+		}
 		for (codenameIndex = 0; codenameIndex < data.story.length; codenameIndex++) {
 			codenameCheck = data.story[codenameIndex].index + "F";
 			text = text.replace(codenameCheck, data.story[codenameIndex].fName);

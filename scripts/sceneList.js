@@ -428,15 +428,19 @@ function writeScene(scene) {
 
 		//NEW SCENES FOR DARED TO CHANGE START HERE
 		case "fairyKingStart" : {
-			writeText("You move your piece forward, placing it firmly on the forested tile. After removing your hand, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
-			writeText("The back is labeled with the tile's name in gold lettering, and turning it around-");
+			writeText("After weighing your options for a moment, you decide to move your piece forward and place it firmly on the forested tile. After removing your hand, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
+			writeText("The front is labeled with the name of the game, and turning it around-");
 			writeSpeech("card","none.jpg","You received your first card~!");
-			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind his/her hand.");
+			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind oppPro hand.");
 			writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
+			writeText("oppF shifts in place, leaning back a bit more.");
+			writeSpeech("opp","","Don't worry, I jumped the first time I heard it too. Just focus on the card, and it'll read the whole thing out for you.");
+			writeSpeech("player","","Huh. Little weird, but alright.");
+			writeText("You look back at the card, a faint shimmer rolling across its surface.");
 			writeSpeech("card","none.jpg","Any forest that houses the Fae can be a tricky place to get lost in, and there are no forests harder to navigate than those of the Fairy King. You get hopelessly lost, but rejoice! A friendly elf can lead you out of the forests, though she seems rather curious about humans...");
 			writeSpeech("card","none.jpg","Challenge: Let the other player toy with your tongue for as long as they want, even if you start drooling all over yourself!");
-			writeText("You can either explain the challenge to oppF and go through with it, or reject it...");
-			writeTransition("fairyAcc", "Explain the challenge and open wide");
+			writeText("oppF looks at you with a slightly raised eyebrow. You can accept the challenge and get a pair of tokens, or reject it and get some sort of punishment effect...");
+			writeTransition("fairyAcc", "Accept the challenge and open wide");
 			writeTransition("fairyRej", "Discard the card and take a punishment instead");
 			break;
 		}
