@@ -716,17 +716,11 @@ function writeScene(scene) {
 				}
 				else{
 					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and a nice look at the lacy light-violet bra supporting her breasts.");
-					writeSpeech("opp","","Honestly, I thought about coming in with no bra, but I really do need the support.");
+					writeSpeech("opp","","Honestly, I thought about skipping the bra completely, but I really do need the support outside of this place.");
 					writeText("She raises her hands to her chest, hefting her tits up for a moment while smirking.");
 					writeSpeech("opp","","If it helps, though... I <i>am</i> wearing a matching pair~!");
 					writeText("OppShe gives you a quick wink before turning her back to you, pulling oppHer hair past her shoulder to expose her back.");
 				}
-				
-
-
-
-
-
 			}
 			else{
 				writeSpeech("player","","Well, it's not like it's the dirtiest thing we could be doing, so... I guess a back massage it is?");
@@ -738,7 +732,7 @@ function writeScene(scene) {
 
 
 
-				
+
 			}
 			if(data.story[0].sex=="M"){
 				if(data.player.pref == "dom"){
