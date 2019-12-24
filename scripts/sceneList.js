@@ -8,8 +8,8 @@ function writeScene(scene) {
 			writeText("<font size+='2'>This game contains themes of <i><b>physical transformation</b> (including manifestation of some animal features, body-swapping, sex-changing, and growth/shrinking of genitalia)</i> and <i><b>mental transformation</b> (induced heat/rut, sissification, subservience, and brain-drain). </i>If you find this content objectionable, you probably won't have a fun time playing this.</font>");
 
 			writeText("With that in mind, you can scroll further down for a bit more information on the game, or you can jump right into by pressing the button below!");
-			writeTransition("prologue", "Start the game");
-			writeTransition("test", "Test the game");
+			writeTransition("prologue", "Start the game [WARNING: ALL CONTENT IN HERE IS SCRAPPED AND KNOWN TO BE BROKEN except the character sheet which should still be 100% functional]");
+			writeTransition("test", "Test the game [This is the only way to access content for the moment]");
 			//writeTransition("prologueSkip", "Skip the prologue");
 			writeText("Other notes:");
 			writeText("This game was made for the <a href='https://tfgames.site/phpbb3/viewtopic.php?f=12&t=12799'>Game-Night Contest on TFGames.</a>");
@@ -47,7 +47,7 @@ function writeScene(scene) {
 			writeTransition("fairyRej", "Reject the Fairy's Help (Switch)");
 			writeTransition("golemCaveStart", "Test the Cavern of the Golems");
 			writeTransition("golemAccFoot", "Show Humility to the Golems (give opponent foot massage)");
-			writeTransition("golemAccBack", "Show Humility to the Golems (give opponent back massage)");
+			writeTransition("golemAccShoulder", "Show Humility to the Golems (give opponent shoulder massage)");
 			writeTransition("golemRej", "Reject the Golem's Challenge");
 			writeTransition("androStart", "Watch your opponent go to Andro-Spring");
 			writeTransition("cafeStart", "Watch your opponent go to the Shadow Elf Cafe");
@@ -451,13 +451,13 @@ function writeScene(scene) {
 			writeText("oppF looks at you with a slightly raised eyebrow. You can accept the challenge and get a pair of tokens, or reject it and get just one along with some sort of punishment effect...");
 			writeTransition("fairyAccEnthused", "Accept the challenge - enthusiastically open wide");
 			writeTransition("fairyAccReluctant", "Accept the challenge - reluctantly open wide");
+			writeTransition("fairyRej", "Discard the card and take a punishment instead");
 			if(data.player.fName == "Testing"){
+				writeSpecial("Debug mode is active. Debug choices are available.")
 				writeTransition("fairyRejSub", "Discard the card and take a punishment instead (Submissive)");
 				writeTransition("fairyRejDom", "Discard the card and take a punishment instead (Dominant)");
 				writeTransition("fairyRej", "Discard the card and take a punishment instead (Switch)");
 			}
-			else
-				writeTransition("fairyRej", "Discard the card and take a punishment instead");
 			break;
 		}
 		case "fairyAccEnthused" : {
@@ -617,12 +617,12 @@ function writeScene(scene) {
 			writeSpeech("player","","Huh. Little weird, but alright.");
 			writeText("You look back at the card, a faint shimmer rolling across its surface.");
 			writeSpeech("card","none.jpg","The caverns created by the ancient golems are far-reaching and expansive, but they're also fiercely protected by their creators, the golems themselves. If you want to gain access, it's said that the golems will respect and help those who are willing to show great humility...");
-			writeSpeech("card","none.jpg","Challenge: Give the opponent a foot or back massage. It's alright if you don't know how - it's the thought that counts!");
+			writeSpeech("card","none.jpg","Challenge: Give the opponent a foot or shoulder massage. It's alright if you don't know how - it's the thought that counts!");
 			writeText("oppF looks at you with a slightly raised eyebrow.");
 			writeSpeech("opp","","You actually get a choice in how you do it, huh? That's actually pretty rare, but I guess it's 'cause it's the first round.");
 			writeText("You can accept the challenge and get a pair of tokens, or reject it and get just one along with some sort of punishment effect...");
 			writeTransition("golemAccFoot", "Accept the challenge and give your opponent a foot massage");
-			writeTransition("golemAccBack", "Accept the challenge and give your opponent a back massage");
+			writeTransition("golemAccShoulder", "Accept the challenge and give your opponent a shoulder massage");
 			writeTransition("golemRej", "Discard the card and take a punishment instead");
 			break;
 		}
@@ -690,7 +690,7 @@ function writeScene(scene) {
 			addTokens(2);
 			writeSpeech("player","","Huh. How do the tokens fit?");
 			writeText("oppF loosely points to it, still looking amused.");
-			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too, though I don't remember the name of the top of my head..");
+			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too, though I don't remember the name off the top of my head.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
@@ -702,13 +702,14 @@ function writeScene(scene) {
 				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
-		case "golemAccBack" : {
-			addFlag("AccBack");
+		case "golemAccShoulder" : {
+			addFlag("AccShoulder");
 			if(data.player.pref == "dom"){
 				writeSpeech("player","","Let's get that shirt off of you - it'll end up getting in the way.");
 				writeSpeech("opp","","Taking the lead, then? Well, can't say I mind too much.");
-				if(data.story[0].sex == "M")
+				if(data.story[0].sex == "M"){
 					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and chest before oppShe turns oppHer back to you.");
+				}
 				else if(data.story[0].sex == "F"){
 					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and some clear evidence that she really did skip out on a bra as her tits bounce down.");
 					writeSpeech("opp","","Hope you don't mind, but during the last few games, my bras really just got in the way. I still brought them, just not <i>on</i> me.");
@@ -723,45 +724,29 @@ function writeScene(scene) {
 				}
 			}
 			else{
-				writeSpeech("player","","Well, it's not like it's the dirtiest thing we could be doing, so... I guess a back massage it is?");
+				writeSpeech("player","","Well, it's not like it's the dirtiest thing we could be doing, so... I guess a shoulder massage it is?");
 				writeText("oppF smiles a bit, sitting up straighter as oppShe grabs the bottom of oppHer shirt.");
 				writeSpeech("opp","","In that case, why don't we get right to it?");
-				if(data.story[0].sex == "M")
+				if(data.story[0].sex == "M"){
 					writeText("OppShe pulls oppHer shirt upwards slowly, giving you a nice little show as the fabric goes up past oppHer toned stomach and chest, before oppShe ultimately pulls it completely off and drops it beside oppHim.");
-
-
-
-
-
-			}
-			if(data.story[0].sex=="M"){
-				if(data.player.pref == "dom"){
-					writeSpeech("player","","Let's get that shirt off of you - it'll end up getting in the way.");
-					writeSpeech("opp","","Taking the lead, then? Well, can't say I mind too much.");
-					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and chest before oppShe turns oppHer back to you.");
+					writeText("OppShe turns oppHer back to you casually, though you can see a hint of a smirk as oppShe faces away.");
+					writeSpeech("opp","","Let's see how you do, hm?");
+				}
+				else if(data.story[0].sex == "F"){
+					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and some clear evidence that she really did skip out on a bra as her tits bounce down.");
+					writeSpeech("opp","","Hope you don't mind, but during the last few games, my bras really just got in the way. I still brought them, just not <i>on</i> me.");
+					writeText("With that, oppShe turns her back to you with an over-the-shoulder smirk.");
 				}
 				else{
-					writeSpeech("player","","Well, it's not like it's the dirtiest thing we could be doing, so... I guess a foot massage it is?");
-					writeText("oppF smiles a bit, leaning back as oppShe lifts a shoe.");
-					writeSpeech("opp","","In that case, why don't we get right to it?");
-					writeText("You move forward, undoing the laces carefully before taking both the shoe and sock off.");
+					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and a nice look at the lacy light-violet bra supporting her breasts.");
+					writeSpeech("opp","","Honestly, I thought about skipping the bra completely, but I really do need the support outside of this place.");
+					writeText("She raises her hands to her chest, hefting her tits up for a moment while smirking.");
+					writeSpeech("opp","","If it helps, though... I <i>am</i> wearing a matching pair~!");
+					writeText("OppShe gives you a quick wink before turning her back to you, pulling oppHer hair past her shoulder to expose her back.");
 				}
 			}
-			else{
-				if(data.player.pref == "dom"){
-					writeSpeech("player","","Let's get those heels off, oppF.");
-					writeSpeech("opp","","Taking the lead, then? I certainly don't mind.");
-					writeText("OppShe carefully tugs at the heel of the shoe, sliding it off to reveal a slender foot as oppShe smiles.");
-				}
-				else{
-					writeSpeech("player","","Well, it's not like it's the dirtiest thing we could be doing, so... I guess a foot massage it is?");
-					writeText("oppF smiles a bit, leaning back as oppShe lifts a shoe.");
-					writeSpeech("opp","","In that case, why don't we get right to it, hun?");
-					writeText("You move forward, undoing the laces carefully before taking both the shoe and sock off.");
-				}
-			}
-			writeText("You quickly get to work, not <i>entirely</i> sure how it's supposed to work, but starting with a gentle kneading around the middle of the foot with your thumbs.");
-			writeText("oppF lets out a gentle groan as you do, clearly relaxing further into oppHer seat as oppShe does.");
+			writeText("You quickly get to work, not <i>entirely</i> sure how it's supposed to work, but starting with a gentle kneading around the bigger muscles of the shoulders.");
+			writeText("oppF lets out a quiet groan as you push, relaxing a bit under your hands.");
 			writeSpeech("player","","That was fast.");
 			writeText("Weirdly, it actually feels pleasant to be moving your hands like this...");
 			writeSpeech("opp","","Sensitivity...");
@@ -770,27 +755,27 @@ function writeScene(scene) {
 			writeSpeech("opp","","The game... It amps up your body's sensitivity while you play. Part of it's to help players enjoy things they might not be into, and another part is to make <i>giving</i> feel as good as <i>getting.</i>");
 			writeText("That explains your fingers feeling tingly...");
 			writeSpeech("opp","","That's also why the first round is always something tame, but sensual, like this. It's to get you accustomed to...");
-			writeText("oppF pauses to grunt, one of your hands sliding along oppHer foot as you press in.");
+			writeText("oppF pauses to grunt, one of your hands sliding along one particularly hard-feeling muscle knot as you press in.");
 			if(data.story[0].sex=="M"){
 				writeSpeech("opp","","...to the game. Christ, game or not, this feels damn good...");
-				writeText("While pressing down a bit harder, rolling around oppHer foot in your hand, you can't help but notice the angle you're sitting at and the view it's affording you.");
-				writeText("You can see the faint bulge in oppHer pants become a stronger outline as oppHer arms stretch out and oppShe rolls oppHer neck back, and your mouth is starting to water despite yourself.");
+				writeText("While pressing down a bit harder, rolling the butt of your hand across whatever feels tough, you can feel the faint grumble from oppHer chest as oppShe groans in satisfaction.");
+				writeText("As you keep sliding your hands along oppHer body, you can feel your own body warming up as lean into oppHim and as you feel oppHim lean back oppHimself.");
 			}
 			else if(data.story[0].sex=="F"){
-				writeSpeech("opp","","...to the game. God, those heels can be a bitch to walk in, so what you're doing feels <i>wonderful,</i> hun...");
+				writeSpeech("opp","","...to the game. God, it's easy to forget how <i>tense</i> a girl can get these days, so what you're doing feels <i>wonderful,</i> hun...");
 				writeSpeech("player","","Thanks, I think. Sounds like the game's doing most of the work, though.");
-				writeSpeech("opp","","Mm. Doesn't matter to me - they're your hands. And if they feel that good down there, I can't wait for what the next rounds will make you do with them...");
-				writeText("OppShe gives a quick wink before leaning oppHer head back, relishing the gentle pressure along oppHer foot.");
+				writeSpeech("opp","","Mm. Doesn't matter to me - they're your hands. And if they feel that good back there, I can't wait for what the next rounds will make you do with them...");
+				writeText("OppShe turns her head to give a quick wink before leaning oppHer head forward, relishing the gentle pressure along oppHer her shoulders.");
 			}
 			else{
-				writeSpeech("opp","","...to the game. God, those heels can be a bitch to walk in, so what you're doing feels <i>wonderful,</i> hun...");
-				writeText("While pressing down a bit harder, rolling around oppHer foot in your hand, you can't help but notice the angle you're sitting at and the view it's affording you.");
-				writeText("You can see the faint bulge in oppHer pants become a stronger outline as oppHer arms stretch out and oppShe rolls oppHer neck back, and your mouth is starting to water despite yourself.");
+				writeSpeech("opp","","...to the game. God, it's easy to forget how tense a girl gets carrying a pair of tits like mine, so what you're doing feels <i>wonderful,</i> hun...");
+				writeText("While pressing down a bit harder, rolling the butt of your hand across whatever feels tough, you can feel the faint grumble from oppHer chest as oppShe groans in satisfaction.");
+				writeText("As you keep sliding your hands along oppHer body, you can feel your own body warming up as lean into oppHim and as you feel oppHim lean back oppHimself.");
 			}
 			writeText("Feeling a bit more confident, you start applying a bit more pressure and moving your hands a bit more, using oppHer grunts and groans as a roadmap for where to go next.");
-			writeText("Despite barely moving much at all, you can feel your breathing get heavier from arousal as you handle oppHer foot - the game really does seem to want to make giving pleasure just as good as getting it...");
-			writeText("A few seconds later, though, oppF pulls oppHer foot away, smiling down at you with a look of satisfaction.");
-			writeSpeech("opp","","You're good at this, but I think I'd like to see what my turn will have me do. Though if it's particularly boring, I might ask you to do the same to the other foot. For now, though?");
+			writeText("Despite barely moving much at all, you can feel your breathing get heavier from arousal as you saw into oppHer body - the game really does seem to want to make giving pleasure just as good as getting it...");
+			writeText("A few seconds later, though, oppF moves oppHer hand to stop yours, smiling back at you with a look of satisfaction.");
+			writeSpeech("opp","","You're good at this, but I think I'd like to see what my turn will have me do. Though if it's particularly boring, I might ask if I can return the favor... For now, though?");
 			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
 			writeSpeech("opp","","Go ahead and take that reward of yours, playerF. You earned it.");
 			addTokens(2);
