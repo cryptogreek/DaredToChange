@@ -17,6 +17,7 @@ var data = {
 		character: "red",
 		pref: "switch",
 		currentScene: "start",
+		tokens: 0,
 		will: 5,
 		dick: 6,
 		height: 63,
@@ -575,6 +576,44 @@ function willDown(){
 		writeSpecial("Willpower has been decremented.");
 }
 
+function addTokens(num){
+	data.player.tokens += num;
+	if(data.player.fName == "Testing"){
+		if(num == 1)
+			writeSpecial("You received a TF-Token.");
+		else if (num == 2)
+			writeSpecial("You received two TF-Tokens.");
+		else
+			writeSpecial("Not sure how, but you just received "+num+" tokens?");
+	}
+}
+
+function loseTokens(num){
+	data.player.tokens -= num;
+	if(data.player.fName == "Testing")
+		writeSpecial(num+" tokens have been spent.");
+}
+
+function willUp(){
+	if(data.player.will < 9)
+		data.player.will += 1;
+	if(data.player.fName == "Testing")
+		writeSpecial("Willpower has been incremented.");
+}
+
+function addFlag(flag){
+	if(flag == "Rej"){
+		data.player.flags += flag;
+	}
+	else if(data.player.flags.includes(flag)!=true){
+		data.player.flags+=flag;
+		if(data.player.fName == "Testing")
+			writeSpecial("The flag <i>["+flag+"]</i> has been added to your save file.");
+	}
+	else
+		writeSpecial("The duplicate flag <i>["+flag+"]</i> was not added to your save file.");
+}
+
 function writeBig (img, cap) {
 	if (imagesDisabled != true) {
 	document.getElementById('output').innerHTML += `
@@ -796,6 +835,11 @@ function renamePlayer() {
 	for(var i = 0; i < 3; i++){
 		if(document.getElementById('gender'+i+'').checked==true){
 			data.story[0].sex = document.getElementById('gender'+i+'').value;
+		}
+	}
+	for(var i = 0; i < 3; i++){
+		if(document.getElementById('role'+i+'').checked==true){
+			data.player.pref = document.getElementById('role'+i+'').value;
 		}
 	}
 	if(data.story[0].sex == "H"){
@@ -1138,6 +1182,7 @@ function switchDesc(n) {
 		<div class=" lb_primary">
 			<h2 class = "selfDesc">Name: `+data.player.fName+` `+data.player.lName+`</h2>
 		</div><div class=" lb_secondary">
+			<p class = "selfDesc"><i>Tokens:</i> `+data.player.tokens+`</p>
 			<p class = "selfDesc">`+playerHeightArray[data.player.heightVal].desc+playerBuildArray[data.player.buildVal].desc+playerClothesArray[data.player.clothesVal].desc+`</p>
 			<p class = "selfDesc">`+playerHairArray[data.player.hairVal].desc+playerEarsArray[data.player.earsVal].desc+`</p>
 			<p class = "selfDesc">`+playerLegsArray[data.player.legsVal].desc+playerAssArray[data.player.assVal].desc+playerTailArray[data.player.tailVal].desc+`</p>

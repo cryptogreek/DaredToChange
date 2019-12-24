@@ -41,11 +41,14 @@ function writeScene(scene) {
 			writeSpeech("player","","But now, for testing reasons, the player is a man again.");
 			updateMenu();
 			writeTransition("fairyKingStart", "Test the Fairy King's Forest");
-			writeTransition("fairyRej", "Accept the Fairy's Help");
-			writeTransition("fairyAcc", "Reject the Fairy's Help (Dom)");
-			writeTransition("fairyAcc1", "Reject the Fairy's Help (Sub)");
+			writeTransition("fairyAccEnthused", "Accept the Fairy's Help Enthusiastically");
+			writeTransition("fairyAccReluctant", "Accept the Fairy's Help Reluctantly");
+			writeTransition("fairyRejDom", "Reject the Fairy's Help (Dom)");
+			writeTransition("fairyRejSub", "Reject the Fairy's Help (Sub)");
+			writeTransition("fairyRej", "Reject the Fairy's Help (Switch)");
 			writeTransition("golemCaveStart", "Test the Cavern of the Golems");
-			writeTransition("golemAcc", "Show Humility to the Golems (give opponent foot massage)");
+			writeTransition("golemAccFoot", "Show Humility to the Golems (give opponent foot massage)");
+			writeTransition("golemAccBack", "Show Humility to the Golems (give opponent back massage)");
 			writeTransition("golemRej", "Reject the Golem's Challenge");
 			writeTransition("androStart", "Watch your opponent go to Andro-Spring");
 			writeTransition("cafeStart", "Watch your opponent go to the Shadow Elf Cafe");
@@ -87,16 +90,19 @@ function writeScene(scene) {
 		case "prologueName": {
 			writeText("First Name: <input type='text' id='nameSubmission' value='Kevin'>");
 			writeText("Last Name: <input type='text' id='lastSubmission' value='Rascals'>");
-			writeText("Age: <input type='text' id='ageSubmission' value='25'>");
-			writeText("Dick (in): <input type='text' id='dickSubmission' value='6'>");
-			writeText("Height (in): <input type='text' id='heightSubmission' value='66'>");
-			writeText("Build: <input type='radio' id='build0' name='build' value='average'> Average <input type='radio' id='build1' name='build' value='stocky'> Stocky <input type='radio' id='build2' name='build' value='slim'> Slim <input type='radio' id='build3' name='build' value='fit'> Fit");
-			writeText("Sexual Preference: <input type='radio' id='gender0' name='gender' value='M'> Male <input type='radio' id='gender1' name='gender' value='F'> Female <input type='radio' id='gender2' name='gender' value='H'> Shemale");
+			writeText("Age: <input type='text' id='ageSubmission' value='25'> <font size='-2'>(18+)</font>");
+			writeText("Dick (in): <input type='text' id='dickSubmission' value='6'> <font size='-2'>(1-12)</font>");
+			writeText("Height (in): <input type='text' id='heightSubmission' value='66'> <font size='-2'>(60-78)</font>");
+			writeText("Build: &nbsp <input type='radio' id='build0' name='build' value='average' checked='true'> Average &nbsp &nbsp <input type='radio' id='build1' name='build' value='stocky'> Stocky &nbsp &nbsp <input type='radio' id='build2' name='build' value='slim'> Slim &nbsp &nbsp <input type='radio' id='build3' name='build' value='fit'> Fit");
+			writeText("Preferred Role: &nbsp <input type='radio' id='role0' name='pref' value='switch' checked='true'> Switch &nbsp &nbsp <input type='radio' id='role1' name='pref' value='sub'> Sub &nbsp &nbsp <input type='radio' id='role2' name='pref' value='dom'> Dom");
+			writeText("Sexual Preference: &nbsp <input type='radio' id='gender0' name='gender' value='M' checked='true'> Male &nbsp &nbsp <input type='radio' id='gender1' name='gender' value='F'> Female &nbsp &nbsp <input type='radio' id='gender2' name='gender' value='H'> Shemale");
 			//writeTransition("prologue3", "Finish");
 			writeFunction("renamePlayer()", "Finish");
 			break;
 		}
 		case "prologue2" : {
+			if(data.player.fName == "Testing")
+				writeSpecial("Your name is Testing. Debug mode has been activated.");
 			if(data.player.age < 18){
 				writeText("It was at that moment that you realized that you totally forgot you were underaged.");
 				writeText("Meg brings over a friend and you play Uno while eating junk food. You have a lot of wholesome, non-sexual fun.");
@@ -127,17 +133,20 @@ function writeScene(scene) {
 					data.player.will -= 1;
 				}
 			}
-			else{
-				writeText("With that out of the way, everything should be fine. Drinks, snacks, clear and open space on the carpet, etc...");
-				writeSpeech("player","","Alright, that's basically everything. Nothing left to do but wait...");
-				writeText("You throw yourself onto a nearby beanbag, relishing the feeling as you pull out your phone.");
-				writeText("You don't actually end up <i>waiting</i> for her, though, with a hefty <font size='+1' color='white'><i><b>SLAM</b></i></font> coming from the front door.");
-				writeText("Sounds like she might've knocked by kicking the door.");
-				writeText("Again.");
-				writeTransition("prologueSub", "Rush to the door. It's probably better to not keep her waiting...");
-				writeTransition("prologueDom", "Make her wait a bit. Kicking your door was rather rude.");
+			if(data.player.height < 60 || data.player.height > 78){
+				writeText("For reasons of height-based transformations, your starting height has to be between 5' (60in) and 6'6\" (78in). Sorry!");
+				writeTransition("prologueName", "Go back.");
 				break;
 			}
+			writeText("With that out of the way, everything should be fine. Drinks, snacks, clear and open space on the carpet, etc...");
+			writeSpeech("player","","Alright, that's basically everything. Nothing left to do but wait...");
+			writeText("You throw yourself onto a nearby beanbag, relishing the feeling as you pull out your phone.");
+			writeText("You don't actually end up <i>waiting</i> for her, though, with a hefty <font size='+1' color='white'><i><b>SLAM</b></i></font> coming from the front door.");
+			writeText("Sounds like she might've knocked by kicking the door.");
+			writeText("Again.");
+			writeTransition("prologueSub", "Rush to the door. It's probably better to not keep her waiting...");
+			writeTransition("prologueDom", "Make her wait a bit. Kicking your door was rather rude.");
+			break;
 		}
 		case "prologueSub": {
 			if(data.player.will > 0)
@@ -428,11 +437,11 @@ function writeScene(scene) {
 
 		//NEW SCENES FOR DARED TO CHANGE START HERE
 		case "fairyKingStart" : {
-			data.player.flags+="Fairy";
+			addFlag("fairy");
 			writeText("After weighing your options for a moment, you decide to move your piece forward and place it firmly on the forested tile. After removing your hand, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
 			writeText("The front is labeled with the name of the game, and turning it around-");
 			writeSpeech("card","none.jpg","You received your first card~!");
-			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind oppPro hand.");
+			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind oppHer hand.");
 			writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
 			writeText("oppF shifts in place, leaning back a bit more.");
 			writeSpeech("opp","","Don't worry, I jumped the first time I heard it too. Just focus on the card, and it'll read the whole thing out for you.");
@@ -440,35 +449,37 @@ function writeScene(scene) {
 			writeText("You look back at the card, a faint shimmer rolling across its surface.");
 			writeSpeech("card","none.jpg","Any forest that houses the Fae can be a tricky place to get lost in, and there are no forests harder to navigate than those of the Fairy King. You get hopelessly lost, but rejoice! A friendly elf can lead you out of the forests, though oppShe seems rather curious about humans...");
 			writeSpeech("card","none.jpg","Challenge: Let the other player toy with your tongue for as long as they want, even if you start drooling all over yourself!");
-			writeText("oppF looks at you with a slightly raised eyebrow. You can accept the challenge and get a pair of tokens, or reject it and get some sort of punishment effect...");
-			writeTransition("fairyAcc1", "Accept the challenge - enthusiastically open wide");
-			writeTransition("fairyAcc2", "Accept the challenge - reluctantly open wide");
+			writeText("oppF looks at you with a slightly raised eyebrow. You can accept the challenge and get a pair of tokens, or reject it and get just one along with some sort of punishment effect...");
+			writeTransition("fairyAccEnthused", "Accept the challenge - enthusiastically open wide");
+			writeTransition("fairyAccReluctant", "Accept the challenge - reluctantly open wide");
 			if(data.player.fName == "Testing"){
 				writeTransition("fairyRejSub", "Discard the card and take a punishment instead (Submissive)");
 				writeTransition("fairyRejDom", "Discard the card and take a punishment instead (Dominant)");
+				writeTransition("fairyRej", "Discard the card and take a punishment instead (Switch)");
 			}
 			else
 				writeTransition("fairyRej", "Discard the card and take a punishment instead");
 			break;
 		}
-		case "fairyAcc1" : {
-			data.player.flags += "Acc1";
-			willDown();
+		case "fairyAccEnthused" : {
+			if(data.player.flags.includes("AccEnthused")!=true)
+				willDown();
+			addFlag("AccEnthused");
 			writeText("You smile at oppF, licking your lips a bit.");
 			writeSpeech("player","","Sounds like a pretty good start.");
 			writeSpeech("opp","","Hah. Looks like someone's getting excited; do I even need to ask if you're up for the challenge?");
 			writeText("In response, you just open your mouth wide, letting out a soft \"<i>Ahh~</i>\" as you do.");
 			writeText("oppF slides up close to you with a grin, oppHer fingers very quickly reaching towards your mouth... but not going in just yet.");
-			writeText("OppShe starts off with just rubbing the pads of her fingers along your lips, sending a tingling sensation along them and through your entire mouth.");
+			writeText("OppShe starts off with just rubbing the pads of oppHer fingers along your lips, sending a tingling sensation along them and through your entire mouth.");
 			writeText("You can feel your face flushing as oppF's own face turns a little red, though that only seems to make oppHim lean oppHer face in even closer.");
 			writeText("A moment later, you feel a finger finally go past your lips as oppShe starts exploring around, pressing gently against your tongue with just the tip.");
 			writeSpeech("opp","","Did you notice?");
-			writeText("You reflexively move to speak, but her fingers make it a bit difficult to reply.");
+			writeText("You reflexively move to speak, but oppHer fingers make it a bit difficult to reply.");
 			writeSpeech("opp","","The game increases your sensitivity all over the place... It's why the first round is always something tame, but sensual. It's to get you accustomed to...");
 			writeText("A finger softly caresses the underside of your tongue, feeling far better than it should as your body shudders slightly.");
 			writeSpeech("opp","","...Well, to all of <i>this.</i>");
 			writeText("Even as oppHer fingers tease your tongue, you can feel another slowly gliding across your gums, spreading your spit all around as it starts flowing past your lips and down your chin.");
-			writeText("Every teasing prod makes it harder to control your breathing, and despite how far back she slides her fingers, you never feel the urge to gag - just a strong feeling of wanting her to push them even further.");
+			writeText("Every teasing prod makes it harder to control your breathing, and despite how far back oppShe slides oppHer fingers, you never feel the urge to gag - just a strong feeling of wanting oppHer to push them even further.");
 			writeText("OppShe gently pulls on your tongue, pulling it all the way out of your mouth as a bit of drool starts to dribble from the tip, the pad of oppHer thumb sliding across the slick top...");
 			writeSpeech("opp","","...Neat.");
 			writeText("Before oppShe pulls oppHer hand away suddenly, leaving your mouth feeling dreadfully empty as oppShe takes oppHer seat again leans back.");
@@ -479,6 +490,7 @@ function writeScene(scene) {
 			writeText("oppF grins wolfishly.");
 			writeSpeech("opp","","I'll be looking forward to it... But for now, collect your prize.");
 			writeText("The sound of a faint <i>clink</i> from the gameboard pulls your attention to the same little port that the card came out of. Despite definitely not having been large enough to fit quarter-sized tokens, the slot still popped a pair of them out.");
+			addTokens(2);
 			writeSpeech("opp","","It stretches. Magically.");
 			writeText("oppF points to the slot, an amused look playing across oppHer face.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
@@ -492,7 +504,8 @@ function writeScene(scene) {
 				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
-		case "fairyAcc2" : {
+		case "fairyAccReluctant" : {
+			addFlag("AccReluctant");
 			writeText("You shift around a bit, before taking a deep breath and nodding.");
 			writeSpeech("player","","Well... It's not like it's the <i>most</i> embarrassing challenge I could do.");
 			writeSpeech("opp","","So you're taking the challenge, then?");
@@ -505,7 +518,7 @@ function writeScene(scene) {
 			writeText("From the moment oppShe touches the inside of your mouth, a soft jolt spreads throughout your body. OppHer thumb traces along your gums just for a moment before you feel oppHer pointer finger start gently pressing against the middle of your tongue.");
 			writeText("A faint blush spreads across oppF's face, probably just as red as your own, as oppShe starts pushing against it. That you can feel the smallest movements of oppHer fingers is almost unreal...");
 			writeSpeech("opp","","Did you notice?");
-			writeText("You reflexively move to speak, but her fingers make it a bit difficult to reply.");
+			writeText("You reflexively move to speak, but oppHer fingers make it a bit difficult to reply.");
 			writeSpeech("opp","","The game increases your sensitivity all over the place... It's why the first round is always something tame, but sensual. It's to get you accustomed to...");
 			writeText("A finger softly caresses the underside of your tongue, feeling far better than it should as your body shudders slightly.");
 			writeSpeech("opp","","...Well, to all of <i>this.</i>");
@@ -519,6 +532,7 @@ function writeScene(scene) {
 			writeText("oppF grins wolfishly.");
 			writeSpeech("opp","","I'll be looking forward to it... But for now, collect your prize.");
 			writeText("The sound of a faint <i>clink</i> from the gameboard pulls your attention to the same little port that the card came out of. Despite definitely not having been large enough to fit quarter-sized tokens, the slot still popped a pair of them out.");
+			addTokens(2);
 			writeSpeech("opp","","It stretches. Magically.");
 			writeText("oppF points to the slot, an amused look playing across oppHer face.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
@@ -543,7 +557,10 @@ function writeScene(scene) {
 			break;
 		}
 		case "fairyRej" : {
-			willUp();
+			if(data.player.flags.includes("fairyRej"!=true)){
+				willUp();
+				addFlag("Rej");
+			}
 			writeSpeech("player","","Yeah, I... don't think I'm gonna do that. No offense or anything, I'd just rather not have someone's fingers in my mouth.");
 			writeText("oppF shrugs.");
 			writeSpeech("opp","","I get that - to each their own. Plus, since it's the first round, it's not like the punishment will be <i>too</i> bad. Push the card back in the slot if you're sure about it.");
@@ -553,7 +570,7 @@ function writeScene(scene) {
 			writeText("There's a moment of silence after the card finishes, before you feel <i>something.</i> You feel breathless, but not in a painful way, and an almost fuzzy sensation plays across your skin.");
 			writeText("Your muscles tighten up sharply as you let out a gasp at a much higher-pitch than you should have, and your vision goes white.");
 			writeText("Only for a second, though. After that, you can see normally again, though everything around you seems predictably larger from your new height.");
-			writeSpeech("card","","Congratulations on your first transformation! A shame it had to be through a punishment.");
+			writeSpeech("card","","Congratulations on your first transformation! A shame it had to be through a punishment, but that's just the way the game goes!");
 			writeSpecial("Your entire body is now smaller and more lithe! To see your new appearance (and any future changes), click either STATUS on the sidebar or click your character's portrait when you speak.");
 			data.player.height = 50;
 			data.player.heightVal = 1;
@@ -566,6 +583,59 @@ function writeScene(scene) {
 				data.player.dick -= 1;
 				data.player.genitalsVal = 3;
 			}
+			writeText("oppF takes a moment to look you over, taking in your smaller body with an amused look.");
+			writeSpeech("opp","","If I didn't know any better, I'd say you lost some weight since I last saw you.");
+			writeSpeech("player","","Funny. My skin feels weird, though - and not just because of the size difference...");
+			writeSpeech("opp","","Ah, yeah. The game increases your sensitivity all over the place... It's why the first round is always something tame, but sensual. It's to get you accustomed to...");
+			writeText("OppShe gestures vaguely at your body.");
+			writeSpeech("opp","","To all of that, really. It really helps make some things you wouldn't normally be into feel pretty damn good, especially in the later rounds.");
+			writeSpeech("player","","That makes sense. Still a little weird, though.");
+			writeSpeech("opp","","Eh, that's magic for ya. I find it's a lot more fun if you just roll with it and have some fun with whatever gets thrown at you.");
+			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
+			addTokens(1);
+			writeText("oppF loosely points to it, still looking amused.");
+			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too.");
+			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
+			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
+			writeSpeech("opp","","And with that, it looks like it's my turn.");
+			if(data.story[0].sex == "F")
+				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+			else if(data.story[0].sex == "M")
+				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
+			else
+				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+			break;
+		}
+		case "golemCaveStart" : {
+			addFlag("golem");
+			writeText("After weighing your options for a moment, you decide to move your piece forward and place it in front of the cavern's opening. After moving your hand away, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
+			writeText("The front is labeled with the name of the game, and turning it around-");
+			writeSpeech("card","none.jpg","You received your first card~!");
+			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind oppHer hand.");
+			writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
+			writeText("oppF shifts in place, leaning back a bit more.");
+			writeSpeech("opp","","Don't worry, I jumped the first time I heard it too. Just focus on the card, and it'll read the whole thing out for you.");
+			writeSpeech("player","","Huh. Little weird, but alright.");
+			writeText("You look back at the card, a faint shimmer rolling across its surface.");
+			writeSpeech("card","none.jpg","The caverns created by the ancient golems are far-reaching and expansive, but they're also fiercely protected by their creators, the golems themselves. If you want to gain access, it's said that the golems will respect and help those who are willing to show great humility...");
+			writeSpeech("card","none.jpg","Challenge: Give the opponent a foot or back massage. It's alright if you don't know how - it's the thought that counts!");
+			writeText("oppF looks at you with a slightly raised eyebrow. You can accept the challenge and get a pair of tokens, or reject it and get just one along with some sort of punishment effect...");
+			writeTransition("golemAccFoot", "Accept the challenge and give your opponent a foot massage");
+			writeTransition("golemAccBack", "Accept the challenge and give your opponent a back massage");
+			writeTransition("golemRej", "Discard the card and take a punishment instead");
+			break;
+		}
+		case "golemAccFoot" : {
+			addFlag("AccFoot");
+			break;
+		}
+		case "golemAccBack" : {
+			addFlag("AccBack");
+			break;
+		}
+		case "golemRej" : {
+			if(data.player.flags.includes("golemRej")!=true)
+				addFlag("Rej");
 			break;
 		}
 

@@ -236,7 +236,7 @@ writeSpeech("card","none.jpg","You received your first card~!");
 writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind his/her hand.");
 writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
 writeSpeech("card","none.jpg","The caverns created by the ancient golems are far-reaching and expansive, but they're also fiercely protected by their creators, the golems themselves. If you want to gain access, it's said that the golems will respect and help those who are willing to show great humility...");
-writeSpeech("card","none.jpg","Challenge: Give the opponent a foot massage. It's alright if you don't know how - it's the thought that counts!");
+writeSpeech("card","none.jpg","Challenge: Give the opponent a foot or back massage. It's alright if you don't know how - it's the thought that counts!");
 writeText("You can either explain the challenge to oppF and go through with it, or reject it...");
 writeTransition("golemAcc", "Explain the challenge and give her a massage");
 writeTransition("golemRej", "Discard the card and take a punishment instead");
