@@ -40,6 +40,7 @@ var data = {
 		fName: "???",
 		lName: "???",
 		color:"#833aa7",
+		piece:"blue",
 		sex:"M",
 		will:5,
 		dick:7,
@@ -79,19 +80,19 @@ var logbookArray = [
 ];
 
 var oppHeightArray = [
-	{desc: " looks to be around "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
-	{desc: " stands at a rather short "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
-	{desc: " stands at a rather tall "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
-	{desc: " is a towering "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
-	{desc: " is a miniscule "+Math.floor(data.story[0].height / 12) + " feet and " + data.story[0].height % 12 + " inches tall, ",},
+	{desc: " looks to be around ",},
+	{desc: " stands at a rather short ",},
+	{desc: " stands at a rather tall ",},
+	{desc: " is a towering ",},
+	{desc: " is a miniscule ",},
 ];
 
 var playerHeightArray = [
-	{desc: "You stand at "+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
-	{desc: "You stand at a short "+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
-	{desc: "You stand at a rather tall"+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
-	{desc: "You stand at a miniscule"+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
-	{desc: "You stand at a towering"+ Math.floor(data.player.height / 12) + " feet and " + data.player.height % 12 + " inches, ",},
+	{desc: "You stand at ",},
+	{desc: "You stand at a short ",},
+	{desc: "You stand at a rather tall ",},
+	{desc: "You stand at a miniscule ",},
+	{desc: "You stand at a towering ",},
 ];
 
 var oppBuildArray = [
@@ -331,7 +332,7 @@ function nameUpdate() {
 function hideStuff() {
 	//console.log("hideStuff start");
 	hideSave();
-	//hideSelf();
+	hideSelf();
 	//console.log("hideStuff end");
 }
 
@@ -367,11 +368,12 @@ function selfButton() {
 
 function hideSelf() {
 	selfHidden = true;
-	document.getElementById("self").style.visibility = "hidden";	
+	document.getElementById("self").style.visibility = "hidden";
 }
 
 function showSelf() {
-	hideStuff();
+	// hideStuff();
+	hideSave();
 	selfHidden = false;
 	document.getElementById("self").style.visibility = "visible"; 
 	generateNav();
@@ -386,6 +388,8 @@ function writeSpeech (name, img, text) {
 		else
 			cssColor = "#994949";
 	}
+	if(name == "Desk Girl")
+			cssColor = "#DC58D6";
 	if(name == "opp"){
 		if(data.story[0].sex=="H")
 			cssColor = "#9400b5";
@@ -437,6 +441,35 @@ function writeSpeech (name, img, text) {
 			">
 			<div class="textBoxContent">
 			<p class = "textName" style="color:`+cssColor+`">Card</p>
+			<p>` + replaceCodenames(text) + `</p>
+		</div>
+		<br>
+		`;
+	}
+	else if(name == "Desk Girl"){
+		document.getElementById('output').innerHTML +=`
+		<div class="textBox" style="border-color: `+cssColor+`">
+			<img class = "textThumb" onclick="openLogFor('Desk Girl')" style="box-shadow: -5px 5px `+cssColor+`" src = "
+				`+ img +`
+			">
+			<div class="textBoxContent">
+			<p class = "textName" style="color:`+cssColor+`">Desk Girl</p>
+			<p>` + replaceCodenames(text) + `</p>
+		</div>
+		<br>
+		`;
+	}
+	else if(name == "Man" || name == "Woman" || name == "Dickgirl"){
+		if(name == "Woman")
+			cssColor = "#DDB7DD";
+		img = "scripts/gamefiles/profiles/misc.jpg";
+		document.getElementById('output').innerHTML +=`
+		<div class="textBox" style="border-color: `+cssColor+`">
+			<img class = "textThumb" style="box-shadow: -5px 5px `+cssColor+`" src = "
+				`+ img +`
+			">
+			<div class="textBoxContent">
+			<p class = "textName" style="color:`+cssColor+`">`+ name + `</p>
 			<p>` + replaceCodenames(text) + `</p>
 		</div>
 		<br>
@@ -845,6 +878,7 @@ function renamePlayer() {
 	if(data.story[0].sex == "H"){
 		data.story[0].fName = "Felicity";
 		data.story[0].lName = "Lenore";
+		data.story[0].piece = "purple";
 		data.story[0].height = 75;
 		data.story[0].buildVal = 1;
 		data.story[0].clothesVal = 2;
@@ -858,6 +892,7 @@ function renamePlayer() {
 	else if(data.story[0].sex == "M"){
 		data.story[0].fName = "Cody";
 		data.story[0].lName = "Devons";
+		data.story[0].piece = "blue";
 		data.story[0].height = 73;
 		data.story[0].buildVal = 1;
 		data.story[0].clothesVal = 0;
@@ -871,6 +906,7 @@ function renamePlayer() {
 	else if(data.story[0].sex == "F"){
 		data.story[0].fName = "Sienna";
 		data.story[0].lName = "Kendrix";
+		data.story[0].piece = "green";
 		data.story[0].height = 67;
 		data.story[0].buildVal = 0;
 		data.story[0].clothesVal = 1;
@@ -1130,8 +1166,26 @@ function generateNav() {
 }
 
 function switchDesc(n) {
-	if (n != "player") {
-		console.log("now loading logbook for character ID " + n + " aka " + data.story[n].index);
+	if(n == "Desk Girl"){
+		console.log("now loading logbook for character ID DESKGIRL aka DESKGIRL");
+		if (imagesDisabled != true) {
+			document.getElementById('logbookRight').innerHTML = `
+				<img id="selfImage" class="selfImage" src="scripts/gamefiles/profiles/desk.jpg">
+			`;
+		}
+		document.getElementById('logbookRight').innerHTML += `
+		<div class=" lb_primary">
+			<h2 class = "selfDesc">Name: Desk Girl</h2>
+		</div><div class=" lb_secondary">
+			<p class = "selfDesc">The girl handling the front desk of D.T.C. Since she's always sitting, you can't really tell how tall she is, though she's clearly got a slim figure. You can also clearly see the edges of her bra poking out of a rather casual V-neck sweater, something that's obviously done on-purpose if the way she toys with the neck is anything to go by.</p>
+			<p class = "selfDesc">She has her hair pulled into a loose bun, with some stray strands framing her face and others pulled behind her ears. Every time she pauses her typing to slide some of her hair over her ear, she takes a moment to fiddle with her earlobe...</p>
+			<p class = "selfDesc">Aside from that, though, the desk blocks the view of the rest of her. Her smile seems genuine, though, like she actually does enjoy working here.</p>
+		</div>
+		`;
+	}
+	else if (n != "player") {
+		if(n != "Desk Girl")
+			console.log("now loading logbook for character ID " + n + " aka " + data.story[n].index);
 		if (imagesDisabled != true) {
 			document.getElementById('logbookRight').innerHTML = `
 				<img id="selfImage" class="selfImage" src="scripts/gamefiles/characters/`+data.story[n].index+data.story[n].image+data.story[n].sex+`.jpg">
@@ -1142,7 +1196,7 @@ function switchDesc(n) {
 			<div class=" lb_primary">
 				<h2 class = "selfDesc">Name: `+data.story[n].fName+` `+data.story[n].lName+`</h2>
 			</div><div class=" lb_secondary">
-				<p class = "selfDesc">`+data.story[0].fName+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
+				<p class = "selfDesc">`+data.story[0].fName+oppHeightArray[data.story[0].heightVal].desc+Math.floor(data.story[0].height / 12)+` feet and `+Math.floor(data.story[0].height % 12)+` inches tall,`+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
 				<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
 				<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
 				<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+data.story[0].dick+oppGenitalsArray2[data.story[0].genitalsVal2].desc+`</p>
@@ -1154,7 +1208,7 @@ function switchDesc(n) {
 			<div class=" lb_primary">
 				<h2 class = "selfDesc">Name: `+data.story[n].fName+` `+data.story[n].lName+`</h2>
 			</div><div class=" lb_secondary">
-				<p class = "selfDesc">`+data.story[0].fName+oppHeightArray[data.story[0].heightVal].desc+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
+				<p class = "selfDesc">`+data.story[0].fName+oppHeightArray[data.story[0].heightVal].desc+Math.floor(data.story[0].height / 12)+` feet and `+Math.floor(data.story[0].height % 12)+` inches tall,`+oppBuildArray[data.story[0].buildVal].desc+oppClothesArray[data.story[0].clothesVal].desc+`</p>
 				<p class = "selfDesc">`+oppHairArray[data.story[0].hairVal].desc+oppEarsArray[data.story[0].earsVal].desc+`</p>
 				<p class = "selfDesc">`+oppLegsArray[data.story[0].legsVal].desc+oppAssArray[data.story[0].assVal].desc+oppTailArray[data.story[0].tailVal].desc+`</p>
 				<p class = "selfDesc">`+oppChestArray[data.story[0].chestVal].desc+oppGenitalsArray[data.story[0].genitalsVal].desc+`</p>
@@ -1183,7 +1237,7 @@ function switchDesc(n) {
 			<h2 class = "selfDesc">Name: `+data.player.fName+` `+data.player.lName+`</h2>
 		</div><div class=" lb_secondary">
 			<p class = "selfDesc"><i>Tokens:</i> `+data.player.tokens+`</p>
-			<p class = "selfDesc">`+playerHeightArray[data.player.heightVal].desc+playerBuildArray[data.player.buildVal].desc+playerClothesArray[data.player.clothesVal].desc+`</p>
+			<p class = "selfDesc">`+playerHeightArray[data.player.heightVal].desc+Math.floor(data.player.height / 12)+` feet and `+Math.floor(data.player.height % 12)+` inches tall,`+playerBuildArray[data.player.buildVal].desc+playerClothesArray[data.player.clothesVal].desc+`</p>
 			<p class = "selfDesc">`+playerHairArray[data.player.hairVal].desc+playerEarsArray[data.player.earsVal].desc+`</p>
 			<p class = "selfDesc">`+playerLegsArray[data.player.legsVal].desc+playerAssArray[data.player.assVal].desc+playerTailArray[data.player.tailVal].desc+`</p>
 			<p class = "selfDesc">`+playerChestArray[data.player.chestVal].desc+playerGenitalsArray[data.player.genitalsVal].desc+data.player.dick+playerGenitalsArray2[data.player.genitalsVal].desc+`</p>

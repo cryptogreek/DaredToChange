@@ -3,18 +3,21 @@ function writeScene(scene) {
 	switch(scene) {
 		//System Locations
 		case "start" : {
-			writeText("<i><b>Dare(d) to Change</i></b> is a text-based adult game written by Cryptogreek/CaptainCryptogreek, built in NoodleJacuzzi's custom engine with his permission. Given that I'm not a fan of Twine, I'm thankful that he let me <s>steal</s> use his engine. If you haven't checked out his content, you can keep up with it all at his <a href='https://noodlejacuzzi.github.io/index.html'>master index by clicking here.</a>");
+			writeText("<i><b>Dare(d) to Change</i></b> is a text-based adult game written by Cryptogreek/CaptainCryptogreek, built in NoodleJacuzzi's custom engine with his permission. Learning to use it basically meant teaching myself JavaScript but, given that I'm not a fan of Twine, I'm glad to just be coding rather than working with a GUI. If you haven't checked out his content, you can keep up with it all at his <a href='https://noodlejacuzzi.github.io/index.html'>master index by clicking here.</a>");
 			writeText("This game does contain what some people would consider <i>bizarre</i> fetishes, so here's a content warning:");
-			writeText("<font size+='2'>This game contains themes of <i><b>physical transformation</b> (including manifestation of some animal features, body-swapping, sex-changing, and growth/shrinking of genitalia)</i> and <i><b>mental transformation</b> (induced heat/rut, sissification, subservience, and brain-drain). </i>If you find this content objectionable, you probably won't have a fun time playing this.</font>");
+			writeText("This game contains themes of <i><b>physical transformation</b> (including manifestation of some animal features and growth/shrinking of genitalia)</i> and <i><b>mental transformation</b> (induced heat/rut and sissification). </i>If you find this content objectionable, you probably won't have a fun time playing this.");
 
 			writeText("With that in mind, you can scroll further down for a bit more information on the game, or you can jump right into by pressing the button below!");
-			writeTransition("prologue", "Start the game [WARNING: ALL CONTENT IN HERE IS SCRAPPED AND KNOWN TO BE BROKEN except the character sheet which should still be 100% functional]");
-			writeTransition("test", "Test the game [This is the only way to access content for the moment]");
+			writeTransition("prologue", "Start the game [70% of the tutorial has been implemented]");
+			writeTransition("test", "Test the game [This is the only way to access content of the game itself for the moment]");
 			//writeTransition("prologueSkip", "Skip the prologue");
 			writeText("Other notes:");
 			writeText("This game was made for the <a href='https://tfgames.site/phpbb3/viewtopic.php?f=12&t=12799'>Game-Night Contest on TFGames.</a>");
 			writeText("You can open a character's description by clicking on their icon - do this often to see a lot of the changes that occur, both of the person and how you view them in the game.");
+			writeText("The game is currently fairly limited in terms of content. As of Version 0.2, it includes physical transformation (body shrinking and animal ears), tongue-play, massage-play (shoulder or foot), oral sex, watersports, and butt plugs. All watersports and foot content can be avoided if you choose, and they're pretty obvious about it.");
+			writeText("Future fetishes currently planned include sissification, bimbofication, more animal parts (particularly tail-play and knotting), breast-growth, feminization, and masculinization.");
 			writeText("My Discord is corenkeitaro#7169. If you see anything that needs fixing in the game, you can message me there or email me at cryptogreekcaptions@gmail.com.");
+			writeText("If you enjoyed the writing in this game, you might want to check out <a href='https://noodlejacuzzi.github.io/Hentai%20University/Hentai%20University.html'>Hentai University</a>, another game that I write for! It's hypnotism-focused, though, rather than transformation.");
 			writeText("You can click on the title of a window to close it. For example, if you click 'STATUS' on the left, you can close the new window by clicking anywhere in the 'STATUS' section at the top.");
 			break;
 		}
@@ -76,14 +79,29 @@ function writeScene(scene) {
 			// break;
 		}
 		case "prologue": {
-			data.story[0].met = true;
-			writeText("Nearly every Saturday, you have Game Night. It's a simple, easy way to relax and quit worrying about whatever looming deadline threatens your mental well-being <i>this</i> week. Last time, you chose the game and, as usual, Meg called a few of her friends to join.");
-			writeText("Given that you two switch out between who chooses the next game, that makes it Meg's turn, and she hasn't hesitated about hyping up the game that she found. And since whoever <i>doesn't</i> choose the game hosts, you're finishing up with the prep-work.");
-			writeText("Most people would probably just laugh off the idea of a board game that advertised itself as 'transforming your mind and body' over the course playing it, but those people clearly didn't watch Jumanji enough times.");
-			writeText("According to Meg, she bought it at a junk-shop that she swears wasn't on Google Maps, run by a <i>'hilariously big-tittied lady that spoke exclusively in ominous riddles'.</i> Given that the title apparently has the word <i>Dare</i> in the title, you doubt this game will stay all-ages for very long.");
-			writeText("With the last of the snacks set up, you check your phone while waiting for Meg. She said she'd bring the game over, refusing to send any pictures of the box, and promised to bring over a friend, since it's a three-player game.");
-			writeText("In the meantime, you should probably think about how you'll introduce yourself to the person she's bringing over...");
-			writeTransition("prologueName", "Continue");
+			writeText("A fairly nice-looking, if not very eye-catching, four-story building is in front of you. Given the sign in the window, \"D.T.C.\", you're pretty confident that the address must be correct.");
+			writeText("You were always at least a bit of a fan of games, playing all sorts back in your teens, but nowadays, there are a lot fewer opportunities to play. So, when a friend from back then sent you a message about the place that hosts private Game Nights, you couldn't really help but feel curious.");
+			writeText("...That, and the fact that the website was very explicit about the games having sexual content caught your attention. Sure, the way they talked about the game transforming the players seemed a bit ridiculous, but to be entirely honest... Being able to change your body might actually be a pretty welcome way to break the monotony for a night.");
+			writeText("Still, standing in front of the place won't get you anywhere, so...");
+			writeTransition("prologue1", "Go inside");
+			break;
+		}
+		case "prologue1" : {
+			writeText("Stepping into the building, you can see that it's well-kept, but is about as uninteresting as the outside. The only thing that stands out is the woman at the desk, whose eyes lock on yours immediately.");
+			writeText("She smiles widely, standing up a bit straighter.");
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Good evening, sir! Are you here for one of our Game Nights?");
+			writeText("You pause for just a moment, before walking towards her with a nod.");
+			writeSpeech("player","","Yeah. I signed up on the website?");
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Ah, good! Drop-ins are a lot harder to pair up, but you should already have a partner assigned to you by now.");
+			writeText("She reaches underneath her desk and quickly pulls out a sheet of paper. A second later, you're handed it, a clipboard, and a pen.");
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Just write down your personal information on this, and we'll use it to look you up and find your room and partner. Ah, and don't worry!");
+			writeText("She leans forward half-conspiratorily, smiling wider.");
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","We don't tell your partner what you write, so don't worry about that. Of course, given the <i>services</i> our game provides, they'll probably know a whole lot more than's on that sheet by the end of the night!");
+			writeSpeech("player","","...Is that so?");
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Yup! So don't worry about judgement and just get ready to have some fun!");
+			writeText("At that, she shifts back in her seat and starts typing on the computer, probably getting ready to look you up.");
+			writeText("Speaking of...");
+			writeTransition("prologueName", "Fill out the sheet");
 			break;
 		}
 		case "prologueName": {
@@ -137,73 +155,236 @@ function writeScene(scene) {
 				writeTransition("prologueName", "Go back.");
 				break;
 			}
-			writeText("With that out of the way, everything should be fine. Drinks, snacks, clear and open space on the carpet, etc...");
-			writeSpeech("player","","Alright, that's basically everything. Nothing left to do but wait...");
-			writeText("You throw yourself onto a nearby beanbag, relishing the feeling as you pull out your phone.");
-			writeText("You don't actually end up <i>waiting</i> for her, though, with a hefty <font size='+1' color='white'><i><b>SLAM</b></i></font> coming from the front door.");
-			writeText("Sounds like she might've knocked by kicking the door.");
-			writeText("Again.");
-			writeTransition("prologueSub", "Rush to the door. It's probably better to not keep her waiting...");
-			writeTransition("prologueDom", "Make her wait a bit. Kicking your door was rather rude.");
+			if(data.player.pref == "dom"){
+				writeText("With your sheet all filled out, you hand it over to the desk-girl. She looks over it quickly, holding the clipboard with one hand and typing with the other.");
+				writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Heh, no hesitation, huh? You and your partner are sure to have fun. Hopefully enough to keep coming back - we might even get matched up some time.");
+				writeText("She flashes you a smile before she finishes typing.");
+			
+			}
+			else if(data.player.pref == "sub"){
+				writeText("With your sheet filled out, you're a little hesitant to hand it over and let the desk-girl read it, but...");
+				writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Ah, sorry! Forgot that your first can be embarrassing... I've actually played this loads of times, so I won't judge.");
+				writeText("You take a moment before nodding and handing over the clipboard, which she quickly uses to look you up.");
+			}
+			else{
+				writeText("You fill out the sheet and hand it over to the desk girl, though your face does get a bit red as you see her looking it over and looking you up.");
+				writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Don't worry about it being your first time, by the way. Everyone starts out somewhere, and I hope you have a good enough time to keep coming back.");
+				writeText("She flashes you a winning smile before she finishes typing and glances at the screen.");
+			}
+			var roomNum = (getRandomInt(4)+3);
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","And... Yup, there you are. You're in Room "+ roomNum +", and your partner's name is oppF. If you just head down the hallway and look for your number, oppShe should already be there! Just take this card and you're on your way!");
+			writeText("She pulls out a little plastic ID-card and hands it to you - the back is stamped with <i>Dare(d) to Change</i>, while the front is just your first name in a fancy font.");
+			writeSpeech("player","","Alright, thanks.");
+			writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","No problem, sweetheart. Have fun!");
+			writeText("With that, she goes back to typing on the computer while you head down the hallway. It's a pretty short walk, and you can hear incredibly faint sounds from a few doors that were left open just a crack.");
+			writeText("Despite that fact, they're still muffled enough that you can't make anything out without actually trying. Seems like D.T.C. takes players' privacy pretty seriously... and like some of the players don't really care that much.");
+			writeText("If you wanted, you could probably take a peek in one of these rooms... Who knows what you might see?");
+			writeTransition("prologueMeet", "It would be rude to make your partner wait on you");
+			writeTransition("prologuePeek", "Well, maybe just a quick look...");
 			break;
 		}
-		case "prologueSub": {
-			if(data.player.will > 0)
-				data.player.will -= 1;
-			data.story[0].met = true;
-			writeText("You move quickly, hoping to prevent her from kicking it a second time, and swiftly open the door.");
-			writeText("You can see Meg standing there, smugly grinning to the guy beside her.");
-			writeSpeech("meg","","See? A quick kick got him here way faster.");
-			writeText("She turns to look at you, her arms holding onto what you assume is the game box. It's not the largest, but it helps highlight certain... assets.");
-			writeText("You can't read the full name, obscured as it is by her chest as she moves past you.");
-			writeText("She's wearing a shorter, tighter skirt this time, highlighting her black stockings. And you could swear she skipped out on the bra...");
-			writeSpeech("player","","You probably shouldn't kick the door, though...?");
-			writeSpeech("meg","","Ah, it's fine! You ready for Game Night? I brought a friend!");
-			writeText("Looking back to the new guy, you have to pivot your head up a bit. He's a pretty tall guy.");
-			writeText("Short-cut blond hair, a bit of scruff - he kinda makes you think of a background actor, in a weird way.");
-			writeText("He smiles wide, offering you his hand.");
-			writeSpeech("dale","","It's Dale. Nice to meet you - Meg says you're pretty good at games.");
-			writeText("You shake his hand.");
-			writeSpeech("player","","Not to brag, but I'd probably agree. Make yourself at home.");
-			writeText("You shut the door behind him, the tell-tale <font color='white'><i>Floomf</i></font> sound telling you that Megan just sniped your seat.");
-			writeText("Given that you set out three of them already, though, it's not like it matters too much.");
-			writeText("You and Dale sit down, Megan crossing her legs as she leans back.");
-			writeSpeech("meg","","So, Mr. Host - you wanna jump right into the game, or should we shoot the shit for a bit?");
-			writeTransition("gameStart", "It <i>is</i> Game Night. Open it up and get started.");
-			writeTransition("prologue3", "Chat with the players before getting into the game.");
+		case "prologueMeet": {
+			if(data.player.flags.includes("Peek"))
+				writeText("Moving quickly and trying not to focus on what you just watched, you find room "+roomNum+" and pause for a moment.");
+			else
+				writeText("Peeking on someone without their consent feels a bit off, so you head to find your designated room instead. It doesn't take long for you to get to it, though you pause when you get there.");
+			writeText("A small silver tag is hanging from the handle, reading <i>\"Occupied - Waiting for playerF\"</i>. It's rather fancily designed, actually...");
+			writeText("Still, you move your hand forward and turn the knob, with the tag shimmering for a moment before turning a deep azure, the text now reading, <i>\"Game in Progress\".</i>");
+			writeSpeech("player","","Whoa...");
+			writeSpeech("opp","","Pretty neat, right?");
+			writeText("Looking into the room, you see your partner for the game sitting down on the couch, smiling pretty wide.");
+			if(data.story[0].sex == "M"){
+				writeText("OppShe is leaning against the back of the couch, both oppHer arms and legs spread out casually. OppShe raises oppHer hand to give a casual wave, oppHer tight shirt highlighting oppHer toned chest.");
+				writeSpeech("opp","","playerF, right? I'm oppF. Looks like we'll be in each other's care for this one.");
+				writeText("He extends his hand out to shake, which you quickly move to take.");
+				writeSpeech("player","","It's good to meet you. It's my first time playing, so...");
+				writeText("OppShe nods understandingly.");
+				writeSpeech("opp","","Yeah, the owner said as much - first-timers often get cold feet and never show up, so she wanted to make sure I was prepped for that. Good to see you came, though!");
+				writeText("OppShe claps oppHis hand against your shoulder gently.");
+				writeSpeech("opp","","Take all this at whatever speed you like. A game's only fun if everyone's into it, y'know?");
+				writeSpeech("player","","Heh. Alright, thanks.");
+				writeText("At that, oppShe leans back into the couch again.");
+				writeSpeech("opp","","If you want, we can go over the rules a bit before we start. You might already know 'em, though, so if you'd rather we jumped right into the first-hand experience, I'm up for that too.");
+			}
+			else if(data.story[0].sex == "F"){
+				writeText("OppShe is leaning against the back of the couch, oppHer legs neatly folded over and her hands resting on her thigh. She gives you a confident smile and sits up a bit straighter, which does <i>things</i> to her assets.");
+				writeSpeech("opp","","playerF, right? I'm oppF. Looks like we'll be getting to have a whole lot of fun with each other!");
+				writeText("She extends her hand out, which you quickly move to shake.");
+				writeSpeech("player","","It's good to meet you. It's actually my first time playing, so...");
+				writeText("OppShe nods understandingly.");
+				writeSpeech("opp","","Yeah, the owner said as much - first-timers often get cold feet and never show up, so she wanted to make sure I was prepped for that. Good to see you came, though!");
+				writeText("She smiles a bit more, brushing her hand against yours.");
+				writeSpeech("opp","","You can take this as slow as you need. I want this to be fun enough that you come back and see everything, after all!");
+				writeSpeech("player","","Heh. Alright, thanks.");
+				writeText("At that, oppShe leans back into the couch again.");
+				writeSpeech("opp","","If you'd like, we can start by going over the rules a bit before we begin. If you already know them, though, we can always jump right into the game and see how things go?");
+			}
+			else{
+				writeText("OppShe is leaning against the back of the couch, but she stands up fully as you walk in - she's rather tall, actually. She gives you a confident smile and offers you her hand.");
+				writeSpeech("opp","","I'm oppF. You're playerF, right? It's a pleasure to meet you. Looks like we'll be playing DTC with each other, yeah?");
+				writeSpeech("player","","The pleasure's mine, and it looks like it. It is my first time, though, so...");
+				writeText("OppShe grins widely, nodding.");
+				writeSpeech("opp","","I getcha. The boss told me that, since first-timers can get cold feet sometimes, but I'm glad you decided to come. Go as slow as you need - we can always pick up the pace once you're comfortable with the game!");
+				writeSpeech("player","","That sounds like a good idea, thanks.");
+				writeText("OppShe takes her seat again, falling against it with a thump.");
+				writeSpeech("opp","","Ah, did you want to go over the rules before we start?");
+				writeText("She sits up a bit straighter again.");
+				writeSpeech("opp","","If you already know them, we can jump right into it, but it might help a bit to hear them if you skimmed them like I did the first time.");
+			}
+			writeTransition("prologueRules", "Let's go over the rules before we start");
+			writeTransition("prologueStart", "I already know them, so let's get started");
 			break;
 		}
-		case "prologueDom": {
-			if(data.player.will < 10)
-				data.player.will += 1;
-			data.story[0].met = true;
-			writeText("You relax a bit more on the beanbag, checking your notifications for a few seconds.");
-			writeText("You've just finished checking your email when you hear a far more restrained knock on the door.");
-			writeText("<i>Now</i> you head over, opening it up with a smile.");
-			writeText("In front of you is guy a bit taller than you - blond hair, little bit scruffy. He gives you a small smile.");
-			writeSpeech("dale","","Sorry about that - I'm Dale. Meg said kicking it was normal, so...");
-			writeSpeech("player","","No problem. Unfortunately, it <i>is</i> normal.");
-			writeText("You step aside, gesturing for him to come in.");
-			writeSpeech("meg","","Ugh... Totally thought that'd make you rush over.");
-			writeSpeech("player","","If you really needed to get in, you wouldn't have stopped at one kick.");
-			writeSpeech("meg","","Eh, fair point.");
-			writeText("She strides inside, her brown hair bouncing about as she almost skips towards the main living-space.");
-			writeText("Looks like she's carrying the game box. It's not the largest, but the way she's carrying it helps to highlight certain... assets.");
-			writeText("You can't read the full name, obscured as it is by her chest as she moves past you.");
-			writeText("She's wearing a shorter, tighter skirt this time, and you could swear she skipped out on the bra...");
-			writeSpeech("dale","","Ah, right.");
-			writeText("Dale turns to you, smiling as he offers his hand.");
-			writeSpeech("dale","","Forgot to say, but thanks for having me. Meg said you're pretty good at these kinds of games, so I'm looking forward to it.");
-			writeText("You shake his hand, smiling back.");
-			writeSpeech("player","","Glad to have you. Not sure <i>what</i> kind of game she brought this time, but with her, half the fun is figuring it out.");
-			writeSpeech("meg","","You're making it sound like I'm always bringing weird things over...");
-			writeSpeech("player","","Where did you get that game again?");
-			writeText("She flushes slightly, scoffing.");
-			writeSpeech("meg","","Looks like <i>someone's</i> feeling extra confident today. You looking to skip past the chat and get right to the game?");
-			writeTransition("gameStart", "It <i>is</i> Game Night. Open it up and get started.");
-			writeTransition("prologue3", "Shoot the shit for a little bit - Game Night is about the players, too.");
+		case "prologuePeek": {
+			addFlag("Peek");
+			writeText("Well, given that this is a place for sexy sorts of games, them leaving the soundproofed door cracked open could mean that that's what they're into - being heard and seen by other people.");
+			writeSpeech("player","","Plus, it might help to see what I'm getting into...");
+			writeText("Telling yourself that, you move towards one of the doors and look at it. You actually do spot a small pink tag on the handle.");
+			writeText("Your face goes a bit a bit red when you see that it read, <i><b>\"Watch me~\"</b></i>, with a little lipstick-kiss beside it.");
+			writeText("You reach out to touch it and, as you do, the door seems to shimmer for just a moment.");
+			writeText("Then, you can see through it, with a faint whisper in the back of your head that it's a one-way view, and they can't actually see you... though you note that a faint light flashes on.");
+			if(data.story[0].sex == "M"){
+				writeText("You can see two people on a couch; at first glance, it looks like a man and a very slim woman, but the sight of something flopping around uselessly quickly corrects your assumption.");
+				writeText("The effeminate of the two is completely naked, bouncing up and down on the other man's almost unbelievably thick cock, with frantic and girly moans spilling out of their mouth each time the man bottoms out.");
+				writeText("The <i>real</i> man, on the other hand, is almost completely clothed, with his pants barely pulled low enough to reveal the bitch-breaker he keeps driving deep into the boy's ass.");
+				writeText("However, it's when you look at the top of the boy's head that you realize that something's a little off.");
+				writeText("A pair of fox ears are poking right out the top, one twitching around in blissful pleasure, and the other being bit down on as he squirms and tries to moan despite the hand clamped down on his throat.");
+				writeSpeech("Man","none","Fuck... Get <i>bred</i>, you little <i><b>bitch...!</b></i>");
+				writeText("With a rough, vicious <i>slamming</i> of his hips, the man thrusts harder as the boy's eyes roll back as his whole body starts to twitch.");
+				writeText("Without even touching his still-limp dicklet, he starts dribbling out cum as you watch the bigger man's fat balls visibly tighten up, his entire cock tensing as he pumps a thick load into his boytoy.");
+				writeText("After a few seconds of that, he slowly lifts the practically insensate sissy off his cock, a full ten inches sliding out before more cum than you thought possible starts <i>pouring</i> out... And for the man to set the boy down and start gently rubbing his ears.");
+				writeText("The door slowly fades back in, obscuring your vision of the aftercare as you realize just how turned on you'd gotten.");
+			}
+			else if(data.story[0].sex == "F"){
+				if(data.player.pref == "sub"){
+					writeText("You're immediately greeted with the sight of a man pinned face-up to a coffee table, his legs pointed to the door, and a woman sitting on his face.");
+					writeText("A sadistic look plays across her face as she grinds down onto his, her pussy pressed against his mouth as she gropes her chest.");
+					writeSpeech("Woman","none","Ooh, <i>fuck,</i> love... Keep going~ The sooner I cum, the sooner you <i>breathe~!</i>");
+					writeText("You can clearly see the man's cock get harder as she says that, a throaty moan spilling out of her mouth as she leans forward.");
+					writeSpeech("Woman","none","Ah...? Oh my~");
+					writeText("She grins widely, staring right at the door now.");
+					writeSpeech("Woman","none","The light above the door lit up... I wonder what that could possibly mean~");
+					writeText("The man seems to freeze for a moment, before bucking against her a bit harder.");
+					writeSpeech("Woman","none","Oh, <i>hush.</i> You were the one who put the tag up, darling, so you don't get to complain about an <i>audience.</i>");
+					writeText("She shakes her head a bit before sending a gentle smile your way, winking.");
+					writeText("Then, she slowly lowers her body forward, her breasts pressing against her toy's hips as she starts to slowly jerk him off.");
+					writeText("She spreads around his precum before taking a slow, deep-breath...");
+					writeText("And throats him balls-deep in a swift movement.");
+					writeText("You can see the man's hips buck forward, but she pulls up just as quickly and leaves him swinging wildly.");
+					writeSpeech("Woman","none","Your challenge is edging until I cum, love. You'd better not pop before I do~");
+					writeText("Her hand keeps teasing the tip a bit more, a pathetic mewling coming from the man before she laughs and takes another deep breath.");
+					writeText("She does the same move, taking him balls-deep and pulling back, a trail of spit connecting his tip and her lips, but it goes differently this time.");
+					writeText("His cock starts bouncing frantically, tightening up as he spurts wildly. It spatters across her chest as she gasps in surprise, before a disappointed look flashes across her face.");
+					writeSpeech("Woman","none","And you were doing so well... Almost half an hour of edging, and being watched makes you cum in under a minute. Looks like you'll have to take a punishment, hun.");
+					writeText("An apologetic look flashes across her face as she looks to the door.");
+					writeSpeech("Woman","none","Sorry it was so short. Have fun with your own game, whoever you are!");
+					writeText("The door starts to fade back in, obscuring the room as she wipes some of the cum from her body and starts raising it to her lips.");
+					writeText("It takes you a moment to catch your breath, your pants feeling very, <i>very</i> tight now.");
+				}
+				else{
+					writeText("You're immediately greeted with the sight of a woman pinned down to a coffee table, her ankles pressed down next to her ears as a <i>very</i> well-hung man pounds into her cunt.");
+					writeText("She's moaning like a porn star, her fluttering eyes hazed over as she paws at a truly massive pair of tits hanging down.");
+					writeText("As the man continues to fuck her, though, you can't help but notice something large and fluffy waving behind them.");
+					writeSpeech("Man","none","Moan <i>louder, <b>whore.</b></i>");
+					writeText("He <i>slams</i> his hips against hers, the wet slapping almost as loud as the high-pitched squeal of pleasure that came from her mouth.");
+					writeSpeech("Woman","none","F-Fuck me harder...~! You've still got another hole to <i><b>break</b></i> or you'll get <i>punished~!</i>");
+					writeSpeech("Man","none","Are you really <i>that fucking cum-hungry,</i> bitch?");
+					writeText("Instead of answering, she just keeps moaning as he saws into her cunt with reckless abandon, her eyes lingering on the door for a moment.");
+					writeSpeech("Woman","none","O-Oh fuck...~! The light above the door it-");
+					writeText("A moan interrupts her thought as he <i>slams</i> his hips into her ass again, her whole body starting to shudder.");
+					writeSpeech("Man","none","<i>Fuck...</i> What'd you say?");
+					writeSpeech("Woman","none","...Nothing~ Just that I bet your load this time won't be half as thick~!");
+					writeText("The man lets out a deep growl, but grins as he lets go of one of her ankles.");
+					writeSpeech("Man","none","You're just <i>begging</i> for this, aren't you?");
+					writeSpeech("Woman","none","Fuck me stupid, darling~");
+					writeText("Hearing that, he grasps onto one of her massive tits and forces it in front of her own face.");
+					writeSpeech("Man","none","Better bite down, slut.");
+					writeText("Pulling out of her pussy, he aims a little lower as her eyes go wide.");
+					writeSpeech("Woman","","<i><b>Yes sir~!</b></i>");
+					writeText("He pushes into her ass as she sucks on her own tit, her eyes rolling back as he starts picking up speed and pounds her deeper.");
+					writeText("You're not even sure how long he spends fucking her ass as she suckles on one breast and gropes the other, but you can tell from the groans when he's about finished.");
+					writeText("Clearly, she can too, as she quickly wraps her free leg around his back and pulls him balls-deep and keeps him there as he grunts,");
+					writeSpeech("Man","","Fucking <i>take it, bitch...!</i>");
+					writeText("After a few seconds of that, he starts to pull out, but she keeps him in place.");
+					writeSpeech("Woman","","No need to rush... I want to enjoy the <i>fullness</i> a little longer...");
+					writeText("He pauses, before sighing with a smile.");
+					writeSpeech("Man","","Sure.");
+					writeText("The door starts to fade back in, obscuring the room as he leans into her chest and she runs her hands through his hair.");
+					writeText("It takes you a moment to catch your breath, your pants feeling very, <i>very</i> tight now.");
+				}
+			}
+			else{
+				writeText("You're immediately greeted with the sight of a woman laying face-up on the couch and another woman standing above her... for a certain definition of woman, seeing as what she's currently got crammed down the girl's throat.");
+				writeText("From here, you can clearly see the girl's throat distending while the dickgirl roughly saws into her throat... though, clearly not rough enough for the woman's liking, seeing as she keeps grabbing her partner's ass to pull her deeper.");
+				writeSpeech("Dickgirl","","Holy <i>shit,</i> you weren't kidding about your throat...!");
+				writeText("The woman lets out a low hum, making her partner's back curl as he breathing hitches.");
+				writeText("There's a pause, before the low hum turns into a soft melody as the herm does her best to thrust at a steady rate.");
+				writeSpeech("Dickgirl","","Fuck, fuck, fuck, fuck, <i><b>FUCK!</b></i>");
+				writeText("She leans her entire body forward, grabbing onto the woman's tits and squeezing them roughly, only for the humming to get louder and more wild as she does.");
+				writeSpeech("Dickgirl","","That's <i>so</i> not fair...! Are you seriously humming the <i>national anthem around my <b>dick!?</b></i>");
+				writeText("The woman's body clearly shakes with laughter, before one of her hands goes to her neck.");
+				writeSpeech("Dickgirl","","Oh, <i>Hell</i> no!");
+				writeText("It quickly gets swatted away.");
+				writeSpeech("Dickgirl","","The challenge is no hands, hun, and I'm not letting this end early just 'cause you got impatient!");
+				writeText("Instead, she puts her own hands around the woman's throat, tightening down as they both start to moan, muffled as the woman's grunts were.");
+				writeSpeech("Dickgirl","","Is this what you wanted? Then <i>fucking take it!</i>");
+				writeText("She starts pulling out all the way to the head before roughly fucking her throat like a sex toy, even as the woman uses her hands to finger herself and toy with her clit.");
+				writeText("Neither of them are able to last long, with the bodily shaking clueing you into the woman's orgasm, and the wild shaking pushing the dickgirl over.");
+				writeText("You hear a low, primal moan as you watch see the woman's throat distend a bit more as a thick, almost impossibly large load spurts into her stomach. When the dick is finally pulled out of her throat, she rolls over and gasps desperately for air.");
+				writeSpeech("Dickgirl","none","S-Shit, are you oka-");
+				writeText("The woman's hand limply lashes out, grabbing the dickgirl's shirt and pulling her down... Or, more accurately, trying to.");
+				writeSpeech("Woman","none","F-Fuckin'... What'dya take me for, ya fuckin' quickshot...?");
+				writeText("There's a brief pause, before they both start laughing.");
+				writeSpeech("Woman","none","N-Next time, pull out a bit when you cum... I wanna taste it, 'kay?");
+				writeSpeech("Dickgirl","none","...We are <i>so</i> coming back her sometime.");
+				writeText("The door starts to fade back in, obscuring the room as she helps the girl sit up a bit straighter, her cock still dripping with spit.");
+				writeText("It takes you a moment to catch your breath, your pants feeling very, <i>very</i> tight now.");
+			}
+			writeSpeech("player","","...Wow. I, uh... should probably get to my own room...");
+			writeTransition("prologueMeet", "Meet up with your partner");
 			break;
 		}
+		case "prologueRules": {
+			addFlag("Rules");
+			writeSpeech("player","","Let's go over the rules, just to make we're on the same page.");
+			writeSpeech("opp","","Got it.");
+			writeText("OppShe starts off by gesturing to a large game-board built into a mini-table in the center of the room. It's completely flat and featureless now, save for two thing.");
+			writeText("Two colored pieces are sitting near one end - a red one and a "+data.story[0].piece+" one right next to it.");
+			writeSpeech("opp","","The "+data.story[0].piece+" one is me. The board is blank now, but that's because it reveals bits of itself as the game goes on and it lets us choose tiles to go to.");
+			writeText("OppShe gestures to the side, where a card-slot appears to be situated.");
+			writeSpeech("opp","","You'll get your challenges, punishments, and rewards out of there. Every round, we both choose one of two places to go, starting with the newer player, and we either have to do what the card tells us, or we face some kind of punishment.");
+			writeSpeech("opp","","The punishments can be all sorts of things, from having a sex toy wrapped around your cock for a few rounds to actual physical and mental changes.");
+			writeSpeech("opp","","The main thing you'll want to know about is tokens. You get one every round, even if you get punished, but you get another when you complete a challenge. You can use these to do some of the things the website mentioned.");
+			writeSpeech("player","","The magical transformation stuff?");
+			writeSpeech("opp","","Exactly. The person who made the game and runs this place calls herself a <i>Conveniomancer</i> whose purpose in life is using her magic to let people have comfy games when they're not working.");
+			writeSpeech("player","","And... I should just believe in a magical wizard lady?");
+			writeSpeech("opp","","It goes a lot smoother that way, yeah. Besides, you already met her - she's the girl behind the desk.");
+			writeSpeech("player","","Oh. Neat.");
+			writeSpeech("opp","","Yup. Anyway, you can spend tokens on transformations like getting a pair of fox ears or something. Feel free to save them up or spend them how you like - they're just there to make the game a bit more fun if you want to add some spice to the challenges.");
+			writeText("oppF pauses.");
+			writeSpeech("opp","","Though, I should say that you can only do it in between rounds, not during them. Probably for balance reasons, if I had to guess.");
+			writeSpeech("player","","Makes sense. Wouldn't want weird interactions causing some problems after the challenge has already been chosen.");
+			writeSpeech("opp","","Exactly. With that, though... I think we're actually pretty good on rules. We have the round, where we trade off moving our pieces; the challenge-portion, where we do something sexy or embarrassing; and the post-round, where we can use tokens.");
+			writeSpeech("player","","Alright, makes sense to me... Probably.");
+			writeSpeech("opp","","It'll be clearer during the game, I promise - actually experiencing it is different from having someone describe it.");
+			writeTransition("prologueStart", "Then let's start experiencing it");
+			break;
+		}
+		case "prologueStart": {
+			if(data.player.flags.includes("Rules")){
+				writeSpeech("player","","Then let's go ahead and get this game started.");
+				writeText("OppShe grins, nodding.");
+			}
+			else{
+				writeSpeech("player","","I'm fine with the rules - anything I missed, I'll probably be able to figure out while we play.");
+				writeSpeech("opp","","Fair enough - it'll probably be more fun that way.");
+			}
+			writeText("oppF grabs oppHer ID-card and lightly taps it against the board, a ripple-effect spreading out from the contact point. Following suit, you do the same, though ");
+			break;
+		}
+
+
+
 		case "prologue3": {
 			writeSpeech("player","","We've got all night, and it's not like Dale and I have met.");
 			writeSpeech("dale","","Yeah. The only thing I really know is your name, and that this's a weekly thing.");
@@ -439,15 +620,15 @@ function writeScene(scene) {
 			addFlag("fairy");
 			writeText("After weighing your options for a moment, you decide to move your piece forward and place it firmly on the forested tile. After removing your hand, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
 			writeText("The front is labeled with the name of the game, and turning it around-");
-			writeSpeech("card","none.jpg","You received your first card~!");
+			writeSpeech("card","none","You received your first card~!");
 			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind oppHer hand.");
-			writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
+			writeSpeech("card","none","Don't worry about reading the cards out loud - I can do that for ya!");
 			writeText("oppF shifts in place, leaning back a bit more.");
 			writeSpeech("opp","","Don't worry, I jumped the first time I heard it too. Just focus on the card, and it'll read the whole thing out for you.");
 			writeSpeech("player","","Huh. Little weird, but alright.");
 			writeText("You look back at the card, a faint shimmer rolling across its surface.");
-			writeSpeech("card","none.jpg","Any forest that houses the Fae can be a tricky place to get lost in, and there are no forests harder to navigate than those of the Fairy King. You get hopelessly lost, but rejoice! A friendly elf can lead you out of the forests, though oppShe seems rather curious about humans...");
-			writeSpeech("card","none.jpg","Challenge: Let the other player toy with your tongue for as long as they want, even if you start drooling all over yourself!");
+			writeSpeech("card","none","Any forest that houses the Fae can be a tricky place to get lost in, and there are no forests harder to navigate than those of the Fairy King. You get hopelessly lost, but rejoice! A friendly elf can lead you out of the forests, though oppShe seems rather curious about humans...");
+			writeSpeech("card","none","Challenge: Let the other player toy with your tongue for as long as they want, even if you start drooling all over yourself!");
 			writeText("oppF looks at you with a slightly raised eyebrow. You can accept the challenge and get a pair of tokens, or reject it and get just one along with some sort of punishment effect...");
 			writeTransition("fairyAccEnthused", "Accept the challenge - enthusiastically open wide");
 			writeTransition("fairyAccReluctant", "Accept the challenge - reluctantly open wide");
@@ -609,15 +790,15 @@ function writeScene(scene) {
 			addFlag("golem");
 			writeText("After weighing your options for a moment, you decide to move your piece forward and place it in front of the cavern's opening. After moving your hand away, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
 			writeText("The front is labeled with the name of the game, and turning it around-");
-			writeSpeech("card","none.jpg","You received your first card~!");
+			writeSpeech("card","none","You received your first card~!");
 			writeText("You jump sharply at the sound of a chipper feminine voice, oppF hiding a smile behind oppHer hand.");
-			writeSpeech("card","none.jpg","Don't worry about reading the cards out loud - I can do that for ya!");
+			writeSpeech("card","none","Don't worry about reading the cards out loud - I can do that for ya!");
 			writeText("oppF shifts in place, leaning back a bit more.");
 			writeSpeech("opp","","Don't worry, I jumped the first time I heard it too. Just focus on the card, and it'll read the whole thing out for you.");
 			writeSpeech("player","","Huh. Little weird, but alright.");
 			writeText("You look back at the card, a faint shimmer rolling across its surface.");
-			writeSpeech("card","none.jpg","The caverns created by the ancient golems are far-reaching and expansive, but they're also fiercely protected by their creators, the golems themselves. If you want to gain access, it's said that the golems will respect and help those who are willing to show great humility...");
-			writeSpeech("card","none.jpg","Challenge: Give the opponent a foot or shoulder massage. It's alright if you don't know how - it's the thought that counts!");
+			writeSpeech("card","none","The caverns created by the ancient golems are far-reaching and expansive, but they're also fiercely protected by their creators, the golems themselves. If you want to gain access, it's said that the golems will respect and help those who are willing to show great humility...");
+			writeSpeech("card","none","Challenge: Give the opponent a foot or shoulder massage. It's alright if you don't know how - it's the thought that counts!");
 			writeText("oppF looks at you with a slightly raised eyebrow.");
 			writeSpeech("opp","","You actually get a choice in how you do it, huh? That's actually pretty rare, but I guess it's 'cause it's the first round.");
 			writeText("You can accept the challenge and get a pair of tokens, or reject it and get just one along with some sort of punishment effect...");
