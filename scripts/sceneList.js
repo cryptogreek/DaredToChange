@@ -8,15 +8,15 @@ function writeScene(scene) {
 			writeText("This game contains themes of <i><b>physical transformation</b> (including manifestation of some animal features and growth/shrinking of genitalia)</i> and <i><b>mental transformation</b> (induced heat/rut and sissification). </i>If you find this content objectionable, you probably won't have a fun time playing this.");
 
 			writeText("With that in mind, you can scroll further down for a bit more information on the game, or you can jump right into by pressing the button below!");
-			writeTransition("prologue", "Start the game [70% of the tutorial has been implemented]");
-			writeTransition("test", "Test the game [This is the only way to access content of the game itself for the moment]");
+			writeTransition("prologue", "Start the game [The tutorial and 70% of round one have been implemented]");
+			writeTransition("test", "Test the game [Expect everything to break]");
 			//writeTransition("prologueSkip", "Skip the prologue");
 			writeText("Other notes:");
 			writeText("This game was made for the <a href='https://tfgames.site/phpbb3/viewtopic.php?f=12&t=12799'>Game-Night Contest on TFGames.</a>");
 			writeText("You can open a character's description by clicking on their icon - do this often to see a lot of the changes that occur, both of the person and how you view them in the game.");
 			writeText("The game is currently fairly limited in terms of content. As of Version 0.2, it includes physical transformation (body shrinking and animal ears), tongue-play, massage-play (shoulder or foot), oral sex, watersports, and butt plugs. All watersports and foot content can be avoided if you choose, and they're pretty obvious about it.");
 			writeText("Future fetishes currently planned include sissification, bimbofication, more animal parts (particularly tail-play and knotting), breast-growth, feminization, and masculinization.");
-			writeText("My Discord is corenkeitaro#7169. If you see anything that needs fixing in the game, you can message me there or email me at cryptogreekcaptions@gmail.com.");
+			writeText("My Discord is corenkeitaro#7169. If you see anything that needs fixing in the game, you can message me there or email me at cryptogreekcaptions@gmail.com. I also am pretty active on the Discord server <a href='https://discord.gg/8SgGSMm'>Noodle's Jacuzzi</a>, which has information on both my current projects and on Noodle's.");
 			writeText("If you enjoyed the writing in this game, you might want to check out <a href='https://noodlejacuzzi.github.io/Hentai%20University/Hentai%20University.html'>Hentai University</a>, another game that I write for! It's hypnotism-focused, though, rather than transformation.");
 			writeText("You can click on the title of a window to close it. For example, if you click 'STATUS' on the left, you can close the new window by clicking anywhere in the 'STATUS' section at the top.");
 			break;
@@ -379,211 +379,41 @@ function writeScene(scene) {
 				writeSpeech("player","","I'm fine with the rules - anything I missed, I'll probably be able to figure out while we play.");
 				writeSpeech("opp","","Fair enough - it'll probably be more fun that way.");
 			}
-			writeText("oppF grabs oppHer ID-card and lightly taps it against the board, a ripple-effect spreading out from the contact point. Following suit, you do the same, though ");
+			writeText("oppF grabs oppHer ID-card and lightly taps it against the board, a ripple-effect spreading out from the contact point. Following suit, you do the same, though yours is accompanied by a faint <i>ping</i> ringing out.");
+			writeSpeech("opp","","Cool-cool, we're both in. Now, for the weird bit...");
+			writeText("You open your mouth to ask what oppShe means by that, but a tingling sensation suddenly surges throughout your body and answers that question.");
+			writeText("It's not a <i>bad</i> feeling by any means, but it's a lot like feeling a gentle breeze across every pore at once, while still being very... <i>tingly.</i>");
+			writeText("A few seconds later, though, and the sensation passes, leaving you feeling a lot more sensitive across your body than you felt a second ago.");
+			writeSpeech("opp","","Still not sure how I feel about that, but it's definitely interesting.");
+			writeSpeech("player","","I'll say...");
+			writeText("You rub at your forearm a bit, before something else catches your eye.");
+			writeText("The board shimmers for a moment, an incandescent white covering everything before colors start to slowly fade back in, revealing that both of your pieces are still sitting at the same spot, but there are now two large tiles that you can choose from.");
+			writeSpeech("opp","","Looks like the game's all prepped. Newest player goes first, so...");
+			writeText("OppShe gestures for you to move your piece, leaning back in oppHer position on the couch. There's something smug about that smirk...");
+			writeText("For now, though, it might be better to take a look at those tiles.");
+			writeText("The first is a forest, with tiny trees popping out of the board around it. A sparkly cloud seems to hover above it, but it's thin enough to be able to see the name of the tile - The Fairy King's Forest.");
+			writeText("The second is a large cave-mouth of carved brown-orange stone with some type of rock-creature standing in front of it. Engraved into the top of the cave-mouth, the tile's name shines slightly in the light - Cavern of the Golems.");
+			writeText("You can choose between either one, but you could also ask oppF about them. He/She might have seen them before in another game.");
+			writeTransition("fairyKingStart", "Go to The Fairy King's Forest");
+			writeTransition("fairyKingStart", "Go to The Cavern of the Golems");
+			writeTransition("advice1", "Ask about the two options");
 			break;
 		}
-
-
-
-		case "prologue3": {
-			writeSpeech("player","","We've got all night, and it's not like Dale and I have met.");
-			writeSpeech("dale","","Yeah. The only thing I really know is your name, and that this's a weekly thing.");
-			writeSpeech("meg","","Eh, alright. We'll go round-circle, then. Let's go with full name, three facts about ourselves, and...");
-			writeText("She pauses to think.");
-			writeSpeech("meg","","...how seriously we're taking this whole 'transformation game' thing. Since I know both of you already, I might as well start.");
-			writeSpeech("dale","","Actually... Why not make it two statements and a question? That'd be a bit more fun.");
-			writeText("Meg thinks for a moment before nodding.");
-			writeSpeech("meg","","Good point. I'd probably just say my favorite game and pull a blank on the rest...");
-			writeSpeech("dale","","Alright, then let's start with you, to set a solid example.");
-			writeText("Her eyes roll over the both of you, before saying dryly,");
-			writeSpeech("meg","","Sure. Megan Howzer, and welcome to my AMA. For my two facts... Let's see.");
-			writeText("Her hand toys with her chin for a moment.");
-			writeSpeech("meg","","My favorite animals are probably ferrets or foxes, though I have a pretty serious soft-spot for those extra-fluffy dogs. And... My favorite game is Monopoly, <i>especially</i> with people who take it as seriously as me.");
-			writeSpeech("player","","You know, we'd play more Monopoly on Game Night if you'd stop homebrewing rules about compound interest, loans, and deferred payments.");
-			writeSpeech("meg","","Hah. I'd sooner sell my soul than play <i>commoner's Monopoly</i>.");
-			writeText("She pouts a bit.");
-			writeSpeech("meg","","I guess it's question time, now?");
-			writeText("Dale looks at you for a moment.");
-			writeTransition("prologueQ1", "Ask how she and Dale know each other.");
-			writeTransition("prologueQ2", "Ask where she's most <i>sensitive.</i>");
-			writeTransition("prologueQ3", "Let Dale ask the question.");
-			break;
-		}
-		case "gameStart" : {
-			break;
-		}
-		case "prologueQ1" : {
-			data.story[1].desc = "Meg's coworker at the coffee shop. Meg said they spend their breaks complaining about customers.";
-			writeSpeech("player","","How do you two know each other?");
-			writeSpeech("meg","","Work!");
-			writeText("Megan sits up straighter, (probably) pushing her tits out inadvertantly.");
-			writeSpeech("dale","","Yeah. We work at the same coffee place, so we got to talking.");
-			writeSpeech("meg","","A couple of conversations on break turned into a habit of bitching at each other and last week we talked about games.");
-			writeSpeech("dale","","Yup. Not exactly the most interesting story, honestly.");
-			writeText("He shifts slightly after saying that.");
-			writeSpeech("meg","","Yeah. We usually just spent time talking about some of the customers.");
-			writeText("Megan sits up a bit straighter.");
-			writeSpeech("meg","","And with that said, time for my final question... How seriously I'm taking the idea of a game that can change your body!");
-			writeText("She nods firmly.");
-			writeSpeech("meg","","I think that big-tittied riddle lady scammed me out of eighty bucks! Kinda hope it is real but, much like when offering a loan in Monopoly, it's best to keep things realistic.");
-			writeSpeech("meg","","Now, let's go with Dale next!");
-			writeScene("prologueQDale");
-			break;
-		}
-		case "prologueQ2" : {
-			data.player.will += 1;
-			data.player.flags += "feet";
-			writeSpeech("player","","Where would you say you're the most... <i>sensitive?</i>");
-			writeText("You see Dale's eyebrows climb a bit.");
-			writeSpeech("meg","","Good question! And considering what I have planned for the game, probably the tamest one tonight!");
-			writeText("Grinning, she extends her stocking-clad legs out, pointing her toes.");
-			writeSpeech("meg","","Being a barista, I'm always on my feet, which makes everything from the thighs down <i>crazy</i> tender.");
-			writeSpeech("dale","","Huh. You two are pretty open, aren't you?");
-			writeSpeech("player","","A bit, but it's part of Game Night. The whole point is being open about things.");
-			writeSpeech("meg","","True true~! I remember last summer, during that heat wave, we had to strip down in the middle of Risk!");
-			writeText("Dale relaxes a bit.");
-			writeSpeech("meg","","And with that said, time for my final question... How seriously I'm taking the idea of a game that can change your body!");
-			writeText("She nods firmly.");
-			writeSpeech("meg","","I think that big-tittied riddle lady scammed me out of eighty bucks! Kinda hope it is real but, much like when offering a loan in Monopoly, it's best to keep things realistic.");
-			writeSpeech("meg","","Now, let's go with Dale next!");
-			writeScene("prologueQDale");
-			break;
-		}
-		case "prologueQ3" : {
-			if(data.player.will > 5)
-				writeText("You stay quiet, letting Dale speak.");
-			else
-				writeText("You stay quiet, looking at Dale.");
-			writeSpeech("dale","","Hm... Alright. I've been wondering for a while, but are you actually wearing a bra?");
-			writeText("There's a moment of silence...");
-			writeSpeech("meg","","Ha. Nah, man!");
-			writeText("She shifts on the beanbag, repositioning her tits.");
-			writeSpeech("meg","","The point of Game Night is to be comfortable and open. Hell, we played Risk without any pants during a heat wave last summer.");
-			writeSpeech("dale","","...Noted.");
-			writeSpeech("meg","","Good question, though! Given the game we're playing, it'll probably be the tamest one of the night!");
-			writeText("Speaking of, it looks like she snuck the box behind her beanbag.");
-			writeSpeech("meg","","And with that said, time for my final question... How seriously I'm taking the idea of a game that can change your body!");
-			writeText("She nods firmly.");
-			writeSpeech("meg","","I think that big-tittied riddle lady scammed me out of eighty bucks! Kinda hope it is real but, much like when offering a loan in Monopoly, it's best to keep things realistic.");
-			writeSpeech("meg","","Now, let's go with Dale next!");
-			writeScene("prologueQDale");
-			break;
-		}
-		case "prologueQDale" : {
-			writeSpeech("dale","","Me, huh? Alright.");
-			writeText("He crosses his arms, looking up at the ceiling as he hums in thought.");
-			if(data.story[1].desc == "Meg's coworker at the coffee shop. Meg said they spend their breaks complaining about customers."){
-				writeSpeech("dale","","You already know I work with Meg, so that's out... I guess my favorite game is Blackjack? It's the only card game I played much of.");
-			}
-			else{
-				data.story[1].desc = "Meg's coworker at the coffee shop. Meg said they spend their breaks complaining about customers.";
-				writeSpeech("dale","","Fact number one is that Meg and I work together at the coffee shop. We started getting along while complaining about one particularly annoying customer, and last week, we started talking about board games.");
-				writeSpeech("meg","","Yup! We ended up talking about Game Night, and <i>boom</i>, here we are!");
-			}
-			writeSpeech("dale","","And for a second fact... I dunno. I guess just ask two questions?");
-			writeText("Meg starts grinning widely, looking right at you with what you can only describe as a lewd twinkle in her eye. It wouldn't take a genius to realize where she's about to take this...");
-			writeSpeech("meg","","You take the first one, playerF - I've got second~!");
-			writeTransition("prologueQDale1", "Ask what convinced him to actually join for Game Night.");
-			writeTransition("prologueQDale2", "Ask if he's a top or a bottom.");
-			writeTransition("prologueQDale3", "Ask about his dick size before Megan does.");
-			break;
-		}
-		case "prologueQDale1" : {
-			writeSpeech("player","","What convinced you to come and join Game Night? Just boredom or something?");
-			writeSpeech("dale","","Something like that, yeah. Feels like I'm kinda stuck in a rut nowadays, doing the same thing every day. When Megan suggested coming over and playing some raunchy dare-game she found, I thought, \"Hey, why not?\"");
-			writeSpeech("player","","Well, I can promise that with Megan involved, it won't be boring, at least.");
-			writeText("She pouts at that, placing her hands on her hips.");
-			writeSpeech("meg","","I'm not sure I like those implications, friend-o! Still, I wasn't expecting a serious question, so lemme balance things out!");
-			writeText("Her body pitches forward, nearly falling off her chair as bounces forward.");
-			break;
-		}
-		case "prologueQDale2" : {
-			writeSpeech("player","","Are you more of a top, or a bottom?");
-			writeText("He pauses for just a second, before smirking.");
-			writeSpeech("dale","","Top, through and through. If you want to trip me up, you'll need to try harder.");
-			writeText("You hear Megan barely stifle a laugh.");
-			writeSpeech("meg","","Try harder, huh? Well, give me a shot, then!");
-			break;
-		}
-		case "prologueQDale3" : {
-			writeSpeech("player","","Dick size, go.");
-			writeText("He pauses, blinking once. Then twice.");
-			writeText("Megan exhales sharply out of her nose, pouting again.");
-			writeSpeech("meg","","Ah, man! I wanted to be the one to-");
-			writeSpeech("dale","","Seven and a half long, five around. How 'bout you?");
-			writeText("He leans back, the sound of the beanbag shifting filling the air. His eyes lock onto yours, looking amused.");
-			if(data.player.dick < 8){
-				writeTransition("prologueQDale3A", "Lie and say you're eight inches.");
-				writeTransition("prologueQDale3B", "Tell him you don't quite match up.");
-			}
-			else{
-				writeTransition("prologueQDale3C", "Tell him your actual length.");
-				writeTransition("prologueQDale3D", "Spare his feelings and lie.");
-			}
-			writeTransition("prologueQDale3E", "\"Is that your one question for me?\"");
-			break;
-		}
-		case "prologueQDale3A" : {
-			data.story.flags.introLieShort = true;
-			writeSpeech("player","","I'm eight inches. That's pretty close.");
-			writeText("Dale scoffs, a small smirk on his face.");
-			writeSpeech("dale","","Right. I'll take your word for it.");
-			writeScene("prologueQDale3E1");
-			break;
-		}
-		case "prologueQDale3B" : {
-			writeSpeech("player","","Huh. That's pretty neat - longer than I am, at least.");
-			writeText("He chuckles.");
-			writeSpeech("dale","","Yeah, that's usually the case.");
-			writeScene("prologueQDale3E1");
-			break;
-		}
-		case "prologueQDale3C" : {
-			if(data.player.dick == 8)
-				writeSpeech("player","","Eight inches. It's close, though.");
-			else if(data.player.dick == 9)
-				writeSpeech("player","","Nine inches. It's pretty good for what it is.");
-			else if(data.player.dick == 10)
-				writeSpeech("player","","Ten inches. If anything, it gets in the way.");
-			else if(data.player.dick == 11)
-				writeSpeech("player","","Eleven inches. It, uh... It's actually more of a problem than you'd think.");
-			else if(data.player.dick == 12)
-				writeSpeech("player","","It's a foot long. It, uh... It's actually more of a problem than you'd think.");
-			writeText("Dale scoffs, a small smirk on his face.");
-			writeSpeech("dale","","Right. I'll take your word for it.");
-			writeScene("prologueQDale3E1");
-			break;
-		}
-		case "prologueQDale3D" : {
-			data.story.flags.introLieLong = true;
-			writeSpeech("player","","Huh. Longer than me, at least.");
-			writeText("He chuckles.");
-			writeSpeech("dale","","Yeah, that's usually the case.");
-			writeScene("prologueQDale3E1");
-			break;
-		}
-		case "prologueQDale3E" : {
-			writeSpeech("player","","Is that your one question for me?");
-			writeText("He laughs.");
-			writeSpeech("dale","","Nah, it's fine. Megan'll probably have a better question anyway.");
-			writeScene("prologueQDale3E1");
-			break;
-		}
-		case "prologueQDale3E1" : {
-			writeText("Meg shifts a bit, nodding.");
-			writeSpeech("meg","","Well, first time witnessing an <i>actual</i> dick-measuring contest... and I love it. But we've still got one more question! I *was* gonna ask if you ever did butt-stuff, but <i>someone</i> beat me to the embarrasing-question-punch.");
-
-			writeText("<input type='radio' name='gender' value='male'> Male</input>");
-
-
-			break;
-		}
-		case "prologueQDale4" : {
-			writeText("Her body pitches forward, nearly falling off her chair as bounces forward.");
-			writeSpeech("meg","","You ever done butt-stuff?");
-			writeText("You expect Dale to get embarrassed, but...");
-			writeSpeech("dale","","Once, but my ex wasn't a fan of it, and we couldn't get rough without thinking it might mess something up. How 'bout you?");
-			writeSpeech("meg","","Nice try, but I already answered my question!");
+		case "advice1" : {
+			addFlag("advice1");
+			writeSpeech("player","","Actually... You've played this before, right?");
+			writeSpeech("opp","","A couple of times, yeah. What's up?");
+			writeSpeech("player","","Have you seen these tiles before? Or maybe you've got an idea what they'll do?");
+			writeText("You can practically see the amount of smug coming off of oppHer increase, but oppShe gives a small shrug.");
+			writeSpeech("opp","","Well, fairy-related things tend to have punishments that make you more fairy-like, and their challenges usually use curiosity as a theme? I don't know exactly what it'll be, but anything that says fairy will probably do something to make you smaller or more lithe.");
+			writeSpeech("player","","Makes sense. And what about golems?");
+			writeSpeech("opp","","They're big, burly, stone creatures. If I had to guess, the punishment would probably make you bigger. No clue about the challenge, though - I've only ever seen one Golem-themed event, and it was in the fourth round, so it was a bit extreme.");
+			writeSpeech("opp","","...And no, I won't explain further on what that was, just in case it comes up in our game.");
+			//If you're actually reading through this code, props to you! Your secret piece of information is that it involved a chastity cage.
+			writeSpeech("player","","Alright. Thanks for the advice.");
+			writeSpeech("opp","","No problem. So, what're you thinking about choosing?");
+			writeTransition("fairyKingStart", "Go to The Fairy King's Forest");
+			writeTransition("fairyKingStart", "Go to The Cavern of the Golems");
 			break;
 		}
 		case "cheat": {
@@ -595,27 +425,6 @@ function writeScene(scene) {
 			writeTransition("room", "Go back");
 			break;
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		//NEW SCENES FOR DARED TO CHANGE START HERE
 		case "fairyKingStart" : {
 			addFlag("fairy");
 			writeText("After weighing your options for a moment, you decide to move your piece forward and place it firmly on the forested tile. After removing your hand, there's a faint <i>click</i> sound as a card pops out of the side of the game board.");
@@ -744,7 +553,7 @@ function writeScene(scene) {
 			writeSpeech("player","","Yeah, I... don't think I'm gonna do that. No offense or anything, I'd just rather not have someone's fingers in my mouth.");
 			writeText("oppF shrugs.");
 			writeSpeech("opp","","I get that - to each their own. Plus, since it's the first round, it's not like the punishment will be <i>too</i> bad. Push the card back in the slot if you're sure about it.");
-			writeText("Putting the card back, it quickly gets pulled back into the board... only for another to pop out in its place. Pullin that one out, you hear the card's voice:");
+			writeText("Putting the card back, it quickly gets pulled into the board... only for another to pop out in its place. Pulling that one out, you hear the card's voice:");
 			writeSpeech("card","","You rejected the elf's help, huh? Well, unfortunately for you, it looks like oppShe isn't taking the rejection well. You don't recognize the words that oppShe's saying, but you recognize the tones of spellcraft easily. You don't have time to do anything before blacking out!");
 			writeSpeech("card","","When you wake up, you're outside of the forest but, standing up, you realize that something happened to you... Your whole body shrank! Not just in height, but you're also a lot more slim and feel pretty fragile now. It'll take a while to get used to your new, small frame!");
 			writeText("There's a moment of silence after the card finishes, before you feel <i>something.</i> You feel breathless, but not in a painful way, and an almost fuzzy sensation plays across your skin.");
@@ -975,36 +784,58 @@ function writeScene(scene) {
 			break;
 		}
 		case "golemRej" : {
-			if(data.player.flags.includes("golemRej")!=true)
+			if(data.player.flags.includes("golemRej")!=true){
+				willUp();
 				addFlag("Rej");
+			}
+			writeSpeech("player","","Yeah, I... don't think I'm gonna do that. No offense or anything, it's just not really my thing.");
+			writeText("oppF shrugs.");
+			writeSpeech("opp","","I get that - to each their own. Plus, since it's the first round, it's not like the punishment will be <i>too</i> bad. Push the card back in the slot if you're sure about it.");
+			writeText("Putting the card back, it quickly gets pulled into the board... only for another to pop out in its place. Pulling that one out, you hear the card's voice:");
+			writeSpeech("card","","You chose not to humble yourself in front of the golems, huh? Well, it's not an impossible journey without the use of their caverns, just a long and tiring one. And, worst of all, it doesn't even make for a good story to use in seducing the pants off of other people!");
+			writeSpeech("card","","By the time you make it to your destination, your journey has hardened you... Literally. The stresses made your body larger and stronger, but the pride that got you stuck on this journey didn't let you develop any sort of thick skin, leaving you even more sensitive than before!");
+			writeText("There's a moment of silence after the card finishes, before you feel <i>something.</i> You feel breathless, but not in a painful way, and an almost fuzzy sensation plays across your skin.");
+			writeText("Your muscles tighten up sharply as you let out a gasp, which you could swear practically booms at a much lower pitch than you're used to hearing from yourself, and your vision goes white.");
+			writeText("Only for a second, though. After that, you can see normally again, but everything in the area seems a little bit smaller from your body's new position nearly up to the ceiling.");
+			writeSpeech("card","","Congratulations on your first transformation! A shame it had to be through a punishment, but that's just the way the game goes!");
+			writeSpecial("Your entire body is now a lot larger! To see your new appearance (and any future changes), click either STATUS on the sidebar or click your character's portrait when you speak.");
+			data.player.height = 86;
+			data.player.heightVal = 4;
+			data.player.buildVal = 8;
+			data.player.clothesVal = 6;
+			data.player.legsVal = 5;
+			data.player.assVal = 4;
+			data.player.chestVal = 5;
+			data.player.genitalsVal = 5;
+			writeText("oppF takes a moment to look you over, taking in your much larger body with an amused look.");
+			writeSpeech("opp","","Wait, don't tell me - you put on a little weight.");
+			writeSpeech("player","","Funny. My skin feels weird, though - and not just because of the size difference...");
+			writeSpeech("opp","","Ah, yeah. The game increases your sensitivity all over the place... It's why the first round is always something tame, but sensual. It's to get you accustomed to...");
+			writeText("OppShe gestures vaguely at your body.");
+			writeSpeech("opp","","To all of that, really. It really helps make some things you wouldn't normally be into feel pretty damn good, especially in the later rounds.");
+			writeSpeech("player","","That makes sense. Still a little weird, though.");
+			writeSpeech("opp","","Eh, that's magic for ya. I find it's a lot more fun if you just roll with it and have some fun with whatever gets thrown at you.");
+			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
+			addTokens(1);
+			writeText("oppF loosely points to it, still looking amused.");
+			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too.");
+			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
+			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
+			writeSpeech("opp","","And with that, it looks like it's my turn.");
+			if(data.story[0].sex == "F")
+				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+			else if(data.story[0].sex == "M")
+				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
+			else
+				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		case "gallery" : {
-			generateGalleryNav();
-			writeTransition("room", "Finish up");
+		case "androStart" : {
+			writeText("The event [androStart] has not yet been implemented. It will be implemented shortly, alongside [cafeStart], following which will be the implementation of the first Post-Round.");
+			break;
+		}
+		case "cafeStart" : {
+			writeText("The event [cafeStart] has not yet been implemented. It will be implemented shortly, alongside [androStart], following which will be the implementation of the first Post-Round.");
 			break;
 		}
 		default: {

@@ -211,7 +211,7 @@ Areas:
 "Also, there's a quick-start that skips right to the gameplay part, allowing you to set a bunch of factors in addition to the normal ones. Potentially allow for turning off particular fetishes."
 "After the intro scene is complete, the game begins with a shimmery effect across your skin, feeling like thin silk pulling across your pores for a short moment. Then, a set of LVL1 events are available to the players - three, maybe four options"
 
-writeText("The board shimmers for a moment, an incandescent white covering everything before colors start to slowly fade back in, revealing that both of your pieces are still sitting on the Start tile, but there are now two large tiles that you can choose from.");
+writeText("The board shimmers for a moment, an incandescent white covering everything before colors start to slowly fade back in, revealing that both of your pieces are still sitting at the same spot, but there are now two large tiles that you can choose from.");
 writeText("The first is a forest, with tiny trees popping out of the board around it. A sparkly cloud seems to hover above it, but it's thin enough to be able to see the name of the tile - The Fairy King's Forest.");
 writeText("The second is a large cave-mouth of carved brown-orange stone with some type of rock-creature standing in front of it. Engraved into the top of the cave-mouth, the tile's name shines slightly in the light - Cavern of the Golems.");
 writeText("You can choose between either one, but you could also ask oppF about them. He/She might have seen them before in another game.");
