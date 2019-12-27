@@ -371,6 +371,8 @@ function writeScene(scene) {
 			break;
 		}
 		case "prologueStart": {
+			data.player.round = 1;
+			document.getElementById("day").innerHTML = "Round: "+data.player.round; 
 			if(data.player.flags.includes("Rules")){
 				writeSpeech("player","","Then let's go ahead and get this game started.");
 				writeText("OppShe grins, nodding.");
@@ -831,11 +833,240 @@ function writeScene(scene) {
 			break;
 		}
 		case "androStart" : {
-			writeText("The event [androStart] has not yet been implemented. It will be implemented shortly, alongside [cafeStart], following which will be the implementation of the first Post-Round.");
+			writeText("The tile itself looks like a small pool of water surrounded by grass and a few colorful flowers, and you can hear (and even feel a drop from) a small splash of water as oppShe puts her piece down.");
+			writeText("After a second, a slot near oppF pushes out a card just like yours, though oppShe doesn't actually grab it, just lightly tapping it once before listening close.");
+			writeSpeech("card","","Ah, the Spring of Andros! It's said that these waters were blessed in ancient times, blessing those who had the confidence to bare themselves before both their peers and the gods! A small group of people are always present to maintain the springs and witness anyone that seeks to bare themselves to Andros... though some of them do occasionally break off to fuck on the plush grass.");
+			writeSpeech("card","","Challenge: You have to take off any clothing that covers your lower body and leave them off until either the game ends, or until another card overrides this one. And try to make it look <i>good,</i> alright?");
+			writeText("oppF scoffs.");
+			writeSpeech("opp","","Jokes on them - I <i>always</i> make it look good.");
+			if(data.player.flags.includes("fairyRej"))
+				writeText("OppShe stands up, grinning down at you. Especially while you're sitting, your smaller body makes oppHim look absolutely <i>massive</i> next to you...");
+			else if(data.player.flags.includes("golemRej"))
+				writeText("OppShe stands up, grinning at you. Despite the fact that you're sitting down, you're actually not that much shorter than oppHer...");
+			else
+				writeText("OppShe stands up, grinning down at you as oppShe rolls oppHer shoulders a little bit.");
+			if(data.story[0].sex == "M"){
+				writeText("He slowly reaches down to his pants, smoothly undoing his belt. It slides along his jeans, the sound of it pulling across the denim softly filling the air before he lets it go, the belt flopping down onto the couch.");
+				writeText("It's clearly obvious that he's enjoying this just as much, if not <i>more</i> than you, seeing as he's starting to tent his pants.");
+				writeSpeech("opp","","It's a shame that the challenge is that <i>I</i> have to take it all off...");
+				writeText("He undoes the button and pulls down his zipper, winking playfully.");
+				writeSpeech("opp","","I'd've liked to see <i>you</i> pulling all this off of me.");
+				if(data.player.pref == "dom"){
+					writeText("You smirk, leaning back in your seat.");
+					writeSpeech("player","","Sounds like a pretty good time.");
+					writeText("His grin widens.");
+					writeSpeech("opp","","Well, if you get a card like this one, just ask and I'll help you out. For now, though...");
+				}
+				else{
+					writeText("You can feel your face flush, your eyes lingering on the tent for a moment before oppF lets out a barking laugh.");
+					writeSpeech("opp","","Seems like you would've enjoyed it too! Hope this little show makes up for it...");
+				}
+				writeText("His hand drifts further down, his thumb hooking onto his jeans and pulling them down. His tight, steely-gray underwear does nothing to hide his erection as he pulls his jeans all the way off.");
+				writeText("Finally, he puts his hands on his underwear and pulls it down, going slow as it slides low enough to reveal inch after inch after inch... until seven inches down, his head <i>swings</i> up, no longer held by the elastic.");
+				writeText("You could swear the <i><b>THWAP</b></i> of it impacting against his lower stomach echoed for a second as it twitches under your gaze.");
+			}
+			else{
+				writeText("She slowly reaches down, hooking a thumb into her jeans and runs it along her hip.");
+				writeSpeech("opp","","I hope you don't mind if I take this slow; last game I played turned into a horny fuck-frenzy real fast, so I didn't have as much time to <i>enjoy</i> things like these.");
+				if(data.player.pref == "dom"){
+					writeSpeech("player","","Take your time - we've got all night, and I know I'll be enjoying the show too.");
+					writeText("She smiles sweetly.");
+					writeSpeech("opp","","Flirt. Keep talking like that, and I won't be the only one whose pants end up on the floor~");
+				}
+				else{
+					writeSpeech("player","","It's fine. We have all night, don't we?");
+					writeText("She smiles, nodding gently.");
+					writeSpeech("opp","","We do indeed... And something tells me that it won't be long before your pants end up on the floor next to mine~");
+				}
+				writeText("Her jeans have just the littlest bit of stretch as she pulls them down, squeezing down on her thighs as she shimmies them lower. Her whole body is bent over as she does, giving you a <i>very</i> clear view of her cleavage as she carefully steps out of her jeans.");
+				writeText("She then looks up into your eyes, rolling her back upwards in a graceful, practiced motion as her hands toy with her tits for a moment before both of your attentions go to her straining panties.");
+				writeSpeech("opp","","Mm, even if my challenge <i>didn't</i> involve stripping, I don't think the poor things can take much more...");
+				writeText("With a sly smile, she takes a few steps towards you, standing within arm's-reach as she hooks her thumb down the center of her panties.");
+				writeText("Her other hand reaches into them, her middle finger sliding just underneath her rapidly hardening shaft as she slids her panties down.");
+				writeText("Her thick, hefty cock swings upwards close enough that you can feel the displaced air, but not quite touch it. A single wet bead of precum shines at the tip as she starts sliding her panties off the rest of the way.");
+				writeText("A moment later, she's wearing only her T-shirt and heels as she winks at you, her hand tracing a line across the top of her dick.");
+				writeSpeech("opp","","Now <i>this</i> feels a lot more comfortable~!");
+			}
+			writeText("There's a part of you that thinks it might be rude to stare, but...");
+			writeTransition("androAway", "Pull your gaze back up");
+			writeTransition("androLook", "Try to be subtle about your glances");
+			writeTransition("androAdmire", "Fuck subtlety");
+			break;
+		}
+		case "androAway" : {
+			if(data.story[0].sex == "M"){
+				data.story[0].clothesVal = 3;
+				data.story[0].genitalsVal = 6;
+				data.story[0].genitalsVal2 = 1;
+			}
+			else{
+				data.story[0].clothesVal = 4;
+				data.story[0].genitalsVal = 7;
+				data.story[0].genitalsVal2 = 1;
+			}
+			addFlag("androAway");
+			writeText("You quickly try and look away from oppHer cock, but you could swear that oppF only looks smugger as you do.");
+			writeText("OppShe doesn't say anything about it, though, content to just smile and sit back on the couch, oppHer finger casually running up and down the underside from the balls up to the tip.");
+			writeText("A moment later, there's the same clink sound from the slot as before, a pair of tokens bouncing out for oppF to take.");
+			writeSpeech("card","","Looks like you finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeText("oppF grabs oppHer tokens, rolling them around between oppHer fingers.");
+			writeSpeech("opp","","That makes this the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
+
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
+			break;
+		}
+		case "androLook" : {
+			if(data.story[0].sex == "M"){
+				data.story[0].clothesVal = 3;
+				data.story[0].genitalsVal = 6;
+				data.story[0].genitalsVal2 = 1;
+			}
+			else{
+				data.story[0].clothesVal = 4;
+				data.story[0].genitalsVal = 7;
+				data.story[0].genitalsVal2 = 1;
+			}
+			addFlag("androLook");
+			writeText("You try to be at least a little subtle, sneaking a few quick glances at oppHer length without coming off too strongly.");
+			writeSpeech("opp","","");
+
+			writeText("A moment later, there's the same clink sound from the slot as before, a pair of tokens bouncing out for oppF to take.");
+			writeSpeech("card","","Looks like you finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeText("oppF grabs oppHer tokens, rolling them around between oppHer fingers.");
+			writeSpeech("opp","","That makes this the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
+			break;
+		}
+		case "androAdmire" : {
+			if(data.story[0].sex == "M"){
+				data.story[0].clothesVal = 3;
+				data.story[0].genitalsVal = 6;
+				data.story[0].genitalsVal2 = 1;
+			}
+			else{
+				data.story[0].clothesVal = 4;
+				data.story[0].genitalsVal = 7;
+				data.story[0].genitalsVal2 = 1;
+			}
+			addFlag("androAdmire");
+			writeSpeech("player","","I want that thing inside of me.");
+			if(data.story[0].sex == "M"){
+				writeText("There's a clear, visible twitch as the cock hardens further, oppF's face flushing for a second.");
+				writeSpeech("opp","","...You know, that's the fastest I've ever had someone say that to me. You really know what to say to get a guy going, don't you?");
+			}
+			else{
+				writeText("There's a clear, visible twitch as the cock hardens further, oppF's face flushing.");
+				writeSpeech("opp","","...You know, that's the fastest I've ever had someone say that to me. You really know what to say to make a girl feel wanted, don't you?");
+			}
+			if(data.player.pref == "sub"){
+				writeSpeech("player","","Ah, sorry. That was-");
+				writeSpeech("opp","","No, no, I actually appreciate it! Just... caught me off guard, is all. Thanks.");
+			}
+			else{
+				writeSpeech("player","","I certainly try.");
+				writeText("oppF laughs a little, shaking oppHer head.");
+				writeSpeech("opp","","Well, it caught me off guard, but it's working.");
+			}
+			writeText("The sound of the same clink sound from the slot as before interrupts you two, a pair of tokens bouncing out as oppF's reward.");
+			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeText("oppF grabs oppHer tokens, rolling them around between oppHer fingers.");
+			writeSpeech("opp","","That makes this the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
 			break;
 		}
 		case "cafeStart" : {
-			writeText("The event [cafeStart] has not yet been implemented. It will be implemented shortly, alongside [androStart], following which will be the implementation of the first Post-Round.");
+			writeText("The tile itself looks like one of those open-air cafes with the awnings over the tables, with a small figurine of a tan elf-girl in a uniform standing near one of them.");
+			writeText("After a second, a slot near oppF pushes out a card just like yours, though oppShe doesn't actually grab it, just lightly tapping it once before listening close.");
+			writeSpeech("card","","The Shadow-Elf Cafe, a magical place that's said to serve not just amazing tea and cakes, but some delectable and <i>powerful</i> potions brewed in the backrooms! You've just been invited in for a drink with one of the servers, totally on the house. Shadow-Elves don't have the best reputation, but their society is largely based around mutual respect, so everything should be fine as long as you don't do anything insulting...");
+			writeSpeech("card","","Challenge: You have to taste your opponent's saliva. We're not picky about how - we recommend a nice little bout of tongue-fencing ourselves~!");
+			writeText("oppF nods calmly, looking at you.");
+			if(data.player.flags.includes("Rej")){
+				if(data.player.flags.includes("fairy"))
+					writeSpeech("opp","","How do you feel about this one? You weren't comfortable with me touching your tongue with my fingers, so...");
+				else
+					writeSpeech("opp","","How do you feel about this one? You weren't comfortable with a massage and this is a bit more <i>direct</i>, so...");
+				writeTransition("cafeAcc", "Pull her in for a kiss");
+				writeTransition("cafeAccTongue", "Let your tongue hang out of your mouth");
+				break;
+			}
+			else if(data.player.flags.includes("AccEnthused")){
+				writeText("Or, to be more accurate, looking at your <i>chin</i>, which is still a little slick from when oppShe played with your tongue.");
+				writeText("It's pretty obvious where she's going with this...");
+				writeTransition("cafeAccEnthused", "Let her control the pace");
+				writeTransition("cafeAcc", "Pull her in for a kiss");
+				break;
+			}
+			else{
+				if(data.player.flags.includes("fairyAccReluctant"))
+					writeSpeech("opp","","Well, we're off to a good start, aren't we? Shame you went and wiped that spit off your chin - could've made for a fun way to solve the challenge.");
+				else
+					writeSpeech("opp","","Well, we're off to a good start, aren't we? Of course, I'll need you to stay sitting to actually reach those lips of yours...");
+				if(data.player.pref == "dom"){
+					writeTransition("cafeAccEnthused", "Let her control the pace");
+					writeTransition("cafeAcc", "Pull her in for a kiss");
+					writeTransition("cafeAccSpit", "Stop her and tell her to open her mouth wide");
+					break;
+				}
+				else{
+					writeText("Standing, oppF walks over to you with a confident smile, oppHer hand moving slowly to your face.");
+					writeTransition("cafeAccEnthused", "Let her control the pace");
+					writeTransition("cafeAcc", "Pull her in for a kiss");
+				}
+
+			}
+			break;
+		}
+		case "cafeAcc" : {
+			break;
+		}
+		case "cafeAccEnthused" : {
+			break;
+		}
+		case "cafeAccSpit" : {
+			writeSpeech("player","","Actually, it says you have to taste my spit, right?");
+			writeText("She pauses, a look of confusion crossing her face.");
+			writeSpeech("opp","","I mean, yeah? Kinda thought that was what I was going for.");
+			writeSpeech("player","","Then make sure to hold still, and <i>open wide.</i>");
+			writeText("It takes a good few seconds for it to click but, when it does, a playful spark seems to fly through her eyes.");
+			writeSpeech("opp","","You got it, hun~!");
+			if(data.player.flags.includes("golemRej"))
+				writeText("She steps right up to where you're sitting, just barely bending at the hips to put her mouth a little bit below yours.");
+			else if(data.player.flags.includes("fairyRej"))
+				writeText("She walks up to where you're sitting, getting down on her knees so she's low enough that her mouth is below yours when you stand up.");
+			else
+				writeText("She walks up to where you're sitting, getting down on her knees so she's low enough that her mouth is below yours.");
+			writeText("Her hands go up to her lips, spreading them wide and holding them open as she sticks out her tongue and playfully goes,");
+			writeSpeech("opp","","<i>Ahhhhh~!</i>");
+			writeText("Aiming carefully, you feel yourself salivating before you bring your head close to hers.");
+			writeText("You spit sharply, some of it spattering against her cheek as she flinches slightly, before letting out a little giggle.");
+			writeText("She keeps her mouth open while rolling around her tongue, before closing it, swallowing deeply, and winking.");
+			writeSpeech("opp","","You're pretty fun, playerF. Maybe the next thing you make me swallow can be a bit more <i>fun</i> getting into my mouth~?");
+			writeSpeech("player","","You keep teasing me, and it just might...");
+			writeSpeech("opp","","Then I'll be sure not to stop~");
+			if(data.player.flags.includes("golemRej"))
+				writeText("She stands up straighter, rolling her back as she does before she pauses again with a smirk.");
+			else
+				writeText("She stands up from her knees, stretching out her back before she pauses again and smirks.");
+			writeSpeech("opp","","One more thing, though.");
+			writeText("Dragging a finger across her cheek, she collects most of the spit.");
+			writeSpeech("opp","","I don't plan on letting you miss a <i>drop</i> next time.");
+			writeText("She brings the finger to her mouth, sensually licking it before plopping down onto the couch with a satisfied look, before the same <i>clink</i> sound from before rings out.");
+			writeText("oppF picks up the reward, contentedly rolling them between oppHer fingers before the card's voice rings out again.");
+			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeSpeech("opp","","Well, I guess that makes this the start of the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
+			break;
+		}
+		case "cafeAccTongue" : {
+			writeText("Instead of answering her, you lean forward a little bit and open your mouth, letting your tongue loll out.");
+			writeSpeech("opp","","Mn. Good answer...");
+			writeText("She moves close to you, her hand gently grabbing onto your chin as she brings her face close to yours.");
+			writeText("The moment you feel her lips press against your tongue, an electric shiver runs through your body, before her other hand goes to rest on your hip.");
+			writeText("After another moment, she ");
 			break;
 		}
 		default: {

@@ -113,6 +113,8 @@ var oppClothesArray = [
 	{desc: " He's wearing a tight-fitting T-shirt that hides nothing, and a pair of loose jeans that you could swear shouldn't be as tight around the crotch as they look.",},
 	{desc: " She's wearing a tight-fitting T-shirt that does nothing to hide the fact that she skipped putting on a bra, and a pair of just-as-tight jeans that hug her ass and hips in ways that can really <i>do things</i> to a man.",},
 	{desc: " She's wearing a tight-fitting T-shirt that's just thin enough for you to see the the color of her light-violet bra, and a pair of loose jeans that you could swear shouldn't be as tight around the crotch as they look.",},
+	{desc: " He's wearing a tight-fitting T-shirt and absolutely nothing else, exposing everything below his stomach with no shame and even a bit of pride.",},
+	{desc: " She's wearing a tight-fitting T-shirt that's just thin enough for you to see the the color of her light-violet bra, a pair of four-inch heels, and not a thread more. She's clearly proud of what she's showing off.",},
 
 ];
 var playerClothesArray = [
@@ -231,6 +233,8 @@ var oppGenitalsArray = [
 	{desc: "She has a pair of violet panties on, just sheer enough for you to see the shape of her pussy.",},
 	{desc: "His cock is hanging down between his legs, not quite fully erect but still at least ",},
 	{desc: "Her cock is hanging down between her legs, not quite fully erect but still at least ",},
+	{desc: "His cock is standing tall between his legs, fully erect and obviously at least ",},
+	{desc: "Her cock is standing tall between her legs, fully erect and obviously at least ",},
 ];
 var oppGenitalsArray2 = [
 	{desc: ""},
@@ -693,6 +697,7 @@ function renamePlayer() {
 		data.story[0].assVal = 1;
 		data.story[0].chestVal = 2;
 		data.story[0].genitalsVal = 2;
+		data.story[0].dick = 8;
 	sceneTransition("prologue2");
 	}
 	else if(data.story[0].sex == "M"){
