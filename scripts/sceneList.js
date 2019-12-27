@@ -1078,6 +1078,7 @@ function writeScene(scene) {
 			writeText("OS:" + navigator.platform  + "");
 			writeBig("images/butts.jpg");
 			writeTransition("room", "Go back");
+			break;
 		}
 	}
 }
