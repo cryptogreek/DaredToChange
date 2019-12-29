@@ -31,6 +31,7 @@ var data = {
 		tailVal:0,
 		chestVal:0,
 		genitalsVal:0,
+		newChange:"",
 		flags: "",
 	},
 	story: [
@@ -247,6 +248,9 @@ var playerGenitalsArray = [
 	{desc: "Your cock has shrunk down thanks to the transformation, now only ",},
 	{desc: "You have a tiny little sissy clitty, only ",},
 	{desc: "Despite your body growing, your cock is still ",},
+	{desc: "A thick, heavy, ",},
+	{desc: "A ruby-red, ",},
+	{desc: "Your cock grew a fair bit, now ",},
 ];
 var playerGenitalsArray2 = [
 	{desc: "-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
@@ -255,6 +259,9 @@ var playerGenitalsArray2 = [
 	{desc: "-inches long. Despite that, it feels even <i>more</i> sensitive now than it did before...",},
 	{desc: "-inches long. At this point, it doesn't even get hard, but the tip is always dribbling just a little bit of pre.",},
 	{desc: "-inches long. It almost makes it look shorter than it used to be when compared to you now.",},
+	{desc: "-inch long horsecock is hanging down loosely. It's not as stiff as a normal dick, but that isn't really the appeal, is it?",},
+	{desc: "-inch long doggy-dick is hanging down between your thighs. You could swear it feels far warmer than it should, <i>especially</i> the knot.",},
+	{desc: "-inches long and nearly as thick around as your wrist. Just like you were warned, it is feeling <i>very</i> sensitive...",},
 ];
 
 var oppF = data.story[0].fName;
@@ -278,7 +285,7 @@ function startup() {
 function restartButton() {
 	var restart = confirm ("restart the game?");
 	if (restart == true) {
-		loadSlot(161);
+		loadSlot(191);
 	}
 }
 
@@ -476,6 +483,13 @@ function writeTab(character, text) {
 	`;
 }
 
+function addTrans(){
+	if(data.player.flags.includes("trans1"))
+		return;
+	else
+		addFlag("trans1");
+}
+
 function willUp(){
 	if(data.player.will < 9)
 		data.player.will += 1;
@@ -584,7 +598,7 @@ function sceneTransition(scene) {
 	writeScene(scene);
 	data.player.currentScene = scene;
 	console.log(data.player.currentScene);
-	saveSlot(160);
+	saveSlot(190);
 	console.log("scene transition end");
 }
 
@@ -760,7 +774,6 @@ function loadSlot(slot) {
 	console.log("loaded data");
 	sceneTransition(data.player.currentScene);
 	updateSave();
-	nameUpdate();
 }
 
 function saveFile(){
@@ -789,7 +802,7 @@ function loadFile(){
 }
 
 function generateSave() {
-	for (i = 151; i < 159; i++) {
+	for (i = 181; i < 189; i++) {
 		var searchName = 'data' + i;
 		if(localStorage.getItem(searchName)) {
 			var buttonName = 'load' + i + 'Button';

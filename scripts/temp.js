@@ -241,3 +241,23 @@ writeText("You can either explain the challenge to oppF and go through with it, 
 writeTransition("golemAcc", "Explain the challenge and give her a massage");
 writeTransition("golemRej", "Discard the card and take a punishment instead");
 //writeTransition("fairyRej", "Discard the card and take a punishment instead (disable all foot-related content)");
+
+
+Animal-themed:
+Ears - Fox, Cat, Dog
+Tail - Fox, Cat, Dog
+Cock - Horse (genitalsVal == 6), Dog (genitalsVal == 7)
+
+Feminine:
+Breasts - Grow (transFemBreasts)
+Ass - Grow (transFemAss)
+Dick - Shrink (transFemDick)
+
+Masculine:
+Chest - Muscular (transMascChest)
+Ass - Firm up (transMascAss)
+Dick - Grow (genitalsVal == 8)
+
+Rem:
+remGolemPun
+remFairyPun

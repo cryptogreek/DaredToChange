@@ -56,6 +56,7 @@ function writeScene(scene) {
 			writeTransition("cafeStart", "Watch your opponent go to the Shadow Elf Cafe");
 			writeTransition("titanStart", "Go to the Titan's Gate");
 			writeTransition("driderStart", "Go to the Drider's Nest");
+			writeTransition("adviceTokens", "Test the post-round");
 			break;
 		}
 		case "startWardrobe": {
@@ -969,7 +970,7 @@ function writeScene(scene) {
 				writeText("oppF laughs a little, shaking oppHer head.");
 				writeSpeech("opp","","Well, it caught me off guard, but it's working.");
 			}
-			writeText("The sound of the same clink sound from the slot as before interrupts you two, a pair of tokens bouncing out as oppF's reward.");
+			writeText("The sound of the same clink as before interrupts you two, a pair of tokens bouncing out of the slot as oppF's reward.");
 			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
 			writeText("oppF grabs oppHer tokens, rolling them around between oppHer fingers.");
 			writeSpeech("opp","","That makes this the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
@@ -978,11 +979,15 @@ function writeScene(scene) {
 			break;
 		}
 		case "cafeStart" : {
+			if(data.story[0].sex != "F"){
+				writeSpecial("Probably for testing reasons, oppF wasn't a woman at the start of this woman-only event. She has now been changed.");
+				data.story[0].sex == "F";
+			}
 			writeText("The tile itself looks like one of those open-air cafes with the awnings over the tables, with a small figurine of a tan elf-girl in a uniform standing near one of them.");
 			writeText("After a second, a slot near oppF pushes out a card just like yours, though oppShe doesn't actually grab it, just lightly tapping it once before listening close.");
 			writeSpeech("card","","The Shadow-Elf Cafe, a magical place that's said to serve not just amazing tea and cakes, but some delectable and <i>powerful</i> potions brewed in the backrooms! You've just been invited in for a drink with one of the servers, totally on the house. Shadow-Elves don't have the best reputation, but their society is largely based around mutual respect, so everything should be fine as long as you don't do anything insulting...");
 			writeSpeech("card","","Challenge: You have to taste your opponent's saliva. We're not picky about how - we recommend a nice little bout of tongue-fencing ourselves~!");
-			writeText("oppF nods calmly, looking at you.");
+			writeText("oppF nods calmly, looking at you for a moment.");
 			if(data.player.flags.includes("Rej")){
 				if(data.player.flags.includes("fairy"))
 					writeSpeech("opp","","How do you feel about this one? You weren't comfortable with me touching your tongue with my fingers, so...");
@@ -1011,21 +1016,95 @@ function writeScene(scene) {
 					break;
 				}
 				else{
-					writeText("Standing, oppF walks over to you with a confident smile, oppHer hand moving slowly to your face.");
+					writeText("A second later, oppF walks over to you with a confident smile, oppHer hand moving slowly to your face.");
 					writeTransition("cafeAccEnthused", "Let her control the pace");
 					writeTransition("cafeAcc", "Pull her in for a kiss");
+					break;
 				}
-
 			}
 			break;
 		}
 		case "cafeAcc" : {
+			addFlag("cafeAcc");
+			writeText("Rather than waiting for her, you reach out first as she approaches. You can see one eyebrow raise a bit before she smiles and rolls with it, letting you guide her face to yours.");
+			writeText("The first thing you notice about the kiss is the sensitivity spike from the game, the feeling of her lips pressing against yours almost feeling like a jolt of pleasure through your body as oppF lets out a gentle laugh and pulls back just a fraction of an inch.");
+			writeSpeech("opp","","Yeah, the first time always messes with people, myself included. I know I really developed an oral fixation thanks to this game...");
+			writeText("She gently kisses your cheek once, her breath faintly tickling your skin as she raises her knee up to the couch and leans forward a bit.");
+			writeText("Just as you feel her thigh press against your crotch, she kisses you fully, her tongue pressing against yours as you feel her breasts push against you. Given the thin shirt and her lack of a bra, you can actually feel her nipples press against you.");
+			writeText("She can too, if the throaty moan is anything to by.");
+			writeSpeech("player","","Sounds like your mouth isn't the only sensitive thing here...");
+			writeText("She's about to reply when your hand goes up and grabs at her tit from below, your thumb flicking across the sensitive nub as her words turn into a low groan of pleasure.");
+			writeSpeech("opp","","F-Fuckin'... Game amps <i>everything...</i>");
+			if(data.player.pref=="dom")
+				writeSpeech("player","","More fun for me.");
+			writeText("Groping her chest more, you use her moans as a roadmap for what's making her feel better, along with the writhing that causes her thigh to press more and more against your clothed cock.");
+			writeText("Not that it <i>feels</i> that restrained...");
+			writeSpeech("opp","","Nn~! We're supposed to be getting ready for the next round, y'know~...");
+			writeText("Despite saying that, she presses her lips to your neck, her thigh still rubbing against you.");
+			writeText("But she pauses at the sound of the same <i>clink</i> as before, letting out a slightly disappointed hum as she pulls away.");
+			writeSpeech("opp","","You know, you can make it pretty hard to hold out until the <i>good</i> rounds, hun.");
+			if(data.player.pref=="dom")
+				writeSpeech("player","","I aim to please.");
+			else
+				writeSpeech("player","","I'm taking that as a compliment.");
+			writeText("She rolls her eyes with a light laugh, moving over to collect her reward.");
+			writeText("As she rolls the tokens around between her fingers, you hear the sound of the card's voice... clear its throat?");
+			writeSpeech("card","","Ahem! Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeText("oppF looks down at the shiny tokens in her hand for a moment before looking back at you.");
+			writeSpeech("opp","","That makes this your first post-round, then. Do you want to go over how the whole 'token purchasing' works, or do you think you've got it?");
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
 			break;
 		}
 		case "cafeAccEnthused" : {
+			addFlag("cafeAccEnthused");
+			writeText("You just jut your chin out with a small, cheeky smile, and oppF laughs and moves right in front of you.");
+			writeSpeech("opp","","You really didn't come here to hesitate, did you~?");
+			writeText("She playfully runs her hands along your chin before pushing her fingers into your mouth.");
+			writeText("Her other hand forces your head to look straight up before you feel her tongue run along your jawline, the tip tracing a line that sends a shiver down your back.");
+			writeText("As she goes up, you feel her just barely nibble on your ear, her breath warm and heavy against it.");
+			if(data.player.pref == "sub"){
+				writeSpeech("opp","","God, you are such a dirty little <i>bitch,</i> aren't you...?");
+				writeText("You can't hold back the moan that spills out as one of her hands presses down against your crotch, her palm putting a careful amount of pressure that makes your hips buck.");
+			}
+			else{
+				writeSpeech("opp","","You're making it <i>so</i> hard to hold out until the later rounds, hun...!");
+				writeText("Your body shudders as her hand presses down against your crotch, her tits pressing against your chest as she starts gently kissing her way to your mouth.");
+			}
+			writeText("Just a second later, the fingers in your mouth get pulled out, quickly replaced with her tongue as she leans into the kiss.");
+			writeText("The way she moves her tongue has you shuddering more than you expected, careful movements making it harder and harder to keep from moaning into her mouth.");
+			writeText("Then there's her hand, dragging along in an over-the-pants handjob that feels <i>far</i> more sensitive than it should, your own spit soaking into the fabric from her fingers as she grinds gently against your thigh.");
+			if(data.player.pref == "dom"){
+				writeText("Not to be outdone, you put your own hands to work, one hand grasping onto a tit while the other goes to her hip, helping push her against your thigh as she moans sharply.");
+				writeSpeech("opp","","Oooh God... You'd better squeeze <i>hard~!</i>");
+			}
+			else{
+				writeText("Pulling back for just a moment, oppF playfully presses her chest against you harder.");
+				writeSpeech("opp","","Don't let <i>me</i> have all the fun - go ahead and grab a nice handful~!");
+				writeText("You quickly do, a throaty moan shaking the both of you as she shudders and grinds her pussy down harder against your leg.");
+			}
+			writeText("You can feel her shuddering pick up suddenly as you grasp tightly and feel your thumb press against a nub, her eyes suddenly shooting open wide, her breathing heavy.");
+			writeSpeech("opp","","F-Fuck, my...");
+			writeText("Taking a few deep breaths, she collects herself quickly.");
+			writeSpeech("opp","","Sorry, my nipples are really, <i>really</i> sensitive, and I almost... Ahem. We should probably, uh. Keep playing?");
+			if(data.player.pref == "dom")
+				writeSpeech("player","","If that's just round one, I can hardly wait for the next challenge.");
+			else
+				writeSpeech("player","","Oh, right. We should probably keep going, yeah...");
+			writeText("oppF lets out a little laugh before giving you a quick peck on the cheek and going back to her seat.");
+			writeSpeech("opp","","Honestly, I mostly want to show you the whole 'transformation' thing before we actually get <i>started.</i> Otherwise...");
+			writeText("She drags a finger across her ruby-red lips for a moment.");
+			writeSpeech("opp","","...I'd probably smear this lipstick down to your base.");
+			writeText("The sound of the same clink as before suddenly rings out interrupts you two, a pair of tokens bouncing out of the slot as oppF's reward.");
+			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeText("oppF grabs oppHer tokens, rolling them around between oppHer fingers.");
+			writeSpeech("opp","","That makes this the post-round, then. Do you want to go over how the whole 'token purchasing' works, or do you think you've got it?");
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
 			break;
 		}
 		case "cafeAccSpit" : {
+			addFlag("cafeAccSpit");
 			writeSpeech("player","","Actually, it says you have to taste my spit, right?");
 			writeText("She pauses, a look of confusion crossing her face.");
 			writeSpeech("opp","","I mean, yeah? Kinda thought that was what I was going for.");
@@ -1062,13 +1141,409 @@ function writeScene(scene) {
 			break;
 		}
 		case "cafeAccTongue" : {
+			addFlag("cafeAccTongue");
 			writeText("Instead of answering her, you lean forward a little bit and open your mouth, letting your tongue loll out.");
 			writeSpeech("opp","","Mn. Good answer...");
 			writeText("She moves close to you, her hand gently grabbing onto your chin as she brings her face close to yours.");
 			writeText("The moment you feel her lips press against your tongue, an electric shiver runs through your body, before her other hand goes to rest on your hip.");
-			writeText("After another moment, she ");
+			writeText("After another moment, she teases her own tongue forward, dragging the tip along yours as you feel the faint shift in the air of her breathing.");
+			writeText("Her hand pulls your chin forward, pressing her lips against yours as her tongue pushes into your mouth, the heightened sensitivity of your mouth getting you to moan into hers.");
+			writeText("For a moment, she pulls away, her face clearly flushed as she grins.");
+			writeSpeech("opp","","Breathe deep, <i>stud.</i>");
+			writeText("Her hand goes from your chin to the back of your head, pulling you close as she presses her whole body into you.");
+			if(data.player.pref != "dom"){
+				writeText("You can't help but shudder pleasantly as she forcefully pulls you tight, her breasts pressing against your chest as she thoroughly explores your mouth.");
+				writeText("You try to keep pace with the kiss, but she seems to know just how to use the game's sensitivity enhancement to have you quivering in place as her other hand slides along your thigh.");
+			}
+			else{
+				writeText("You push back a bit, your own hands getting to work and running up her thighs. You can feel her tits press harder against you as she moans into your mouth, her body practically grinding against yours.");
+				writeText("Her free hand slides up your thigh too, though she doesn't bother stopping when she reaches the top, her palm pressing firmly against your crotch to get a good feel for your erection.");
+				if(data.player.dick < 4){
+					writeText("She pauses a little as she does, though not for long as you hear her giggle and pull her head away for a moment.");
+					writeSpeech("opp","","Sorry, I don't mean to laugh~! I'm sure we can still have a <i>lot</i> of fun with what you've got.");
+				}
+				else if (data.player.dick > 7){
+					writeText("She pauses a little as she does though, her body shuddering in arousal as she pulls away and looks down.");
+					writeSpeech("opp","","Oh, you are going to be <i>so</i> much fun when we get to the good stuff...!");
+				}
+				else
+					writeSpeech("opp","","We're gonna have some <i>fun</i> with this when we get to the later rounds...");
+			}
+			writeText("She pushes into you again, her lips pressing against yours for a moment, but then she pulls away with a soft smile.");
+			writeSpeech("opp","","I think that was a pretty good <i>taste,</i> don't you think?");
+			writeText("Before you can respond, the same <i>clink</i> sound from when you finished your challenge rings out as a pair of tokens pop out of the slot.");
+			writeText("oppF picks up the reward, contentedly rolling them between oppHer fingers before the card's voice rings out again.");
+			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
+			writeSpeech("opp","","Well, I guess that makes this the start of the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
+			writeTransition("adviceTokens", "Ask how buying a transformation works");
+			writeTransition("postRound1", "Say you've got this");
 			break;
 		}
+		case "adviceTokens" : {
+			addFlag("adviceTokens");
+			writeSpeech("player","","Can you walk me through it? I don't want to accidentally use up all my tokens on the wrong purchase or something like that.");
+			writeSpeech("opp","","Sure thing. It's actually pretty simple for most things - one token for one trait. Just focus on the trait you want, or that you want to give if you'd prefer, and flip the coin.");
+			writeText("oppF closes oppHer eyes for a moment, before grinning. With the ringing sound of the token getting flipped by oppHer thumb, it flies up quickly and lets off a brief, sharp <i>spark</i> before disappearing entirely.");
+			if(data.story[0].sex == "M"){
+				writeText("A second later, you hear oppF inhale sharply, sitting up straighter as you see him visibly grow a few inches and put on a little bulk. Plus, without his clothes in the way, you can see his cock gain a solid inch in length and get just a little thicker...");
+				data.story[0].height = 80;
+				data.story[0].dick = 8;
+				if(data.player.flags.includes("golemRej")){
+					writeText("He smirks up at you, still a bit shorter but a lot closer to you.");
+					writeSpeech("opp","","I can't go letting you stay that much bigger than me, now can I?");
+				}
+				else{
+					writeText("He smirks down at you, rolling his neck.");
+					if(data.player.flags.includes("fairyRej"))
+						writeSpeech("opp","","Heh, I'll have to be careful not to go getting <i>too</i> big for you.");
+				}
+				writeText("Shifting his position a bit, he takes a deep breath, his chest rising as he shudders a bit.");
+				writeSpeech("opp","","Right... Probably a good idea to tell you that anytime something changes or you get something new, it's always pretty sensitive. Doesn't matter if it's muscles, tits, or a tail - this game wants players squirming at a <i>touch</i> whenever something changes.");
+				writeSpeech("player","","Alright, thanks. I'll keep that in mind while spending tokens...");
+			}
+			else if (data.story[0].sex == "F"){
+				data.story[0].chestVal = 2;
+				writeText("A second later, she arches her back and lets out a throaty moan, her shirt clearly starting to strain more as you watch her breasts start to expand out. A moment ago, they were a pretty solid handful, but now...");
+				writeText("She rolls her shoulders around, her lightly heaving chest accentuating the large pair of Double-Ds held behind her stretched shirt. oppF uses her hands to heft them up with a grin, shifting them around to find a more comfortable fit.");
+				writeSpeech("opp","","Most changes only last as long as the game, unless you can make a deal with the owner or something. No consequences means a <i>lot</i> more fun, in my opinion.");
+				writeText("Taking a deep breath, she finally pulls her hands away from her chest.");
+				writeSpeech("opp","","Ah, right. Forgot to mention, but you'll want to keep in mind that anytime something changes or you get something new, the game kinda 'resets' your sensitivity, almost? New parts, new nerves. It makes things like tails or ears really, <i>really</i> nice to play with.");
+				writeSpeech("player","","Sounds like something to keep in mind... Thanks.");
+				writeSpeech("opp","","No problem! Once you've figured out what you want to get, just flip a token and have some fun with it!");
+			}
+			else{
+				data.story[0].assVal = 2;
+				writeText("A second later, she stands up just a bit, raising her rear off of the couch and supporting herself with her hands as she bites her lip.");
+				writeText("Right in front of you, you can see her ass grow slightly, her barely-loose jeans suddenly starting to strain against her ass, which somehow lokos just as firm despite the increase in volume.");
+				writeText("When she sits back down, you can see her the shape of her rear shift with the slow change in pressure, oppF biting her lip as she squirms a bit.");
+				writeSpeech("opp","","God, I almost forgot to mention... You'll want to keep in mind that whenever you change something about your body or get anything new, the game likes to 'reset' your sensitivity. The last time I played, a girl grew herself a cock and had to strip down because her panties kept rubbing against it...");
+				writeSpeech("player","","Sounds like something I'll want to keep in mind... Thanks.");
+				writeSpeech("opp","","No problem, hun. Once you know what you want... Nn~");
+				writeText("oppF takes a deep breath, her eyes shutting as she holds back a moan.");
+				writeSpeech("opp","","...Once you know, just flip the coin and have some fun.");
+			}
+			writeTransition("tfScreenAnimal", "Think about some animal-themed options");
+			writeTransition("tfScreenMasc", "Think about some masculine transformations");
+			writeTransition("tfScreenFem", "Think about some feminine transformations");
+			if(data.player.flags.includes("Rej"))
+				writeTransition("tfScreenRemove", "Think about removing a transformation");
+			if(data.player.name == "Testing"){
+				writeTransition("tfScreenSissy", "Think about some sissification-themed transformations [NONE IMPLEMENTED]");
+				writeTransition("tfScreenCow", "Think about some human-cow-themed transformations [NONE IMPLEMENTED]");
+				writeTransition("tfScreenDegen", "Think about some very, <i>very</i> degenerate transformations [NONE IMPLEMENTED]");
+			}
+			writeTransition("postRound1", "Hold off on transformations for now");
+			break;
+		}
+		case "postRound1" : {
+			if(data.player.flags.includes("adviceTokens") != true && data.player.flags.includes("noAdvice") != true){
+				addFlag("noAdvice");
+				writeSpeech("player","","I think I've got this. Worst case scenario, I end up with something unexpected, right?");
+				writeSpeech("opp","","That's a good way to look at it. In that case, I'll just save up my tokens for now and let you test things out.");
+			}
+			else if(data.player.flags.includes("trans1") != true && data.player.flags.includes("noTrans") != true){
+				addFlag("noTrans");
+				writeSpeech("player","","Actually, I think I might save my tokens for now. Who knows what might happen, right?");
+				writeText("oppF thinks about it for a moment before shrugging.");
+				writeSpeech("opp","","That's probably pretty smart. If a punishment gives you something you're really not into, having a spare token can come in handy. Just remember that you have to wait until the end of a round to use them.");
+			}
+			else if(data.player.flags.includes("trans1") == true && data.player.newChange != ""){
+				console.log("earsVal: "+data.player.earsVal+", tailVal: "+data.player.tailVal);
+				writeText("oppF looks over the change appraisingly, nodding once.");
+				if(data.player.newChange.includes("ears"))
+					writeSpeech("opp","","Those ears are pretty cute... Makes me want to rub them between my fingers just to see how you'd react.");
+				if(data.player.newChange.includes("tail"))
+					writeSpeech("opp","","A tail, huh? Those can be <i>real</i> fun if you know how to use them...");
+				if(data.player.newChange.includes("horseCock")){
+					writeText("OppHer eyes clearly linger on the fat rod hanging down, oppF not even trying to mask it.");
+					writeSpeech("opp","","...We're going to have <i>fun</i> making that fit.");
+				}
+				if(data.player.newChange.includes("dogCock")){
+					writeText("OppHer eyes clearly linger on the scarlet knot, not even trying to mask the plain interest across oppHer face.");
+					writeSpeech("opp","","...We're going to have <i>fun</i> tonight.");
+				}
+				if(data.player.newChange.includes("mascDick")){
+					writeText("OppHer eyes trace along your length, oppHer tongue going across oppHer lips for a moment.");
+					writeSpeech("opp","","...We're going to have <i>fun</i> making that fit.");
+				}
+				if(data.player.newChange.includes("mascBuild")){
+					writeText("oppF stares blatantly at your much large body with a smile.");
+					writeSpeech("opp","","Looks like someone likes to top.");
+				}
+				if(data.player.newChange.includes("transFemBreasts")){
+					if(data.story[0].sex == "M"){
+						writeText("His eyes linger on your chest for a moment, his cock clearly twitching.");
+						writeSpeech("opp","","Well, I can imagine the kind of fun we could have with those...");
+					}
+					else{
+						writeSpeech("opp","","Looking to have a bit with a pair of your own, huh?");
+						if(data.story[0].sex == "F"){
+							writeText("She runs a hand along one of her tits with a grin.");
+							writeSpeech("opp","","You won't regret it, hun.");
+						}
+						else{
+							writeText("She uses one hand to tease her nipple, while the other casually strokes her cock.");
+							writeSpeech("opp","","Maybe we could have some fun with painting each other's tits, hm?");
+						}
+					}
+				}
+				if(data.player.newChange.includes("transFemAss")){
+					if(data.story[0].sex == "F"){
+						writeText("She stares at your newly-fat ass with a look of excitement.");
+						writeSpeech("opp","","I cannot <i>wait</i> to see how that thing jiggles~!");
+					}
+					else{
+						writeText("OppShe bites oppHer lip while looking at your ass, oppHer cock twitching sharply.");
+						writeSpeech("opp","","God, you're making it hard to not just pin you down right here...");
+					}
+				}
+				if(data.player.newChange.includes("transFemCock")){
+					if(data.story[0].sex == "F"){
+						writeText("A look of amusement flies across oppF's face.");
+						writeSpeech("opp","","There's easier ways to make a girl tease you, hun... But this might be my favorite. I'd love for you to put on a little show for me later with that <i>little toy</i>...");
+					}
+					else{
+						writeText("oppF smiles, oppHer eyes clearly lingering on your shrunken cock.");
+						writeSpeech("opp","","Looks like someone isn't interested in topping... Good thing I have more than enough for you to play with, hm?");
+					}
+				}
+				if(data.player.newChange.includes("transMascChest")){
+					if(data.player.flags.includes("transFemBreasts")){
+						writeText("oppShe looks a little disappointed, but smiles nonetheless.");
+						writeSpeech("opp","","Yeah, I guess they're not for everyone.");
+					}
+					else{
+						if(data.story[0].sex == "M"){
+							writeText("He grins, looking over your broader chest.");
+							writeSpeech("opp","","You're looking trim... I like it.");
+						}
+						else{
+							writeText("oppF bites her lip as she looks over your chest.");
+							writeSpeech("opp","","Looking good, <i>stud.</i>");
+						}
+					}
+				}
+				if(data.player.newChange.includes("transMascAss")){
+					writeText("oppF takes a nice, long look at your now-firm ass.");
+					writeSpeech("opp","","I'm looking forward to put my hands on <i>that...</i>");
+				}
+				if(data.player.newChange.includes("remGolemPun"))
+					writeSpeech("opp","","Prefer the smaller look, huh? Can't blame you - I think you look better this way, too.");
+				if(data.player.newChange.includes("remFairyPun"))
+					writeSpeech("opp","","Not a fan of the fairy-look, huh? Well, you do look pretty hot like this, so I'm not complaining.");
+				
+				console.log(data.player.newChange+" will now be blank");
+				data.player.newChange = "";
+				console.log(data.player.newChange)
+			}
+			writeText("OppShe stretches out oppHer arms, relaxing and watching you with an interested look. OppShe's probably thinking about what you might choose to do...");
+			writeTransition("round2", "Start the next round [NOT IMPLEMENTED]");
+			writeTransition("tfScreen", "Think about some transformations");
+			writeTransition("oppChat", "Chat with your opponent");
+			
+			break;
+		}
+		case "tfScreen" : {
+			writeText("There's a couple different kinds of transformations you could think about...");
+			writeTransition("tfScreenAnimal", "Think about some animal-themed options");
+			writeTransition("tfScreenMasc", "Think about some masculine transformations");
+			writeTransition("tfScreenFem", "Think about some feminine transformations");
+			if(data.player.flags.includes("Rej"))
+				writeTransition("tfScreenRemove", "Think about removing a transformation");
+			if(data.player.name == "Testing"){
+				writeTransition("tfScreenSissy", "Think about some sissification-themed transformations [NONE IMPLEMENTED]");
+				writeTransition("tfScreenCow", "Think about some human-cow-themed transformations [NONE IMPLEMENTED]");
+				writeTransition("tfScreenDegen", "Think about some very, <i>very</i> degenerate transformations [NONE IMPLEMENTED]");
+			}
+			writeTransition("postRound1", "Hold off on transformations for now");
+			break;
+		}
+		case "tfScreenAnimal" : {
+			writeText("oppF mentioned that you could grow animal ears if you wanted...");
+			writeTransition("transCatEars", "Grow a pair of sleek cat ears");
+			writeTransition("transDogEars", "Grow a pair of floofy dog ears");
+			writeTransition("transFoxEars", "Grow a pair of fluffy fox ears");
+
+			writeText("And of course, oppShe mentioned tails, too...");
+			writeTransition("transCatTail", "Grow a nice, thin cat tail");
+			writeTransition("transDogTail", "Grow a floofy dog tail");
+			writeTransition("transFoxTail", "Grow an absurdly fluffy fox tail");
+
+			writeText("But if you were feeling a little more frisky, there's always...");
+			writeTransition("transHorseCock", "Get yourself a fat horse-cock");
+			writeTransition("transDogCock", "Grow a knotty doggy dick");
+
+			writeText("Of course, there are always other things to do, too...");
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "tfScreenMasc" : {
+			writeText("If you wanted, you could probably make your body look a bit more muscular...");
+			writeTransition("transMascChest", "Change to look a bit more manly");
+
+			writeText("You could also firm up that ass of yours specifically...");
+			writeTransition("transMascAss", "Firm up that rear");
+
+			if(data.player.dick > 11){
+				writeText("Unfortunately, with a foot-long gut-puncher, growing any further is probably a bad idea for oppF's health...");
+			}
+			else{
+				writeText("And of course, if you're feeling like you want to pump up your length down there...");
+				writeTransition("transMascCock", "Add a bit of length down there");
+			}
+			writeText("Of course, there are always other things to do, too...");
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "tfScreenFem" : {
+			writeText("If you wanted, you could probably grow a nice pair of breasts with one of these tokens...");
+			writeTransition("transFemBreasts", "Grow out your chest a little");
+
+			writeText("Alternatively, you could round out that booty of yours and get it nice and <i>fat...</i>");
+			writeTransition("transFemAss", "Get that ass nice and jiggly");
+
+			if(data.player.dick < 2)
+				writeText("Of course, you can't really shrink your tiny little dicklet down any further without growing yourself a pussy, which isn't really an option yet...");
+			else{
+				writeText("And then, if you're feeling a little unfeminine because of your length <i>down there</i>, you could always...");
+				writeTransition("transFemDick", "Shrink that cock down");
+			}
+
+			writeText("Of course, there are always other things to do, too...");
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "tfScreenRemove" : {
+			if(data.player.flags.includes("fairyRej"))
+				writeTransition("transFairyRem", "Remove the Fae-Form punishment");
+			else if (data.player.flags.includes("golemRej"))
+				writeTransition("transFairyRem", "Remove the Golem's Shape punishment");
+			else
+				writeSpecial("You have no punishments currently affecting you.");
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transCatEars" : {
+			data.player.newChange +="ears";
+			console.log("catEarsAdded");
+			console.log(data.player.newChange)
+			addTrans();
+			data.player.earsVal = 1;
+			writeSpecial("Temp: Added cat ears for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transDogEars" : {
+			data.player.newChange +="ears";
+			console.log(data.player.newChange)
+			addTrans();
+			data.player.earsVal = 2;
+			writeSpecial("Temp: Added dog ears for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transFoxEars" : {
+			data.player.newChange +="ears";
+			console.log(data.player.newChange)
+			data.player.earsVal = 4;
+			addTrans();
+			writeSpecial("Temp: Added fox ears for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transCatTail" : {
+			data.player.newChange +="tail";
+			console.log(data.player.newChange)
+			addTrans();
+			data.player.tailVal = 1;
+			writeSpecial("Temp: Added cat tail for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transDogTail" : {
+			data.player.newChange +="tail";
+			console.log(data.player.newChange)
+			console.log("dogTailAdded");
+			addTrans();
+			data.player.tailVal = 2;
+			writeSpecial("Temp: Added dog tail for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transFoxTail" : {
+			data.player.newChange +="tail";
+			console.log(data.player.newChange)
+			addTrans();
+			data.player.earsVal = 4;
+			writeSpecial("Temp: Added fox tail for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transHorseCock" : {
+			data.player.newChange +="horseCock";
+			console.log(data.player.newChange)
+			addTrans();
+			data.player.genitalsVal = 6;
+			writeSpecial("Temp: Added horse cock for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transDogCock" : {
+			data.player.newChange +="dogCock";
+			console.log(data.player.newChange)
+			addTrans();
+			data.player.genitalsVal = 7;
+			writeSpecial("Temp: Added dog dick for test purposes.");
+			
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transMascChest" : {
+			break;
+		}
+		case "transMascAss" : {
+			break;
+		}
+		case "transMascCock" : {
+			if(data.player.dick < 5){
+				data.player.dick = 7;
+			}
+			else if (data.player.dick < 8){
+				data.player.dick = 9;
+			}
+			else if (data.player.dick < 11){
+				data.player.dick = 10;
+			}
+			else{
+				data.player.dick = 12;
+			}
+			break;
+		}
+
+
+
+			writeTransition("transMascChest", "Change to look a bit more manly");
+			writeTransition("transMascAss", "Firm up that rear");
+			writeTransition("transMascCock", "Add a bit of length down there");
 		default: {
 			writeText("Something went wrong, and you've encountered a bug. Keep in mind where you just where and what you did, and let me know so I can fix it.");
 			writeText("Here's a list of important details. If you message me directly with these jams, I should have a better idea of what caused the problem:");
