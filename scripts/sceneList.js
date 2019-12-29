@@ -1227,7 +1227,7 @@ function writeScene(scene) {
 			writeTransition("tfScreenFem", "Think about some feminine transformations");
 			if(data.player.flags.includes("Rej"))
 				writeTransition("tfScreenRemove", "Think about removing a transformation");
-			if(data.player.name == "Testing"){
+			if(data.player.fName == "Testing"){
 				writeTransition("tfScreenSissy", "Think about some sissification-themed transformations [NONE IMPLEMENTED]");
 				writeTransition("tfScreenCow", "Think about some human-cow-themed transformations [NONE IMPLEMENTED]");
 				writeTransition("tfScreenDegen", "Think about some very, <i>very</i> degenerate transformations [NONE IMPLEMENTED]");
@@ -1255,22 +1255,29 @@ function writeScene(scene) {
 				if(data.player.newChange.includes("tail"))
 					writeSpeech("opp","","A tail, huh? Those can be <i>real</i> fun if you know how to use them...");
 				if(data.player.newChange.includes("horseCock")){
-					writeText("OppHer eyes clearly linger on the fat rod hanging down, oppF not even trying to mask it.");
+					writeText("OppHer eyes clearly linger on the fat horse-cock hanging down, oppF not even trying to mask oppHer interest.");
 					writeSpeech("opp","","...We're going to have <i>fun</i> making that fit.");
 				}
 				if(data.player.newChange.includes("dogCock")){
 					writeText("OppHer eyes clearly linger on the scarlet knot, not even trying to mask the plain interest across oppHer face.");
 					writeSpeech("opp","","...We're going to have <i>fun</i> tonight.");
 				}
-				if(data.player.newChange.includes("mascDick")){
+				if(data.player.newChange.includes("transMascDick") && data.player.dick > 10){
+					writeText("OppShe stares quietly at your cock for a moment, before muttering,");
+					writeSpeech("opp","","Challenge accepted...");
+				}
+				else if(data.player.newChange.includes("transMascDick") && data.player.dick > 7){
 					writeText("OppHer eyes trace along your length, oppHer tongue going across oppHer lips for a moment.");
 					writeSpeech("opp","","...We're going to have <i>fun</i> making that fit.");
+				}
+				else if(data.player.newChange.includes("transMascDick")){
+					writeText("OppShe glances over at your length, just giving an approving nod in silence.");
 				}
 				if(data.player.newChange.includes("mascBuild")){
 					writeText("oppF stares blatantly at your much large body with a smile.");
 					writeSpeech("opp","","Looks like someone likes to top.");
 				}
-				if(data.player.newChange.includes("transFemBreasts")){
+				if(data.player.newChange.includes("transFemBreasts") && data.player.chestVal == 1){
 					if(data.story[0].sex == "M"){
 						writeText("His eyes linger on your chest for a moment, his cock clearly twitching.");
 						writeSpeech("opp","","Well, I can imagine the kind of fun we could have with those...");
@@ -1287,6 +1294,14 @@ function writeScene(scene) {
 						}
 					}
 				}
+				else if(data.player.newChange.includes("transFemBreasts") && data.player.chestVal == 2){
+					writeText("OppShe takes in the sight of your larger breasts, smirking.");
+					writeSpeech("opp","","Looks like <i>someone's</i> having fun. I know I'm looking forward to playing with those...");
+				}
+				else if(data.player.newChange.includes("transFemBreasts")){
+					writeText("OppShe marvels at the sight of your giant breasts.");
+					writeSpeech("opp","","Taking it to the extreme, huh? Glad you're enjoying yourself! But you'd better share the fun of them with me...");
+				}
 				if(data.player.newChange.includes("transFemAss")){
 					if(data.story[0].sex == "F"){
 						writeText("She stares at your newly-fat ass with a look of excitement.");
@@ -1297,7 +1312,7 @@ function writeScene(scene) {
 						writeSpeech("opp","","God, you're making it hard to not just pin you down right here...");
 					}
 				}
-				if(data.player.newChange.includes("transFemCock")){
+				if(data.player.newChange.includes("transFemDick")){
 					if(data.story[0].sex == "F"){
 						writeText("A look of amusement flies across oppF's face.");
 						writeSpeech("opp","","There's easier ways to make a girl tease you, hun... But this might be my favorite. I'd love for you to put on a little show for me later with that <i>little toy</i>...");
@@ -1344,13 +1359,18 @@ function writeScene(scene) {
 			break;
 		}
 		case "tfScreen" : {
+			if(data.player.tokens < 1 && data.player.fName != "Testing"){
+				writeText("Unfortunately, you're out of tokens, so you can't really buy any transformations right now.");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
 			writeText("There's a couple different kinds of transformations you could think about...");
 			writeTransition("tfScreenAnimal", "Think about some animal-themed options");
 			writeTransition("tfScreenMasc", "Think about some masculine transformations");
 			writeTransition("tfScreenFem", "Think about some feminine transformations");
 			if(data.player.flags.includes("Rej"))
 				writeTransition("tfScreenRemove", "Think about removing a transformation");
-			if(data.player.name == "Testing"){
+			if(data.player.fName == "Testing"){
 				writeTransition("tfScreenSissy", "Think about some sissification-themed transformations [NONE IMPLEMENTED]");
 				writeTransition("tfScreenCow", "Think about some human-cow-themed transformations [NONE IMPLEMENTED]");
 				writeTransition("tfScreenDegen", "Think about some very, <i>very</i> degenerate transformations [NONE IMPLEMENTED]");
@@ -1379,14 +1399,31 @@ function writeScene(scene) {
 			break;
 		}
 		case "tfScreenMasc" : {
-			writeText("If you wanted, you could probably make your body look a bit more muscular...");
-			writeTransition("transMascChest", "Change to look a bit more manly");
-
-			writeText("You could also firm up that ass of yours specifically...");
-			writeTransition("transMascAss", "Firm up that rear");
+			if(data.player.flags.includes("transMascBuild") != true || (data.player.flags.includes("golemRej") && data.player.flags.includes("transGolemRem"))){
+				writeText("If you wanted, you could probably make your body look a bit more muscular...");
+				writeTransition("transMascChest", "Change to look a bit more manly");
+			}
+			else if(data.player.fName == "Testing")
+				writeTransition("transMascChest", "Change to look a bit more manly");
+			else
+				writeText("Your body is already pretty broad and stocky, so it'd be a waste of a coin to try again.");
+			if(data.player.flags.includes("transMascAss") != true){
+				if(data.player.flags.includes("transFemAss")){
+					writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and firm up.");
+					writeTransition("transMascAss", "Firm up that rear");
+				}
+				else{
+					writeText("You could also firm up that ass of yours specifically...");
+					writeTransition("transMascAss", "Firm up that rear");
+				}
+			}
+			else
+				writeText("You've already firmed up your ass a lot, so doing the same thing would probably be a waste of a coin.");
 
 			if(data.player.dick > 11){
 				writeText("Unfortunately, with a foot-long gut-puncher, growing any further is probably a bad idea for oppF's health...");
+				if(data.player.fName == "Testing")
+					writeTransition("transMascCock", "Add a bit of length down there");
 			}
 			else{
 				writeText("And of course, if you're feeling like you want to pump up your length down there...");
@@ -1401,16 +1438,21 @@ function writeScene(scene) {
 			writeText("If you wanted, you could probably grow a nice pair of breasts with one of these tokens...");
 			writeTransition("transFemBreasts", "Grow out your chest a little");
 
-			writeText("Alternatively, you could round out that booty of yours and get it nice and <i>fat...</i>");
-			writeTransition("transFemAss", "Get that ass nice and jiggly");
-
+			if(data.player.flags.includes("transFemAss"))
+				if(data.player.flags.includes("transMascAss")){
+					writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and firm up.");
+					writeTransition("transMascAss", "Firm up that rear");
+				}
+				else{
+					writeText("Alternatively, you could round out that booty of yours and get it nice and <i>fat...</i>");
+					writeTransition("transFemAss", "Get that ass nice and jiggly");
+				}
 			if(data.player.dick < 2)
 				writeText("Of course, you can't really shrink your tiny little dicklet down any further without growing yourself a pussy, which isn't really an option yet...");
 			else{
 				writeText("And then, if you're feeling a little unfeminine because of your length <i>down there</i>, you could always...");
 				writeTransition("transFemDick", "Shrink that cock down");
 			}
-
 			writeText("Of course, there are always other things to do, too...");
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
@@ -1428,122 +1470,275 @@ function writeScene(scene) {
 			break;
 		}
 		case "transCatEars" : {
+			loseTokens(1);
 			data.player.newChange +="ears";
 			console.log("catEarsAdded");
 			console.log(data.player.newChange)
 			addTrans();
 			data.player.earsVal = 1;
-			writeSpecial("Temp: Added cat ears for test purposes.");
-			
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+			writeText("You're not sure how you know for sure, but you have a pair of jet-black cat ears poking out of your head, which you can kinda almost move if you focus.");
+			writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transDogEars" : {
+			loseTokens(1);
 			data.player.newChange +="ears";
 			console.log(data.player.newChange)
 			addTrans();
 			data.player.earsVal = 2;
-			writeSpecial("Temp: Added dog ears for test purposes.");
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+			writeText("You're not entirely sure how you know, but you have a pair of droopy dog ears coming out from your head. You can flop them around by bouncing your hair about, but can't really control them.");
+			writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transFoxEars" : {
+			loseTokens(1);
 			data.player.newChange +="ears";
 			console.log(data.player.newChange)
 			data.player.earsVal = 4;
 			addTrans();
-			writeSpecial("Temp: Added fox ears for test purposes.");
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+			writeText("You're not entirely sure how you know, but you definitely have a pair of fluffy fox ears poking out of your head. The fur is almost absurdly soft...");
+			writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transCatTail" : {
+			loseTokens(1);
 			data.player.newChange +="tail";
 			console.log(data.player.newChange)
 			addTrans();
 			data.player.tailVal = 1;
-			writeSpecial("Temp: Added cat tail for test purposes.");
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+			writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
+			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transDogTail" : {
+			loseTokens(1);
 			data.player.newChange +="tail";
 			console.log(data.player.newChange)
 			console.log("dogTailAdded");
 			addTrans();
 			data.player.tailVal = 2;
-			writeSpecial("Temp: Added dog tail for test purposes.");
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+			writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
+			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transFoxTail" : {
+			loseTokens(1);
 			data.player.newChange +="tail";
 			console.log(data.player.newChange)
 			addTrans();
-			data.player.earsVal = 4;
-			writeSpecial("Temp: Added fox tail for test purposes.");
+			data.player.tailVal = 4;
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+			writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
+			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transHorseCock" : {
+			loseTokens(1);
 			data.player.newChange +="horseCock";
+			data.player.flags +="horseCock";
 			console.log(data.player.newChange)
 			addTrans();
 			data.player.genitalsVal = 6;
-			writeSpecial("Temp: Added horse cock for test purposes.");
+			data.player.dick = 12;
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
+			writeText("Seeing as you lack a sheathe and this big guy swings low, there's no way you'll be wearing anything below the hips for a while.");
+			writeText("You now have a long, heavy, speckled shaft with a medial ring swelling out halfway down, and a fat, blunt head that promises to <i>stretch</i> anything it enters...");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transDogCock" : {
+			loseTokens(1);
 			data.player.newChange +="dogCock";
+			data.player.flags +="dogCock";
 			console.log(data.player.newChange)
 			addTrans();
 			data.player.genitalsVal = 7;
-			writeSpecial("Temp: Added dog dick for test purposes.");
+			data.player.dick = 8;
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
+			writeText("Without any sort of natural sheathe, the feeling of wearing anything below your hips sets your mind aflame as you see it.");
+			writeText("You now have a fat, ruby-red cock covered in veins and shining sleekly, sitting atop an even <i>fatter</i> knot. It feels so warm, even now...");
 			
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transMascChest" : {
+			loseTokens(1);
+			data.player.buildVal = 3;
+			data.player.newChange += "transMascChest";
+			data.player.flags += "transMascChest";
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, before rapidly collecting around your torso.");
+			writeText("It feels like little sparks of pleasure dancing across your skin before a sharp pang of pleasure shoots through you.");
+			writeText("Looking down, you can see your torso is a lot broader and more toned, and definitely stronger looking.");
+
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transMascAss" : {
+			loseTokens(1);
+			data.player.assVal = 1;
+			data.player.newChange += "transMascAss";
+			data.player.flags += "transMascAss";
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, though it very quickly fixates on your rear.");
+			writeText("Sparks of pleasure dart along the surface, feeling like a fast, sharp massage across the skin before it suddenly stops.");
+			writeText("Looking down, you can see your ass is looking a lot firmer, more toned, and damn-fine-looking.");
+
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transMascCock" : {
+			loseTokens(1);
+			data.player.newChange += "transMascDick";
 			if(data.player.dick < 5){
 				data.player.dick = 7;
+				data.player.genitalsVal = 1;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your less-than-large cock grows quite a bit. Not that anyone would be able to tell if they hadn't seen you beforehand...");
 			}
 			else if (data.player.dick < 8){
 				data.player.dick = 9;
+				data.player.genitalsVal = 8;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your already above-average cock grows. At this point, you're probably around where most people would want to stop...");
 			}
-			else if (data.player.dick < 11){
+			else if (data.player.dick < 10){
 				data.player.dick = 10;
+				data.player.genitalsVal = 8;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A flash of almost burning, pleasureful heat surges through your crotch, the moan not even able to spill out out of you as your already large cock grows even more. By the time the heat-haze over your head clears, it's pretty obvious that most people wouldn't be comfortable taking your full length...");
 			}
 			else{
 				data.player.dick = 12;
+				data.player.genitalsVal = 9;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("As it shatters, you feel an absurdly hot surge of pleasure flash through your body, nearly making you cum on the spot as you feel your cock grow to reach a foot long, every inch more sensitive than the last as you try not to pop.");
+				writeText("When the heat finally fades, your shaft feels a lot less likely to spurt with a strong breeze, but it's still pretty sensitive.");
 			}
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
+		case "transFairyRem" : {
+			data.player.newChange += "transFairyRem";
+			loseTokens(1);
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("It only takes a moment for a feeling like a cold breeze to settle over your body, leaving you without breath as everything goes white.");
+			writeText("When your vision clears up, you can see that you're back to a pretty normal, average-sized body.");
+			data.player.heightVal = 0;
+			data.player.buildVal = 0;
+			data.player.clothesVal = 0;
+			data.player.legsVal = 0;
+			data.player.assVal = 0;
+			data.player.chestVal = 0;
+			data.player.genitalsVal = 0;
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transGolemRem" : {
+			data.player.newChange += "transGolemRem";
+			loseTokens(1);
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("It only takes a moment for a feeling like a cold breeze to settle over your body, leaving you without breath as everything goes white.");
+			writeText("When your vision clears up, you can see that you're back to a pretty normal, average-sized body.");
+			data.player.heightVal = 0;
+			data.player.buildVal = 0;
+			data.player.clothesVal = 0;
+			data.player.legsVal = 0;
+			data.player.assVal = 0;
+			data.player.chestVal = 0;
+			data.player.genitalsVal = 0;
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transFemBreasts" : {
+			loseTokens(1);
+			data.player.newChange += "transFemBreasts";
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			if(data.player.chestVal == 0){
+				data.player.flags += ("transFemBreasts");
+				data.player.chestVal = 1;
+				writeText("A gentle surge of warmth pushes into your chest, turning you on as the phantom sensation of hands groping at your chest pull a moan from your throat.");
+				writeText("The sensations fade quickly, leaving you with a small pair of breasts that are sensitive to the touch.");
+			}
+			else if(data.player.chestVal == 1){
+				writeText("The surge of warmth is stronger this time, leaving you gasping as the phantom hands feel stronger and squeeze tighter around your tits.");
+				writeText("When the sensations fade and your chest isn't heaving from arousal <i>quite</i> as much, you can see that your tits are at least C-cups now.");
+				data.player.chestVal = 2;
+			}
+			else if(data.player.chestVal == 2){
+				data.player.flags += ("hugeBreasts");
+				writeText("The heat completely overwhelms you, your whole body tensing up as you moan throatily right in front of oppF, but not really able to care as the phantom hands run wild.");
+				writeText("You could swear you feel them across your entire body this time, forcing you to the edge of orgasm and holding you there until the suddenly stop, leaving you pent-up and gasping for air.");
+				writeText("Your tits are huge now, each one at least the size of your head and both of them sensitive enough that a strong breeze would make you moan uncontrollably.");
+				data.player.chestVal = 7;
+			}
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transFemAss" : {
+			data.player.newChange += "transFemAss";
+			loseTokens(1);
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			writeText("There's a faint sensation of warmth in your ass for a moment, before it suddenly <i>spikes</i> in heat, feeling like a sharp slap on the ass that makes you yelp.");
+			writeText("Checking your ass, you can quickly tell that it got <i>very</i> juicy, straining against your pants rather clearly.");
+			data.player.newChange += "transFemAss";
+			data.player.assVal = 2;
 
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
+		case "transFemDick" : {
+			loseTokens(1);
+			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+			data.player.newChange += "transFemDick";
+			data.player.dick = 3;
+			data.player.genitalsVal = 3;
 
-
-			writeTransition("transMascChest", "Change to look a bit more manly");
-			writeTransition("transMascAss", "Firm up that rear");
-			writeTransition("transMascCock", "Add a bit of length down there");
+			writeTransition("tfScreen", "Think about another transformation");
+			writeTransition("postRound1", "Go back to the game");
+			break;
+		}
 		default: {
 			writeText("Something went wrong, and you've encountered a bug. Keep in mind where you just where and what you did, and let me know so I can fix it.");
 			writeText("Here's a list of important details. If you message me directly with these jams, I should have a better idea of what caused the problem:");
@@ -1551,8 +1746,7 @@ function writeScene(scene) {
 			writeText("" + JSON.stringify(data) + "");
 			writeText("Browser:" + navigator.appCodeName  + "");
 			writeText("OS:" + navigator.platform  + "");
-			writeBig("images/butts.jpg");
-			writeTransition("room", "Go back");
+			writeTransition("postRound1", "Go back");
 			break;
 		}
 	}

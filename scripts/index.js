@@ -33,6 +33,7 @@ var data = {
 		genitalsVal:0,
 		newChange:"",
 		flags: "",
+		round:0,
 	},
 	story: [
 		{index: "opp",
@@ -99,15 +100,15 @@ var oppBuildArray = [
 	{desc: "and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
 ];
 var playerBuildArray = [
-	{desc: "and you're probably pretty-average weight-wise.",},
-	{desc: "and you're just a little heavier than average.",},
-	{desc: "and you're just a bit more slim and light than average.",},
-	{desc: "and you're pretty muscular compared to most people.",},
-	{desc: "and you've got a bit more in the curves-department compared to most people.",},
-	{desc: "and you are practically an Adonis when it comes to your body and muscles.",},
-	{desc: "and you are a <i>lot</i> curvier than most people.",},
-	{desc: "and you're a lot slimmer than you were at the start of the game. Plus, your ears almost seem pointed, now...",},
-	{desc: "and you're body is a whole lot more sturdy and barrel-like than at the start of the game. Doesn't make your skin any less sensitive, though...",},
+	{desc: " and you're probably pretty-average weight-wise.",},
+	{desc: " and you're just a little heavier than average.",},
+	{desc: " and you're just a bit more slim and light than average.",},
+	{desc: " and you're pretty muscular compared to most people.",},
+	{desc: " and you've got a bit more in the curves-department compared to most people.",},
+	{desc: " and you are practically an Adonis when it comes to your body and muscles.",},
+	{desc: " and you are a <i>lot</i> curvier than most people.",},
+	{desc: " and you're a lot slimmer than you were at the start of the game. Plus, your ears almost seem pointed, now...",},
+	{desc: " and you're body is a whole lot more sturdy and barrel-like than at the start of the game. Doesn't make your skin any less sensitive, though...",},
 ];
 
 var oppClothesArray = [
@@ -141,10 +142,10 @@ var oppEarsArray = [
 ];
 var playerEarsArray = [
 	{desc: "",},
-	{desc: "A pair of adorable cat ears poke out from the top of your head, just sensitive enough that you can feel the very faint breeze caressing the fur. ",},
-	{desc: "A pair of adorable dog ears droop out from the sides of your head. They don't seem to be able to hear much, but you could swear you can hear your own heartbeat through them. ",},
-	{desc: "A pair of twitchy bunny ears spring out from the top of your head. Despite your best efforts, you can't seem to control how they move, especially when your opponent takes a good look at them. ",},
-	{desc: "A pair of sensitive fox ears pop out from the top of your head. You can't seem to stop them from twitching slightly whenever you hear a noise, even if it's as quiet as the drop of a pin. ",},
+	{desc: " A pair of adorable cat ears poke out from the top of your head, just sensitive enough that you can feel the very faint breeze caressing the fur. ",},
+	{desc: " A pair of adorable dog ears droop out from the sides of your head. They don't seem to be able to hear much, but you could swear you can hear your own heartbeat through them. ",},
+	{desc: " A pair of twitchy bunny ears spring out from the top of your head. Despite your best efforts, you can't seem to control how they move, especially when your opponent takes a good look at them. ",},
+	{desc: " A pair of sensitive fox ears pop out from the top of your head. You can't seem to stop them from twitching slightly whenever you hear a noise, even if it's as quiet as the drop of a pin. ",},
 ];
 
 var oppHairArray = [
@@ -180,8 +181,8 @@ var playerLegsArray = [
 var oppAssArray = [
 	{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Looking at it, you can't help but feel curious about how firm it would feel in your hands...",},
 	{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Despite how firm you would <i>swear</i> it has to be, there always seems to be just enough jiggle that it shakes with every movement.",},
-	{desc: "And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever "+data.story[0].fName+ " shifts in place, you could swear it practically ripples.",},
-	{desc: "And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if "+data.story[0].fName+"'s gentle squirming is anything to go by.",},
+	{desc: "And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever your opponent shifts in place, you could swear it practically ripples.",},
+	{desc: "And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if your opponent's gentle squirming is anything to go by.",},
 
 ];
 var playerAssArray = [
@@ -225,6 +226,7 @@ var playerChestArray = [
 	{desc: "You you have a pair of teeny-titties pushing out from your chest, highlighting your slim sissy figure. ",},
 	{desc: "Having shrunk down, your chest is similarly slimmer, with your shoulders less broad now than before. ",},
 	{desc: "Your chest and shoulders are a lot broader now, though they look (and feel) pretty toned. ",},
+	{desc: "Your tits have expanded even further, jumping right past Double-Ds and straight into '<i>huge</i>' territory. They're actually even more sensitive now than they were before! ",},
 ];
 
 var oppGenitalsArray = [
@@ -251,6 +253,7 @@ var playerGenitalsArray = [
 	{desc: "A thick, heavy, ",},
 	{desc: "A ruby-red, ",},
 	{desc: "Your cock grew a fair bit, now ",},
+	{desc: "Your gargantuan cock is a solid ",},
 ];
 var playerGenitalsArray2 = [
 	{desc: "-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
@@ -261,7 +264,8 @@ var playerGenitalsArray2 = [
 	{desc: "-inches long. It almost makes it look shorter than it used to be when compared to you now.",},
 	{desc: "-inch long horsecock is hanging down loosely. It's not as stiff as a normal dick, but that isn't really the appeal, is it?",},
 	{desc: "-inch long doggy-dick is hanging down between your thighs. You could swear it feels far warmer than it should, <i>especially</i> the knot.",},
-	{desc: "-inches long and nearly as thick around as your wrist. Just like you were warned, it is feeling <i>very</i> sensitive...",},
+	{desc: "-inches long and fairly intimidating in terms of girth.",},
+	{desc: "-inches long, and probably the upper limit of what you should really have it if you value having blood pumping through the rest of your body.",},
 ];
 
 var oppF = data.story[0].fName;
@@ -517,9 +521,15 @@ function addTokens(num){
 }
 
 function loseTokens(num){
-	data.player.tokens -= num;
-	if(data.player.fName == "Testing")
+	if(data.player.fName == "Testing"){
 		writeSpecial(num+" tokens have been spent.");
+		if(data.player.tokens > 1)
+			data.player.tokens -= num;
+	}
+	else if(data.player.tokens < 1)
+		writeSpecial("You are out of tokens. How in the world did you do that...?")
+	else
+		data.player.tokens -= num;
 }
 
 function willUp(){
@@ -566,6 +576,8 @@ function writeTransition (name, scene) {
 			` + replaceCodenames(scene) + `
 		</p>
 	`;
+	document.getElementById('day').innerHTML = "Round: "+data.player.round;
+	document.getElementById('tokens').innerHTML = "Tokens: "+data.player.tokens;
 }
 
 function writeFunction (name, func) {
