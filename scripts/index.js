@@ -33,7 +33,7 @@ var data = {
 		genitalsVal:0,
 		newChange:"",
 		flags: "",
-		round:0,
+		round:"0",
 	},
 	story: [
 		{index: "opp",

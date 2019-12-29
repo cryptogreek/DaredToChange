@@ -1238,7 +1238,7 @@ function writeScene(scene) {
 		case "postRound1" : {
 			if(data.player.flags.includes("adviceTokens") != true && data.player.flags.includes("noAdvice") != true){
 				addFlag("noAdvice");
-				writeSpeech("player","","I think I've got this. Worst case scenario, I end up with something unexpected, right?");
+				writeSpeech("player","","I think I've got this. Worst case scenario, I just end up with something unexpected, right?");
 				writeSpeech("opp","","That's a good way to look at it. In that case, I'll just save up my tokens for now and let you test things out.");
 			}
 			else if(data.player.flags.includes("trans1") != true && data.player.flags.includes("noTrans") != true){
@@ -1470,6 +1470,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transCatEars" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="ears";
 			console.log("catEarsAdded");
@@ -1486,6 +1487,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transDogEars" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="ears";
 			console.log(data.player.newChange)
@@ -1501,6 +1503,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFoxEars" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="ears";
 			console.log(data.player.newChange)
@@ -1516,6 +1519,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transCatTail" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="tail";
 			console.log(data.player.newChange)
@@ -1531,6 +1535,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transDogTail" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="tail";
 			console.log(data.player.newChange)
@@ -1547,6 +1552,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFoxTail" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="tail";
 			console.log(data.player.newChange)
@@ -1562,6 +1568,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transHorseCock" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="horseCock";
 			data.player.flags +="horseCock";
@@ -1579,6 +1586,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transDogCock" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange +="dogCock";
 			data.player.flags +="dogCock";
@@ -1596,6 +1604,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transMascChest" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.buildVal = 3;
 			data.player.newChange += "transMascChest";
@@ -1610,6 +1619,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transMascAss" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.assVal = 1;
 			data.player.newChange += "transMascAss";
@@ -1624,6 +1634,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transMascCock" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange += "transMascDick";
 			if(data.player.dick < 5){
@@ -1656,6 +1667,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFairyRem" : {
+			addFlag("trans1");
 			data.player.newChange += "transFairyRem";
 			loseTokens(1);
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
@@ -1673,6 +1685,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transGolemRem" : {
+			addFlag("trans1");
 			data.player.newChange += "transGolemRem";
 			loseTokens(1);
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
@@ -1690,6 +1703,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFemBreasts" : {
+			addFlag("trans1");
 			loseTokens(1);
 			data.player.newChange += "transFemBreasts";
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
@@ -1716,6 +1730,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFemAss" : {
+			addFlag("trans1");
 			data.player.newChange += "transFemAss";
 			loseTokens(1);
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
@@ -1729,6 +1744,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFemDick" : {
+			addFlag("trans1");
 			loseTokens(1);
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
 			data.player.newChange += "transFemDick";
@@ -1772,14 +1788,63 @@ function writeScene(scene) {
 			writeText("oppF laughs, shrugging.");
 			writeSpeech("opp","","I mean... Sure, why not? The challenges have their own appeal, but there's no reason we can't fuck between them. What did you have in mind?");
 			if(data.story[0].sex == "M"){
-				
+				writeTransition("oppChatSexAnal", "Fuck his ass");
+				writeTransition("oppChatSexCatch", "Ride his cock");
+				writeTransition("oppChatSexHJ", "Jerk each other off");
+				if(data.player.genitalsVal == 7)
+					writeTransition("oppChatSexAnalKnot", "Knot him");
+				if(data.player.tailVal != 0)
+					writeTransition("oppChatSexTail", "Give him a tailjob");
+				if(data.player.chestVal == 1 || data.player.chestVal == 2 || data.player.chestVal == 7)
+					writeTransition("oppChatSexGiveTitjob", "Give him a titjob");
 			}
 			if(data.story[0].sex == "F"){
+				writeTransition("oppChatSexVaginal", "Fuck her");
+				writeTransition("oppChatSexAnal", "Fuck her ass");
+				writeTransition("oppChatSexTitjob", "Get a titjob");
+				if(data.player.genitalsVal == 7){
+					writeTransition("oppChatSexFemKnot", "Knot her");
+					writeTransition("oppChatSexAnalKnot", "Knot her ass");
+				}
 				
 			}
 			if(data.story[0].sex == "H"){
-				
+				writeTransition("oppChatSexAnal", "Fuck her ass");
+				writeTransition("oppChatSexCatch", "Ride her cock");
+				writeTransition("oppChatSexHJ", "Jerk each other off");
+				writeTransition("oppChatSexTitjob", "Get a titjob");
+				if(data.player.chestVal == 1 || data.player.chestVal == 2 || data.player.chestVal == 7)
+					writeTransition("oppChatSexGiveTitjob", "Give her a titjob");
+				if(data.player.genitalsVal == 7)
+					writeTransition("oppChatSexAnalKnot", "Knot her");
+				if(data.player.tailVal != 0)
+					writeTransition("oppChatSexTail", "Give her a tailjob");
 			}
+			writeTransition("postRound1", "Never mind - return to the game");
+			break;
+		}
+		case "oppChatSexAnal" : {
+			break;
+		}
+		case "oppChatSexCatch" : {
+			break;
+		}
+		case "oppChatSexHJ" : {
+			break;
+		}
+		case "oppChatSexFemKnot" : {
+			break;
+		}
+		case "oppChatSexAnalKnot" : {
+			break;
+		}
+		case "oppChatSexTail" : {
+			break;
+		}
+		case "oppChatSexTitjob" : {
+			break;
+		}
+		case "oppChatSexGiveTitjob" : {
 			break;
 		}
 		default: {
