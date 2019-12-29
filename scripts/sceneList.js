@@ -1739,6 +1739,49 @@ function writeScene(scene) {
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
+		case "oppChat" : {
+			writeSpeech("player","","Actually, I had a few questions I wanted to ask.");
+			writeSpeech("opp","","Oh yeah? Ask away, then! I'm always happy to help out.");
+			writeTransition("oppChatPlayedBefore", "You said you've played this before?");
+			writeTransition("oppChatSex", "Wanna fuck?");
+			writeTransition("postRound1", "Never mind");
+			break;
+		}
+		case "oppChatPlayedBefore" : {
+			writeSpeech("player","","You mentioned that you played this before, and I was wondering how those games went.");
+			writeText("oppF pauses to think.");
+			writeSpeech("opp","","I actually thought you meant questions about the game, but I'm good to answer that, too. My first time was a lot of fun, with this one girl that really took the lead and helped me out. Lot of fun to play with, and probably the dirtiest bitch I've played against.");
+			writeText("OppShe pauses to grin.");
+			writeSpeech("opp","","Well, <i>thus far,</i> I mean. She purposefully rejected a few challenges just because she wanted to see what the punishments were. By round four, she was two feet tall, hyper-elastic, and gave me a stomach-deformation fetish. She was a <i>freak.</i>");
+			writeText("oppF thinks a bit more, before breaking out into a grin.");
+			writeSpeech("opp","","After that, I got paired up with this guy that got me completely <i>hooked </i>on anal. It wasn't like it was some huge sequence of challenges and punishments or anything - it was just that he was really into making it feel as good as possible for the both of us. He was a really adorable little guy.");
+			writeSpeech("opp","","And my last game... was different. I loved it, but the girl was a total S, and it took me a few rounds to really get into it. Honestly, I'm still not entirely sure how I feel about orgasm control. It was definitely an interesting experience, though, and I wouldn't trade it for the world.");
+			writeText("oppF leans back, crossing oppHer arms with an even wider grin.");
+			writeSpeech("opp","","That makes this my fourth time playing. I'm <i>far</i> from the most experienced player, but I guess they think I'm good enough to walk someone new through it, yeah?");
+			writeText("OppShe shakes oppHer head, oppHer hair shifting a bit.");
+			writeSpeech("opp","","Was that all?");
+			writeTransition("oppChat", "Keep chatting");
+			writeTransition("postRound1", "Return to the game");
+			break;
+		}
+		case "oppChatSex" : {
+			if(data.player.pref == "dom")
+				writeSpeech("player","","Wanna fuck before the start of the next round?");
+			else
+				writeSpeech("player","","I was wondering if maybe you wanted to get off before the start of the next round...?");
+			writeText("oppF laughs, shrugging.");
+			writeSpeech("opp","","I mean... Sure, why not? The challenges have their own appeal, but there's no reason we can't fuck between them. What did you have in mind?");
+			if(data.story[0].sex == "M"){
+				
+			}
+			if(data.story[0].sex == "F"){
+				
+			}
+			if(data.story[0].sex == "H"){
+				
+			}
+			break;
+		}
 		default: {
 			writeText("Something went wrong, and you've encountered a bug. Keep in mind where you just where and what you did, and let me know so I can fix it.");
 			writeText("Here's a list of important details. If you message me directly with these jams, I should have a better idea of what caused the problem:");
