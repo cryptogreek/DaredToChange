@@ -406,7 +406,7 @@ function writeScene(scene) {
 			writeText("The second is a large cave-mouth of carved brown-orange stone with some type of rock-creature standing in front of it. Engraved into the top of the cave-mouth, the tile's name shines slightly in the light - Cavern of the Golems.");
 			writeText("You can choose between either one, but you could also ask oppF about them. He/She might have seen them before in another game.");
 			writeTransition("fairyKingStart", "Go to The Fairy King's Forest");
-			writeTransition("fairyKingStart", "Go to The Cavern of the Golems");
+			writeTransition("golemCaveStart", "Go to The Cavern of the Golems");
 			writeTransition("advice1", "Ask about the two options");
 			break;
 		}
@@ -424,7 +424,7 @@ function writeScene(scene) {
 			writeSpeech("player","","Alright. Thanks for the advice.");
 			writeSpeech("opp","","No problem. So, what're you thinking about choosing?");
 			writeTransition("fairyKingStart", "Go to The Fairy King's Forest");
-			writeTransition("fairyKingStart", "Go to The Cavern of the Golems");
+			writeTransition("golemCaveStart", "Go to The Cavern of the Golems");
 			break;
 		}
 		case "cheat": {
