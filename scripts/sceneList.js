@@ -20,7 +20,7 @@ function writeScene(scene) {
 			writeText("Future fetishes currently planned include sissification, bimbofication, more animal parts (particularly tail-play), more feminization, and more masculinization.");
 			writeText("My Discord is corenkeitaro#7169. If you see anything that needs fixing in the game, you can message me there or email me at cryptogreekcaptions@gmail.com. I also am pretty active on the Discord server <a href='https://discord.gg/8SgGSMm'>Noodle's Jacuzzi</a>, which has information on both my current projects and on Noodle's.");
 			writeText("If you enjoyed the writing in this game, you might want to check out <a href='https://noodlejacuzzi.github.io/Hentai%20University/Hentai%20University.html'>Hentai University</a>, another game that I write for! It's hypnotism-focused, though, rather than transformation.");
-			writeText("And shoutout to <a href='https://www.patreon.com/noodlejacuzzi'>Noodle's Patreon</a>, seeing as I'd be stuck using Twine without his engine.");
+			writeText("And shoutout to <a href='https://www.patreon.com/noodlejacuzzi'>Noodle's Patreon</a>, seeing as I'd be stuck using Twine without his engine. I actually also get a cut from that due to co-writing for HU, which is neat.");
 			writeText("You can click on the title of a window to close it. For example, if you click 'STATUS' on the left, you can close the new window by clicking anywhere in the 'STATUS' section at the top.");
 			break;
 		}
