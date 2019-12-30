@@ -359,7 +359,7 @@ function writeScene(scene) {
 			addFlag("Rules");
 			writeSpeech("player","","Let's go over the rules, just to make we're on the same page.");
 			writeSpeech("opp","","Got it.");
-			writeText("OppShe starts off by gesturing to a large game-board built into a mini-table in the center of the room. It's completely flat and featureless now, save for two thing.");
+			writeText("OppShe starts off by gesturing to a large game-board built into a mini-table in the center of the room. It's completely flat and featureless now, save for two things.");
 			writeText("Two colored pieces are sitting near one end - a red one and a "+data.story[0].piece+" one right next to it.");
 			writeSpeech("opp","","The "+data.story[0].piece+" one is me. The board is blank now, but that's because it reveals bits of itself as the game goes on and it lets us choose tiles to go to.");
 			writeText("OppShe gestures to the side, where a card-slot appears to be situated.");
@@ -1507,7 +1507,7 @@ function writeScene(scene) {
 				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
 				writeText("You're not entirely sure how you know, but you have a pair of droopy dog ears coming out from your head. You can flop them around by bouncing your hair about, but can't really control them.");
 				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-
+				
 				writeTransition("tfScreen", "Think about another transformation");
 				writeTransition("postRound1", "Go back to the game");
 				break;
@@ -1924,12 +1924,12 @@ function writeScene(scene) {
 				if(data.player.dick < 4){
 					writeText("Your hips immediately clap against oppHers as oppShe shifts around.");
 					writeSpeech("opp","","Ah, you bottomed out...");
-					if(data.story[0].sex == "F"){
+					if(data.story[0].sex == "F")
 						writeText("OppShe brings oppHer hand to oppHer pussy again, toying with it idly.");
-					}
-					else{
+					
+					else
 						writeText("OppShe brings oppHer hand to oppHer dick, stroking it slowly from top to bottom.");
-					}
+					
 					writeSpeech("opp","","Go ahead and start thrusting. We might as well try to have fun, right?");
 					writeText("OppShe keeps toying with herself while you pound into oppHer ass, not really able to pull out too much without actually pulling out.");
 					writeText("After around a minute of this, oppF starts shifting around, arching oppHer back more and panting as oppHer hand picks up speed.");
@@ -1938,7 +1938,10 @@ function writeScene(scene) {
 					writeText("oppF's hand stops, curiosity evident in oppHer voice as you start spurting inside of oppHer.");
 					writeSpeech("opp","","A quickshot...? Well, I guess that's fine.");
 					writeText("OppShe pulls oppHimself off of you, standing up straight.");
-					writeSpeech("opp","","Err... No offense, but maybe next time, you should catch?");
+					if(data.story[0].sex == "F")
+						writeSpeech("opp","","Err... No offense, but maybe you want grow yourself a little before next time?");
+					else
+						writeSpeech("opp","","Err... No offense, but maybe next time, you should catch?");
 					writeTransition("postRound1", "Go back");
 					break;
 				}
