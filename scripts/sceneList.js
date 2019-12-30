@@ -160,7 +160,7 @@ function writeScene(scene) {
 				writeText("With your sheet all filled out, you hand it over to the desk-girl. She looks over it quickly, holding the clipboard with one hand and typing with the other.");
 				writeSpeech("Desk Girl","scripts/gamefiles/profiles/desk.jpg","Heh, no hesitation, huh? You and your partner are sure to have fun. Hopefully enough to keep coming back - we might even get matched up some time.");
 				writeText("She flashes you a smile before she finishes typing.");
-			
+
 			}
 			else if(data.player.pref == "sub"){
 				writeText("With your sheet filled out, you're a little hesitant to hand it over and let the desk-girl read it, but...");
@@ -208,26 +208,26 @@ function writeScene(scene) {
 				writeSpeech("opp","","If you want, we can go over the rules a bit before we start. You might already know 'em, though, so if you'd rather we jumped right into the first-hand experience, I'm up for that too.");
 			}
 			else if(data.story[0].sex == "F"){
-				writeText("OppShe is leaning against the back of the couch, oppHer legs neatly folded over and her hands resting on her thigh. She gives you a confident smile and sits up a bit straighter, which does <i>things</i> to her assets.");
+				writeText("OppShe is leaning against the back of the couch, oppHer legs neatly folded over and oppHer hands resting on oppHer thigh. She gives you a confident smile and sits up a bit straighter, which does <i>things</i> to oppHer assets.");
 				writeSpeech("opp","","playerF, right? I'm oppF. Looks like we'll be getting to have a whole lot of fun with each other!");
-				writeText("She extends her hand out, which you quickly move to shake.");
+				writeText("She extends oppHer hand out, which you quickly move to shake.");
 				writeSpeech("player","","It's good to meet you. It's actually my first time playing, so...");
 				writeText("OppShe nods understandingly.");
 				writeSpeech("opp","","Yeah, the owner said as much - first-timers often get cold feet and never show up, so she wanted to make sure I was prepped for that. Good to see you came, though!");
-				writeText("She smiles a bit more, brushing her hand against yours.");
+				writeText("She smiles a bit more, brushing oppHer hand against yours.");
 				writeSpeech("opp","","You can take this as slow as you need. I want this to be fun enough that you come back and see everything, after all!");
 				writeSpeech("player","","Heh. Alright, thanks.");
 				writeText("At that, oppShe leans back into the couch again.");
 				writeSpeech("opp","","If you'd like, we can start by going over the rules a bit before we begin. If you already know them, though, we can always jump right into the game and see how things go?");
 			}
 			else{
-				writeText("OppShe is leaning against the back of the couch, but she stands up fully as you walk in - she's rather tall, actually. She gives you a confident smile and offers you her hand.");
+				writeText("OppShe is leaning against the back of the couch, but she stands up fully as you walk in - she's rather tall, actually. She gives you a confident smile and offers you oppHer hand.");
 				writeSpeech("opp","","I'm oppF. You're playerF, right? It's a pleasure to meet you. Looks like we'll be playing DTC with each other, yeah?");
 				writeSpeech("player","","The pleasure's mine, and it looks like it. It is my first time, though, so...");
 				writeText("OppShe grins widely, nodding.");
 				writeSpeech("opp","","I getcha. The boss told me that, since first-timers can get cold feet sometimes, but I'm glad you decided to come. Go as slow as you need - we can always pick up the pace once you're comfortable with the game!");
 				writeSpeech("player","","That sounds like a good idea, thanks.");
-				writeText("OppShe takes her seat again, falling against it with a thump.");
+				writeText("OppShe takes oppHer seat again, falling against it with a thump.");
 				writeSpeech("opp","","Ah, did you want to go over the rules before we start?");
 				writeText("She sits up a bit straighter again.");
 				writeSpeech("opp","","If you already know them, we can jump right into it, but it might help a bit to hear them if you skimmed them like I did the first time.");
@@ -259,86 +259,86 @@ function writeScene(scene) {
 			else if(data.story[0].sex == "F"){
 				if(data.player.pref == "sub"){
 					writeText("You're immediately greeted with the sight of a man pinned face-up to a coffee table, his legs pointed to the door, and a woman sitting on his face.");
-					writeText("A sadistic look plays across her face as she grinds down onto his, her pussy pressed against his mouth as she gropes her chest.");
+					writeText("A sadistic look plays across oppHer face as she grinds down onto his, oppHer pussy pressed against his mouth as she gropes oppHer chest.");
 					writeSpeech("Woman","none","Ooh, <i>fuck,</i> love... Keep going~ The sooner I cum, the sooner you <i>breathe~!</i>");
-					writeText("You can clearly see the man's cock get harder as she says that, a throaty moan spilling out of her mouth as she leans forward.");
+					writeText("You can clearly see the man's cock get harder as she says that, a throaty moan spilling out of oppHer mouth as she leans forward.");
 					writeSpeech("Woman","none","Ah...? Oh my~");
 					writeText("She grins widely, staring right at the door now.");
 					writeSpeech("Woman","none","The light above the door lit up... I wonder what that could possibly mean~");
-					writeText("The man seems to freeze for a moment, before bucking against her a bit harder.");
+					writeText("The man seems to freeze for a moment, before bucking against oppHer a bit harder.");
 					writeSpeech("Woman","none","Oh, <i>hush.</i> You were the one who put the tag up, darling, so you don't get to complain about an <i>audience.</i>");
-					writeText("She shakes her head a bit before sending a gentle smile your way, winking.");
-					writeText("Then, she slowly lowers her body forward, her breasts pressing against her toy's hips as she starts to slowly jerk him off.");
+					writeText("She shakes oppHer head a bit before sending a gentle smile your way, winking.");
+					writeText("Then, she slowly lowers oppHer body forward, oppHer breasts pressing against oppHer toy's hips as she starts to slowly jerk him off.");
 					writeText("She spreads around his precum before taking a slow, deep-breath...");
 					writeText("And throats him balls-deep in a swift movement.");
 					writeText("You can see the man's hips buck forward, but she pulls up just as quickly and leaves him swinging wildly.");
 					writeSpeech("Woman","none","Your challenge is edging until I cum, love. You'd better not pop before I do~");
 					writeText("Her hand keeps teasing the tip a bit more, a pathetic mewling coming from the man before she laughs and takes another deep breath.");
-					writeText("She does the same move, taking him balls-deep and pulling back, a trail of spit connecting his tip and her lips, but it goes differently this time.");
-					writeText("His cock starts bouncing frantically, tightening up as he spurts wildly. It spatters across her chest as she gasps in surprise, before a disappointed look flashes across her face.");
+					writeText("She does the same move, taking him balls-deep and pulling back, a trail of spit connecting his tip and oppHer lips, but it goes differently this time.");
+					writeText("His cock starts bouncing frantically, tightening up as he spurts wildly. It spatters across oppHer chest as she gasps in surprise, before a disappointed look flashes across oppHer face.");
 					writeSpeech("Woman","none","And you were doing so well... Almost half an hour of edging, and being watched makes you cum in under a minute. Looks like you'll have to take a punishment, hun.");
-					writeText("An apologetic look flashes across her face as she looks to the door.");
+					writeText("An apologetic look flashes across oppHer face as she looks to the door.");
 					writeSpeech("Woman","none","Sorry it was so short. Have fun with your own game, whoever you are!");
-					writeText("The door starts to fade back in, obscuring the room as she wipes some of the cum from her body and starts raising it to her lips.");
+					writeText("The door starts to fade back in, obscuring the room as she wipes some of the cum from oppHer body and starts raising it to oppHer lips.");
 					writeText("It takes you a moment to catch your breath, your pants feeling very, <i>very</i> tight now.");
 				}
 				else{
-					writeText("You're immediately greeted with the sight of a woman pinned down to a coffee table, her ankles pressed down next to her ears as a <i>very</i> well-hung man pounds into her cunt.");
-					writeText("She's moaning like a porn star, her fluttering eyes hazed over as she paws at a truly massive pair of tits hanging down.");
-					writeText("As the man continues to fuck her, though, you can't help but notice something large and fluffy waving behind them.");
+					writeText("You're immediately greeted with the sight of a woman pinned down to a coffee table, oppHer ankles pressed down next to oppHer ears as a <i>very</i> well-hung man pounds into oppHer cunt.");
+					writeText("She's moaning like a porn star, oppHer fluttering eyes hazed over as she paws at a truly massive pair of tits hanging down.");
+					writeText("As the man continues to fuck oppHer, though, you can't help but notice something large and fluffy waving behind them.");
 					writeSpeech("Man","none","Moan <i>louder, <b>whore.</b></i>");
-					writeText("He <i>slams</i> his hips against hers, the wet slapping almost as loud as the high-pitched squeal of pleasure that came from her mouth.");
+					writeText("He <i>slams</i> his hips against oppHers, the wet slapping almost as loud as the high-pitched squeal of pleasure that came from oppHer mouth.");
 					writeSpeech("Woman","none","F-Fuck me harder...~! You've still got another hole to <i><b>break</b></i> or you'll get <i>punished~!</i>");
 					writeSpeech("Man","none","Are you really <i>that fucking cum-hungry,</i> bitch?");
-					writeText("Instead of answering, she just keeps moaning as he saws into her cunt with reckless abandon, her eyes lingering on the door for a moment.");
+					writeText("Instead of answering, she just keeps moaning as he saws into oppHer cunt with reckless abandon, oppHer eyes lingering on the door for a moment.");
 					writeSpeech("Woman","none","O-Oh fuck...~! The light above the door it-");
-					writeText("A moan interrupts her thought as he <i>slams</i> his hips into her ass again, her whole body starting to shudder.");
+					writeText("A moan interrupts oppHer thought as he <i>slams</i> his hips into oppHer ass again, oppHer whole body starting to shudder.");
 					writeSpeech("Man","none","<i>Fuck...</i> What'd you say?");
 					writeSpeech("Woman","none","...Nothing~ Just that I bet your load this time won't be half as thick~!");
-					writeText("The man lets out a deep growl, but grins as he lets go of one of her ankles.");
+					writeText("The man lets out a deep growl, but grins as he lets go of one of oppHer ankles.");
 					writeSpeech("Man","none","You're just <i>begging</i> for this, aren't you?");
 					writeSpeech("Woman","none","Fuck me stupid, darling~");
-					writeText("Hearing that, he grasps onto one of her massive tits and forces it in front of her own face.");
+					writeText("Hearing that, he grasps onto one of oppHer massive tits and forces it in front of oppHer own face.");
 					writeSpeech("Man","none","Better bite down, slut.");
-					writeText("Pulling out of her pussy, he aims a little lower as her eyes go wide.");
+					writeText("Pulling out of oppHer pussy, he aims a little lower as oppHer eyes go wide.");
 					writeSpeech("Woman","","<i><b>Yes sir~!</b></i>");
-					writeText("He pushes into her ass as she sucks on her own tit, her eyes rolling back as he starts picking up speed and pounds her deeper.");
-					writeText("You're not even sure how long he spends fucking her ass as she suckles on one breast and gropes the other, but you can tell from the groans when he's about finished.");
-					writeText("Clearly, she can too, as she quickly wraps her free leg around his back and pulls him balls-deep and keeps him there as he grunts,");
+					writeText("He pushes into oppHer ass as she sucks on oppHer own tit, oppHer eyes rolling back as he starts picking up speed and pounds oppHer deeper.");
+					writeText("You're not even sure how long he spends fucking oppHer ass as she suckles on one breast and gropes the other, but you can tell from the groans when he's about finished.");
+					writeText("Clearly, she can too, as she quickly wraps oppHer free leg around his back and pulls him balls-deep and keeps him there as he grunts,");
 					writeSpeech("Man","","Fucking <i>take it, bitch...!</i>");
 					writeText("After a few seconds of that, he starts to pull out, but she keeps him in place.");
 					writeSpeech("Woman","","No need to rush... I want to enjoy the <i>fullness</i> a little longer...");
 					writeText("He pauses, before sighing with a smile.");
 					writeSpeech("Man","","Sure.");
-					writeText("The door starts to fade back in, obscuring the room as he leans into her chest and she runs her hands through his hair.");
+					writeText("The door starts to fade back in, obscuring the room as he leans into oppHer chest and she runs oppHer hands through his hair.");
 					writeText("It takes you a moment to catch your breath, your pants feeling very, <i>very</i> tight now.");
 				}
 			}
 			else{
-				writeText("You're immediately greeted with the sight of a woman laying face-up on the couch and another woman standing above her... for a certain definition of woman, seeing as what she's currently got crammed down the girl's throat.");
-				writeText("From here, you can clearly see the girl's throat distending while the dickgirl roughly saws into her throat... though, clearly not rough enough for the woman's liking, seeing as she keeps grabbing her partner's ass to pull her deeper.");
+				writeText("You're immediately greeted with the sight of a woman laying face-up on the couch and another woman standing above oppHer... for a certain definition of woman, seeing as what she's currently got crammed down the girl's throat.");
+				writeText("From here, you can clearly see the girl's throat distending while the dickgirl roughly saws into oppHer throat... though, clearly not rough enough for the woman's liking, seeing as she keeps grabbing oppHer partner's ass to pull oppHer deeper.");
 				writeSpeech("Dickgirl","","Holy <i>shit,</i> you weren't kidding about your throat...!");
-				writeText("The woman lets out a low hum, making her partner's back curl as he breathing hitches.");
-				writeText("There's a pause, before the low hum turns into a soft melody as the herm does her best to thrust at a steady rate.");
+				writeText("The woman lets out a low hum, making oppHer partner's back curl as he breathing hitches.");
+				writeText("There's a pause, before the low hum turns into a soft melody as the oppHerm does oppHer best to thrust at a steady rate.");
 				writeSpeech("Dickgirl","","Fuck, fuck, fuck, fuck, <i><b>FUCK!</b></i>");
-				writeText("She leans her entire body forward, grabbing onto the woman's tits and squeezing them roughly, only for the humming to get louder and more wild as she does.");
+				writeText("She leans oppHer entire body forward, grabbing onto the woman's tits and squeezing them roughly, only for the humming to get louder and more wild as she does.");
 				writeSpeech("Dickgirl","","That's <i>so</i> not fair...! Are you seriously humming the <i>national anthem around my <b>dick!?</b></i>");
-				writeText("The woman's body clearly shakes with laughter, before one of her hands goes to her neck.");
+				writeText("The woman's body clearly shakes with laughter, before one of oppHer hands goes to oppHer neck.");
 				writeSpeech("Dickgirl","","Oh, <i>Hell</i> no!");
 				writeText("It quickly gets swatted away.");
 				writeSpeech("Dickgirl","","The challenge is no hands, hun, and I'm not letting this end early just 'cause you got impatient!");
-				writeText("Instead, she puts her own hands around the woman's throat, tightening down as they both start to moan, muffled as the woman's grunts were.");
+				writeText("Instead, she puts oppHer own hands around the woman's throat, tightening down as they both start to moan, muffled as the woman's grunts were.");
 				writeSpeech("Dickgirl","","Is this what you wanted? Then <i>fucking take it!</i>");
-				writeText("She starts pulling out all the way to the head before roughly fucking her throat like a sex toy, even as the woman uses her hands to finger herself and toy with her clit.");
+				writeText("She starts pulling out all the way to the head before roughly fucking oppHer throat like a sex toy, even as the woman uses oppHer hands to finger oppHerself and toy with oppHer clit.");
 				writeText("Neither of them are able to last long, with the bodily shaking clueing you into the woman's orgasm, and the wild shaking pushing the dickgirl over.");
-				writeText("You hear a low, primal moan as you watch see the woman's throat distend a bit more as a thick, almost impossibly large load spurts into her stomach. When the dick is finally pulled out of her throat, she rolls over and gasps desperately for air.");
+				writeText("You hear a low, primal moan as you watch see the woman's throat distend a bit more as a thick, almost impossibly large load spurts into oppHer stomach. When the dick is finally pulled out of oppHer throat, she rolls over and gasps desperately for air.");
 				writeSpeech("Dickgirl","none","S-Shit, are you oka-");
-				writeText("The woman's hand limply lashes out, grabbing the dickgirl's shirt and pulling her down... Or, more accurately, trying to.");
+				writeText("The woman's hand limply lashes out, grabbing the dickgirl's shirt and pulling oppHer down... Or, more accurately, trying to.");
 				writeSpeech("Woman","none","F-Fuckin'... What'dya take me for, ya fuckin' quickshot...?");
 				writeText("There's a brief pause, before they both start laughing.");
 				writeSpeech("Woman","none","N-Next time, pull out a bit when you cum... I wanna taste it, 'kay?");
-				writeSpeech("Dickgirl","none","...We are <i>so</i> coming back her sometime.");
-				writeText("The door starts to fade back in, obscuring the room as she helps the girl sit up a bit straighter, her cock still dripping with spit.");
+				writeSpeech("Dickgirl","none","...We are <i>so</i> coming back oppHer sometime.");
+				writeText("The door starts to fade back in, obscuring the room as she helps the girl sit up a bit straighter, oppHer cock still dripping with spit.");
 				writeText("It takes you a moment to catch your breath, your pants feeling very, <i>very</i> tight now.");
 			}
 			writeSpeech("player","","...Wow. I, uh... should probably get to my own room...");
@@ -421,9 +421,9 @@ function writeScene(scene) {
 		}
 		case "cheat": {
 			document.getElementById('output').innerHTML += `
-				<p class='centeredText'>You can enter cheat codes here. For example, use the code 'new name' to rename all of the game's other characters.</p>
-				<p class='centeredText'>Enter cheat code: <input type="text" id="cheatSubmission" value=""></p>
-				<p class='choiceText' onclick='cheat()'>Submit</p>
+			<p class='centeredText'>You can enter cheat codes here. For example, use the code 'new name' to rename all of the game's other characters.</p>
+			<p class='centeredText'>Enter cheat code: <input type="text" id="cheatSubmission" value=""></p>
+			<p class='choiceText' onclick='cheat()'>Submit</p>
 			`;
 			writeTransition("room", "Go back");
 			break;
@@ -489,11 +489,11 @@ function writeScene(scene) {
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
 			if(data.story[0].sex == "F")
-				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+				writeTransition("cafeStart", "She calmly slides oppHer piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
 			else if(data.story[0].sex == "M")
 				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
 			else
-				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+				writeTransition("androStart", "She confidently slides oppHer piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
 		case "fairyAccReluctant" : {
@@ -531,11 +531,11 @@ function writeScene(scene) {
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
 			if(data.story[0].sex == "F")
-				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+				writeTransition("cafeStart", "She calmly slides oppHer piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
 			else if(data.story[0].sex == "M")
 				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
 			else
-				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+				writeTransition("androStart", "She confidently slides oppHer piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
 		case "fairyRejSub" : {
@@ -591,11 +591,11 @@ function writeScene(scene) {
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
 			if(data.story[0].sex == "F")
-				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+				writeTransition("cafeStart", "She calmly slides oppHer piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
 			else if(data.story[0].sex == "M")
 				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
 			else
-				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+				writeTransition("androStart", "She confidently slides oppHer piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
 		case "golemCaveStart" : {
@@ -688,11 +688,11 @@ function writeScene(scene) {
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
 			if(data.story[0].sex == "F")
-				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+				writeTransition("cafeStart", "She calmly slides oppHer piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
 			else if(data.story[0].sex == "M")
 				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
 			else
-				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+				writeTransition("androStart", "She confidently slides oppHer piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
 		case "golemAccShoulder" : {
@@ -704,16 +704,16 @@ function writeScene(scene) {
 					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and chest before oppShe turns oppHer back to you.");
 				}
 				else if(data.story[0].sex == "F"){
-					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and some clear evidence that she really did skip out on a bra as her tits bounce down.");
+					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and some clear evidence that she really did skip out on a bra as oppHer tits bounce down.");
 					writeSpeech("opp","","Hope you don't mind, but during the last few games, my bras really just got in the way. I still brought them, just not <i>on</i> me.");
-					writeText("With that, oppShe turns her back to you with an over-the-shoulder smirk.");
+					writeText("With that, oppShe turns oppHer back to you with an over-the-shoulder smirk.");
 				}
 				else{
-					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and a nice look at the lacy light-violet bra supporting her breasts.");
+					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and a nice look at the lacy light-violet bra supporting oppHer breasts.");
 					writeSpeech("opp","","Honestly, I thought about skipping the bra completely, but I really do need the support outside of this place.");
-					writeText("She raises her hands to her chest, hefting her tits up for a moment while smirking.");
+					writeText("She raises oppHer hands to oppHer chest, hefting oppHer tits up for a moment while smirking.");
 					writeSpeech("opp","","If it helps, though... I <i>am</i> wearing a matching pair~!");
-					writeText("OppShe gives you a quick wink before turning her back to you, pulling oppHer hair past her shoulder to expose her back.");
+					writeText("OppShe gives you a quick wink before turning oppHer back to you, pulling oppHer hair past oppHer shoulder to expose oppHer back.");
 				}
 			}
 			else{
@@ -726,16 +726,16 @@ function writeScene(scene) {
 					writeSpeech("opp","","Let's see how you do, hm?");
 				}
 				else if(data.story[0].sex == "F"){
-					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and some clear evidence that she really did skip out on a bra as her tits bounce down.");
+					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and some clear evidence that she really did skip out on a bra as oppHer tits bounce down.");
 					writeSpeech("opp","","Hope you don't mind, but during the last few games, my bras really just got in the way. I still brought them, just not <i>on</i> me.");
-					writeText("With that, oppShe turns her back to you with an over-the-shoulder smirk.");
+					writeText("With that, oppShe turns oppHer back to you with an over-the-shoulder smirk.");
 				}
 				else{
-					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and a nice look at the lacy light-violet bra supporting her breasts.");
+					writeText("oppF smirks a bit as oppShe reaches down, pulling oppHer shirt over oppHer head. You end up getting a <i>really</i> good look at oppHer toned stomach and a nice look at the lacy light-violet bra supporting oppHer breasts.");
 					writeSpeech("opp","","Honestly, I thought about skipping the bra completely, but I really do need the support outside of this place.");
-					writeText("She raises her hands to her chest, hefting her tits up for a moment while smirking.");
+					writeText("She raises oppHer hands to oppHer chest, hefting oppHer tits up for a moment while smirking.");
 					writeSpeech("opp","","If it helps, though... I <i>am</i> wearing a matching pair~!");
-					writeText("OppShe gives you a quick wink before turning her back to you, pulling oppHer hair past her shoulder to expose her back.");
+					writeText("OppShe gives you a quick wink before turning oppHer back to you, pulling oppHer hair past oppHer shoulder to expose oppHer back.");
 				}
 			}
 			writeText("You quickly get to work, not <i>entirely</i> sure how it's supposed to work, but starting with a gentle kneading around the bigger muscles of the shoulders.");
@@ -758,7 +758,7 @@ function writeScene(scene) {
 				writeSpeech("opp","","...to the game. God, it's easy to forget how <i>tense</i> a girl can get these days, so what you're doing feels <i>wonderful,</i> hun...");
 				writeSpeech("player","","Thanks, I think. Sounds like the game's doing most of the work, though.");
 				writeSpeech("opp","","Mm. Doesn't matter to me - they're your hands. And if they feel that good back there, I can't wait for what the next rounds will make you do with them...");
-				writeText("OppShe turns her head to give a quick wink before leaning oppHer head forward, relishing the gentle pressure along oppHer her shoulders.");
+				writeText("OppShe turns oppHer head to give a quick wink before leaning oppHer head forward, relishing the gentle pressure along oppHer oppHer shoulders.");
 			}
 			else{
 				writeSpeech("opp","","...to the game. God, it's easy to forget how tense a girl gets carrying a pair of tits like mine, so what you're doing feels <i>wonderful,</i> hun...");
@@ -779,11 +779,11 @@ function writeScene(scene) {
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
 			if(data.story[0].sex == "F")
-				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+				writeTransition("cafeStart", "She calmly slides oppHer piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
 			else if(data.story[0].sex == "M")
 				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
 			else
-				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+				writeTransition("androStart", "She confidently slides oppHer piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
 		case "golemRej" : {
@@ -826,15 +826,15 @@ function writeScene(scene) {
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
 			if(data.story[0].sex == "F")
-				writeTransition("cafeStart", "She calmly slides her piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
+				writeTransition("cafeStart", "She calmly slides oppHer piece over to a tile labeled, \"The Shadow-Elf Cafe\"");
 			else if(data.story[0].sex == "M")
 				writeTransition("androStart", "He confidently slides his piece over to the tile labeled \"Spring of Andros\"");
 			else
-				writeTransition("androStart", "She confidently slides her piece over to the tile labeled \"Spring of Andros\"");
+				writeTransition("androStart", "She confidently slides oppHer piece over to the tile labeled \"Spring of Andros\"");
 			break;
 		}
 		case "androStart" : {
-			writeText("The tile itself looks like a small pool of water surrounded by grass and a few colorful flowers, and you can hear (and even feel a drop from) a small splash of water as oppShe puts her piece down.");
+			writeText("The tile itself looks like a small pool of water surrounded by grass and a few colorful flowers, and you can hear (and even feel a drop from) a small splash of water as oppShe puts oppHer piece down.");
 			writeText("After a second, a slot near oppF pushes out a card just like yours, though oppShe doesn't actually grab it, just lightly tapping it once before listening close.");
 			writeSpeech("card","","Ah, the Spring of Andros! It's said that these waters were blessed in ancient times, blessing those who had the confidence to bare themselves before both their peers and the gods! A small group of people are always present to maintain the springs and witness anyone that seeks to bare themselves to Andros... though some of them do occasionally break off to fuck on the plush grass.");
 			writeSpeech("card","","Challenge: You have to take off any clothing that covers your lower body and leave them off until either the game ends, or until another card overrides this one. And try to make it look <i>good,</i> alright?");
@@ -867,7 +867,7 @@ function writeScene(scene) {
 				writeText("You could swear the <i><b>THWAP</b></i> of it impacting against his lower stomach echoed for a second as it twitches under your gaze.");
 			}
 			else{
-				writeText("She slowly reaches down, hooking a thumb into her jeans and runs it along her hip.");
+				writeText("She slowly reaches down, hooking a thumb into oppHer jeans and runs it along oppHer hip.");
 				writeSpeech("opp","","I hope you don't mind if I take this slow; last game I played turned into a horny fuck-frenzy real fast, so I didn't have as much time to <i>enjoy</i> things like these.");
 				if(data.player.pref == "dom"){
 					writeSpeech("player","","Take your time - we've got all night, and I know I'll be enjoying the show too.");
@@ -879,13 +879,13 @@ function writeScene(scene) {
 					writeText("She smiles, nodding gently.");
 					writeSpeech("opp","","We do indeed... And something tells me that it won't be long before your pants end up on the floor next to mine~");
 				}
-				writeText("Her jeans have just the littlest bit of stretch as she pulls them down, squeezing down on her thighs as she shimmies them lower. Her whole body is bent over as she does, giving you a <i>very</i> clear view of her cleavage as she carefully steps out of her jeans.");
-				writeText("She then looks up into your eyes, rolling her back upwards in a graceful, practiced motion as her hands toy with her tits for a moment before both of your attentions go to her straining panties.");
+				writeText("Her jeans have just the littlest bit of stretch as she pulls them down, squeezing down on oppHer thighs as she shimmies them lower. Her whole body is bent over as she does, giving you a <i>very</i> clear view of oppHer cleavage as she carefully steps out of oppHer jeans.");
+				writeText("She then looks up into your eyes, rolling oppHer back upwards in a graceful, practiced motion as oppHer hands toy with oppHer tits for a moment before both of your attentions go to oppHer straining panties.");
 				writeSpeech("opp","","Mm, even if my challenge <i>didn't</i> involve stripping, I don't think the poor things can take much more...");
-				writeText("With a sly smile, she takes a few steps towards you, standing within arm's-reach as she hooks her thumb down the center of her panties.");
-				writeText("Her other hand reaches into them, her middle finger sliding just underneath her rapidly hardening shaft as she slids her panties down.");
-				writeText("Her thick, hefty cock swings upwards close enough that you can feel the displaced air, but not quite touch it. A single wet bead of precum shines at the tip as she starts sliding her panties off the rest of the way.");
-				writeText("A moment later, she's wearing only her T-shirt and heels as she winks at you, her hand tracing a line across the top of her dick.");
+				writeText("With a sly smile, she takes a few steps towards you, standing within arm's-reach as she hooks oppHer thumb down the center of oppHer panties.");
+				writeText("Her other hand reaches into them, oppHer middle finger sliding just underneath oppHer rapidly hardening shaft as she slids oppHer panties down.");
+				writeText("Her thick, hefty cock swings upwards close enough that you can feel the displaced air, but not quite touch it. A single wet bead of precum shines at the tip as she starts sliding oppHer panties off the rest of the way.");
+				writeText("A moment later, she's wearing only oppHer T-shirt and heels as she winks at you, oppHer hand tracing a line across the top of oppHer dick.");
 				writeSpeech("opp","","Now <i>this</i> feels a lot more comfortable~!");
 			}
 			writeText("There's a part of you that thinks it might be rude to stare, but...");
@@ -993,15 +993,15 @@ function writeScene(scene) {
 					writeSpeech("opp","","How do you feel about this one? You weren't comfortable with me touching your tongue with my fingers, so...");
 				else
 					writeSpeech("opp","","How do you feel about this one? You weren't comfortable with a massage and this is a bit more <i>direct</i>, so...");
-				writeTransition("cafeAcc", "Pull her in for a kiss");
+				writeTransition("cafeAcc", "Pull oppHer in for a kiss");
 				writeTransition("cafeAccTongue", "Let your tongue hang out of your mouth");
 				break;
 			}
 			else if(data.player.flags.includes("AccEnthused")){
 				writeText("Or, to be more accurate, looking at your <i>chin</i>, which is still a little slick from when oppShe played with your tongue.");
 				writeText("It's pretty obvious where she's going with this...");
-				writeTransition("cafeAccEnthused", "Let her control the pace");
-				writeTransition("cafeAcc", "Pull her in for a kiss");
+				writeTransition("cafeAccEnthused", "Let oppHer control the pace");
+				writeTransition("cafeAcc", "Pull oppHer in for a kiss");
 				break;
 			}
 			else{
@@ -1010,15 +1010,15 @@ function writeScene(scene) {
 				else
 					writeSpeech("opp","","Well, we're off to a good start, aren't we? Of course, I'll need you to stay sitting to actually reach those lips of yours...");
 				if(data.player.pref == "dom"){
-					writeTransition("cafeAccEnthused", "Let her control the pace");
-					writeTransition("cafeAcc", "Pull her in for a kiss");
-					writeTransition("cafeAccSpit", "Stop her and tell her to open her mouth wide");
+					writeTransition("cafeAccEnthused", "Let oppHer control the pace");
+					writeTransition("cafeAcc", "Pull oppHer in for a kiss");
+					writeTransition("cafeAccSpit", "Stop oppHer and tell oppHer to open oppHer mouth wide");
 					break;
 				}
 				else{
 					writeText("A second later, oppF walks over to you with a confident smile, oppHer hand moving slowly to your face.");
-					writeTransition("cafeAccEnthused", "Let her control the pace");
-					writeTransition("cafeAcc", "Pull her in for a kiss");
+					writeTransition("cafeAccEnthused", "Let oppHer control the pace");
+					writeTransition("cafeAcc", "Pull oppHer in for a kiss");
 					break;
 				}
 			}
@@ -1026,31 +1026,31 @@ function writeScene(scene) {
 		}
 		case "cafeAcc" : {
 			addFlag("cafeAcc");
-			writeText("Rather than waiting for her, you reach out first as she approaches. You can see one eyebrow raise a bit before she smiles and rolls with it, letting you guide her face to yours.");
-			writeText("The first thing you notice about the kiss is the sensitivity spike from the game, the feeling of her lips pressing against yours almost feeling like a jolt of pleasure through your body as oppF lets out a gentle laugh and pulls back just a fraction of an inch.");
+			writeText("Rather than waiting for oppHer, you reach out first as she approaches. You can see one eyebrow raise a bit before she smiles and rolls with it, letting you guide oppHer face to yours.");
+			writeText("The first thing you notice about the kiss is the sensitivity spike from the game, the feeling of oppHer lips pressing against yours almost feeling like a jolt of pleasure through your body as oppF lets out a gentle laugh and pulls back just a fraction of an inch.");
 			writeSpeech("opp","","Yeah, the first time always messes with people, myself included. I know I really developed an oral fixation thanks to this game...");
-			writeText("She gently kisses your cheek once, her breath faintly tickling your skin as she raises her knee up to the couch and leans forward a bit.");
-			writeText("Just as you feel her thigh press against your crotch, she kisses you fully, her tongue pressing against yours as you feel her breasts push against you. Given the thin shirt and her lack of a bra, you can actually feel her nipples press against you.");
+			writeText("She gently kisses your cheek once, oppHer breath faintly tickling your skin as she raises oppHer knee up to the couch and leans forward a bit.");
+			writeText("Just as you feel oppHer thigh press against your crotch, she kisses you fully, oppHer tongue pressing against yours as you feel oppHer breasts push against you. Given the thin shirt and oppHer lack of a bra, you can actually feel oppHer nipples press against you.");
 			writeText("She can too, if the throaty moan is anything to by.");
 			writeSpeech("player","","Sounds like your mouth isn't the only sensitive thing here...");
-			writeText("She's about to reply when your hand goes up and grabs at her tit from below, your thumb flicking across the sensitive nub as her words turn into a low groan of pleasure.");
+			writeText("She's about to reply when your hand goes up and grabs at oppHer tit from below, your thumb flicking across the sensitive nub as oppHer words turn into a low groan of pleasure.");
 			writeSpeech("opp","","F-Fuckin'... Game amps <i>everything...</i>");
 			if(data.player.pref=="dom")
 				writeSpeech("player","","More fun for me.");
-			writeText("Groping her chest more, you use her moans as a roadmap for what's making her feel better, along with the writhing that causes her thigh to press more and more against your clothed cock.");
+			writeText("Groping oppHer chest more, you use oppHer moans as a roadmap for what's making oppHer feel better, along with the writhing that causes oppHer thigh to press more and more against your clothed cock.");
 			writeText("Not that it <i>feels</i> that restrained...");
 			writeSpeech("opp","","Nn~! We're supposed to be getting ready for the next round, y'know~...");
-			writeText("Despite saying that, she presses her lips to your neck, her thigh still rubbing against you.");
+			writeText("Despite saying that, she presses oppHer lips to your neck, oppHer thigh still rubbing against you.");
 			writeText("But she pauses at the sound of the same <i>clink</i> as before, letting out a slightly disappointed hum as she pulls away.");
 			writeSpeech("opp","","You know, you can make it pretty hard to hold out until the <i>good</i> rounds, hun.");
 			if(data.player.pref=="dom")
 				writeSpeech("player","","I aim to please.");
 			else
 				writeSpeech("player","","I'm taking that as a compliment.");
-			writeText("She rolls her eyes with a light laugh, moving over to collect her reward.");
-			writeText("As she rolls the tokens around between her fingers, you hear the sound of the card's voice... clear its throat?");
+			writeText("She rolls oppHer eyes with a light laugh, moving over to collect oppHer reward.");
+			writeText("As she rolls the tokens around between oppHer fingers, you hear the sound of the card's voice... clear its throat?");
 			writeSpeech("card","","Ahem! Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
-			writeText("oppF looks down at the shiny tokens in her hand for a moment before looking back at you.");
+			writeText("oppF looks down at the shiny tokens in oppHer hand for a moment before looking back at you.");
 			writeSpeech("opp","","That makes this your first post-round, then. Do you want to go over how the whole 'token purchasing' works, or do you think you've got it?");
 			writeTransition("adviceTokens", "Ask how buying a transformation works");
 			writeTransition("postRound1", "Say you've got this");
@@ -1060,40 +1060,40 @@ function writeScene(scene) {
 			addFlag("cafeAccEnthused");
 			writeText("You just jut your chin out with a small, cheeky smile, and oppF laughs and moves right in front of you.");
 			writeSpeech("opp","","You really didn't come here to hesitate, did you~?");
-			writeText("She playfully runs her hands along your chin before pushing her fingers into your mouth.");
-			writeText("Her other hand forces your head to look straight up before you feel her tongue run along your jawline, the tip tracing a line that sends a shiver down your back.");
-			writeText("As she goes up, you feel her just barely nibble on your ear, her breath warm and heavy against it.");
+			writeText("She playfully runs oppHer hands along your chin before pushing oppHer fingers into your mouth.");
+			writeText("Her other hand forces your head to look straight up before you feel oppHer tongue run along your jawline, the tip tracing a line that sends a shiver down your back.");
+			writeText("As she goes up, you feel oppHer just barely nibble on your ear, oppHer breath warm and heavy against it.");
 			if(data.player.pref == "sub"){
 				writeSpeech("opp","","God, you are such a dirty little <i>bitch,</i> aren't you...?");
-				writeText("You can't hold back the moan that spills out as one of her hands presses down against your crotch, her palm putting a careful amount of pressure that makes your hips buck.");
+				writeText("You can't hold back the moan that spills out as one of oppHer hands presses down against your crotch, oppHer palm putting a careful amount of pressure that makes your hips buck.");
 			}
 			else{
 				writeSpeech("opp","","You're making it <i>so</i> hard to hold out until the later rounds, hun...!");
-				writeText("Your body shudders as her hand presses down against your crotch, her tits pressing against your chest as she starts gently kissing her way to your mouth.");
+				writeText("Your body shudders as oppHer hand presses down against your crotch, oppHer tits pressing against your chest as she starts gently kissing oppHer way to your mouth.");
 			}
-			writeText("Just a second later, the fingers in your mouth get pulled out, quickly replaced with her tongue as she leans into the kiss.");
-			writeText("The way she moves her tongue has you shuddering more than you expected, careful movements making it harder and harder to keep from moaning into her mouth.");
-			writeText("Then there's her hand, dragging along in an over-the-pants handjob that feels <i>far</i> more sensitive than it should, your own spit soaking into the fabric from her fingers as she grinds gently against your thigh.");
+			writeText("Just a second later, the fingers in your mouth get pulled out, quickly replaced with oppHer tongue as she leans into the kiss.");
+			writeText("The way she moves oppHer tongue has you shuddering more than you expected, careful movements making it harder and harder to keep from moaning into oppHer mouth.");
+			writeText("Then there's oppHer hand, dragging along in an over-the-pants handjob that feels <i>far</i> more sensitive than it should, your own spit soaking into the fabric from oppHer fingers as she grinds gently against your thigh.");
 			if(data.player.pref == "dom"){
-				writeText("Not to be outdone, you put your own hands to work, one hand grasping onto a tit while the other goes to her hip, helping push her against your thigh as she moans sharply.");
+				writeText("Not to be outdone, you put your own hands to work, one hand grasping onto a tit while the other goes to oppHer hip, helping push oppHer against your thigh as she moans sharply.");
 				writeSpeech("opp","","Oooh God... You'd better squeeze <i>hard~!</i>");
 			}
 			else{
-				writeText("Pulling back for just a moment, oppF playfully presses her chest against you harder.");
+				writeText("Pulling back for just a moment, oppF playfully presses oppHer chest against you harder.");
 				writeSpeech("opp","","Don't let <i>me</i> have all the fun - go ahead and grab a nice handful~!");
-				writeText("You quickly do, a throaty moan shaking the both of you as she shudders and grinds her pussy down harder against your leg.");
+				writeText("You quickly do, a throaty moan shaking the both of you as she shudders and grinds oppHer pussy down harder against your leg.");
 			}
-			writeText("You can feel her shuddering pick up suddenly as you grasp tightly and feel your thumb press against a nub, her eyes suddenly shooting open wide, her breathing heavy.");
+			writeText("You can feel oppHer shuddering pick up suddenly as you grasp tightly and feel your thumb press against a nub, oppHer eyes suddenly shooting open wide, oppHer breathing heavy.");
 			writeSpeech("opp","","F-Fuck, my...");
-			writeText("Taking a few deep breaths, she collects herself quickly.");
+			writeText("Taking a few deep breaths, she collects oppHerself quickly.");
 			writeSpeech("opp","","Sorry, my nipples are really, <i>really</i> sensitive, and I almost... Ahem. We should probably, uh. Keep playing?");
 			if(data.player.pref == "dom")
 				writeSpeech("player","","If that's just round one, I can hardly wait for the next challenge.");
 			else
 				writeSpeech("player","","Oh, right. We should probably keep going, yeah...");
-			writeText("oppF lets out a little laugh before giving you a quick peck on the cheek and going back to her seat.");
+			writeText("oppF lets out a little laugh before giving you a quick peck on the cheek and going back to oppHer seat.");
 			writeSpeech("opp","","Honestly, I mostly want to show you the whole 'transformation' thing before we actually get <i>started.</i> Otherwise...");
-			writeText("She drags a finger across her ruby-red lips for a moment.");
+			writeText("She drags a finger across oppHer ruby-red lips for a moment.");
 			writeSpeech("opp","","...I'd probably smear this lipstick down to your base.");
 			writeText("The sound of the same clink as before suddenly rings out interrupts you two, a pair of tokens bouncing out of the slot as oppF's reward.");
 			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
@@ -1106,33 +1106,33 @@ function writeScene(scene) {
 		case "cafeAccSpit" : {
 			addFlag("cafeAccSpit");
 			writeSpeech("player","","Actually, it says you have to taste my spit, right?");
-			writeText("She pauses, a look of confusion crossing her face.");
+			writeText("She pauses, a look of confusion crossing oppHer face.");
 			writeSpeech("opp","","I mean, yeah? Kinda thought that was what I was going for.");
 			writeSpeech("player","","Then make sure to hold still, and <i>open wide.</i>");
-			writeText("It takes a good few seconds for it to click but, when it does, a playful spark seems to fly through her eyes.");
+			writeText("It takes a good few seconds for it to click but, when it does, a playful spark seems to fly through oppHer eyes.");
 			writeSpeech("opp","","You got it, hun~!");
 			if(data.player.flags.includes("golemRej"))
-				writeText("She steps right up to where you're sitting, just barely bending at the hips to put her mouth a little bit below yours.");
+				writeText("She steps right up to where you're sitting, just barely bending at the hips to put oppHer mouth a little bit below yours.");
 			else if(data.player.flags.includes("fairyRej"))
-				writeText("She walks up to where you're sitting, getting down on her knees so she's low enough that her mouth is below yours when you stand up.");
+				writeText("She walks up to where you're sitting, getting down on oppHer knees so she's low enough that oppHer mouth is below yours when you stand up.");
 			else
-				writeText("She walks up to where you're sitting, getting down on her knees so she's low enough that her mouth is below yours.");
-			writeText("Her hands go up to her lips, spreading them wide and holding them open as she sticks out her tongue and playfully goes,");
+				writeText("She walks up to where you're sitting, getting down on oppHer knees so she's low enough that oppHer mouth is below yours.");
+			writeText("Her hands go up to oppHer lips, spreading them wide and holding them open as she sticks out oppHer tongue and playfully goes,");
 			writeSpeech("opp","","<i>Ahhhhh~!</i>");
-			writeText("Aiming carefully, you feel yourself salivating before you bring your head close to hers.");
-			writeText("You spit sharply, some of it spattering against her cheek as she flinches slightly, before letting out a little giggle.");
-			writeText("She keeps her mouth open while rolling around her tongue, before closing it, swallowing deeply, and winking.");
+			writeText("Aiming carefully, you feel yourself salivating before you bring your head close to oppHers.");
+			writeText("You spit sharply, some of it spattering against oppHer cheek as she flinches slightly, before letting out a little giggle.");
+			writeText("She keeps oppHer mouth open while rolling around oppHer tongue, before closing it, swallowing deeply, and winking.");
 			writeSpeech("opp","","You're pretty fun, playerF. Maybe the next thing you make me swallow can be a bit more <i>fun</i> getting into my mouth~?");
 			writeSpeech("player","","You keep teasing me, and it just might...");
 			writeSpeech("opp","","Then I'll be sure not to stop~");
 			if(data.player.flags.includes("golemRej"))
-				writeText("She stands up straighter, rolling her back as she does before she pauses again with a smirk.");
+				writeText("She stands up straighter, rolling oppHer back as she does before she pauses again with a smirk.");
 			else
-				writeText("She stands up from her knees, stretching out her back before she pauses again and smirks.");
+				writeText("She stands up from oppHer knees, stretching out oppHer back before she pauses again and smirks.");
 			writeSpeech("opp","","One more thing, though.");
-			writeText("Dragging a finger across her cheek, she collects most of the spit.");
+			writeText("Dragging a finger across oppHer cheek, she collects most of the spit.");
 			writeSpeech("opp","","I don't plan on letting you miss a <i>drop</i> next time.");
-			writeText("She brings the finger to her mouth, sensually licking it before plopping down onto the couch with a satisfied look, before the same <i>clink</i> sound from before rings out.");
+			writeText("She brings the finger to oppHer mouth, sensually licking it before plopping down onto the couch with a satisfied look, before the same <i>clink</i> sound from before rings out.");
 			writeText("oppF picks up the reward, contentedly rolling them between oppHer fingers before the card's voice rings out again.");
 			writeSpeech("card","","Looks like you two finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
 			writeSpeech("opp","","Well, I guess that makes this the start of the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
@@ -1142,34 +1142,34 @@ function writeScene(scene) {
 		}
 		case "cafeAccTongue" : {
 			addFlag("cafeAccTongue");
-			writeText("Instead of answering her, you lean forward a little bit and open your mouth, letting your tongue loll out.");
+			writeText("Instead of answering oppHer, you lean forward a little bit and open your mouth, letting your tongue loll out.");
 			writeSpeech("opp","","Mn. Good answer...");
-			writeText("She moves close to you, her hand gently grabbing onto your chin as she brings her face close to yours.");
-			writeText("The moment you feel her lips press against your tongue, an electric shiver runs through your body, before her other hand goes to rest on your hip.");
-			writeText("After another moment, she teases her own tongue forward, dragging the tip along yours as you feel the faint shift in the air of her breathing.");
-			writeText("Her hand pulls your chin forward, pressing her lips against yours as her tongue pushes into your mouth, the heightened sensitivity of your mouth getting you to moan into hers.");
-			writeText("For a moment, she pulls away, her face clearly flushed as she grins.");
+			writeText("She moves close to you, oppHer hand gently grabbing onto your chin as she brings oppHer face close to yours.");
+			writeText("The moment you feel oppHer lips press against your tongue, an electric shiver runs through your body, before oppHer other hand goes to rest on your hip.");
+			writeText("After another moment, she teases oppHer own tongue forward, dragging the tip along yours as you feel the faint shift in the air of oppHer breathing.");
+			writeText("Her hand pulls your chin forward, pressing oppHer lips against yours as oppHer tongue pushes into your mouth, the heightened sensitivity of your mouth getting you to moan into oppHers.");
+			writeText("For a moment, she pulls away, oppHer face clearly flushed as she grins.");
 			writeSpeech("opp","","Breathe deep, <i>stud.</i>");
-			writeText("Her hand goes from your chin to the back of your head, pulling you close as she presses her whole body into you.");
+			writeText("Her hand goes from your chin to the back of your head, pulling you close as she presses oppHer whole body into you.");
 			if(data.player.pref != "dom"){
-				writeText("You can't help but shudder pleasantly as she forcefully pulls you tight, her breasts pressing against your chest as she thoroughly explores your mouth.");
-				writeText("You try to keep pace with the kiss, but she seems to know just how to use the game's sensitivity enhancement to have you quivering in place as her other hand slides along your thigh.");
+				writeText("You can't help but shudder pleasantly as she forcefully pulls you tight, oppHer breasts pressing against your chest as she thoroughly explores your mouth.");
+				writeText("You try to keep pace with the kiss, but she seems to know just how to use the game's sensitivity enhancement to have you quivering in place as oppHer other hand slides along your thigh.");
 			}
 			else{
-				writeText("You push back a bit, your own hands getting to work and running up her thighs. You can feel her tits press harder against you as she moans into your mouth, her body practically grinding against yours.");
-				writeText("Her free hand slides up your thigh too, though she doesn't bother stopping when she reaches the top, her palm pressing firmly against your crotch to get a good feel for your erection.");
+				writeText("You push back a bit, your own hands getting to work and running up oppHer thighs. You can feel oppHer tits press harder against you as she moans into your mouth, oppHer body practically grinding against yours.");
+				writeText("Her free hand slides up your thigh too, though she doesn't bother stopping when she reaches the top, oppHer palm pressing firmly against your crotch to get a good feel for your erection.");
 				if(data.player.dick < 4){
-					writeText("She pauses a little as she does, though not for long as you hear her giggle and pull her head away for a moment.");
+					writeText("She pauses a little as she does, though not for long as you hear oppHer giggle and pull oppHer head away for a moment.");
 					writeSpeech("opp","","Sorry, I don't mean to laugh~! I'm sure we can still have a <i>lot</i> of fun with what you've got.");
 				}
 				else if (data.player.dick > 7){
-					writeText("She pauses a little as she does though, her body shuddering in arousal as she pulls away and looks down.");
+					writeText("She pauses a little as she does though, oppHer body shuddering in arousal as she pulls away and looks down.");
 					writeSpeech("opp","","Oh, you are going to be <i>so</i> much fun when we get to the good stuff...!");
 				}
 				else
 					writeSpeech("opp","","We're gonna have some <i>fun</i> with this when we get to the later rounds...");
 			}
-			writeText("She pushes into you again, her lips pressing against yours for a moment, but then she pulls away with a soft smile.");
+			writeText("She pushes into you again, oppHer lips pressing against yours for a moment, but then she pulls away with a soft smile.");
 			writeSpeech("opp","","I think that was a pretty good <i>taste,</i> don't you think?");
 			writeText("Before you can respond, the same <i>clink</i> sound from when you finished your challenge rings out as a pair of tokens pop out of the slot.");
 			writeText("oppF picks up the reward, contentedly rolling them between oppHer fingers before the card's voice rings out again.");
@@ -1203,23 +1203,23 @@ function writeScene(scene) {
 			}
 			else if (data.story[0].sex == "F"){
 				data.story[0].chestVal = 2;
-				writeText("A second later, she arches her back and lets out a throaty moan, her shirt clearly starting to strain more as you watch her breasts start to expand out. A moment ago, they were a pretty solid handful, but now...");
-				writeText("She rolls her shoulders around, her lightly heaving chest accentuating the large pair of Double-Ds held behind her stretched shirt. oppF uses her hands to heft them up with a grin, shifting them around to find a more comfortable fit.");
+				writeText("A second later, she arches oppHer back and lets out a throaty moan, oppHer shirt clearly starting to strain more as you watch oppHer breasts start to expand out. A moment ago, they were a pretty solid handful, but now...");
+				writeText("She rolls oppHer shoulders around, oppHer lightly heaving chest accentuating the large pair of Double-Ds held behind oppHer stretched shirt. oppF uses oppHer hands to heft them up with a grin, shifting them around to find a more comfortable fit.");
 				writeSpeech("opp","","Most changes only last as long as the game, unless you can make a deal with the owner or something. No consequences means a <i>lot</i> more fun, in my opinion.");
-				writeText("Taking a deep breath, she finally pulls her hands away from her chest.");
+				writeText("Taking a deep breath, she finally pulls oppHer hands away from oppHer chest.");
 				writeSpeech("opp","","Ah, right. Forgot to mention, but you'll want to keep in mind that anytime something changes or you get something new, the game kinda 'resets' your sensitivity, almost? New parts, new nerves. It makes things like tails or ears really, <i>really</i> nice to play with.");
 				writeSpeech("player","","Sounds like something to keep in mind... Thanks.");
 				writeSpeech("opp","","No problem! Once you've figured out what you want to get, just flip a token and have some fun with it!");
 			}
 			else{
 				data.story[0].assVal = 2;
-				writeText("A second later, she stands up just a bit, raising her rear off of the couch and supporting herself with her hands as she bites her lip.");
-				writeText("Right in front of you, you can see her ass grow slightly, her barely-loose jeans suddenly starting to strain against her ass, which somehow lokos just as firm despite the increase in volume.");
-				writeText("When she sits back down, you can see her the shape of her rear shift with the slow change in pressure, oppF biting her lip as she squirms a bit.");
-				writeSpeech("opp","","God, I almost forgot to mention... You'll want to keep in mind that whenever you change something about your body or get anything new, the game likes to 'reset' your sensitivity. The last time I played, a girl grew herself a cock and had to strip down because her panties kept rubbing against it...");
+				writeText("A second later, she stands up just a bit, raising oppHer rear off of the couch and supporting oppHerself with oppHer hands as she bites oppHer lip.");
+				writeText("Right in front of you, you can see oppHer ass grow slightly, oppHer barely-loose jeans suddenly starting to strain against oppHer ass, which somehow lokos just as firm despite the increase in volume.");
+				writeText("When she sits back down, you can see oppHer the shape of oppHer rear shift with the slow change in pressure, oppF biting oppHer lip as she squirms a bit.");
+				writeSpeech("opp","","God, I almost forgot to mention... You'll want to keep in mind that whenever you change something about your body or get anything new, the game likes to 'reset' your sensitivity. The last time I played, a girl grew oppHerself a cock and had to strip down because oppHer panties kept rubbing against it...");
 				writeSpeech("player","","Sounds like something I'll want to keep in mind... Thanks.");
 				writeSpeech("opp","","No problem, hun. Once you know what you want... Nn~");
-				writeText("oppF takes a deep breath, her eyes shutting as she holds back a moan.");
+				writeText("oppF takes a deep breath, oppHer eyes shutting as she holds back a moan.");
 				writeSpeech("opp","","...Once you know, just flip the coin and have some fun.");
 			}
 			writeTransition("tfScreenAnimal", "Think about some animal-themed options");
@@ -1285,11 +1285,11 @@ function writeScene(scene) {
 					else{
 						writeSpeech("opp","","Looking to have a bit with a pair of your own, huh?");
 						if(data.story[0].sex == "F"){
-							writeText("She runs a hand along one of her tits with a grin.");
+							writeText("She runs a hand along one of oppHer tits with a grin.");
 							writeSpeech("opp","","You won't regret it, hun.");
 						}
 						else{
-							writeText("She uses one hand to tease her nipple, while the other casually strokes her cock.");
+							writeText("She uses one hand to tease oppHer nipple, while the other casually strokes oppHer cock.");
 							writeSpeech("opp","","Maybe we could have some fun with painting each other's tits, hm?");
 						}
 					}
@@ -1333,7 +1333,7 @@ function writeScene(scene) {
 							writeSpeech("opp","","You're looking trim... I like it.");
 						}
 						else{
-							writeText("oppF bites her lip as she looks over your chest.");
+							writeText("oppF bites oppHer lip as she looks over your chest.");
 							writeSpeech("opp","","Looking good, <i>stud.</i>");
 						}
 					}
@@ -1447,386 +1447,787 @@ function writeScene(scene) {
 					writeText("Alternatively, you could round out that booty of yours and get it nice and <i>fat...</i>");
 					writeTransition("transFemAss", "Get that ass nice and jiggly");
 				}
-			if(data.player.dick < 2)
-				writeText("Of course, you can't really shrink your tiny little dicklet down any further without growing yourself a pussy, which isn't really an option yet...");
-			else{
-				writeText("And then, if you're feeling a little unfeminine because of your length <i>down there</i>, you could always...");
-				writeTransition("transFemDick", "Shrink that cock down");
-			}
-			writeText("Of course, there are always other things to do, too...");
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "tfScreenRemove" : {
-			if(data.player.flags.includes("fairyRej"))
-				writeTransition("transFairyRem", "Remove the Fae-Form punishment");
-			else if (data.player.flags.includes("golemRej"))
-				writeTransition("transFairyRem", "Remove the Golem's Shape punishment");
-			else
-				writeSpecial("You have no punishments currently affecting you.");
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transCatEars" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="ears";
-			console.log("catEarsAdded");
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.earsVal = 1;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
-			writeText("You're not sure how you know for sure, but you have a pair of jet-black cat ears poking out of your head, which you can kinda almost move if you focus.");
-			writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transDogEars" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="ears";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.earsVal = 2;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
-			writeText("You're not entirely sure how you know, but you have a pair of droopy dog ears coming out from your head. You can flop them around by bouncing your hair about, but can't really control them.");
-			writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transFoxEars" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="ears";
-			console.log(data.player.newChange)
-			data.player.earsVal = 4;
-			addTrans();
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
-			writeText("You're not entirely sure how you know, but you definitely have a pair of fluffy fox ears poking out of your head. The fur is almost absurdly soft...");
-			writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transCatTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.tailVal = 1;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transDogTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			console.log("dogTailAdded");
-			addTrans();
-			data.player.tailVal = 2;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transFoxTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.tailVal = 4;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transHorseCock" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="horseCock";
-			data.player.flags +="horseCock";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.genitalsVal = 6;
-			data.player.dick = 12;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
-			writeText("Seeing as you lack a sheathe and this big guy swings low, there's no way you'll be wearing anything below the hips for a while.");
-			writeText("You now have a long, heavy, speckled shaft with a medial ring swelling out halfway down, and a fat, blunt head that promises to <i>stretch</i> anything it enters...");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transDogCock" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="dogCock";
-			data.player.flags +="dogCock";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.genitalsVal = 7;
-			data.player.dick = 8;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
-			writeText("Without any sort of natural sheathe, the feeling of wearing anything below your hips sets your mind aflame as you see it.");
-			writeText("You now have a fat, ruby-red cock covered in veins and shining sleekly, sitting atop an even <i>fatter</i> knot. It feels so warm, even now...");
-			
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transMascChest" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.buildVal = 3;
-			data.player.newChange += "transMascChest";
-			data.player.flags += "transMascChest";
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, before rapidly collecting around your torso.");
-			writeText("It feels like little sparks of pleasure dancing across your skin before a sharp pang of pleasure shoots through you.");
-			writeText("Looking down, you can see your torso is a lot broader and more toned, and definitely stronger looking.");
-
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transMascAss" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.assVal = 1;
-			data.player.newChange += "transMascAss";
-			data.player.flags += "transMascAss";
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, though it very quickly fixates on your rear.");
-			writeText("Sparks of pleasure dart along the surface, feeling like a fast, sharp massage across the skin before it suddenly stops.");
-			writeText("Looking down, you can see your ass is looking a lot firmer, more toned, and damn-fine-looking.");
-
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transMascCock" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange += "transMascDick";
-			if(data.player.dick < 5){
-				data.player.dick = 7;
-				data.player.genitalsVal = 1;
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your less-than-large cock grows quite a bit. Not that anyone would be able to tell if they hadn't seen you beforehand...");
-			}
-			else if (data.player.dick < 8){
-				data.player.dick = 9;
-				data.player.genitalsVal = 8;
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your already above-average cock grows. At this point, you're probably around where most people would want to stop...");
-			}
-			else if (data.player.dick < 10){
-				data.player.dick = 10;
-				data.player.genitalsVal = 8;
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("A flash of almost burning, pleasureful heat surges through your crotch, the moan not even able to spill out out of you as your already large cock grows even more. By the time the heat-haze over your head clears, it's pretty obvious that most people wouldn't be comfortable taking your full length...");
-			}
-			else{
-				data.player.dick = 12;
-				data.player.genitalsVal = 9;
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("As it shatters, you feel an absurdly hot surge of pleasure flash through your body, nearly making you cum on the spot as you feel your cock grow to reach a foot long, every inch more sensitive than the last as you try not to pop.");
-				writeText("When the heat finally fades, your shaft feels a lot less likely to spurt with a strong breeze, but it's still pretty sensitive.");
-			}
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transFairyRem" : {
-			addFlag("trans1");
-			data.player.newChange += "transFairyRem";
-			loseTokens(1);
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("It only takes a moment for a feeling like a cold breeze to settle over your body, leaving you without breath as everything goes white.");
-			writeText("When your vision clears up, you can see that you're back to a pretty normal, average-sized body.");
-			data.player.heightVal = 0;
-			data.player.buildVal = 0;
-			data.player.clothesVal = 0;
-			data.player.legsVal = 0;
-			data.player.assVal = 0;
-			data.player.chestVal = 0;
-			data.player.genitalsVal = 0;
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transGolemRem" : {
-			addFlag("trans1");
-			data.player.newChange += "transGolemRem";
-			loseTokens(1);
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("It only takes a moment for a feeling like a cold breeze to settle over your body, leaving you without breath as everything goes white.");
-			writeText("When your vision clears up, you can see that you're back to a pretty normal, average-sized body.");
-			data.player.heightVal = 0;
-			data.player.buildVal = 0;
-			data.player.clothesVal = 0;
-			data.player.legsVal = 0;
-			data.player.assVal = 0;
-			data.player.chestVal = 0;
-			data.player.genitalsVal = 0;
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transFemBreasts" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange += "transFemBreasts";
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			if(data.player.chestVal == 0){
-				data.player.flags += ("transFemBreasts");
-				data.player.chestVal = 1;
-				writeText("A gentle surge of warmth pushes into your chest, turning you on as the phantom sensation of hands groping at your chest pull a moan from your throat.");
-				writeText("The sensations fade quickly, leaving you with a small pair of breasts that are sensitive to the touch.");
-			}
-			else if(data.player.chestVal == 1){
-				writeText("The surge of warmth is stronger this time, leaving you gasping as the phantom hands feel stronger and squeeze tighter around your tits.");
-				writeText("When the sensations fade and your chest isn't heaving from arousal <i>quite</i> as much, you can see that your tits are at least C-cups now.");
-				data.player.chestVal = 2;
-			}
-			else if(data.player.chestVal == 2){
-				data.player.flags += ("hugeBreasts");
-				writeText("The heat completely overwhelms you, your whole body tensing up as you moan throatily right in front of oppF, but not really able to care as the phantom hands run wild.");
-				writeText("You could swear you feel them across your entire body this time, forcing you to the edge of orgasm and holding you there until the suddenly stop, leaving you pent-up and gasping for air.");
-				writeText("Your tits are huge now, each one at least the size of your head and both of them sensitive enough that a strong breeze would make you moan uncontrollably.");
-				data.player.chestVal = 7;
-			}
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transFemAss" : {
-			addFlag("trans1");
-			data.player.newChange += "transFemAss";
-			loseTokens(1);
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("There's a faint sensation of warmth in your ass for a moment, before it suddenly <i>spikes</i> in heat, feeling like a sharp slap on the ass that makes you yelp.");
-			writeText("Checking your ass, you can quickly tell that it got <i>very</i> juicy, straining against your pants rather clearly.");
-			data.player.newChange += "transFemAss";
-			data.player.assVal = 2;
-
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "transFemDick" : {
-			addFlag("trans1");
-			loseTokens(1);
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			data.player.newChange += "transFemDick";
-			data.player.dick = 3;
-			data.player.genitalsVal = 3;
-
-			writeTransition("tfScreen", "Think about another transformation");
-			writeTransition("postRound1", "Go back to the game");
-			break;
-		}
-		case "oppChat" : {
-			writeSpeech("player","","Actually, I had a few questions I wanted to ask.");
-			writeSpeech("opp","","Oh yeah? Ask away, then! I'm always happy to help out.");
-			writeTransition("oppChatPlayedBefore", "You said you've played this before?");
-			writeTransition("oppChatSex", "Wanna fuck?");
-			writeTransition("postRound1", "Never mind");
-			break;
-		}
-		case "oppChatPlayedBefore" : {
-			writeSpeech("player","","You mentioned that you played this before, and I was wondering how those games went.");
-			writeText("oppF pauses to think.");
-			writeSpeech("opp","","I actually thought you meant questions about the game, but I'm good to answer that, too. My first time was a lot of fun, with this one girl that really took the lead and helped me out. Lot of fun to play with, and probably the dirtiest bitch I've played against.");
-			writeText("OppShe pauses to grin.");
-			writeSpeech("opp","","Well, <i>thus far,</i> I mean. She purposefully rejected a few challenges just because she wanted to see what the punishments were. By round four, she was two feet tall, hyper-elastic, and gave me a stomach-deformation fetish. She was a <i>freak.</i>");
-			writeText("oppF thinks a bit more, before breaking out into a grin.");
-			writeSpeech("opp","","After that, I got paired up with this guy that got me completely <i>hooked </i>on anal. It wasn't like it was some huge sequence of challenges and punishments or anything - it was just that he was really into making it feel as good as possible for the both of us. He was a really adorable little guy.");
-			writeSpeech("opp","","And my last game... was different. I loved it, but the girl was a total S, and it took me a few rounds to really get into it. Honestly, I'm still not entirely sure how I feel about orgasm control. It was definitely an interesting experience, though, and I wouldn't trade it for the world.");
-			writeText("oppF leans back, crossing oppHer arms with an even wider grin.");
-			writeSpeech("opp","","That makes this my fourth time playing. I'm <i>far</i> from the most experienced player, but I guess they think I'm good enough to walk someone new through it, yeah?");
-			writeText("OppShe shakes oppHer head, oppHer hair shifting a bit.");
-			writeSpeech("opp","","Was that all?");
-			writeTransition("oppChat", "Keep chatting");
-			writeTransition("postRound1", "Return to the game");
-			break;
-		}
-		case "oppChatSex" : {
-			if(data.player.pref == "dom")
-				writeSpeech("player","","Wanna fuck before the start of the next round?");
-			else
-				writeSpeech("player","","I was wondering if maybe you wanted to get off before the start of the next round...?");
-			writeText("oppF laughs, shrugging.");
-			writeSpeech("opp","","I mean... Sure, why not? The challenges have their own appeal, but there's no reason we can't fuck between them. What did you have in mind?");
-			if(data.story[0].sex == "M"){
-				writeTransition("oppChatSexAnal", "Fuck his ass");
-				writeTransition("oppChatSexCatch", "Ride his cock");
-				writeTransition("oppChatSexHJ", "Jerk each other off");
-				if(data.player.genitalsVal == 7)
-					writeTransition("oppChatSexAnalKnot", "Knot him");
-				if(data.player.tailVal != 0)
-					writeTransition("oppChatSexTail", "Give him a tailjob");
-				if(data.player.chestVal == 1 || data.player.chestVal == 2 || data.player.chestVal == 7)
-					writeTransition("oppChatSexGiveTitjob", "Give him a titjob");
-			}
-			if(data.story[0].sex == "F"){
-				writeTransition("oppChatSexVaginal", "Fuck her");
-				writeTransition("oppChatSexAnal", "Fuck her ass");
-				writeTransition("oppChatSexTitjob", "Get a titjob");
-				if(data.player.genitalsVal == 7){
-					writeTransition("oppChatSexFemKnot", "Knot her");
-					writeTransition("oppChatSexAnalKnot", "Knot her ass");
+				if(data.player.dick < 2)
+					writeText("Of course, you can't really shrink your tiny little dicklet down any further without growing yourself a pussy, which isn't really an option yet...");
+				else{
+					writeText("And then, if you're feeling a little unfeminine because of your length <i>down there</i>, you could always...");
+					writeTransition("transFemDick", "Shrink that cock down");
 				}
-				
+				writeText("Of course, there are always other things to do, too...");
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
 			}
-			if(data.story[0].sex == "H"){
-				writeTransition("oppChatSexAnal", "Fuck her ass");
-				writeTransition("oppChatSexCatch", "Ride her cock");
-				writeTransition("oppChatSexHJ", "Jerk each other off");
-				writeTransition("oppChatSexTitjob", "Get a titjob");
-				if(data.player.chestVal == 1 || data.player.chestVal == 2 || data.player.chestVal == 7)
-					writeTransition("oppChatSexGiveTitjob", "Give her a titjob");
-				if(data.player.genitalsVal == 7)
-					writeTransition("oppChatSexAnalKnot", "Knot her");
-				if(data.player.tailVal != 0)
-					writeTransition("oppChatSexTail", "Give her a tailjob");
+			case "tfScreenRemove" : {
+				if(data.player.flags.includes("fairyRej"))
+					writeTransition("transFairyRem", "Remove the Fae-Form punishment");
+				else if (data.player.flags.includes("golemRej"))
+					writeTransition("transFairyRem", "Remove the Golem's Shape punishment");
+				else
+					writeSpecial("You have no punishments currently affecting you.");
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
 			}
+			case "transCatEars" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="ears";
+				console.log("catEarsAdded");
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.earsVal = 1;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+				writeText("You're not sure how you know for sure, but you have a pair of jet-black cat ears poking out of your head, which you can kinda almost move if you focus.");
+				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transDogEars" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="ears";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.earsVal = 2;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+				writeText("You're not entirely sure how you know, but you have a pair of droopy dog ears coming out from your head. You can flop them around by bouncing your hair about, but can't really control them.");
+				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transFoxEars" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="ears";
+				console.log(data.player.newChange)
+				data.player.earsVal = 4;
+				addTrans();
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+				writeText("You're not entirely sure how you know, but you definitely have a pair of fluffy fox ears poking out of your head. The fur is almost absurdly soft...");
+				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transCatTail" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.tailVal = 1;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transDogTail" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				console.log("dogTailAdded");
+				addTrans();
+				data.player.tailVal = 2;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transFoxTail" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.tailVal = 4;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transHorseCock" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="horseCock";
+				data.player.flags +="horseCock";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.genitalsVal = 6;
+				data.player.dick = 12;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
+				writeText("Seeing as you lack a sheathe and this big guy swings low, there's no way you'll be wearing anything below the hips for a while.");
+				writeText("You now have a long, heavy, speckled shaft with a medial ring swelling out halfway down, and a fat, blunt head that promises to <i>stretch</i> anything it enters...");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transDogCock" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="dogCock";
+				data.player.flags +="dogCock";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.genitalsVal = 7;
+				data.player.dick = 8;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
+				writeText("Without any sort of natural sheathe, the feeling of wearing anything below your hips sets your mind aflame as you see it.");
+				writeText("You now have a fat, ruby-red cock covered in veins and shining sleekly, sitting atop an even <i>fatter</i> knot. It feels so warm, even now...");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transMascChest" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.buildVal = 3;
+				data.player.newChange += "transMascChest";
+				data.player.flags += "transMascChest";
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, you feel a powerful heat <i>surge</i> through your body, before rapidly collecting around your torso.");
+				writeText("It feels like little sparks of pleasure dancing across your skin before a sharp pang of pleasure shoots through you.");
+				writeText("Looking down, you can see your torso is a lot broader and more toned, and definitely stronger looking.");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transMascAss" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.assVal = 1;
+				data.player.newChange += "transMascAss";
+				data.player.flags += "transMascAss";
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, you feel a powerful heat <i>surge</i> through your body, though it very quickly fixates on your rear.");
+				writeText("Sparks of pleasure dart along the surface, feeling like a fast, sharp massage across the skin before it suddenly stops.");
+				writeText("Looking down, you can see your ass is looking a lot firmer, more toned, and damn-fine-looking.");
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transMascCock" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange += "transMascDick";
+				if(data.player.dick < 5){
+					data.player.dick = 7;
+					data.player.genitalsVal = 1;
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your less-than-large cock grows quite a bit. Not that anyone would be able to tell if they hadn't seen you beforehand...");
+				}
+				else if (data.player.dick < 8){
+					data.player.dick = 9;
+					data.player.genitalsVal = 8;
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your already above-average cock grows. At this point, you're probably around where most people would want to stop...");
+				}
+				else if (data.player.dick < 10){
+					data.player.dick = 10;
+					data.player.genitalsVal = 8;
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("A flash of almost burning, pleasureful heat surges through your crotch, the moan not even able to spill out out of you as your already large cock grows even more. By the time the heat-haze over your head clears, it's pretty obvious that most people wouldn't be comfortable taking your full length...");
+				}
+				else{
+					data.player.dick = 12;
+					data.player.genitalsVal = 9;
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("As it shatters, you feel an absurdly hot surge of pleasure flash through your body, nearly making you cum on the spot as you feel your cock grow to reach a foot long, every inch more sensitive than the last as you try not to pop.");
+					writeText("When the heat finally fades, your shaft feels a lot less likely to spurt with a strong breeze, but it's still pretty sensitive.");
+				}
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transFairyRem" : {
+				addFlag("trans1");
+				data.player.newChange += "transFairyRem";
+				loseTokens(1);
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("It only takes a moment for a feeling like a cold breeze to settle over your body, leaving you without breath as everything goes white.");
+				writeText("When your vision clears up, you can see that you're back to a pretty normal, average-sized body.");
+				data.player.heightVal = 0;
+				data.player.buildVal = 0;
+				data.player.clothesVal = 0;
+				data.player.legsVal = 0;
+				data.player.assVal = 0;
+				data.player.chestVal = 0;
+				data.player.genitalsVal = 0;
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transGolemRem" : {
+				addFlag("trans1");
+				data.player.newChange += "transGolemRem";
+				loseTokens(1);
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("It only takes a moment for a feeling like a cold breeze to settle over your body, leaving you without breath as everything goes white.");
+				writeText("When your vision clears up, you can see that you're back to a pretty normal, average-sized body.");
+				data.player.heightVal = 0;
+				data.player.buildVal = 0;
+				data.player.clothesVal = 0;
+				data.player.legsVal = 0;
+				data.player.assVal = 0;
+				data.player.chestVal = 0;
+				data.player.genitalsVal = 0;
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transFemBreasts" : {
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange += "transFemBreasts";
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				if(data.player.chestVal == 0){
+					data.player.flags += ("transFemBreasts");
+					data.player.chestVal = 1;
+					writeText("A gentle surge of warmth pushes into your chest, turning you on as the phantom sensation of hands groping at your chest pull a moan from your throat.");
+					writeText("The sensations fade quickly, leaving you with a small pair of breasts that are sensitive to the touch.");
+				}
+				else if(data.player.chestVal == 1){
+					writeText("The surge of warmth is stronger this time, leaving you gasping as the phantom hands feel stronger and squeeze tighter around your tits.");
+					writeText("When the sensations fade and your chest isn't heaving from arousal <i>quite</i> as much, you can see that your tits are at least C-cups now.");
+					data.player.chestVal = 2;
+				}
+				else if(data.player.chestVal == 2){
+					data.player.flags += ("hugeBreasts");
+					writeText("The heat completely overwhelms you, your whole body tensing up as you moan throatily right in front of oppF, but not really able to care as the phantom hands run wild.");
+					writeText("You could swear you feel them across your entire body this time, forcing you to the edge of orgasm and holding you there until the suddenly stop, leaving you pent-up and gasping for air.");
+					writeText("Your tits are huge now, each one at least the size of your head and both of them sensitive enough that a strong breeze would make you moan uncontrollably.");
+					data.player.chestVal = 7;
+				}
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transFemAss" : {
+				addFlag("trans1");
+				data.player.newChange += "transFemAss";
+				loseTokens(1);
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("There's a faint sensation of warmth in your ass for a moment, before it suddenly <i>spikes</i> in heat, feeling like a sharp slap on the ass that makes you yelp.");
+				writeText("Checking your ass, you can quickly tell that it got <i>very</i> juicy, straining against your pants rather clearly.");
+				data.player.newChange += "transFemAss";
+				data.player.assVal = 2;
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "transFemDick" : {
+				addFlag("trans1");
+				loseTokens(1);
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				data.player.newChange += "transFemDick";
+				data.player.dick = 3;
+				data.player.genitalsVal = 3;
+
+				writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("postRound1", "Go back to the game");
+				break;
+			}
+			case "oppChat" : {
+				writeSpeech("player","","Actually, I had a few questions I wanted to ask.");
+				writeSpeech("opp","","Oh yeah? Ask away, then! I'm always happy to help out.");
+				writeTransition("oppChatPlayedBefore", "You said you've played this before?");
+				writeTransition("oppChatSex", "Wanna fuck?");
+				writeTransition("postRound1", "Never mind");
+				break;
+			}
+			case "oppChatPlayedBefore" : {
+				data.player.flags += "asked";
+				writeSpeech("player","","You mentioned that you played this before, and I was wondering how those games went.");
+				writeText("oppF pauses to think.");
+				writeSpeech("opp","","I actually thought you meant questions about the game, but I'm good to answer that, too. My first time was a lot of fun, with this one girl that really took the lead and helped me out. Lot of fun to play with, and probably the dirtiest bitch I've played against.");
+				writeText("OppShe pauses to grin.");
+				writeSpeech("opp","","Well, <i>thus far,</i> I mean. She purposefully rejected a few challenges just because she wanted to see what the punishments were. By round four, she was two feet tall, hyper-elastic, and gave me a stomach-deformation fetish. She was a <i>freak.</i>");
+				writeText("oppF thinks a bit more, before breaking out into a grin.");
+				writeSpeech("opp","","After that, I got paired up with this guy that got me completely <i>hooked </i>on anal. It wasn't like it was some huge sequence of challenges and punishments or anything - it was just that he was really into making it feel as good as possible for the both of us. He was a really adorable little guy.");
+				writeSpeech("opp","","And my last game... was different. I loved it, but the girl was a total S, and it took me a few rounds to really get into it. Honestly, I'm still not entirely sure how I feel about orgasm control. It was definitely an interesting experience, though, and I wouldn't trade it for the world.");
+				writeText("oppF leans back, crossing oppHer arms with an even wider grin.");
+				writeSpeech("opp","","That makes this my fourth time playing. I'm <i>far</i> from the most experienced player, but I guess they think I'm good enough to walk someone new through it, yeah?");
+				writeText("OppShe shakes oppHer head, oppHer hair shifting a bit.");
+				writeSpeech("opp","","Was that all?");
+				writeTransition("oppChat", "Keep chatting");
+				writeTransition("postRound1", "Return to the game");
+				break;
+			}
+			case "oppChatSex" : {
+				if(data.player.pref == "dom")
+					writeSpeech("player","","Wanna fuck before the start of the next round?");
+				else
+					writeSpeech("player","","I was wondering if maybe you wanted to get off before the start of the next round...?");
+				writeText("oppF laughs, shrugging.");
+				writeSpeech("opp","","I mean... Sure, why not? The challenges have their own appeal, but there's no reason we can't fuck between them. What did you have in mind?");
+
+
+			//Current Version:
+			if(data.story[0].sex == "M"){
+				writeTransition("oppChatSexCatch", "Ride his cock");
+			}
+			else if(data.story[0].sex == "F"){
+
+			}
+			else{
+				writeTransition("oppChatSexCatch", "Ride his cock");
+			}
+
+
+			//Complete list:
+			// if(data.story[0].sex == "M"){
+			// 	writeTransition("oppChatSexAnal", "Fuck his ass");
+			// 	writeTransition("oppChatSexCatch", "Ride his cock");
+			// 	writeTransition("oppChatSexHJ", "Jerk each other off");
+			// 	if(data.player.genitalsVal == 7)
+			// 		writeTransition("oppChatSexAnalKnot", "Knot him");
+			// 	if(data.player.tailVal != 0)
+			// 		writeTransition("oppChatSexTail", "Give him a tailjob");
+			// 	if(data.player.chestVal == 1 || data.player.chestVal == 2 || data.player.chestVal == 7)
+			// 		writeTransition("oppChatSexGiveTitjob", "Give him a titjob");
+			// }
+			// if(data.story[0].sex == "F"){
+			// 	writeTransition("oppChatSexVaginal", "Fuck oppHer");
+			// 	writeTransition("oppChatSexAnal", "Fuck oppHer ass");
+			// 	writeTransition("oppChatSexTitjob", "Get a titjob");
+			// 	if(data.player.genitalsVal == 7){
+			// 		writeTransition("oppChatSexFemKnot", "Knot oppHer");
+			// 		writeTransition("oppChatSexAnalKnot", "Knot oppHer ass");
+			// 	}
+			// }
+			// if(data.story[0].sex == "H"){
+			// 	writeTransition("oppChatSexAnal", "Fuck oppHer ass");
+			// 	writeTransition("oppChatSexCatch", "Ride oppHer cock");
+			// 	writeTransition("oppChatSexHJ", "Jerk each other off");
+			// 	writeTransition("oppChatSexTitjob", "Get a titjob");
+			// 	if(data.player.chestVal == 1 || data.player.chestVal == 2 || data.player.chestVal == 7)
+			// 		writeTransition("oppChatSexGiveTitjob", "Give oppHer a titjob");
+			// 	if(data.player.genitalsVal == 7)
+			// 		writeTransition("oppChatSexAnalKnot", "Knot oppHer");
+			// 	if(data.player.tailVal != 0)
+			// 		writeTransition("oppChatSexTail", "Give oppHer a tailjob");
+			// }
 			writeTransition("postRound1", "Never mind - return to the game");
 			break;
 		}
 		case "oppChatSexAnal" : {
+			if(data.player.flags.includes("asked")){
+				if(data.player.pref == "dom")
+					writeSpeech("player","","You said that another player got you totally hooked on anal, so let's see you bend over.");
+				else
+					writeSpeech("player","","You mentioned that another player got you hooked on anal, and I'm getting pretty hard...");
+			}
+			else{
+				if(data.player.pref == "dom")
+					writeSpeech("player","","I was thinking you could bend over for a bit of <i>fun</i>.");
+				else
+					writeSpeech("player","","Well, I'm getting pretty hard, and you have an <i>amazing</i> ass...");
+			}
+			writeText("oppF laughs, nodding.");
+			writeSpeech("opp","","Well, when you put it like that, how am I supposed to say no?");
+			writeText("OppShe stands up and turns around, bending at the hip to put one hand on the couch, and the other grasping at oppHer ass.");
+			writeSpeech("opp","","I keep myself nice and ready before I start a game now, so don't think you have to go gentle if you don't want to.");
+			if(data.player.genitalsVal == 6){
+				if(data.story[0].sex == "F")
+					writeText("Looking over your thick horsecock, oppShe does take a moment to rub oppHer clit in excitement.");
+				else
+					writeText("Looking over your thick horsecock, oppShe does give oppHer cock a few tentative strokes.");
+				writeSpeech("opp","","Be as rough as you like and <i>ride me like your horsie.</i>");
+			}
+			else if(data.player.genitalsVal == 7){
+				if(data.story[0].sex == "F")
+					writeText("Looking at your red rocket, particularly the thick knot, oppShe smirks and fingers her pussy for a second.");
+				else
+					writeText("Looking at your red rocket, particularly the thick knot, oppShe smirks and strokes oppHer dick a few times.");
+				writeSpeech("opp","","Be as rough as you have to be to <i>knot me like a bitch.</i>");
+			}
+			else if(data.player.genitalsVal == 8 || data.player.genitalsVal == 9){
+				writeText("oppF takes a moment to look over your huge cock, before grinning even wider.");
+				writeSpeech("opp","","And feel free to take that as a challenge, if you want to see how long it takes for me to take you <i>balls-deep.</i>");
+			}
+			if(data.player.buildVal == 7 || data.player.buildVal == 8){
+				writeText("You approach oppHer quickly, your hands grabbing onto oppHer ass... and realizing that your height makes for just a little bit of a problem.");
+				if(data.player.buildVal == 7){
+					writeText("Laughing a bit, oppF shakes oppHer head.");
+					writeSpeech("opp","","Here you go, <i>little guy~!</i>");
+					writeText("Spreading oppHer legs further out, oppShe lowers her ass down enough that it's around your level. It's a bit demeaning, but...");
+					if(data.player.pref == "sub")
+						writeText("...if anything, it's even more of a turn-on.");
+					else{
+						writeSpeech("opp","","<font size='+2'><i><b>F-FUCK~!</b></i></font>");
+						writeText("A red imprint from your hand is left on oppHer ass as oppShe gasps a bit.");
+					}
+					writeText("Your cock throbs against oppHer ass, rubbing against it as your precum spreads around oppHer hole.");
+				}
+				else if(data.player.buildVal == 8){
+					writeText("You actually have to crouch down a bit, even as oppShe stands up onto oppHer toes.");
+					writeSpeech("opp","","Let's see you put that new body of yours through its paces, hm?");
+					writeText("Your cock throbs against oppHer ass, rubbing against it as your precum spreads around oppHer hole.");
+				}
+				writeText("A moment later and, rather than waiting on you to thrust, oppF lets out a low hum...");
+				writeText("...and sharply bobs oppHer hips back, the tip of of your cock sliding into oppHer ass as oppShe lets out a groan of pleasure.");
+				if(data.player.genitalsVal == 7){
+					writeText("The thinner tip of your dog-cock makes it easier to slide in, slipping most of your length in with a single long, slow thrust.");
+					if(data.story[0].sex == "F")
+						writeText("OppShe lets out a low groan, oppHer free hand going to finger herself as oppShe arches oppHer back and bounces against your knot.");
+					else
+						writeText("OppShe lets out a low groan, oppHer free hand pawing at oppHer ass and spreading oppHer cheeks while bouncing back against your knot.");
+				}
+				if(data.player.genitalsVal == 6){
+					writeText("oppF has to hold still for a moment to get a bit more used to the fat, flared tip before oppShe starts to slowly slide back.");
+					writeSpeech("opp","","Christ, you're big...!");
+					writeText("Despite the complaint, oppShe keeps backing up further and further, more and more of your horsecock disappearing into oppHer ass.");
+				}
+				if(data.player.dick < 4){
+					writeText("Your hips immediately clap against oppHers as oppShe shifts around.");
+					writeSpeech("opp","","Ah, you bottomed out...");
+					if(data.story[0].sex == "F"){
+						writeText("OppShe brings oppHer hand to oppHer pussy again, toying with it idly.");
+					}
+					else{
+						writeText("OppShe brings oppHer hand to oppHer dick, stroking it slowly from top to bottom.");
+					}
+					writeSpeech("opp","","Go ahead and start thrusting. We might as well try to have fun, right?");
+					writeText("OppShe keeps toying with herself while you pound into oppHer ass, not really able to pull out too much without actually pulling out.");
+					writeText("After around a minute of this, oppF starts shifting around, arching oppHer back more and panting as oppHer hand picks up speed.");
+					writeText("Unfortunately, since the game is making your cock even more sensitive as it gets smaller...");
+					writeSpeech("opp","","H-Huh...?");
+					writeText("oppF's hand stops, curiosity evident in oppHer voice as you start spurting inside of oppHer.");
+					writeSpeech("opp","","A quickshot...? Well, I guess that's fine.");
+					writeText("OppShe pulls oppHimself off of you, standing up straight.");
+					writeSpeech("opp","","Err... No offense, but maybe next time, you should catch?");
+					writeTransition("postRound1", "Go back");
+					break;
+				}
+				writeText("oppF keeps bouncing back against you, oppHer moans getting louder as oppShe uses a hand to tease oppHimself.");
+				writeText("Your hands on oppHer hips, you keep pulling oppHer into your thrusts, gradually putting more force behind each one.");
+				writeSpeech("opp","","C-Come on, you can do better than that...!");
+				writeText("OppHer free hand gives oppHimself a swift slap on the ass, looking back at you with a grin.");
+				writeSpeech("opp","","Get <i>rough~!</i>");
+				writeSpeech("player","","If you say so...");
+				if(data.player.genitalsVal != 6 || data.player.genitalsVal != 7 || data.player.genitalsVal != 8 || data.player.genitalsVal != 9){
+					writeText("You tighten your grip around oppHer, pistoning in and out of oppHer ass as quickly as you can, the echo of your hips against oppHers ringign out nearly as loud as the moaning.");
+					writeSpeech("opp","","F-Fuck yeah...! Fuck me <i><b>up,</b></i> stud~!");
+					writeText("Thrusting harder, you push oppF forward onto the couch, oppHer arm giving out as oppHer face gets shoved into it.");
+					writeText("The lower angle makes it a lot easier to put more force into each thrust, which only makes oppHer groaning even louder.");
+				}
+				else{
+					writeText("Letting go of oppHer hips, you reach forward and try to grab at oppHer's wrists, leaving oppHer face to fall into couch.");
+					writeSpeech("opp","","Nn~");
+					writeText("Not that oppShe seems to mind. Grasping tightly, you pull your hips back and...");
+					if(data.player.genitalsVal == 6){
+						writeText("...you <i><b>slam</b></i> your horsecock into oppHer ass, oppF letting out a throaty moan as the medial ring pushes well past oppHer entrance.");
+						writeSpeech("opp","","F-Fuck...~!");
+						writeText("Holding onto oppHer wrists, you start bucking into oppHer as you both let out louder and louder moans.");
+						writeSpeech("opp","","It's stretching me out so much...! Come on, I want your <i>delicious fucking horsecock <b>balls-deep!</b></i>");
+						writeText("Seeing as that was already the plan, you keep pounding into oppHer, the lower angle causing your thrusts to finally go all the way.");
+						writeText("You can feel oppHer squeezing around tightly, oppHer words starting to slur into each other as oppShe descends into wordless moaning.");
+						writeText("The rapid tensing is actually bringing you to the edge...");
+						writeSpeech("player","","I'm getting close...!");
+						writeText("Immediately, you feel oppHer ass tighten.");
+						writeSpeech("opp","","God, yes...! Fill me up! Fuck my ass and <i>fill me up like a <b>stable whore!</b></i>");
+						writeText("Unable to hold back, you completely let loose, your heavy balls slapping against oppHer thighs as you cum.");
+						writeText("You start shooting rope after rope, your body shaking as you cum, but it just doesn't stop - nearly a solid minute of just spurting inside of oppHer goes by before you finally collapse.");
+						writeText("It takes a bit for your entire cock to slide out with a loud, wet <i><b>pop</b></i>, but when it does, a small wave of watery cum spilling out onto the floor as oppHer knees give out.");
+					}
+					else if(data.player.genitalsVal == 7){
+						writeText("...you <i><b>slam</b></i> your hips forward, oppF letting out a throaty moan as the knot <i>pops</i> into oppHer ass and starts rhythmically squeezing around you.");
+						writeSpeech("opp","","F-Fuck...~!");
+						writeText("Holding onto oppHer wrists, you start bucking into oppHer as you both let out louder and louder moans.");
+						writeText("G-God, this knot is so <i>unfair~!</i> It's rubbing all the right spots...!");
+						writeText("You can feel oppHer squeezing around tightly, oppHer words starting to slur into each other as oppShe descends into wordless moaning.");
+						writeText("The rapid tensing is actually bringing you to the edge...");
+						writeSpeech("player","","I'm getting close...!");
+						writeText("Immediately, you feel oppHer ass tighten.");
+						writeSpeech("opp","","Inside...! Fill me up! Knot me, and make me <i>fucking bitch!</i>");
+						writeText("Unable to hold back, you completely let loose, forcing your knot as deep as it could go and cumming.");
+						writeText("You start shooting rope after rope, your body shaking as you cum, but it just doesn't stop - nearly a solid minute of just spurting inside of oppHer goes by before you finally collapse.");
+						writeText("A loud, wet <i><b>pop</b></i> rings out as your knot slides out of oppHer hole, a small wave of watery cum spilling out onto the floor as oppHer knees give out.");
+					}
+					else if(data.player.genitalsVal == 8 || data.player.genitalsVal = 9){
+						writeText("...you <i><b>slam</b></i> your hips forward, oppF letting out a throaty moan as you sink your cock balls-deep into oppHer ass.");
+						writeSpeech("opp","","F-Fuck...~!");
+						writeText("Holding onto oppHer wrists, you start bucking into oppHer as you both let out louder and louder moans.");
+						writeSpeech("opp","","F-Fuck yeah, <i>pound</i> me with that monstercock! <i>Break me~!</i>");
+						writeText("Seeing as that was already the plan, you keep pounding into oppHer, the lower angle causing your thrusts to finally go all the way.");
+						writeText("You can feel oppHer squeezing around tightly, oppHer words starting to slur into each other as oppShe descends into wordless moaning.");
+						writeText("The rapid tensing is actually bringing you to the edge...");
+						writeSpeech("player","","I'm getting close...!");
+						writeText("Immediately, you feel oppHer ass tighten.");
+						writeSpeech("opp","","Don't you <i>dare</i> pull out...! Fill me up and <i><b>cum inside!</b></i>");
+						writeText("Unable to hold back, you completely let loose, forcing your knot as deep as it could go and cumming.");
+					}
+				}
+			}
 			break;
 		}
 		case "oppChatSexCatch" : {
+			if(data.player.flags.includes("androAdmire")){
+				writeSpeech("player","","Remember when I said I want that thing inside me?");
+				writeText("oppF grins, oppHer cock twitching once as oppShe leans back and spreads out a bit.");
+			}
+			else{
+				if(data.player.pref == "dom")
+					writeSpeech("player","","Full disclosure: I want your cock inside of me.");
+				else
+					writeSpeech("player","","I want you inside me.");
+				writeText("oppF smiles, nodding as oppShe leans back and spreads out of bit.");
+			}
+			writeSpeech("opp","","If you want it that bad, <i>come and get it.</i>");
+			if(data.player.flags.include("fairyRej") == true && data.player.flags.include("remFairyPun") != true){
+				writeText("You quickly move to straddle oppF, your smaller body making it a bit harder to climb up at first, but you're soon kneeling over oppHer length.");
+				writeSpeech("opp","","You know, you look pretty good at this size...");
+				writeText("OppHer smile widens sharply as you feel oppHer hands rest down on your hips.");
+				writeSpeech("opp","","...and you look pretty light, too.");
+				writeSpeech("player","","Thank-");
+				writeText("Your voice cuts out as you feel oppHer head press against your hole, the feeling against your hyper-sensitive skin causing you to gasp sharply.");
+				writeText("Instead of pushing it in, though, oppF rolls oppHer hips forward and pulls you close, oppHer shaft sliding against your ass as oppShe smears oppHer precum up to your lower back.");
+				writeSpeech("player","","F-Fuck...!");
+				writeText("Seated firmly on oppF's stomach, you suddenly realize just how long oppHer cock is compared to your tinier frame.");
+				writeText("Maybe it's just the game, but it only makes you harder.");
+				writeSpeech("opp","","Hah, I could probably get off just with this ass of yours~!");
+				writeText("You shiver slightly as oppF shifts underneath you, sliding oppHer length against your cheeks.");
+				if(data.player.pref == "dom"){
+					writeText("Unable to hold back, you sharply raise your hips, putting your hands down on oppHer stomach with a smirk.");
+					writeText("This time, when you're hole presses against oppHer head, <i>oppShe's</i> the one that has to bite back a moan.");
+					writeText("And when you drop your hips back down, neither of you can keep quiet as you feel oppF's fingers squeezing down on your hips.");
+				}
+				else{
+					writeText("oppF smirks as oppShe looks at you, oppHer hands holding yours tighter as oppShe raises you further up, every inch of oppHer shaft teasing your ass.");
+					writeSpeech("player","","Let's see how much you can take.");
+					writeText("You only feel the pressure against your hole for a moment, before oppHer slick length <i>pops</i> in and makes it impossible to keep from moaning.");
+				}
+				writeText("OppHer hands shift against you, twisting you around a bit to find an easier and deeper fit, even as you bob up and down on oppHer cock.");
+				writeSpeech("player","","You're splitting me apart...!");
+				writeSpeech("opp","","Try saying that after the next few inches.");
+				writeText("Angling it just right, oppF pulls you down enough to slide further inside, oppHer head scraping against your prostate as you fail to even gasp properly, your body falling forward as you try to support yourself with your hands on oppHer chest.");
+				if(data.story[0].sex == "H"){
+					writeSpeech("opp","","If you need some handles to hold onto, I've got a nice pair right here~");
+					writeText("Moving oppHer chest closer to you, you can feel a bit of oppHer cock slide out as she shifts. As you grab oppHer tits, though, she <i>bucks</i> forward.");
+				}
+				else{
+					writeSpeech("opp","","You're making this ride look <i>real</i> fun, y'know...");
+					writeText("Shifting forward, you can feel a bit of his cock slide out for a moment, before one of his hands goes to the small of your back and he <i>bucks</i> forward.");
+				}
+				writeText("You squeal as oppShe hits your prostate again, your cock dribbling precum down from the tip as oppF <i>fucks</i> it out of you.");
+				if(data.player.genitalsVal == 6){
+					writeText("OppShe moans sharply at the sight of your fat horsecock and the feeling of it dragging across oppHer chest and spreading the slick fluid.");
+					writeSpeech("opp","","Such a huge fucktoy on such a <i>tiny little body</i>... At least it's good for telling me how much you're <i>loving this.</i>");
+				}
+				else if(data.player.genitalsVal == 7){
+					writeText("OppShe moans sharply as your knot slides against oppHer abdomen, the tip drooping low enough to smear your fluids wildly.");
+					writeSpeech("opp","","Such a <i>fat</i> knot, and all you're using it for is to show me just how much you love getting fucked like a <i>bitch...</i> I'd say it's a shame, if it weren't such a <i><b>turn-on.</b></i>");
+				}
+				else if(data.player.genitalsVal == 8 || data.player.genitalsVal == 9){
+					writeText("OppShe moans sharply as your cockhead smears your fluid across oppHer abdomen, the fat slab of cockmeat almost reaching oppHer chest.");
+					writeSpeech("opp","","You have a nice, fat <i>bitch-breaker</i> like that, and you're riding <i>me...</i> You really do know how to make someone feel wanted~!");
+				}
+				else{
+					writeText("OppShe moans as your cockhead smears your fluid across oppHer lower abdomen, oppHer skin feeling slick and sweet as you grind against it.");
+					writeSpeech("opp","","God, you feel <i>amazing...</i> And it looks like you're having fun too. But let's try stepping things up...");
+				}
+				writeText("With that, oppF's hands go to your thighs as oppShe grins.");
+				writeText("Before you can even ask, oppShe grips you tightly and stand up suddenly.");
+				writeText("Completely losing the stable ground of oppHer thighs, you can't help but grab on tightly to oppF's shoulders as finally slide all the way down.");
+				writeText("Pleasure shoots through your entire body, your legs going around oppHer back as you feel it.");
+				if(data.player.pref == "sub" || data.player.dick < 4){
+					writeText("Your ass rapidly squeezes down on oppHer cock as your dick spasms uncontrollably, a soft moan spilling out as you shoot your load onto oppHer stomach.");
+					writeSpeech("opp","","Holy shit, did you just...?");
+					writeText("The pause only lasts for a second, though, before oppShe pulls you even tighter to oppHer body.");
+					writeSpeech("opp","","Seeing that, there's no way I can hold back...!");
+				}
+				else{
+					writeText("OppShe bottoms out completely, oppHer balls slapping against your ass once before oppShe pauses, giving you a chance to accomodate the fat cock stretching you out.");
+					writeSpeech("opp","","F-Fuck, your ass is <i>tight</i>... I can't...!");
+					writeText("OppShe pulls you tighter against oppHer, dragging oppHer cock only an inch out before thrusting back in, sawing into you gently for a few thrusts, before pulling out further with every movement.");
+				}
+				writeText("After a few more seconds, you're doing your best to just hold on tight while oppShe pounds into your ass, the pleasure searing through your entire body as oppHer hands support you by your ass.");
+				writeText("OppHer nails just barely dig into your skin as oppShe bounces you up and down on oppHer cock, using oppHer hips to pound into you hard enough that you end up going from just the tip to balls-deep every second.");
+				if(data.player.pref == "sub" || data.player.dick < 4){
+					writeSpeech("player","","A-Again...! <i>I'm cumming again~!</i>");
+				}
+				else{
+					writeText("The feeling of your cock sliding against oppHer stomach mixed with the brutal ass-fucking is causing you to hit the edge, your legs around oppHer back as you groan,");
+					writeSpeech("player","","I'm gonna cum...!");
+				}
+				writeSpeech("opp","","I can't hold out either...!");
+				writeText("You feel oppHer fingers dig in even tighter, oppHer hips somehow going even faster as you feel oppHer bring oppHer mouth to your neck.");
+				writeSpeech("opp","","I'm...!");
+				writeText("She can't even finish the phrase before the white-hot load spurts inside of you, oppHer stomach rapidly tensing against your cock and pushing you over.");
+				if(data.player.pref == "sub" || data.player.dick < 4)
+					writeText("A smaller, thinner load joins the globs from your last orgasm, but they quickly flow back down onto your own dick, dribbling down to your balls.");
+				else
+					writeText("You spurt a thick load onto oppHer stomach, painting it white before oppShe pulls you even tighter and you can feel it smear across your own body.");
+				writeText("It takes a second for the two of you to collect yourselves, oppHer cock softening a bit before she gently lifts you off of it.");
+				writeText("Some of oppHer cum dribbles out of your gaping hole, futilely trying to squeeze itself tight as it drips onto oppHer thighs.");
+				writeSpeech("opp","","You were incredible...");
+				writeSpeech("player","","Th-Thanks... You too...");
+				writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
+			}
+			if(data.player.flags.include("golemRej") == true && data.player.flags.include("remGolemPun") != true){
+				writeText("You move to straddle oppF, but very quickly realize the size difference could make things a bit... troublesome.");
+				writeSpeech("player","","Er, how should we-?");
+				writeSpeech("opp","","Here, lean back on the couch...");
+				writeText("oppF guides you into position, standing between your legs with a grin...");
+				writeText("...before grabbing onto those legs and lifting.");
+				writeText("This new body is clearly more flexible than you expected, as oppF can push your ankles to the back of the couch as oppHer girthy cock flops down on top of yours.");
+				if(data.player.genitalsVal == 6){
+					writeText("OppShe grins and shifts oppHer hips, slapping oppHer own shaft across your fat horsecock.");
+					writeSpeech("opp","","Such a huge fucktoy, all ready to just flop around while I fuck you... At least it's good for telling me how much you're <i>loving this.</i>");
+				}
+				else if(data.player.genitalsVal == 7){
+					writeText("OppShe grins, oppHer shaft rubbing along your knot and getting you to moan from the warmth. ");
+					writeSpeech("opp","","Such a <i>fat</i> knot, and all you're using it for is to show me just how much you love getting fucked like a <i>bitch...</i> I'd say it's a shame, if it weren't such a <i><b>turn-on.</b></i>");
+				}
+				else if(data.player.genitalsVal == 8 || data.player.genitalsVal == 9){
+					writeText("OppShe shifts oppHer hips, oppHer head rubbing up against your longer, thicker shaft");
+					writeSpeech("opp","","You have a nice, fat <i>bitch-breaker</i> like that, and you're the one getting <i>fucked...</i> You really do know how to make someone feel wanted~!");
+				}
+				else{
+					writeText("OppShe smirks as your cockhead smears your precum across your lower abdomen, your skin feeling slick as oppShe rubs against you.");
+					writeSpeech("opp","","God, you look <i>amazing...</i> And it looks like you're having fun too. But let's try stepping things up...");
+				}
+				writeText("Bringing both of your ankles up and holding them with one of oppHer hands, the other glides down your thigh and spreads your ass, oppHer thumb pressing gently against your hole.");
+				writeSpeech("opp","","When someone <i>this much bigger</i> is underneath me...");
+				writeText("You feel oppHer cockhead press into you, the warmth of oppHer precum smearing around.");
+				writeSpeech("opp","","...I just don't know <i>how to hold back~!</i>");
+				writeSpeech("player","","<font size='+2'><i><b>AAHN~!</b></i></font>");
+				writeText("Held underneath oppHer, you can feel oppHer cock push inch after inch in, stretching you out as oppShe leans into you, biting oppHer lip.");
+				writeSpeech("opp","","For someone so big, you're <i>so fucking tight...!</i>");
+				writeText("Only halfway in, oppShe moans as oppShe grinds to a stop, looking into your eyes with a flushed grin.");
+				writeSpeech("opp","","Looks like I'll have to get you used to me~!");
+				writeText("You try to speak but can't, the game amping your sensitivity too high to think straight as oppF starts sawing into you, oppHer cock scraping against your prostate with every subtle shift.");
+				writeText("Within seconds, you're practically dripping precum onto your stomach as each thrust takes oppHer just a bit deeper inside of you.");
+				writeText("OppHer other hand moves away from your ass to grab onto your leg again, oppHer breathing heavy from arousal as oppShe starts pulling out more and mroe with each thrust.");
+				writeText("After just a few seconds, oppShe's getting almost oppHer whole length in with each measured thrust, before suddenly...");
+				writeText("OppShe stops, just oppHer cockhead inside, your body feeling unbelievably empty now.");
+				writeSpeech("player","","F-Fuck... Is something wro-");
+				writeText("-and she bucks forward, grinning as your words turn into a sharp moan.");
+				writeSpeech("opp","","God, I love that...!");
+				writeText("You start squirming in place, oppHer hips practically slamming into yours now as oppShe picks up speed, finally bottoming out as oppHer balls slap rythmically against your ass.");
+				writeText("Pinning your ankles completely behind your head, oppShe grins.");
+				writeSpeech("opp","","Hold these for me.");
+				writeText("As oppShe lets go, your legs end up held back by your arms as you use your hands to press down against your thighs.");
+				writeText("OppHer hands go to your waist, now putting more strength behind every thrust while still <i>pounding</i> your prostate.");
+				writeText("Pleasure shoots through your entire body, your entire body tensing sharply as you feel it.");
+				if(data.player.pref == "sub" || data.player.dick < 4){
+					writeText("Your ass rapidly squeezes down on oppHer cock as your dick spasms uncontrollably, a soft moan spilling out as you shoot your load onto your own stomach.");
+					writeSpeech("opp","","Holy shit, did you just...?");
+					writeText("The pause only lasts for a second, though, before oppShe grasps your hips even tighter.");
+					writeSpeech("opp","","Seeing that, there's no way I can hold back...!");
+					writeText("Just seconds later, a wordless shout spills out of oppF's mouth as oppShe slams as deep inside as oppShe can go.");
+				}
+				else{
+					writeText("Coils of pleasure shoot through your body, holding you on the edge as your cock bounces around, oppHer balls slapping against your ass as you feel your orgasm just barely out of reach.");
+					writeSpeech("opp","","F-Fuck, your ass is <i>tight</i>... I'm about to...!");
+					writeText("OppShe pulls you tighter against oppHer, oppHer balls tensing up as oppShe goes even faster as you feel oppHer stomach start sliding against your shaft and finally push you over.");
+				}
+				writeText("You feel white-hot jets of cum blast into your ass, your own cock spurting more and more across your stomach as the both of you finish climaxing together.");
+				writeText("It takes a second for the two of you to collect yourselves, oppHer cock softening a bit before she slowly draws it out of you.");
+				writeText("Some of oppHer cum dribbles out of your gaping hole, futilely trying to squeeze itself tight as it drips onto oppHer thighs.");
+				writeSpeech("opp","","You were incredible...");
+				writeSpeech("player","","Th-Thanks... You too...");
+				writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
+			}
+			else{
+				writeText("You move smoothly over to where oppShe's sitting, kneeling onto the couch above oppHer cock.");
+				writeText("OppHer hands move to grab onto your ass, squeezing it tightly as oppShe grins.");
+				writeSpeech("opp","","God, you look incredible right now...");
+				writeText("OppHer smile widens sharply as you feel oppHer hands move to your hips.");
+				writeSpeech("opp","","But I bet you <i>feel</i> even better.");
+				if(data.player.pref == "dom"){
+					writeText("You roll your eyes a bit and grin down teasingly.");
+					writeSpeech("player","","Let's test that out, shall we?");
+					writeText("You bob down, your hole pressing against oppHer cockhead as you roll your hips around, smearing oppHer precum across your ass.");
+					writeText("And then, you lower your hips even further, relishing in the low groan that comes out of oppF's mouth as oppHer head <i>pops</i> into your tight ass.");
+				}
+				else{
+					writeText("OppShe rolls her hips forward, oppHer cockhead smearing around oppHer precum across your ass as the pleasure sends jolts up your spine.");
+					writeSpeech("player","","W-Well, why not test that out?");
+					writeText("Supporting yourself with your hands on oppHer chest, you bob down, your hole pressing against oppHer cockhead again but, this time, not sliding around.");
+					writeText("You both moan as oppHer dick spreads you open, oppF's hands tightening around your hips for a second.");
+				}
+				writeText("OppHer hands shift against you, twisting you around a bit to find an easier and deeper fit, even as you bob up and down on oppHer cock.");
+				writeSpeech("player","","You're splitting me apart...!");
+				writeSpeech("opp","","Try saying that after the next few inches.");
+				writeText("Angling it just right, oppF pulls you down enough to slide further inside, oppHer head scraping against your prostate as you fail to even gasp properly, your body falling forward as you keep try ingto support yourself with your hands on oppHer chest.");
+				if(data.story[0].sex == "H"){
+					writeSpeech("opp","","If you need some handles to hold onto, I've got a nice pair right here~");
+					writeText("Moving oppHer chest closer to you, you can feel a bit of oppHer cock slide out as she shifts. As you grab oppHer tits, though, she <i>bucks</i> forward.");
+				}
+				else{
+					writeSpeech("opp","","You're making this ride look <i>real</i> fun, y'know...");
+					writeText("Shifting forward, you can feel a bit of his cock slide out for a moment, before one of his hands goes to the small of your back and he <i>bucks</i> forward.");
+				}
+				writeText("You squeal as oppShe hits your prostate again, your cock dribbling precum down from the tip as oppF <i>fucks</i> it out of you.");
+				if(data.player.genitalsVal == 6){
+					writeText("OppShe moans sharply at the sight of your fat horsecock and the feeling of it dragging across oppHer chest and spreading the slick fluid.");
+					writeSpeech("opp","","Such a huge fucktoy on such a <i>tiny little body</i>... At least it's good for telling me how much you're <i>loving this.</i>");
+				}
+				else if(data.player.genitalsVal == 7){
+					writeText("OppShe moans sharply as your knot slides against oppHer abdomen, the tip drooping low enough to smear your fluids wildly.");
+					writeSpeech("opp","","Such a <i>fat</i> knot, and all you're using it for is to show me just how much you love getting fucked like a <i>bitch...</i> I'd say it's a shame, if it weren't such a <i><b>turn-on.</b></i>");
+				}
+				else if(data.player.genitalsVal == 8 || data.player.genitalsVal == 9){
+					writeText("OppShe moans sharply as your cockhead smears your fluid across oppHer abdomen, the fat slab of cockmeat almost reaching oppHer chest.");
+					writeSpeech("opp","","You have a nice, fat <i>bitch-breaker</i> like that, and you're riding <i>me...</i> You really do know how to make someone feel wanted~!");
+				}
+				else{
+					writeText("OppShe moans as your cockhead smears your fluid across oppHer lower abdomen, oppHer skin feeling slick and sweet as you grind against it.");
+					writeSpeech("opp","","God, you feel <i>amazing...</i> And it looks like you're having fun too. But let's try stepping things up...");
+				}
+				writeText("With that, oppF's hands go to your thighs as oppShe grins.");
+				writeText("OppShe raises her hips while pulling you down, the sensation of her and gravity pushing oppHer cock as deep as it can go making your insides feel incredibly warm.");
+				writeSpeech("opp","","Let's see how well you can handle this...!");
+				writeText("Quickly bouncing you up and down with oppHer thrusts, the loud clap of oppHer hips against your ass rings out as oppShe practically <i>slams</i> into your prostate with every thrust, the dribbling precum practically shooting across oppHer chest.");
+				writeText("Then, rising up like the tide inside of you, pleasure shoots through your entire body as you tense up, feeling something coming.");
+				if(data.player.pref == "sub" || data.player.dick < 4){
+					writeText("Your ass rapidly squeezes down on oppHer cock as your dick spasms uncontrollably, a soft moan spilling out as you shoot your load onto oppHer stomach.");
+					writeSpeech("opp","","Holy shit, did you just...?");
+					writeText("The pause only lasts for a second, though, before oppShe pulls you even tighter to oppHer body.");
+					writeSpeech("opp","","Seeing that, there's no way I can hold back...!");
+				}
+				else{
+					writeText("Coils of pleasure shoot through your body, holding you on the edge as your cock bounces around, oppHer balls slapping against your ass as you feel your orgasm just barely out of reach.");
+					writeSpeech("opp","","F-Fuck, your ass is <i>tight</i>... I'm about to...!");
+					writeText("OppShe pulls you tighter against oppHer, oppHer balls tensing up as oppShe goes even faster as you feel oppHer stomach start sliding against your shaft and finally push you over.");
+				}
+				writeText("You feel white-hot jets of cum blast into your ass, your own cock spurting more and more across your stomach as the both of you finish climaxing together.");
+				writeText("It takes a second for the two of you to collect yourselves, oppHer cock softening a bit before she slowly draws it out of you.");
+				writeText("Some of oppHer cum dribbles out of your gaping hole, futilely trying to squeeze itself tight as it drips onto oppHer thighs.");
+				writeSpeech("opp","","You were incredible...");
+				writeSpeech("player","","Th-Thanks... You too...");
+				writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
+			}
+			writeTransition("postRound1", "Go back");
 			break;
 		}
 		case "oppChatSexHJ" : {
@@ -2000,7 +2401,7 @@ function checkForEvents() {
 					}
 					else {
 						if (galleryCheck('braceletHome3') == false) {
-							writeFunction("writeEvent('braceletHome3')", data.story[0].fName + "'s girlfriend is coming over, use the bracelet on her");
+							writeFunction("writeEvent('braceletHome3')", data.story[0].fName + "'s girlfriend is coming over, use the bracelet on oppHer");
 						}
 						else {
 							if (galleryCheck('braceletHome4') == false) {

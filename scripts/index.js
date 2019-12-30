@@ -33,7 +33,7 @@ var data = {
 		genitalsVal:0,
 		newChange:"",
 		flags: "",
-		round:"0",
+		round:0,
 	},
 	story: [
 		{index: "opp",
@@ -295,13 +295,6 @@ function restartButton() {
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
-}
-
-function passTime() {
-	if(data.player.round <10){
-		data.player.round += 1;
-	}
-	console.log('round is now ' + data.player.round);
 }
 
 //Showing & hiding windows
