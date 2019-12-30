@@ -28,6 +28,7 @@ function writeScene(scene) {
 			writeSpecial("Token count has been set to 100. Have fun!");
 			data.player.tokens = 100;
 			writeTransition("prologue", "Begin the game");
+			break;
 		}
 		case "test" : {
 			data.player.fName = "Testing";
