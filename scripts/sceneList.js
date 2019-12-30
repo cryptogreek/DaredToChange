@@ -8,14 +8,14 @@ function writeScene(scene) {
 			writeText("This game contains themes of <i><b>physical transformation</b> (including manifestation of some animal features and growth/shrinking of genitalia)</i> and <i><b>mental transformation</b> (induced heat/rut and sissification). </i>If you find this content objectionable, you probably won't have a fun time playing this.");
 
 			writeText("With that in mind, you can scroll further down for a bit more information on the game, or you can jump right into by pressing the button below!");
-			writeTransition("prologue", "Start the game [The tutorial and 70% of round one have been implemented]");
-			writeTransition("test", "Test the game [Expect everything to break]");
+			writeTransition("prologue", "Start the game");
+			//writeTransition("test", "Test the game [Expect everything to break]");
 			//writeTransition("prologueSkip", "Skip the prologue");
 			writeText("Other notes:");
 			writeText("This game was made for the <a href='https://tfgames.site/phpbb3/viewtopic.php?f=12&t=12799'>Game-Night Contest on TFGames.</a>");
 			writeText("You can open a character's description by clicking on their icon - do this often to see a lot of the changes that occur, both of the person and how you view them in the game.");
-			writeText("The game is currently fairly limited in terms of content. As of Version 0.2, it includes physical transformation (body shrinking and animal ears), tongue-play, massage-play (shoulder or foot), oral sex, watersports, and butt plugs. All watersports and foot content can be avoided if you choose, and they're pretty obvious about it.");
-			writeText("Future fetishes currently planned include sissification, bimbofication, more animal parts (particularly tail-play and knotting), breast-growth, feminization, and masculinization.");
+			writeText("The game is currently fairly limited in terms of content. As of Version 0.1, it's around 25000 words of assorted code and content, so it currently only includes physical transformation (body shrinking/growth, breast growth, animal ears/tails/naughty-bits), tongue-play, massage-play (shoulder or foot), oral/anal sex, horsecock, and knotting.");
+			writeText("Future fetishes currently planned include sissification, bimbofication, more animal parts (particularly tail-play), more feminization, and more masculinization.");
 			writeText("My Discord is corenkeitaro#7169. If you see anything that needs fixing in the game, you can message me there or email me at cryptogreekcaptions@gmail.com. I also am pretty active on the Discord server <a href='https://discord.gg/8SgGSMm'>Noodle's Jacuzzi</a>, which has information on both my current projects and on Noodle's.");
 			writeText("If you enjoyed the writing in this game, you might want to check out <a href='https://noodlejacuzzi.github.io/Hentai%20University/Hentai%20University.html'>Hentai University</a>, another game that I write for! It's hypnotism-focused, though, rather than transformation.");
 			writeText("You can click on the title of a window to close it. For example, if you click 'STATUS' on the left, you can close the new window by clicking anywhere in the 'STATUS' section at the top.");
