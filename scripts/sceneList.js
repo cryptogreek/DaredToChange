@@ -57,6 +57,7 @@ function writeScene(scene) {
 			writeTransition("titanStart", "Go to the Titan's Gate");
 			writeTransition("driderStart", "Go to the Drider's Nest");
 			writeTransition("adviceTokens", "Test the post-round");
+			writeTransition("oppChat", "Test opp-chat");
 			break;
 		}
 		case "startWardrobe": {
@@ -1792,13 +1793,16 @@ function writeScene(scene) {
 
 			//Current Version:
 			if(data.story[0].sex == "M"){
+				writeTransition("oppChatSexAnal", "Fuck his ass");
 				writeTransition("oppChatSexCatch", "Ride his cock");
 			}
 			else if(data.story[0].sex == "F"){
+				writeTransition("oppChatSexAnal", "Fuck her ass");
 
 			}
 			else{
-				writeTransition("oppChatSexCatch", "Ride his cock");
+				writeTransition("oppChatSexAnal", "Fuck her ass");
+				writeTransition("oppChatSexCatch", "Ride her cock");
 			}
 
 
@@ -1972,7 +1976,7 @@ function writeScene(scene) {
 						writeText("You start shooting rope after rope, your body shaking as you cum, but it just doesn't stop - nearly a solid minute of just spurting inside of oppHer goes by before you finally collapse.");
 						writeText("A loud, wet <i><b>pop</b></i> rings out as your knot slides out of oppHer hole, a small wave of watery cum spilling out onto the floor as oppHer knees give out.");
 					}
-					else if(data.player.genitalsVal == 8 || data.player.genitalsVal = 9){
+					else if(data.player.genitalsVal == 8 || data.player.genitalsVal == 9){
 						writeText("...you <i><b>slam</b></i> your hips forward, oppF letting out a throaty moan as you sink your cock balls-deep into oppHer ass.");
 						writeSpeech("opp","","F-Fuck...~!");
 						writeText("Holding onto oppHer wrists, you start bucking into oppHer as you both let out louder and louder moans.");
@@ -1987,12 +1991,12 @@ function writeScene(scene) {
 						writeText("You cum deep into oppHer ass, spurting as oppShe lets out a long groan.");
 						writeText("After a few seconds, you start pulling out, finally sliding your head out with a POP.");
 					}
-					writeText("Both of you take a minute to collect yourselves before oppF speaks.");
-					writeSpeech("opp","","You were incredible...");
-					writeSpeech("player","","Th-Thanks... You too...");
-					writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
 				}
 			}
+			writeText("Both of you take a minute to collect yourselves before oppF speaks.");
+			writeSpeech("opp","","You were incredible...");
+			writeSpeech("player","","Th-Thanks... You too...");
+			writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
 			break;
 		}
 		case "oppChatSexCatch" : {
@@ -2008,7 +2012,7 @@ function writeScene(scene) {
 				writeText("oppF smiles, nodding as oppShe leans back and spreads out of bit.");
 			}
 			writeSpeech("opp","","If you want it that bad, <i>come and get it.</i>");
-			if(data.player.flags.include("fairyRej") == true && data.player.flags.include("remFairyPun") != true){
+			if(data.player.flags.includes("fairyRej") == true && data.player.flags.includes("remFairyPun") != true){
 				writeText("You quickly move to straddle oppF, your smaller body making it a bit harder to climb up at first, but you're soon kneeling over oppHer length.");
 				writeSpeech("opp","","You know, you look pretty good at this size...");
 				writeText("OppHer smile widens sharply as you feel oppHer hands rest down on your hips.");
@@ -2098,7 +2102,7 @@ function writeScene(scene) {
 				writeSpeech("player","","Th-Thanks... You too...");
 				writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
 			}
-			if(data.player.flags.include("golemRej") == true && data.player.flags.include("remGolemPun") != true){
+			if(data.player.flags.includes("golemRej") == true && data.player.flags.includes("remGolemPun") != true){
 				writeText("You move to straddle oppF, but very quickly realize the size difference could make things a bit... troublesome.");
 				writeSpeech("player","","Er, how should we-?");
 				writeSpeech("opp","","Here, lean back on the couch...");
