@@ -1934,7 +1934,7 @@ function writeScene(scene) {
 				writeSpeech("opp","","Get <i>rough~!</i>");
 				writeSpeech("player","","If you say so...");
 				if(data.player.genitalsVal != 6 || data.player.genitalsVal != 7 || data.player.genitalsVal != 8 || data.player.genitalsVal != 9){
-					writeText("You tighten your grip around oppHer, pistoning in and out of oppHer ass as quickly as you can, the echo of your hips against oppHers ringign out nearly as loud as the moaning.");
+					writeText("You tighten your grip around oppHer, pistoning in and out of oppHer ass as quickly as you can, the echo of your hips against oppHers ringing out nearly as loud as the moaning.");
 					writeSpeech("opp","","F-Fuck yeah...! Fuck me <i><b>up,</b></i> stud~!");
 					writeText("Thrusting harder, you push oppF forward onto the couch, oppHer arm giving out as oppHer face gets shoved into it.");
 					writeText("The lower angle makes it a lot easier to put more force into each thrust, which only makes oppHer groaning even louder.");
@@ -1983,8 +1983,14 @@ function writeScene(scene) {
 						writeSpeech("player","","I'm getting close...!");
 						writeText("Immediately, you feel oppHer ass tighten.");
 						writeSpeech("opp","","Don't you <i>dare</i> pull out...! Fill me up and <i><b>cum inside!</b></i>");
-						writeText("Unable to hold back, you completely let loose, forcing your knot as deep as it could go and cumming.");
+						writeText("Unable to hold back, you completely let loose, forcing your cock as deep as it could go and cumming.");
+						writeText("You cum deep into oppHer ass, spurting as oppShe lets out a long groan.");
+						writeText("After a few seconds, you start pulling out, finally sliding your head out with a POP.");
 					}
+					writeText("Both of you take a minute to collect yourselves before oppF speaks.");
+					writeSpeech("opp","","You were incredible...");
+					writeSpeech("player","","Th-Thanks... You too...");
+					writeText("You two have to rest for a little while longer, but once you're ready, you can return to the game.");
 				}
 			}
 			break;
