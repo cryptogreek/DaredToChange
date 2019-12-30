@@ -26,7 +26,7 @@ function writeScene(scene) {
 		case "ezMode" : {
 			writeSpecial("Token count has been set to 100. Have fun!");
 			data.player.tokens = 100;
-			writeTransition("prologue");
+			writeTransition("prologue", "Begin the game");
 		}
 		case "test" : {
 			data.player.fName = "Testing";
