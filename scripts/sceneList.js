@@ -9,6 +9,8 @@ function writeScene(scene) {
 
 			writeText("With that in mind, you can scroll further down for a bit more information on the game, or you can jump right into by pressing the button below!");
 			writeTransition("prologue", "Start the game");
+			writeText("Due to the fact that I haven't implemented a way of getting enough tokens to match the number of transformations available, you may want to play with infinite tokens so that you can transform yourself without having to restart the game when you run out.");
+			writeTransition("ezMode", "Start the game with infinite tokens");
 			//writeTransition("test", "Test the game [Expect everything to break]");
 			//writeTransition("prologueSkip", "Skip the prologue");
 			writeText("Other notes:");
@@ -20,6 +22,11 @@ function writeScene(scene) {
 			writeText("If you enjoyed the writing in this game, you might want to check out <a href='https://noodlejacuzzi.github.io/Hentai%20University/Hentai%20University.html'>Hentai University</a>, another game that I write for! It's hypnotism-focused, though, rather than transformation.");
 			writeText("You can click on the title of a window to close it. For example, if you click 'STATUS' on the left, you can close the new window by clicking anywhere in the 'STATUS' section at the top.");
 			break;
+		}
+		case "ezMode" : {
+			writeSpecial("Token count has been set to 100. Have fun!");
+			data.player.tokens = 100;
+			writeTransition("prologue");
 		}
 		case "test" : {
 			data.player.fName = "Testing";
