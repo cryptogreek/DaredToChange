@@ -541,7 +541,7 @@ function addFlag(flag){
 		if(data.player.fName == "Testing")
 			writeSpecial("The flag <i>["+flag+"]</i> has been added to your save file.");
 	}
-	else
+	else if(data.player.fName == "Testing")
 		writeSpecial("The duplicate flag <i>["+flag+"]</i> was not added to your save file.");
 }
 
