@@ -818,7 +818,7 @@ function writeScene(scene) {
 			data.player.clothesVal = 6;
 			data.player.legsVal = 5;
 			data.player.assVal = 4;
-			data.player.chestVal = 5;
+			data.player.chestVal = 6;
 			data.player.genitalsVal = 5;
 			writeText("oppF takes a moment to look you over, taking in your much larger body with an amused look.");
 			writeSpeech("opp","","Wait, don't tell me - you put on a little weight.");
