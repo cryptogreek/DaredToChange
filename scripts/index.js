@@ -193,6 +193,7 @@ var playerAssArray = [
 	{desc: " And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
 	{desc: " And of course, then comes your ass. Your butt is a lot bigger and firmer than before, but it's still sensitive enough that just sitting down feels like someone started to massage it.",},
 	{desc: " At this point, your ass is just a beautifully big, rippling mound of fuckmeat. It's so sensitive that you could probably be made to come with just an intimate massage.",},
+	{desc: " Then there's your ass, which, thanks to the transformation, Has a very firm and tight shape to it - it's toned enough that it practically looks chiseled.",},
 ];
 
 var oppTailArray = [
