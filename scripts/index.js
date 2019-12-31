@@ -177,6 +177,7 @@ var playerLegsArray = [
 	{desc: "Your legs are looking fairly dainty and thin thanks to the transformation, which you're not sure how you feel about.",},
 	{desc: "Your legs are shaped like tree trunks and you could swear are just as strong, which you're not sure how you feel about.",},
 	{desc: "Your legs are incredibly plush now, like extra-soft, extra-thick pillows that are completely soft and smooth from top to bottom.",},
+	{desc: "Your legs are pretty slim. They don't look fragile or anything, but your legs definitely aren't the strongest-looking.",},
 ];
 
 var oppAssArray = [
@@ -225,7 +226,7 @@ var playerChestArray = [
 	{desc: "You have a pretty normal, flat chest. You're not flabby, but you're not exactly <i>fit</i>, either. ",},
 	{desc: "Your chest is starting to swell a bit, looking almost like a large A-cup. They're sensitive, too... ",},
 	{desc: "You have a pair of fairly-large C-cup breasts hanging from your chest, your sensitive nipples feeling like they're constantly being teased. ",},
-	{desc: "You have a pretty normal, flat chest. You're not flabby, but you're not exactly <i>fit</i>, either. ",},
+	{desc: "You have a pretty normal, somewhat firm chest. You're in pretty good shape compared to most people, though you probably won't be winning any body-building contests anytime soon. ",},
 	{desc: "You you have a pair of teeny-titties pushing out from your chest, highlighting your slim sissy figure. ",},
 	{desc: "Having shrunk down, your chest is similarly slimmer, with your shoulders less broad now than before. ",},
 	{desc: "Your chest and shoulders are a lot broader now, though they look (and feel) pretty toned. ",},
