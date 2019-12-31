@@ -2403,7 +2403,7 @@ function writeScene(scene) {
 				writeSpeech("opp","","Looks like I'll have to get you used to me~!");
 				writeText("You try to speak but can't, the game amping your sensitivity too high to think straight as oppF starts sawing into you, oppHer cock scraping against your prostate with every subtle shift.");
 				writeText("Within seconds, you're practically dripping precum onto your stomach as each thrust takes oppHer just a bit deeper inside of you.");
-				writeText("OppHer other hand moves away from your ass to grab onto your leg again, oppHer breathing heavy from arousal as oppShe starts pulling out more and mroe with each thrust.");
+				writeText("OppHer other hand moves away from your ass to grab onto your leg again, oppHer breathing heavy from arousal as oppShe starts pulling out more and more with each thrust.");
 				writeText("After just a few seconds, oppShe's getting almost oppHer whole length in with each measured thrust, before suddenly...");
 				writeText("OppShe stops, just oppHer cockhead inside, your body feeling unbelievably empty now.");
 				writeSpeech("player","","F-Fuck... Is something wro-");
