@@ -9,7 +9,7 @@ function writeScene(scene) {
 
 			writeText("With that in mind, you can scroll further down for a bit more information on the game, or you can jump right into by pressing the button below!");
 			writeTransition("prologue", "Start the game");
-			writeText("Due to the fact that I haven't implemented a way of getting enough tokens to match the number of transformations available, you may want to play with infinite tokens so that you can transform yourself without having to restart the game when you run out.");
+			writeText("Due to the fact that I haven't implemented enough ways of getting tokens to match the number of transformations available, you may want to play with infinite tokens so that you can transform yourself without having to restart the game when you run out.");
 			writeTransition("ezMode", "Start the game with infinite tokens");
 			//writeTransition("test", "Test the game [Expect everything to break]");
 			//writeTransition("prologueSkip", "Skip the prologue");
