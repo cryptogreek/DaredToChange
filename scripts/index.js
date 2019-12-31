@@ -176,6 +176,7 @@ var playerLegsArray = [
 	{desc: "Your legs are a looking fairly dainty now, thanks to the transformation - perfectly smooth, too.",},
 	{desc: "Your legs are looking fairly dainty and thin thanks to the transformation, which you're not sure how you feel about.",},
 	{desc: "Your legs are shaped like tree trunks and you could swear are just as strong, which you're not sure how you feel about.",},
+	{desc: "Your legs are incredibly plush now, like extra-soft, extra-thick pillows that are completely soft and smooth from top to bottom.",},
 ];
 
 var oppAssArray = [
@@ -191,6 +192,7 @@ var playerAssArray = [
 	{desc: " And then, there's your ass. Thanks to the transformation, it's thick enough that you can feel it bounce when you move, and it's far more sensitive than you expected.",},
 	{desc: " And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
 	{desc: " And of course, then comes your ass. Your butt is a lot bigger and firmer than before, but it's still sensitive enough that just sitting down feels like someone started to massage it.",},
+	{desc: " At this point, your ass is just a beautifully big, rippling mound of fuckmeat. It's so sensitive that you could probably be made to come with just an intimate massage.",},
 ];
 
 var oppTailArray = [
