@@ -940,9 +940,9 @@ function writeScene(scene) {
 			}
 			addFlag("androLook");
 			writeText("You try to be at least a little subtle, sneaking a few quick glances at oppHer length without coming off too strongly.");
-			writeSpeech("opp","","");
-
-			writeText("A moment later, there's the same clink sound from the slot as before, a pair of tokens bouncing out for oppF to take.");
+			writeText("Despite that, though, oppShe smirks smugly as oppShe adjusts oppHer cock casually.");
+			writeSpeech("opp","","This feels a bit more comfortable, don't you think?");
+			writeText("Before you can respond, there's the same clink sound from the slot as before, a pair of tokens bouncing out for oppF to take.");
 			writeSpeech("card","","Looks like you finished your first round - good job! When you're ready for the next one, just tap your cards against the table again and we'll get right to it!");
 			writeText("oppF grabs oppHer tokens, rolling them around between oppHer fingers.");
 			writeSpeech("opp","","That makes this the post-round. Do you want to go over the whole 'token purchases' thing, or do you think you've got it?");
