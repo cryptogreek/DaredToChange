@@ -693,21 +693,17 @@ function renamePlayer() {
 	data.player.age = document.getElementById('ageSubmission').value;
 	data.player.dick = parseInt(document.getElementById('dickSubmission').value,10);
 	data.player.height = document.getElementById('heightSubmission').value;
-	for(var i = 0; i < 4; i++){
-		if(document.getElementById('build'+i+'').checked==true){
-			if(document.getElementById('build'+i+''.value == 'stocky'))
-				data.player.buildVal = 1;
-			else if(document.getElementById('build'+i+''.value == 'slim')){
-				data.player.buildVal = 2;
-				data.player.legsVal = 7;
-			}
-			else if(document.getElementById('build'+i+''.value == 'fit')){
-				data.player.buildVal = 3;
-				data.player.legsVal = 1;
-				data.player.assVal = 1;
-				data.player.chestVal = 3;
-			}
-		}
+	if(document.getElementById('build1').checked == true)
+		data.player.buildVal = 1;
+	else if(document.getElementById('build2').checked == true){
+		data.player.buildVal = 2;
+		data.player.legsVal = 7;
+	}
+	else if(document.getElementById('build3').checked == true){
+		data.player.buildVal = 3;
+		data.player.legsVal = 1;
+		data.player.assVal = 1;
+		data.player.chestVal = 3;
 	}
 	for(var i = 0; i < 3; i++){
 		if(document.getElementById('gender'+i+'').checked==true){
