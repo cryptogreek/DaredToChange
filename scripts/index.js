@@ -90,14 +90,14 @@ var playerHeightArray = [
 ];
 
 var oppBuildArray = [
-{desc: "and he's pretty well-built, with his toned muscles seeming fairly obvious from where you're looking.",},
-{desc: "and she's pretty well-built, with her toned muscles seeming fairly obvious from where you're looking.",},
-{desc: "and he's looking fairly curvy now, thanks to the effects of the transformation.",},
-{desc: "and she's looking fairly curvy now, thanks to the effects of the transformation.",},
-{desc: "and he's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
-{desc: "and she's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
-{desc: "and between his broad shoulders and defined muscles, he's looking more and more like the perfect alpha-male body.",},
-{desc: "and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
+{desc: " and he's pretty well-built, with his toned muscles seeming fairly obvious from where you're looking.",},
+{desc: " and she's pretty well-built, with her toned muscles seeming fairly obvious from where you're looking.",},
+{desc: " and he's looking fairly curvy now, thanks to the effects of the transformation.",},
+{desc: " and she's looking fairly curvy now, thanks to the effects of the transformation.",},
+{desc: " and he's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
+{desc: " and she's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
+{desc: " and between his broad shoulders and defined muscles, he's looking more and more like the perfect alpha-male body.",},
+{desc: " and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
 ];
 var playerBuildArray = [
 {desc: " and you're probably pretty-average weight-wise.",},
@@ -736,7 +736,7 @@ function renamePlayer() {
 		data.story[0].lName = "Devons";
 		data.story[0].piece = "blue";
 		data.story[0].height = 73;
-		data.story[0].buildVal = 1;
+		data.story[0].buildVal = 0;
 		data.story[0].clothesVal = 0;
 		data.story[0].hairVal = 0;
 		data.story[0].legsVal = 0;
