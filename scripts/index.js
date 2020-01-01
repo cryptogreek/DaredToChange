@@ -750,7 +750,7 @@ function renamePlayer() {
 		data.story[0].lName = "Kendrix";
 		data.story[0].piece = "green";
 		data.story[0].height = 67;
-		data.story[0].buildVal = 0;
+		data.story[0].buildVal = 1;
 		data.story[0].clothesVal = 1;
 		data.story[0].hairVal = 1;
 		data.story[0].legsVal = 3;
