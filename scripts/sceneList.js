@@ -195,6 +195,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "prologueMeet": {
+			data.story[0].met = true;
 			if(data.player.flags.includes("Peek"))
 				writeText("Moving quickly and trying not to focus on what you just watched, you find room "+roomNum+" and pause for a moment.");
 			else
@@ -1779,7 +1780,8 @@ function writeScene(scene) {
 		case "transMascChest" : {
 			addFlag("trans1");
 			loseTokens(1);
-			data.player.buildVal = 3;
+			data.player.buildVal = 9;
+			data.player.chestVal = 6;
 			data.player.newChange += "transMascChest";
 			data.player.flags += "transMascChest";
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");

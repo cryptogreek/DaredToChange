@@ -108,7 +108,8 @@ var playerBuildArray = [
 {desc: " and you are practically an Adonis when it comes to your body and muscles.",},
 {desc: " and you are a <i>lot</i> curvier than most people.",},
 {desc: " and you're a lot slimmer than you were at the start of the game. Plus, your ears almost seem pointed, now...",},
-{desc: " and you're body is a whole lot more sturdy and barrel-like than at the start of the game. Doesn't make your skin any less sensitive, though...",},
+{desc: " and your body is a whole lot more sturdy and barrel-like than at the start of the game. Doesn't make your skin any less sensitive, though...",},
+{desc: " and you're pretty muscular compared to most people. Everything does feel really sensitive, though...",},
 ];
 
 var oppClothesArray = [
@@ -194,7 +195,7 @@ var playerAssArray = [
 {desc: " And of course, then comes your ass. Your butt is smaller and more lithe than before, but it's sensitive enough that just sitting down feels like someone started to massage it.",},
 {desc: " And of course, then comes your ass. Your butt is a lot bigger and firmer than before, but it's still sensitive enough that just sitting down feels like someone started to massage it.",},
 {desc: " At this point, your ass is just a beautifully big, rippling mound of fuckmeat. It's so sensitive that you could probably be made to come with just an intimate massage.",},
-{desc: " Then there's your ass, which, thanks to the transformation, Has a very firm and tight shape to it - it's toned enough that it practically looks chiseled.",},
+{desc: " Then there's your ass, which, thanks to the transformation, Has a very firm and tight shape to it - it's toned enough that it practically looks chiseled, and just tracing your finger along it sends shivers up your spine.",},
 ];
 
 var oppTailArray = [
@@ -229,7 +230,7 @@ var playerChestArray = [
 {desc: "You have a pretty normal, somewhat firm chest. You're in pretty good shape compared to most people, though you probably won't be winning any body-building contests anytime soon. ",},
 {desc: "You you have a pair of teeny-titties pushing out from your chest, highlighting your slim sissy figure. ",},
 {desc: "Having shrunk down, your chest is similarly slimmer, with your shoulders less broad now than before. ",},
-{desc: "Your chest and shoulders are a lot broader now, though they look (and feel) pretty toned. ",},
+{desc: "Your chest and shoulders are a lot broader now, though they look (and feel) pretty toned. The muscles feel a bit sensitive, though. ",},
 {desc: "Your tits have expanded even further, jumping right past Double-Ds and straight into '<i>huge</i>' territory. They're actually even more sensitive now than they were before! ",},
 ];
 
@@ -265,11 +266,11 @@ var playerGenitalsArray2 = [
 {desc: "-inch long cock. Since starting the game, it's been feeling a lot more sensitive than you remember.",},
 {desc: "-inches long. Despite that, it feels even <i>more</i> sensitive now than it did before...",},
 {desc: "-inches long. At this point, it doesn't even get hard, but the tip is always dribbling just a little bit of pre.",},
-{desc: "-inches long. It almost makes it look shorter than it used to be when compared to you now.",},
-{desc: "-inch long horsecock is hanging down loosely. It's not as stiff as a normal dick, but that isn't really the appeal, is it?",},
+{desc: "-inches long. It almost makes it look shorter than it used to be when compared to you now, though it's a bit more sensitive.",},
+{desc: "-inch long horsecock is hanging down loosely. It's not as stiff as a normal dick, but that isn't really the appeal, is it? Plus, every inch of the skin is <i>very</i> sensitive to touch...",},
 {desc: "-inch long doggy-dick is hanging down between your thighs. You could swear it feels far warmer than it should, <i>especially</i> the knot.",},
-{desc: "-inches long and fairly intimidating in terms of girth.",},
-{desc: "-inches long, and probably the upper limit of what you should really have it if you value having blood pumping through the rest of your body.",},
+{desc: "-inches long and fairly intimidating in terms of girth. It's a bit more sensitive, particularly around the head.",},
+{desc: "-inches long, and probably the upper limit of what you should really have it if you value having blood pumping through the rest of your body. When it gets <i>really</i> hard, just brushing against it feels ridiculously good.",},
 ];
 
 var oppF = data.story[0].fName;
