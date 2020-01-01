@@ -1246,6 +1246,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "postRound1" : {
+			data.story[0].met = true;
 			if(data.player.flags.includes("adviceTokens") != true && data.player.flags.includes("noAdvice") != true){
 				addFlag("noAdvice");
 				writeSpeech("player","","I think I've got this. Worst case scenario, I just end up with something unexpected, right?");
