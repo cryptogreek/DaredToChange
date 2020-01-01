@@ -182,10 +182,10 @@ var playerLegsArray = [
 ];
 
 var oppAssArray = [
-{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Looking at it, you can't help but feel curious about how firm it would feel in your hands...",},
-{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Despite how firm you would <i>swear</i> it has to be, there always seems to be just enough jiggle that it shakes with every movement.",},
-{desc: "And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever your opponent shifts in place, you could swear it practically ripples.",},
-{desc: "And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if your opponent's gentle squirming is anything to go by.",},
+{desc: " And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Looking at it, you can't help but feel curious about how firm it would feel in your hands...",},
+{desc: " And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Despite how firm you would <i>swear</i> it has to be, there always seems to be just enough jiggle that it shakes with every movement.",},
+{desc: " And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever your opponent shifts in place, you could swear it practically ripples.",},
+{desc: " And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if your opponent's gentle squirming is anything to go by.",},
 
 ];
 var playerAssArray = [
