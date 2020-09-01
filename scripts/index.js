@@ -804,15 +804,15 @@ function saveFile(){
 function loadFile(){
 	data = prompt("Please paste the data", "");
 	data = JSON.parse(data);
-	saveSlot(160);
-	loadSlot(160);
+	saveSlot(190);
+	loadSlot(190);
 	if (data.player.fName == null) {
 		alert("Invalid pasted data! If we tried to use this, the game would completely break!");
-		loadSlot(161);
+		loadSlot(191);
 	}
 	else {
-		saveSlot(160);
-		loadSlot(160);
+		saveSlot(190);
+		loadSlot(190);
 	}
 	updateSave();
 	nameUpdate();
@@ -842,7 +842,7 @@ function generateSave() {
 }
 
 function updateSave() {
-	saveSlot(160);
+	saveSlot(190);
 }
 
 //Gallery
